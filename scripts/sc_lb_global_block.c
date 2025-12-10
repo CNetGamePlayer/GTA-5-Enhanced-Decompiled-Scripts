@@ -4,8 +4,8 @@ void main() // Position - 0x0 (0)
 	Global_2103163 = 1;
 	Global_2103164 = 1;
 	Global_2103165 = true;
-	Global_2103166 = true;
-	Global_2103167 = true;
+	Global_2103166 = 1;
+	Global_2103167 = 1;
 	return;
 }
 
