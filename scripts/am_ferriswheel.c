@@ -6014,14 +6014,14 @@ void func_100(const char* sParam0) // Position - 0x7578 (30072)
 
 void func_101(var uParam0) // Position - 0x7586 (30086)
 {
-	Global_1990131 = 0;
+	Global_1990132 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
 BOOL func_102(var uParam0) // Position - 0x7599 (30105)
 {
-	return Global_1990131 || uParam0->f_692;
+	return Global_1990132 || uParam0->f_692;
 }
 
 void func_103(int iParam0) // Position - 0x75B0 (30128)
@@ -6091,7 +6091,7 @@ void func_107(var uParam0) // Position - 0x7633 (30259)
 	uParam0->f_697 = 0f;
 	uParam0->f_698 = 0f;
 	uParam0->f_699 = 1f;
-	Global_1990131 = 0;
+	Global_1990132 = 0;
 	return;
 }
 

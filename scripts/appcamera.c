@@ -6860,7 +6860,7 @@ BOOL func_76() // Position - 0xB89F (47263)
 			break;
 	}
 
-	if (Global_1979771)
+	if (Global_1979772)
 		return true;
 
 	return false;
@@ -8897,7 +8897,7 @@ void func_143(BOOL bParam0) // Position - 0xE5F9 (58873)
 {
 	if (*Global_4718592.f_192542 == 0 && *Global_4718592.f_192543 == 0 && !Global_1945926)
 		if (func_144(PLAYER::PLAYER_ID()) && bParam0)
-			Global_1979844 = true;
+			Global_1979845 = true;
 		else
 			GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
 

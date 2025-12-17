@@ -2081,7 +2081,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				{
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					{
-						func_12(true);
+						func_12(1);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(*piParam5, 100, 100, 100, 255, 0);
 					}
 				}
@@ -2096,7 +2096,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				{
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					{
-						func_12(true);
+						func_12(1);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(*piParam5, 100, 100, 100, 255, 0);
 					}
 				}
@@ -2106,7 +2106,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam5);
 			
-				func_12(false);
+				func_12(0);
 				*uParam1 = 0;
 				*uParam0 = 0;
 				*uParam4 = 0;
@@ -2228,10 +2228,10 @@ int func_11(int iParam0) // Position - 0x902 (2306)
 	return 15;
 }
 
-void func_12(BOOL bParam0) // Position - 0x952 (2386)
+void func_12(int iParam0) // Position - 0x952 (2386)
 {
-	if (Global_80573 != bParam0)
-		Global_80573 = bParam0;
+	if (Global_80573 != iParam0)
+		Global_80573 = iParam0;
 
 	return;
 }
@@ -14665,7 +14665,7 @@ void func_167(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_8() || Global_1990799 || SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME() == joaat("maintransition"))
+		if (!bParam4 || num != func_8() || Global_1990800 || SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME() == joaat("maintransition"))
 		{
 			characterType = func_200(pedParam0);
 		
@@ -14706,7 +14706,7 @@ void func_167(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 				}
 			}
 		
-			if (Global_1990798)
+			if (Global_1990799)
 				func_171();
 		}
 		else
@@ -14727,7 +14727,7 @@ void func_168(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	int num;
 	int decorationIndex;
 
-	if (!Global_1990798)
+	if (!Global_1990799)
 		func_169(&pedParam0);
 
 	i = 0;
@@ -14735,7 +14735,7 @@ void func_168(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		num = Global_1990770[i];
+		num = Global_1990771[i];
 	
 		if (num <= -1)
 		{
@@ -14789,7 +14789,7 @@ void func_169(var uParam0) // Position - 0x18568 (99688)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1990770[i] = -1;
+		Global_1990771[i] = -1;
 	}
 
 	i = 0;
@@ -14816,7 +14816,7 @@ void func_169(var uParam0) // Position - 0x18568 (99688)
 		}
 	}
 
-	Global_1990798 = true;
+	Global_1990799 = true;
 	return;
 }
 
@@ -14831,20 +14831,20 @@ void func_170(int iParam0, BOOL bParam1) // Position - 0x1860E (99854)
 	{
 		if (bParam1)
 		{
-			if (Global_1990770[i] == iParam0)
+			if (Global_1990771[i] == iParam0)
 				return;
-			else if (Global_1990770[i] == -1)
+			else if (Global_1990771[i] == -1)
 				num = i;
 		}
-		else if (Global_1990770[i] == iParam0)
+		else if (Global_1990771[i] == iParam0)
 		{
-			Global_1990770[i] = -1;
+			Global_1990771[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1990770[num] = iParam0;
+		Global_1990771[num] = iParam0;
 
 	return;
 }
@@ -14855,10 +14855,10 @@ void func_171() // Position - 0x18688 (99976)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1990770[i] = -1;
+		Global_1990771[i] = -1;
 	}
 
-	Global_1990798 = false;
+	Global_1990799 = false;
 	return;
 }
 
@@ -94195,9 +94195,9 @@ void func_487() // Position - 0x7269E (468638)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -94396,10 +94396,10 @@ void func_497() // Position - 0x72A0F (469519)
 	return;
 }
 
-void func_498(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x72A66 (469606)
+void func_498(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x72A66 (469606)
 {
 	Global_22454 = { *uParam0 };
-	Global_8779 = echParam1;
+	Global_8779 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_23070, sParam2, 24);
 	Global_23989 = iParam5;
 
@@ -98813,7 +98813,7 @@ Vector3 func_575(int iParam0, BOOL bParam1) // Position - 0x7A268 (500328)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1972807;
+			return Global_1972808;
 	
 		case 51:
 			return 1100f, 220f, -50f;

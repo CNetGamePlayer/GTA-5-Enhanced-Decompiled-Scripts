@@ -2299,9 +2299,9 @@ void func_8() // Position - 0xC01 (3073)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -16114,7 +16114,7 @@ Vector3 func_351(int iParam0, BOOL bParam1) // Position - 0x13410 (78864)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1972807;
+			return Global_1972808;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -21062,7 +21062,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x1BEBE (114366)
 	return false;
 }
 
-BOOL func_490(ePedComponentType epctParam0, int iParam1) // Position - 0x1BED5 (114389)
+BOOL func_490(Hash hParam0, int iParam1) // Position - 0x1BED5 (114389)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -21078,7 +21078,7 @@ BOOL func_490(ePedComponentType epctParam0, int iParam1) // Position - 0x1BED5 (
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (epctParam0)
+	switch (hParam0)
 	{
 		case 1730644782:
 			num = Global_262145.f_36257[0];
@@ -21146,7 +21146,7 @@ BOOL func_490(ePedComponentType epctParam0, int iParam1) // Position - 0x1BED5 (
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (epctParam0 == Global_1835471[i])
+		if (hParam0 == Global_1835471[i])
 			return true;
 	}
 

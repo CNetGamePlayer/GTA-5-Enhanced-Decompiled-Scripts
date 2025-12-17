@@ -866,7 +866,7 @@ BOOL func_11(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	if (iParam2 < 1 || iParam2 > 7)
 		return 0;
 
-	if (Global_114931.f_7695.f_764 < 8)
+	if (Global_114931.f_7695.f_764 < CHAR_MIKE_FRANK_CONF)
 	{
 		num = iParam0;
 		num.f_3 = func_13(iParam1);
@@ -895,23 +895,23 @@ BOOL func_11(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 
 void func_12(int iParam0) // Position - 0x6F1 (1777)
 {
-	int i;
+	eCharacter i;
 	int num;
-	int j;
+	eCharacter j;
 
 	num = 0;
 
 	if (!func_7(iParam0))
 		return;
 
-	for (i = 0; i < Global_114931.f_7695.f_136; i = i + 1)
+	for (i = CHAR_MICHAEL; i < Global_114931.f_7695.f_136; i = i + 1)
 	{
 		if (IS_BIT_SET(Global_114931.f_7695[i /*15*/].f_2, iParam0))
 			if (Global_114931.f_7695[i /*15*/].f_3 > num)
 				num = Global_114931.f_7695[i /*15*/].f_3;
 	}
 
-	for (j = 0; j < Global_114931.f_7695.f_764; j = j + 1)
+	for (j = CHAR_MICHAEL; j < Global_114931.f_7695.f_764; j = j + 1)
 	{
 		if (IS_BIT_SET(Global_114931.f_7695.f_651[j /*14*/].f_2, iParam0))
 			if (Global_114931.f_7695.f_651[j /*14*/].f_3 == 5)
@@ -1431,7 +1431,7 @@ void func_35(int iParam0, int iParam1) // Position - 0x1147 (4423)
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
 
-	Global_114931.f_8620[iParam0] = 1;
+	Global_114931.f_8620[iParam0] = true;
 	Global_114931.f_8620.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
 	return;
 }

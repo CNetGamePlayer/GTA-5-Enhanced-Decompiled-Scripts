@@ -17052,7 +17052,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x18E26 (101926)
 	return false;
 }
 
-BOOL func_301(ePedComponentType epctParam0, int iParam1) // Position - 0x18E3D (101949)
+BOOL func_301(Hash hParam0, int iParam1) // Position - 0x18E3D (101949)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -17068,7 +17068,7 @@ BOOL func_301(ePedComponentType epctParam0, int iParam1) // Position - 0x18E3D (
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (epctParam0)
+	switch (hParam0)
 	{
 		case 1730644782:
 			num = Global_262145.f_36257[0];
@@ -17136,7 +17136,7 @@ BOOL func_301(ePedComponentType epctParam0, int iParam1) // Position - 0x18E3D (
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (epctParam0 == Global_1835471[i])
+		if (hParam0 == Global_1835471[i])
 			return true;
 	}
 
@@ -21350,9 +21350,9 @@ void func_410() // Position - 0x1E956 (125270)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;

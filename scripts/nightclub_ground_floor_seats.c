@@ -326,7 +326,7 @@ void main() // Position - 0x0 (0)
 
 void func_1() // Position - 0xA8 (168)
 {
-	Global_1950697 = 0;
+	Global_1950697 = false;
 	func_3(&uLocal_124);
 	func_2();
 	return;
@@ -457,7 +457,7 @@ void func_9(var uParam0) // Position - 0x2D1 (721)
 			break;
 	
 		case 1:
-			Global_1950697 = 0;
+			Global_1950697 = false;
 		
 			if (func_65(uParam0))
 			{
@@ -476,7 +476,7 @@ void func_9(var uParam0) // Position - 0x2D1 (721)
 				}
 				else
 				{
-					Global_1950697 = 1;
+					Global_1950697 = true;
 				
 					if (uParam0->f_141.f_5 == -1)
 					{
@@ -860,27 +860,27 @@ int func_17(Player plParam0) // Position - 0xE1E (3614)
 
 	if (func_18(plParam0, 0))
 		num = 0;
-	else if (func_18(plParam0, 1))
+	else if (func_18(plParam0, PV_COMP_BERD))
 		num = 1;
-	else if (func_18(plParam0, 2))
+	else if (func_18(plParam0, PV_COMP_HAIR))
 		num = 2;
-	else if (func_18(plParam0, 3))
+	else if (func_18(plParam0, PV_COMP_UPPR))
 		num = 3;
 
 	return num;
 }
 
-BOOL func_18(Player plParam0, int iParam1) // Position - 0xE68 (3688)
+BOOL func_18(Player plParam0, ePedComponentType epctParam1) // Position - 0xE68 (3688)
 {
 	int num;
 
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_192053.f_6 == iParam1;
+		return Global_4718592.f_192053.f_6 == epctParam1;
 
-	if (plParam0 == _INVALID_PLAYER_INDEX() || iParam1 == -1)
+	if (plParam0 == _INVALID_PLAYER_INDEX() || epctParam1 == PV_COMP_INVALID)
 		return false;
 
-	num = iParam1 + 20;
+	num = epctParam1 + 20;
 	return IS_BIT_SET(Global_1845299[plParam0 /*883*/].f_260.f_364.f_1, num);
 }
 
@@ -950,41 +950,41 @@ BOOL func_23() // Position - 0x1030 (4144)
 	return true;
 }
 
-BOOL func_24(Player plParam0) // Position - 0x104A (4170)
+BOOL func_24(ePedComponentType epctParam0) // Position - 0x104A (4170)
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 		return IS_BIT_SET(Global_4718592.f_192053.f_14, 4);
 
-	if (plParam0 == _INVALID_PLAYER_INDEX())
+	if (epctParam0 == _INVALID_PLAYER_INDEX())
 		return false;
 
-	return IS_BIT_SET(Global_1845299[plParam0 /*883*/].f_260.f_364.f_1, 1);
+	return IS_BIT_SET(Global_1845299[epctParam0 /*883*/].f_260.f_364.f_1, 1);
 }
 
-BOOL func_25(Player plParam0, int iParam1) // Position - 0x108C (4236)
+BOOL func_25(ePedComponentType epctParam0, int iParam1) // Position - 0x108C (4236)
 {
-	if (plParam0 == _INVALID_PLAYER_INDEX())
+	if (epctParam0 == _INVALID_PLAYER_INDEX())
 		return false;
 
 	switch (iParam1)
 	{
 		case 0:
-			return IS_BIT_SET(Global_1845299[plParam0 /*883*/].f_260.f_321.f_7, 0);
+			return IS_BIT_SET(Global_1845299[epctParam0 /*883*/].f_260.f_321.f_7, 0);
 	
 		case 1:
-			return IS_BIT_SET(Global_1845299[plParam0 /*883*/].f_260.f_321.f_7, 1);
+			return IS_BIT_SET(Global_1845299[epctParam0 /*883*/].f_260.f_321.f_7, 1);
 	
 		case 4:
-			return IS_BIT_SET(Global_1845299[plParam0 /*883*/].f_260.f_321.f_7, 2);
+			return IS_BIT_SET(Global_1845299[epctParam0 /*883*/].f_260.f_321.f_7, 2);
 	
 		case 2:
-			return IS_BIT_SET(Global_1845299[plParam0 /*883*/].f_260.f_321.f_7, 3);
+			return IS_BIT_SET(Global_1845299[epctParam0 /*883*/].f_260.f_321.f_7, 3);
 	
 		case 3:
-			return IS_BIT_SET(Global_1845299[plParam0 /*883*/].f_260.f_321.f_7, 4);
+			return IS_BIT_SET(Global_1845299[epctParam0 /*883*/].f_260.f_321.f_7, 4);
 	
 		case 5:
-			return IS_BIT_SET(Global_1845299[plParam0 /*883*/].f_260.f_321.f_7, 5);
+			return IS_BIT_SET(Global_1845299[epctParam0 /*883*/].f_260.f_321.f_7, 5);
 	}
 
 	return false;
@@ -1796,13 +1796,13 @@ int func_59(Player plParam0) // Position - 0x1F99 (8089)
 	return -1;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x1FBA (8122)
+BOOL _NETWORK_IS_PLAYER_VALID(ePedComponentType player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x1FBA (8122)
 {
-	Player player;
+	ePedComponentType type;
 
-	player = player;
+	type = player;
 
-	if (player != -1)
+	if (type != PV_COMP_INVALID)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(player))
 		{
@@ -1811,9 +1811,9 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 					return false;
 		
 			if (bUnk)
-				if (player == Global_2673274.f_3)
+				if (type == Global_2673274.f_3)
 					return Global_2673274.f_2;
-				else if (Global_2658294[player /*468*/] != 4)
+				else if (Global_2658294[type /*468*/] != 4)
 					return false;
 		
 			return true;

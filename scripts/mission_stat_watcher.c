@@ -1013,7 +1013,7 @@ void main() // Position - 0x0 (0)
 							GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(7);
 					
 						if (flag && !Global_65017)
-							Global_45860 = 1;
+							Global_45860 = true;
 					
 						if (!Global_65029)
 						{
@@ -2627,7 +2627,7 @@ char* func_34(int iParam0, BOOL bParam1) // Position - 0x2695 (9877)
 	return unk[1];
 }
 
-char* func_35(const char* sParam0) // Position - 0x2BF9 (11257)
+char* func_35(char* sParam0) // Position - 0x2BF9 (11257)
 {
 	return sParam0;
 }
@@ -2939,7 +2939,7 @@ float func_41(float fParam0) // Position - 0x32F4 (13044)
 	return fParam0 * 0.0009259259f;
 }
 
-void func_42(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x3304 (13060)
+void func_42(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x3304 (13060)
 {
 	int num;
 	int i;
@@ -2957,11 +2957,11 @@ void func_42(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4, 
 	{
 		Global_1679155.f_1 = 1;
 		func_43(7, num);
-		Global_1679155.f_4714[num] = iParam0;
+		Global_1679155.f_4714[num] = epctParam0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1679155.f_4714.f_11[num /*16*/], sParam1, 64);
 		Global_1679155.f_4714.f_172[num] = iParam2;
 		Global_1679155.f_4714.f_216[num] = iParam3;
-		Global_1679155.f_4714.f_183[num] = iParam4;
+		Global_1679155.f_4714.f_183[num] = epctParam4;
 		Global_1679155.f_4714.f_194[num] = iParam5;
 		Global_1679155.f_4714.f_249[num] = iParam6;
 		Global_1679155.f_4714.f_260[num] = iParam7;
@@ -6726,7 +6726,7 @@ void func_79(int iParam0, float fParam1, BOOL bParam2) // Position - 0xBD68 (484
 	else
 		Global_114931.f_9092.f_330[iParam0 /*6*/].f_5 = fParam1;
 
-	Global_33802 = 1;
+	Global_33802 = true;
 	return;
 }
 
@@ -6742,7 +6742,7 @@ void func_81(int iParam0, float fParam1, BOOL bParam2) // Position - 0xBDBB (485
 	else
 		Global_114931.f_18581[iParam0 /*6*/].f_5 = fParam1;
 
-	Global_33802 = 1;
+	Global_33802 = true;
 	return;
 }
 

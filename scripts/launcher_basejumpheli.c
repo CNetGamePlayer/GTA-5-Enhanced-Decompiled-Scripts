@@ -1147,7 +1147,7 @@ void func_7(var uParam0) // Position - 0xAFC (2812)
 	Global_44847 = 0;
 	Global_44849 = 0;
 	Global_44886 = 15;
-	Global_65024 = 0;
+	Global_65024 = false;
 	Global_65025 = 0;
 	return;
 }
@@ -1477,7 +1477,7 @@ void func_30(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) 
 			Global_114931.f_7268.f_227[iParam0] = iParam1;
 	
 		Global_41426[iParam0] = bParam2;
-		Global_41625[iParam0] = 1;
+		Global_41625[iParam0] = true;
 		func_33(iParam0, bParam3, iParam4, false);
 		func_31(iParam0, iParam1);
 	}
@@ -1624,7 +1624,7 @@ BOOL func_33(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 						if (vector.f_4[num2] != 0)
 							ENTITY::CREATE_MODEL_HIDE(vector, 10f, vector.f_4[num2], true);
 					
-						Global_43020[iParam0] = 1;
+						Global_43020[iParam0] = true;
 					}
 				
 					flag = true;
@@ -1706,8 +1706,8 @@ BOOL func_33(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 								STREAMING::REQUEST_IPL(&vector.f_8[2 /*8*/]);
 					}
 				
-					Global_42821[iParam0] = 1;
-					Global_43020[iParam0] = 1;
+					Global_42821[iParam0] = true;
+					Global_43020[iParam0] = true;
 					flag = true;
 					break;
 			
@@ -1767,8 +1767,8 @@ BOOL func_33(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 							INTERIOR::REFRESH_INTERIOR(interiorAtCoordsWithType);
 					}
 				
-					Global_43020[iParam0] = 1;
-					Global_42821[iParam0] = 1;
+					Global_43020[iParam0] = true;
+					Global_42821[iParam0] = true;
 					flag = true;
 					break;
 			
@@ -1782,7 +1782,7 @@ BOOL func_33(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 							if (num == 0)
 							{
 								OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 3);
-								Global_43020[iParam0] = 1;
+								Global_43020[iParam0] = true;
 								flag = true;
 							}
 							else if (num == 1)
@@ -1790,7 +1790,7 @@ BOOL func_33(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 								if (OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 6 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 7 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 8)
 								{
 									OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 10);
-									Global_43020[iParam0] = 1;
+									Global_43020[iParam0] = true;
 									flag = true;
 								}
 							}
@@ -1820,7 +1820,7 @@ BOOL func_33(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 		
 			if (flag)
 			{
-				Global_41625[iParam0] = 0;
+				Global_41625[iParam0] = false;
 				Global_41824[iParam0] = num;
 			
 				if (!func_34())
@@ -4332,7 +4332,7 @@ void func_66() // Position - 0x648F (25743)
 {
 	if (Global_21627.f_1 == 9 || Global_21627.f_1 == 10)
 	{
-		Global_23053 = 0;
+		Global_23053 = false;
 		Global_23049 = 1;
 	}
 
@@ -4389,8 +4389,8 @@ void func_69(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	
 		func_77(true, bParam3, bParam2, false);
 		Global_65033 = 1;
-		Global_77362 = 1;
-		Global_80303 = 1;
+		Global_77362 = true;
+		Global_80303 = true;
 	}
 	else
 	{
@@ -4411,7 +4411,7 @@ void func_69(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_75(PLAYER::PLAYER_ID()) && !bParam4 && !bParam5)
 			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false, false);
 	
-		Global_80303 = 0;
+		Global_80303 = false;
 	}
 
 	return;
@@ -4451,7 +4451,7 @@ int func_72(int iParam0, BOOL bParam1) // Position - 0x66F5 (26357)
 	if (num2 == -1)
 		num2 = func_73();
 
-	if (Global_1575072[num2] == 1)
+	if (Global_1575072[num2] == true)
 	{
 		bParam1;
 		num = 8;
@@ -4576,10 +4576,10 @@ int _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iParam
 			iParam3 = 7;
 
 	Global_23007 = false;
-	Global_23009 = 0;
-	Global_23014 = 0;
+	Global_23009 = false;
+	Global_23014 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_2883585 = 0;
 	return func_82(sParam2, iParam3, false);
@@ -4601,10 +4601,10 @@ int func_82(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x6924 (2691
 					Global_21627.f_1 = 3;
 					Global_23000 = 0;
 					Global_23001 = 1;
-					Global_23053 = 0;
+					Global_23053 = false;
 					Global_22996 = 0;
 					Global_22997 = 0;
-					Global_23011 = 0;
+					Global_23011 = false;
 					Global_23010 = false;
 					Global_21626 = 0;
 				}
@@ -4772,9 +4772,9 @@ void func_83() // Position - 0x6BF2 (27634)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -4863,9 +4863,9 @@ void func_90() // Position - 0x6D27 (27943)
 	Global_23013 = Global_23014;
 	Global_23015 = { Global_23031 };
 	Global_23004 = Global_23005;
-	Global_24016 = 0;
+	Global_24016 = false;
 	Global_23049 = 0;
-	Global_23050 = 0;
+	Global_23050 = false;
 	MISC::CLEAR_BIT(&Global_9464, 16);
 	return;
 }
@@ -5048,10 +5048,10 @@ void func_100() // Position - 0x70E1 (28897)
 	return;
 }
 
-void func_101(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x7138 (28984)
+void func_101(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x7138 (28984)
 {
 	Global_22454 = { *uParam0 };
-	Global_8779 = iParam1;
+	Global_8779 = echParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_23070, sParam2, 24);
 	Global_23989 = iParam5;
 
@@ -5449,7 +5449,7 @@ BOOL func_116(int iParam0, BOOL bParam1) // Position - 0x78DD (30941)
 
 	if (num > -1 && num < 6)
 	{
-		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == 1)
+		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == true)
 		{
 			if (bParam1)
 				if (Global_45660[num /*32*/].f_29)
@@ -5816,7 +5816,7 @@ BOOL func_139() // Position - 0x854A (34122)
 	return false;
 }
 
-Entity func_140() // Position - 0x8564 (34148)
+Ped func_140() // Position - 0x8564 (34148)
 {
 	return Global_98261;
 }
@@ -6140,10 +6140,10 @@ void func_157(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x8AB9 (355
 	{
 		MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	
-		if (Global_34169 == 1)
-			Global_34170 = 1;
+		if (Global_34169 == true)
+			Global_34170 = true;
 	
-		Global_34169 = 1;
+		Global_34169 = true;
 	}
 
 	if (bParam1)

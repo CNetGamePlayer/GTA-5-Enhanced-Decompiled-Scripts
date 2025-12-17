@@ -381,7 +381,7 @@ void main() // Position - 0x0 (0)
 
 void func_1() // Position - 0xD6 (214)
 {
-	Global_1934911 = false;
+	Global_1934911 = 0;
 	func_42(false);
 	func_2();
 	return;
@@ -421,7 +421,7 @@ void func_2() // Position - 0xEC (236)
 	func_5();
 	func_4();
 	Global_1964546 = 0;
-	Global_1983833 = 0;
+	Global_1983834 = 0;
 	_STOPWATCH_DESTROY(&Global_1964547);
 	return;
 }
@@ -2851,7 +2851,7 @@ void func_34() // Position - 0x3952 (14674)
 	{
 		for (j = 0; j < 20; j = j + 1)
 		{
-			Global_2733138.f_4843[i /*21*/][j] = 0;
+			Global_2733138.f_4843[i /*21*/][j] = false;
 		}
 	}
 
@@ -6400,7 +6400,7 @@ void func_68(int iParam0) // Position - 0x9ADC (39644)
 
 void func_69(int iParam0) // Position - 0x9B0E (39694)
 {
-	int src;
+	Any* src;
 
 	if (Global_2673273)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1689173[iParam0], &src, 1);

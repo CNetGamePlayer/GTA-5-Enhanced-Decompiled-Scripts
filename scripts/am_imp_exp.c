@@ -4648,7 +4648,7 @@ Vector3 func_153(int iParam0, BOOL bParam1) // Position - 0x4C13 (19475)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1972807;
+			return Global_1972808;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -10596,7 +10596,7 @@ int func_307(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char
 		}
 	}
 
-	if (Global_1979863 != -1 && echParam0 == Global_1979863)
+	if (Global_1979864 != -1 && echParam0 == Global_1979864)
 		num2 = 1;
 
 	func_308(echParam0, sParam1, num2, func_312(PLAYER::PLAYER_ID()));
@@ -10616,18 +10616,18 @@ void func_308(eCharacter echParam0, char* sParam1, BOOL bParam2, int iParam3) //
 	character.f_3 = 0;
 	character.f_4 = bParam2;
 	character.f_5 = iParam3;
-	character.f_6 = Global_1979846.f_7;
-	character.f_7 = Global_1979846.f_8;
-	character.f_8 = Global_1979846.f_9;
-	character.f_9 = Global_1979846.f_10;
-	character.f_10 = Global_1979846.f_11;
-	character.f_11 = Global_1979846.f_12;
-	character.f_12 = Global_1979846.f_13;
-	character.f_13 = Global_1979846.f_14;
+	character.f_6 = Global_1979847.f_7;
+	character.f_7 = Global_1979847.f_8;
+	character.f_8 = Global_1979847.f_9;
+	character.f_9 = Global_1979847.f_10;
+	character.f_10 = Global_1979847.f_11;
+	character.f_11 = Global_1979847.f_12;
+	character.f_12 = Global_1979847.f_13;
+	character.f_13 = Global_1979847.f_14;
 	STATS::PLAYSTATS_NPC_PHONE(&character);
 
 	if (bParam2)
-		Global_1979863 = -1;
+		Global_1979864 = -1;
 
 	return;
 }
@@ -11914,7 +11914,7 @@ int func_349(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char
 		}
 	}
 
-	if (Global_1979863 != -1 && echParam0 == Global_1979863)
+	if (Global_1979864 != -1 && echParam0 == Global_1979864)
 		num2 = 1;
 
 	func_350(echParam0, sParam1, num2, func_312(PLAYER::PLAYER_ID()));
@@ -11934,18 +11934,18 @@ void func_350(eCharacter echParam0, char* sParam1, BOOL bParam2, int iParam3) //
 	character.f_3 = 0;
 	character.f_4 = bParam2;
 	character.f_5 = iParam3;
-	character.f_6 = Global_1979846.f_7;
-	character.f_7 = Global_1979846.f_8;
-	character.f_8 = Global_1979846.f_9;
-	character.f_9 = Global_1979846.f_10;
-	character.f_10 = Global_1979846.f_11;
-	character.f_11 = Global_1979846.f_12;
-	character.f_12 = Global_1979846.f_13;
-	character.f_13 = Global_1979846.f_14;
+	character.f_6 = Global_1979847.f_7;
+	character.f_7 = Global_1979847.f_8;
+	character.f_8 = Global_1979847.f_9;
+	character.f_9 = Global_1979847.f_10;
+	character.f_10 = Global_1979847.f_11;
+	character.f_11 = Global_1979847.f_12;
+	character.f_12 = Global_1979847.f_13;
+	character.f_13 = Global_1979847.f_14;
 	STATS::PLAYSTATS_NPC_PHONE(&character);
 
 	if (bParam2)
-		Global_1979863 = -1;
+		Global_1979864 = -1;
 
 	return;
 }
@@ -12410,9 +12410,9 @@ void func_364() // Position - 0xFC99 (64665)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -13046,7 +13046,7 @@ void func_402() // Position - 0x1078E (67470)
 							
 								bLocal_128 = true;
 							
-								if (Global_1990801)
+								if (Global_1990802)
 									STREAMING::REQUEST_MODEL(hLocal_361);
 							
 								func_404();
@@ -13060,7 +13060,7 @@ void func_402() // Position - 0x1078E (67470)
 	}
 	else if (func_407(PLAYER::PLAYER_ID(), true) || uLocal_396.f_28 > -1 && !(hLocal_361 == func_37(uLocal_396.f_28)) || func_406(PLAYER::PLAYER_PED_ID()) || func_126(PLAYER::PLAYER_ID(), false) || func_405(PLAYER::PLAYER_ID()))
 	{
-		if (Global_1990801)
+		if (Global_1990802)
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(hLocal_361);
 	
 		for (i = 0; i < iLocal_371; i = i + 1)
@@ -16889,7 +16889,7 @@ void func_499(int iParam0, int iParam1) // Position - 0x155A6 (87462)
 
 BOOL func_500() // Position - 0x155FB (87547)
 {
-	if (MISC::IS_PC_VERSION() && Global_1989415 == 0)
+	if (MISC::IS_PC_VERSION() && Global_1989416 == 0)
 		return false;
 
 	return false;

@@ -15331,7 +15331,7 @@ void func_386() // Position - 0xF06A (61546)
 			if (func_459())
 			{
 				Global_1948447.f_53 = 1;
-				MISC::SET_BIT(&Global_1989501, 17);
+				MISC::SET_BIT(&Global_1989502, 17);
 				func_462(229);
 			}
 			break;
@@ -19128,9 +19128,9 @@ void func_526() // Position - 0x13925 (80165)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;

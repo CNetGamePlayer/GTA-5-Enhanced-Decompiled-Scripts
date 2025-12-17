@@ -966,7 +966,7 @@ BOOL func_18(Player plParam0, int iParam1) // Position - 0xD1C (3356)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_19(-1, false) == 8;
+		flag = func_19(-1, false) == CHAR_MIKE_FRANK_CONF;
 	else
 		flag = Global_1845299[plParam0 /*883*/].f_198 == 8;
 
@@ -977,28 +977,28 @@ BOOL func_18(Player plParam0, int iParam1) // Position - 0xD1C (3356)
 	return flag;
 }
 
-int func_19(int iParam0, BOOL bParam1) // Position - 0xD75 (3445)
+eCharacter func_19(int iParam0, BOOL bParam1) // Position - 0xD75 (3445)
 {
+	eCharacter character;
 	int num;
-	int num2;
 
-	num2 = iParam0;
+	num = iParam0;
 
-	if (num2 == -1)
-		num2 = func_20();
+	if (num == -1)
+		num = func_20();
 
-	if (Global_1575072[num2] == true)
+	if (Global_1575072[num] == true)
 	{
 		bParam1;
-		num = 8;
+		character = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		num = Global_1574921[num2];
+		character = Global_1574921[num];
 		bParam1;
 	}
 
-	return num;
+	return character;
 }
 
 int func_20() // Position - 0xDB6 (3510)
@@ -1268,47 +1268,47 @@ BOOL func_32(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1218 (463
 	return flag && flag2;
 }
 
-BOOL func_33(int iParam0) // Position - 0x131F (4895)
+BOOL func_33(int* piParam0) // Position - 0x131F (4895)
 {
-	switch (iParam0->f_9)
+	switch (piParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
-				iParam0->f_9 = 1;
+				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
+				piParam0->f_9 = 1;
 			
-				if (iParam0->f_7)
+				if (piParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 					{
-						iParam0->f_8 = MISC::GET_GAME_TIMER();
-						iParam0->f_9 = 2;
+						piParam0->f_8 = MISC::GET_GAME_TIMER();
+						piParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-				iParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+				piParam0->f_9 = 0;
 			break;
 	}
 
-	return iParam0->f_9 == 2;
+	return piParam0->f_9 == 2;
 }
 
 void func_34() // Position - 0x13C1 (5057)
@@ -2285,12 +2285,12 @@ Vehicle func_82(float fParam0) // Position - 0x2704 (9988)
 {
 	int playerTeam;
 	BOOL flag;
-	Player player;
+	ePedComponentType type;
 	float num;
 	BOOL flag2;
 	float num2;
-	Player i;
-	Player player2;
+	ePedComponentType i;
+	ePedComponentType type2;
 	Ped playerPed;
 	float num3;
 	Ped playerPed2;
@@ -2304,10 +2304,10 @@ Vehicle func_82(float fParam0) // Position - 0x2704 (9988)
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		player2 = i;
-		playerPed = PLAYER::GET_PLAYER_PED(player2);
+		type2 = i;
+		playerPed = PLAYER::GET_PLAYER_PED(type2);
 	
-		if (!NETWORK::NETWORK_IS_PLAYER_ACTIVE(player2) || !_NETWORK_IS_PLAYER_VALID(player2, true, true) || flag && PLAYER::GET_PLAYER_TEAM(player2) == playerTeam || BUILTIN::VMAG2(caLocal_162.f_4.f_6 - ENTITY::GET_ENTITY_COORDS(playerPed, true)) > num2)
+		if (!NETWORK::NETWORK_IS_PLAYER_ACTIVE(type2) || !_NETWORK_IS_PLAYER_VALID(type2, true, true) || flag && PLAYER::GET_PLAYER_TEAM(type2) == playerTeam || BUILTIN::VMAG2(caLocal_162.f_4.f_6 - ENTITY::GET_ENTITY_COORDS(playerPed, true)) > num2)
 		{
 		}
 		else
@@ -2316,7 +2316,7 @@ Vehicle func_82(float fParam0) // Position - 0x2704 (9988)
 		
 			if (num3 < num)
 			{
-				player = player2;
+				type = type2;
 				num = num3;
 				flag2 = true;
 			}
@@ -2325,7 +2325,7 @@ Vehicle func_82(float fParam0) // Position - 0x2704 (9988)
 
 	if (flag2)
 	{
-		playerPed2 = PLAYER::GET_PLAYER_PED(player);
+		playerPed2 = PLAYER::GET_PLAYER_PED(type);
 	
 		if (PED::IS_PED_IN_ANY_VEHICLE(playerPed2, false))
 		{
@@ -2339,13 +2339,13 @@ Vehicle func_82(float fParam0) // Position - 0x2704 (9988)
 	return -1;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x27E7 (10215)
+BOOL _NETWORK_IS_PLAYER_VALID(ePedComponentType player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x27E7 (10215)
 {
-	Player player;
+	ePedComponentType type;
 
-	player = player;
+	type = player;
 
-	if (player != -1)
+	if (type != PV_COMP_INVALID)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(player))
 		{
@@ -2354,9 +2354,9 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 					return false;
 		
 			if (bUnk)
-				if (player == Global_2673274.f_3)
+				if (type == Global_2673274.f_3)
 					return Global_2673274.f_2;
-				else if (Global_2658294[player /*468*/] != 4)
+				else if (Global_2658294[type /*468*/] != 4)
 					return false;
 		
 			return true;
@@ -2548,7 +2548,7 @@ void func_91() // Position - 0x2C52 (11346)
 	return;
 }
 
-void func_92(int iParam0, int iParam1, char* sParam2, eHudColour ehcParam3, int iParam4, int iParam5, int iParam6, int iParam7, BOOL bParam8, int iParam9, int iParam10, int iParam11, BOOL bParam12, int iParam13, BOOL bParam14, int iParam15, eHudColour ehcParam16, eHudColour ehcParam17, BOOL bParam18, eHudColour ehcParam19, BOOL bParam20, int iParam21, eHudColour ehcParam22, int iParam23, BOOL bParam24, int iParam25, int iParam26, int iParam27, BOOL bParam28, eHudColour ehcParam29, int iParam30, BOOL bParam31, eHudColour ehcParam32, int iParam33, int iParam34, int iParam35, BOOL bParam36, int iParam37, eHudColour ehcParam38, int iParam39) // Position - 0x2C6B (11371)
+void func_92(ePedComponentType epctParam0, int iParam1, char* sParam2, eHudColour ehcParam3, ePedComponentType epctParam4, int iParam5, float fParam6, int iParam7, BOOL bParam8, int iParam9, int iParam10, int iParam11, BOOL bParam12, int iParam13, BOOL bParam14, int iParam15, eHudColour ehcParam16, eHudColour ehcParam17, BOOL bParam18, eHudColour ehcParam19, BOOL bParam20, int iParam21, eHudColour ehcParam22, ePedComponentType epctParam23, BOOL bParam24, ePedComponentType epctParam25, int iParam26, int iParam27, BOOL bParam28, eHudColour ehcParam29, int iParam30, BOOL bParam31, eHudColour ehcParam32, ePedComponentType epctParam33, int iParam34, int iParam35, BOOL bParam36, int iParam37, eHudColour ehcParam38, int iParam39) // Position - 0x2C6B (11371)
 {
 	int num;
 	int i;
@@ -2566,13 +2566,13 @@ void func_92(int iParam0, int iParam1, char* sParam2, eHudColour ehcParam3, int 
 	{
 		Global_1679155.f_1 = 1;
 		func_93(0, num);
-		Global_1679155.f_1177[num] = iParam0;
+		Global_1679155.f_1177[num] = epctParam0;
 		Global_1679155.f_1177.f_11[num] = iParam1;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1679155.f_1177.f_22[num /*16*/], sParam2, 64);
 		Global_1679155.f_1177.f_194[num] = ehcParam3;
-		Global_1679155.f_1177.f_183[num] = iParam4;
+		Global_1679155.f_1177.f_183[num] = epctParam4;
 		Global_1679155.f_1177.f_227[num] = iParam5;
-		Global_1679155.f_1177.f_238[num /*3*/] = iParam6;
+		Global_1679155.f_1177.f_238[num /*3*/] = fParam6;
 		Global_1679155.f_1177.f_238[num /*3*/].f_1 = iParam7;
 		Global_1679155.f_1177.f_269[num] = bParam8;
 		Global_1679155.f_1177.f_280[num] = iParam9;
@@ -2590,9 +2590,9 @@ void func_92(int iParam0, int iParam1, char* sParam2, eHudColour ehcParam3, int 
 		Global_1679155.f_1177.f_433[num] = bParam20;
 		Global_1679155.f_1177.f_444[num] = iParam21;
 		Global_1679155.f_1177.f_455[num] = ehcParam22;
-		Global_1679155.f_1177.f_466[num] = iParam23;
+		Global_1679155.f_1177.f_466[num] = epctParam23;
 		Global_1679155.f_1177.f_477[num] = bParam24;
-		Global_1679155.f_1177.f_205[num] = iParam25;
+		Global_1679155.f_1177.f_205[num] = epctParam25;
 		Global_1679155.f_1177.f_216[num] = iParam39;
 		Global_1679155.f_1177.f_488[num] = iParam26;
 		Global_1679155.f_1177.f_499[num] = iParam27;
@@ -2601,7 +2601,7 @@ void func_92(int iParam0, int iParam1, char* sParam2, eHudColour ehcParam3, int 
 		Global_1679155.f_1177.f_532[num] = iParam30;
 		Global_1679155.f_1177.f_543[num] = bParam31;
 		Global_1679155.f_1177.f_554[num] = ehcParam32;
-		Global_1679155.f_1177.f_565[num] = iParam33;
+		Global_1679155.f_1177.f_565[num] = epctParam33;
 		Global_1679155.f_1177.f_576[num] = iParam34;
 		Global_1679155.f_1177.f_587[num] = iParam35;
 		Global_1679155.f_1177.f_598[num] = bParam36;
@@ -3048,15 +3048,15 @@ void func_105(BOOL bParam0, int iParam1) // Position - 0x370D (14093)
 	return;
 }
 
-void func_106(int iParam0) // Position - 0x37D0 (14288)
+void func_106(int* piParam0) // Position - 0x37D0 (14288)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;
@@ -3441,7 +3441,7 @@ void func_131(int iParam0) // Position - 0x3DD5 (15829)
 	{
 		if (!Global_2635562.f_2993.f_1)
 		{
-			if (!(Global_2635562.f_2989 == -1))
+			if (!(Global_2635562.f_2989 == PV_COMP_INVALID))
 			{
 				if (Global_2635562.f_2989 < 255 && !func_132() && !IS_BIT_SET(*Global_4718592.f_199313, 0) && !(AUDIO::AUDIO_IS_SCRIPTED_MUSIC_PLAYING() && Global_2635562.f_2990 == 0 && iParam0 == 0))
 				{
@@ -3727,16 +3727,16 @@ BOOL func_154() // Position - 0x430A (17162)
 
 void func_155(int iParam0) // Position - 0x431B (17179)
 {
-	int num;
+	ePedComponentType type;
 
-	num = Global_2635562.f_2992;
+	type = Global_2635562.f_2992;
 
 	if (AUDIO::AUDIO_IS_SCRIPTED_MUSIC_PLAYING() && Global_2635562.f_2990 == 0 && iParam0 == 0)
-		num = 255;
+		type = 255;
 
-	if (!(num == Global_2635562.f_2989))
+	if (!(type == Global_2635562.f_2989))
 		if (!AUDIO::IS_RADIO_RETUNING())
-			Global_2635562.f_2989 = num;
+			Global_2635562.f_2989 = type;
 
 	return;
 }

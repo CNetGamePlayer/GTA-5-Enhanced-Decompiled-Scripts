@@ -1070,7 +1070,7 @@ struct<4> func_28(var uParam0) // Position - 0xF68 (3944)
 
 BOOL func_29(int iParam0, int iParam1) // Position - 0xFC5 (4037)
 {
-	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == 1)
+	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == true)
 	{
 		iParam1 == 1;
 		return true;
@@ -1602,15 +1602,15 @@ void func_51(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		}
 	
 		func_59(true, bParam3, bParam2, false);
-		Global_65033 = 1;
-		Global_77362 = 1;
+		Global_65033 = true;
+		Global_77362 = true;
 		Global_80303 = true;
 	}
 	else
 	{
 		func_60(0);
 		HUD::THEFEED_RESUME();
-		Global_65033 = 0;
+		Global_65033 = false;
 	
 		if (bParam1)
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
@@ -1644,7 +1644,7 @@ BOOL func_53(Player plParam0, int iParam1) // Position - 0x1ABD (6845)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_54(-1, false) == 8;
+		flag = func_54(-1, false) == CHAR_MIKE_FRANK_CONF;
 	else
 		flag = Global_1845299[plParam0 /*883*/].f_198 == 8;
 
@@ -1655,28 +1655,28 @@ BOOL func_53(Player plParam0, int iParam1) // Position - 0x1ABD (6845)
 	return flag;
 }
 
-int func_54(int iParam0, BOOL bParam1) // Position - 0x1B16 (6934)
+eCharacter func_54(int iParam0, BOOL bParam1) // Position - 0x1B16 (6934)
 {
+	eCharacter character;
 	int num;
-	int num2;
 
-	num2 = iParam0;
+	num = iParam0;
 
-	if (num2 == -1)
-		num2 = func_55();
+	if (num == -1)
+		num = func_55();
 
-	if (Global_1575072[num2] == true)
+	if (Global_1575072[num] == true)
 	{
 		bParam1;
-		num = 8;
+		character = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		num = Global_1574921[num2];
+		character = Global_1574921[num];
 		bParam1;
 	}
 
-	return num;
+	return character;
 }
 
 int func_55() // Position - 0x1B57 (6999)

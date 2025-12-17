@@ -12270,10 +12270,10 @@ BOOL func_185(var uParam0, var uParam1, var uParam2, int iParam3, Hash hParam4, 
 	if (func_175(uParam0, uParam5, fParam8, hParam9, 1036831949))
 		return true;
 
-	func_176(uParam0, iParam3, hParam4, &Global_1983720, &(Global_1983720.f_3), &(Global_1983720.f_6), 1036831949);
-	func_176(uParam5, fParam8, hParam9, &(Global_1983720.f_7), &(Global_1983720.f_10), &(Global_1983720.f_13), 1036831949);
+	func_176(uParam0, iParam3, hParam4, &Global_1983721, &(Global_1983721.f_3), &(Global_1983721.f_6), 1036831949);
+	func_176(uParam5, fParam8, hParam9, &(Global_1983721.f_7), &(Global_1983721.f_10), &(Global_1983721.f_13), 1036831949);
 
-	if (MISC::GET_POINT_AREA_OVERLAP(Global_1983720, Global_1983720.f_3, Global_1983720.f_6, Global_1983720.f_7, Global_1983720.f_10, Global_1983720.f_13))
+	if (MISC::GET_POINT_AREA_OVERLAP(Global_1983721, Global_1983721.f_3, Global_1983721.f_6, Global_1983721.f_7, Global_1983721.f_10, Global_1983721.f_13))
 		return true;
 
 	return false;
@@ -53142,18 +53142,18 @@ BOOL func_547(var uParam0, Vehicle veParam1, float fParam2, float fParam3, float
 	Hash entityModel;
 	int i;
 
-	func_548(&Global_1972929);
+	func_548(&Global_1972930);
 
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(veParam1, false))
 	{
 		entityModel = ENTITY::GET_ENTITY_MODEL(veParam1);
-		func_525(veParam1, &Global_1972929);
+		func_525(veParam1, &Global_1972930);
 	}
 
 	if (!VEHICLE::IS_VEHICLE_DRIVEABLE(*uParam0, false))
 	{
 		*uParam0 = VEHICLE::CREATE_VEHICLE(entityModel, fParam2, fParam5, bParam6, bParam7, false);
-		func_69(*uParam0, &Global_1972929, true, true, false);
+		func_69(*uParam0, &Global_1972930, true, true, false);
 	
 		if (!VEHICLE::IS_THIS_MODEL_A_BIKE(entityModel) && !VEHICLE::IS_THIS_MODEL_A_BOAT(entityModel) && entityModel != joaat("kosatka") && entityModel != joaat("avisa"))
 		{
@@ -56220,14 +56220,14 @@ void func_643(const char* sParam0) // Position - 0x45EF6 (286454)
 
 void func_644(var uParam0) // Position - 0x45F04 (286468)
 {
-	Global_1990131 = 0;
+	Global_1990132 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
 BOOL func_645(var uParam0) // Position - 0x45F17 (286487)
 {
-	return Global_1990131 || uParam0->f_692;
+	return Global_1990132 || uParam0->f_692;
 }
 
 void func_646(int iParam0) // Position - 0x45F2E (286510)
@@ -56343,7 +56343,7 @@ void func_652(var uParam0) // Position - 0x46085 (286853)
 	uParam0->f_697 = 0f;
 	uParam0->f_698 = 0f;
 	uParam0->f_699 = 1f;
-	Global_1990131 = 0;
+	Global_1990132 = 0;
 	return;
 }
 

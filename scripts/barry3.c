@@ -34370,9 +34370,9 @@ void func_225() // Position - 0x27B5B (162651)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -41331,7 +41331,7 @@ BOOL func_398(Vehicle veParam0) // Position - 0x314F9 (201977)
 		if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Player_Vehicle", INT))
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
-					if (func_400() != -1 && func_400() < 607)
+					if (func_400() != PV_COMP_INVALID && func_400() < 607)
 						if (!func_399(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1583772[func_400() /*143*/].f_66)
 							return true;
 						else if (ENTITY::GET_ENTITY_MODEL(veParam0) == joaat("caddy3"))
@@ -41351,7 +41351,7 @@ BOOL func_399(Vehicle veParam0) // Position - 0x31607 (202247)
 	return false;
 }
 
-BOOL func_400() // Position - 0x31620 (202272)
+ePedComponentType func_400() // Position - 0x31620 (202272)
 {
 	return Global_2359296[func_401() /*5574*/].f_681.f_2;
 }
@@ -41976,7 +41976,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x32687 (206471)
 	return false;
 }
 
-BOOL func_420(ePedComponentType epctParam0, int iParam1) // Position - 0x3269E (206494)
+BOOL func_420(Hash hParam0, int iParam1) // Position - 0x3269E (206494)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -41992,7 +41992,7 @@ BOOL func_420(ePedComponentType epctParam0, int iParam1) // Position - 0x3269E (
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (epctParam0)
+	switch (hParam0)
 	{
 		case 1730644782:
 			num = Global_262145.f_36257[0];
@@ -42060,7 +42060,7 @@ BOOL func_420(ePedComponentType epctParam0, int iParam1) // Position - 0x3269E (
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (epctParam0 == Global_1835471[i])
+		if (hParam0 == Global_1835471[i])
 			return true;
 	}
 

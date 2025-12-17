@@ -407,7 +407,7 @@ void func_8(int iParam0, var uParam1, var uParam2) // Position - 0x3B2 (946)
 
 	flag = true;
 
-	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == 1)
+	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == true)
 	{
 		if (Global_114931.f_10201[iParam0 /*12*/].f_6 == 11 || Global_114931.f_10201[iParam0 /*12*/].f_6 == 12)
 			flag = false;
@@ -467,7 +467,7 @@ void func_9() // Position - 0x498 (1176)
 
 	while (num < 321)
 	{
-		if (Global_114931.f_10201[num /*12*/].f_5 == 1)
+		if (Global_114931.f_10201[num /*12*/].f_5 == true)
 		{
 			switch (Global_114931.f_10201[num /*12*/].f_6)
 			{
@@ -593,7 +593,7 @@ void func_9() // Position - 0x498 (1176)
 			if (func_10() == 2 == false && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				if (NETWORK::NETWORK_IS_CLOUD_AVAILABLE())
-					Global_114665 = 0;
+					Global_114665 = false;
 			
 				if (!Global_65027)
 					func_4();
@@ -1866,7 +1866,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x229F (8863)
 	return false;
 }
 
-BOOL func_43(Hash hParam0, int iParam1) // Position - 0x22B6 (8886)
+BOOL func_43(ePedComponentType epctParam0, int iParam1) // Position - 0x22B6 (8886)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -1882,7 +1882,7 @@ BOOL func_43(Hash hParam0, int iParam1) // Position - 0x22B6 (8886)
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (hParam0)
+	switch (epctParam0)
 	{
 		case 1730644782:
 			num = Global_262145.f_36257[0];
@@ -1950,7 +1950,7 @@ BOOL func_43(Hash hParam0, int iParam1) // Position - 0x22B6 (8886)
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (hParam0 == Global_1835471[i])
+		if (epctParam0 == Global_1835471[i])
 			return true;
 	}
 
@@ -7079,7 +7079,7 @@ void func_203(var uParam0) // Position - 0xA0BE (41150)
 	Global_44847 = 0;
 	Global_44849 = 0;
 	Global_44886 = 15;
-	Global_65024 = 0;
+	Global_65024 = false;
 	Global_65025 = 0;
 	return;
 }

@@ -268,8 +268,8 @@
 	var uLocal_266 = 0;
 	int iLocal_267 = 0;
 	var uLocal_268 = 0;
-	BOOL bLocal_269 = 0;
-	BOOL bLocal_270 = 0;
+	ePedComponentType epctLocal_269 = PV_COMP_HEAD;
+	ePedComponentType epctLocal_270 = PV_COMP_HEAD;
 #endregion
 
 void main() // Position - 0x0 (0)
@@ -312,24 +312,24 @@ void main() // Position - 0x0 (0)
 
 	HUD::REQUEST_ADDITIONAL_TEXT("FMMC", 2);
 	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
-	bLocal_270 = Global_4718592.f_2;
+	epctLocal_270 = Global_4718592.f_2;
 	Global_1574605 = 0;
 	uLocal_149.f_5 = Global_4718592;
 	Global_1574533 = false;
 	Global_1574606 = false;
-	bLocal_269 = Global_4718592;
+	epctLocal_269 = Global_4718592;
 
-	if (Global_4718592 == false)
-		Global_4718592.f_2 = bLocal_270;
+	if (Global_4718592 == PV_COMP_HEAD)
+		Global_4718592.f_2 = epctLocal_270;
 
 	Global_1926961 = 0;
 
 	while (true)
 	{
-		if (bLocal_269 != Global_4718592)
+		if (epctLocal_269 != Global_4718592)
 		{
 			func_19(&uLocal_149);
-			bLocal_269 = Global_4718592;
+			epctLocal_269 = Global_4718592;
 			MISC::CLEAR_BIT(&(uLocal_149.f_4), 0);
 		}
 	
@@ -359,7 +359,7 @@ void main() // Position - 0x0 (0)
 			
 				HUD::DISABLE_FRONTEND_THIS_FRAME();
 				func_16(&uLocal_149);
-				Global_1926962 = 0;
+				Global_1926962 = false;
 				Global_1926961 = 0;
 				iLocal_267 = 4;
 			
@@ -369,16 +369,16 @@ void main() // Position - 0x0 (0)
 		
 			case 4:
 				if (func_13(true))
-					if (Global_4718592.f_2 == 5)
+					if (Global_4718592.f_2 == PV_COMP_HAND)
 						if (func_12(&uLocal_268))
 							iLocal_267 = 2;
 					else if (func_11())
 						if (func_10(&uLocal_268))
 							iLocal_267 = 2;
-					else if (Global_4718592.f_2 == 11)
+					else if (Global_4718592.f_2 == PV_COMP_JBIB)
 						if (func_9(&uLocal_268))
 							iLocal_267 = 2;
-					else if (Global_4718592.f_2 == 12)
+					else if (Global_4718592.f_2 == PV_COMP_MAX)
 						if (func_8(&uLocal_268))
 							iLocal_267 = 2;
 					else if (Global_4718592.f_2 == 14)
@@ -386,7 +386,7 @@ void main() // Position - 0x0 (0)
 							iLocal_267 = 2;
 					else if (func_6(&uLocal_268))
 						iLocal_267 = 2;
-				else if (Global_4718592 == true)
+				else if (Global_4718592 == PV_COMP_BERD)
 					if (func_5(&uLocal_268))
 						iLocal_267 = 2;
 				else if (func_4())
@@ -480,7 +480,7 @@ BOOL func_3() // Position - 0x37D (893)
 
 BOOL func_4() // Position - 0x420 (1056)
 {
-	if (Global_4718592 == 2 || Global_4718592 == 8)
+	if (Global_4718592 == PV_COMP_HAIR || Global_4718592 == PV_COMP_ACCS)
 		return true;
 
 	return false;
@@ -638,7 +638,7 @@ BOOL func_10(int* piParam0) // Position - 0x632 (1586)
 
 BOOL func_11() // Position - 0x695 (1685)
 {
-	return Global_4718592 == 3;
+	return Global_4718592 == PV_COMP_UPPR;
 }
 
 BOOL func_12(int* piParam0) // Position - 0x6A3 (1699)
@@ -669,9 +669,9 @@ BOOL func_12(int* piParam0) // Position - 0x6A3 (1699)
 BOOL func_13(BOOL bParam0) // Position - 0x706 (1798)
 {
 	if (!bParam0)
-		return Global_4718592 == false;
+		return Global_4718592 == PV_COMP_HEAD;
 
-	if (Global_4718592 == false || Global_4718592 == 4 || Global_4718592 == 6 || Global_4718592 == 3 || Global_4718592 == 31 || Global_4718592.f_2 == 6 || Global_4718592.f_2 == 5)
+	if (Global_4718592 == PV_COMP_HEAD || Global_4718592 == PV_COMP_LOWR || Global_4718592 == PV_COMP_FEET || Global_4718592 == PV_COMP_UPPR || Global_4718592 == 31 || Global_4718592.f_2 == PV_COMP_FEET || Global_4718592.f_2 == PV_COMP_HAND)
 		return true;
 
 	return false;
@@ -690,16 +690,16 @@ BOOL func_15() // Position - 0x786 (1926)
 
 void func_16(var uParam0) // Position - 0x79E (1950)
 {
-	if (Global_4718592 == false)
+	if (Global_4718592 == PV_COMP_HEAD)
 	{
 		Global_4718592.f_3535 = uParam0->f_8[0 /*18*/][5];
 		Global_4718592.f_3536 = uParam0->f_8[0 /*18*/][5];
 		Global_4718592.f_3540 = uParam0->f_8[0 /*18*/][7] + 1;
 	}
-	else if (Global_4718592 == true)
+	else if (Global_4718592 == PV_COMP_BERD)
 	{
 	}
-	else if (Global_4718592 == 2)
+	else if (Global_4718592 == PV_COMP_HAIR)
 	{
 		Global_4718592.f_3535 = uParam0->f_8[2 /*18*/][4];
 		Global_4718592.f_128127 = uParam0->f_8[2 /*18*/][7];

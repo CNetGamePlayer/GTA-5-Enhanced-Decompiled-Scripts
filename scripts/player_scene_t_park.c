@@ -1965,7 +1965,7 @@ void func_14() // Position - 0x2607 (9735)
 {
 	if (Global_21627.f_1 == 9 || Global_21627.f_1 == 10)
 	{
-		Global_23053 = 0;
+		Global_23053 = false;
 		Global_23049 = 1;
 	}
 
@@ -4871,35 +4871,35 @@ int func_58(int iParam0, var uParam1, var uParam2, char* sParam3) // Position - 
 
 BOOL func_59(var uParam0) // Position - 0x6CC2 (27842)
 {
-	int num;
+	eCharacter character;
 	Vector3 entityCoords;
-	float num2;
+	float num;
 	int i;
 	Vector3 vector;
-	float num3;
+	float num2;
 
-	num = Global_114931.f_2370.f_539.f_4323;
-	entityCoords = { Global_114931.f_2370.f_539.f_2300[num /*3*/] };
+	character = Global_114931.f_2370.f_539.f_4323;
+	entityCoords = { Global_114931.f_2370.f_539.f_2300[character /*3*/] };
 
 	if (func_60(entityCoords, 0f, 0f, 0f, false))
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
 
 	*uParam0 = 5;
-	num2 = 9999999f;
+	num = 9999999f;
 
 	for (i = 0; i < 5; i = i + 1)
 	{
 		if (IS_BIT_SET(Global_114931.f_7236.f_11[i], 0))
 		{
 			vector = { Global_97632[i /*9*/].f_3 };
-			num3 = BUILTIN::VDIST(entityCoords, vector);
+			num2 = BUILTIN::VDIST(entityCoords, vector);
 		
-			if (num3 > 150f)
+			if (num2 > 150f)
 			{
-				if (num3 < num2)
+				if (num2 < num)
 				{
 					*uParam0 = i;
-					num2 = num3;
+					num = num2;
 				}
 			}
 		}
@@ -8331,9 +8331,9 @@ BOOL func_64(int iParam0, var uParam1, var uParam2) // Position - 0xB236 (45622)
 	return false;
 }
 
-char* func_65(int iParam0) // Position - 0xBBA5 (48037)
+char* func_65(Hash hParam0) // Position - 0xBBA5 (48037)
 {
-	switch (iParam0)
+	switch (hParam0)
 	{
 		case joaat("v_chopshop"):
 			return "v_chopshop";

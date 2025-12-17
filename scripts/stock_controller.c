@@ -63,7 +63,7 @@ void main() // Position - 0x0 (0)
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("stock_controller")) > 1)
 		func_108();
 
-	Global_65011 = 1;
+	Global_65011 = true;
 	iLocal_20 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(480) / 16f);
 	func_107();
 	i = 0;
@@ -92,7 +92,7 @@ void main() // Position - 0x0 (0)
 	func_95();
 	func_94();
 	func_91();
-	Global_65011 = 0;
+	Global_65011 = false;
 	func_90(true);
 	func_87();
 	func_84();
@@ -116,9 +116,9 @@ void main() // Position - 0x0 (0)
 			{
 				num = num - 1;
 				func_47();
-				Global_62205 = 1;
+				Global_62205 = true;
 				func_41();
-				Global_65013 = 1;
+				Global_65013 = true;
 				func_39();
 				func_38();
 			}
@@ -210,7 +210,7 @@ void func_4() // Position - 0x2B1 (689)
 		{
 			Global_62199 = false;
 			Global_62200 = MISC::GET_GAME_TIMER();
-			Global_65012 = 1;
+			Global_65012 = true;
 		}
 	
 		return;
@@ -224,7 +224,7 @@ void func_4() // Position - 0x2B1 (689)
 			Global_62199 = false;
 		
 			if (num < 5)
-				Global_65012 = 0;
+				Global_65012 = false;
 		}
 	}
 
@@ -3795,13 +3795,13 @@ BOOL _IS_PLAYER_IN_VEHICLE_SEAT(Player plParam0, int iParam1) // Position - 0x4D
 	return false;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x4D61 (19809)
+BOOL _NETWORK_IS_PLAYER_VALID(ePedComponentType player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x4D61 (19809)
 {
-	Player player;
+	ePedComponentType type;
 
-	player = player;
+	type = player;
 
-	if (player != -1)
+	if (type != PV_COMP_INVALID)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(player))
 		{
@@ -3810,9 +3810,9 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 					return false;
 		
 			if (bUnk)
-				if (player == Global_2673274.f_3)
+				if (type == Global_2673274.f_3)
 					return Global_2673274.f_2;
-				else if (Global_2658294[player /*468*/] != 4)
+				else if (Global_2658294[type /*468*/] != 4)
 					return false;
 		
 			return true;

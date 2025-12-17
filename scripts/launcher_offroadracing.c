@@ -1337,10 +1337,10 @@ void func_10(int iParam0, BOOL bParam1) // Position - 0xFF1 (4081)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 4);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	return;
 }
@@ -1362,10 +1362,10 @@ void func_11(int iParam0, BOOL bParam1) // Position - 0x1074 (4212)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 5);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	return;
 }
@@ -1392,10 +1392,10 @@ void func_12(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x10F7 (4343
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 11);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	return;
 }
@@ -1513,10 +1513,10 @@ void func_17(int iParam0, BOOL bParam1) // Position - 0x14CB (5323)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 20);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 20);
 	return;
 }
@@ -2261,10 +2261,10 @@ int _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iParam
 			iParam3 = 7;
 
 	Global_23007 = false;
-	Global_23009 = 0;
-	Global_23014 = 0;
+	Global_23009 = false;
+	Global_23014 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_2883585 = 0;
 	return func_58(sParam2, iParam3, false);
@@ -2286,10 +2286,10 @@ int func_58(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x2220 (8736
 					Global_21627.f_1 = 3;
 					Global_23000 = 0;
 					Global_23001 = 1;
-					Global_23053 = 0;
+					Global_23053 = false;
 					Global_22996 = 0;
 					Global_22997 = 0;
-					Global_23011 = 0;
+					Global_23011 = false;
 					Global_23010 = false;
 					Global_21626 = 0;
 				}
@@ -2457,9 +2457,9 @@ void func_59() // Position - 0x24EE (9454)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -2548,9 +2548,9 @@ void func_66() // Position - 0x2624 (9764)
 	Global_23013 = Global_23014;
 	Global_23015 = { Global_23031 };
 	Global_23004 = Global_23005;
-	Global_24016 = 0;
+	Global_24016 = false;
 	Global_23049 = 0;
-	Global_23050 = 0;
+	Global_23050 = false;
 	MISC::CLEAR_BIT(&Global_9464, 16);
 	return;
 }
@@ -2741,10 +2741,10 @@ void func_77() // Position - 0x2A06 (10758)
 	return;
 }
 
-void func_78(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x2A5D (10845)
+void func_78(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x2A5D (10845)
 {
 	Global_22454 = { *uParam0 };
-	Global_8779 = iParam1;
+	Global_8779 = echParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_23070, sParam2, 24);
 	Global_23989 = iParam5;
 
@@ -3425,7 +3425,7 @@ BOOL func_91(int iParam0, BOOL bParam1) // Position - 0x38C9 (14537)
 
 	if (num > -1 && num < 6)
 	{
-		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == 1)
+		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == true)
 		{
 			if (bParam1)
 				if (Global_45660[num /*32*/].f_29)
@@ -3806,7 +3806,7 @@ BOOL func_115() // Position - 0x4578 (17784)
 	return false;
 }
 
-Entity func_116() // Position - 0x4592 (17810)
+Ped func_116() // Position - 0x4592 (17810)
 {
 	return Global_98261;
 }
@@ -4515,10 +4515,10 @@ void func_139(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x5A0F (230
 	{
 		MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	
-		if (Global_34169 == 1)
-			Global_34170 = 1;
+		if (Global_34169 == true)
+			Global_34170 = true;
 	
-		Global_34169 = 1;
+		Global_34169 = true;
 	}
 
 	if (bParam1)

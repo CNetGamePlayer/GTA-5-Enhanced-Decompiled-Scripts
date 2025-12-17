@@ -270,7 +270,7 @@ void func_3(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, i
 	return;
 }
 
-void func_4(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6, float fParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24, int iParam25, int iParam26, int iParam27, int iParam28, int iParam29, int iParam30, int iParam31, int iParam32, int iParam33, int iParam34, int iParam35, int iParam36, int iParam37, int iParam38, int iParam39) // Position - 0x230 (560)
+void func_4(ePedComponentType epctParam0, int iParam1, char* sParam2, int iParam3, ePedComponentType epctParam4, int iParam5, float fParam6, float fParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24, int iParam25, int iParam26, int iParam27, int iParam28, int iParam29, int iParam30, int iParam31, int iParam32, int iParam33, int iParam34, int iParam35, int iParam36, int iParam37, int iParam38, int iParam39) // Position - 0x230 (560)
 {
 	int num;
 	int i;
@@ -288,13 +288,13 @@ void func_4(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, i
 	{
 		Global_1679155.f_1 = 1;
 		func_5(0, num);
-		Global_1679155.f_1177[num] = iParam0;
+		Global_1679155.f_1177[num] = epctParam0;
 		Global_1679155.f_1177.f_11[num] = iParam1;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1679155.f_1177.f_22[num /*16*/], sParam2, 64);
 		Global_1679155.f_1177.f_194[num] = iParam3;
-		Global_1679155.f_1177.f_183[num] = iParam4;
+		Global_1679155.f_1177.f_183[num] = epctParam4;
 		Global_1679155.f_1177.f_227[num] = iParam5;
-		Global_1679155.f_1177.f_238[num /*3*/] = iParam6;
+		Global_1679155.f_1177.f_238[num /*3*/] = fParam6;
 		Global_1679155.f_1177.f_238[num /*3*/].f_1 = fParam7;
 		Global_1679155.f_1177.f_269[num] = iParam8;
 		Global_1679155.f_1177.f_280[num] = iParam9;
@@ -347,17 +347,17 @@ BOOL func_6(int iParam0, int iParam1) // Position - 0x510 (1296)
 
 void func_7() // Position - 0x526 (1318)
 {
-	BOOL flag;
+	ePedComponentType type;
 
-	flag = iLocal_78 - MISC::GET_GAME_TIMER();
+	type = iLocal_78 - MISC::GET_GAME_TIMER();
 
-	if (flag < false)
-		flag = false;
+	if (type < PV_COMP_HEAD)
+		type = PV_COMP_HEAD;
 
 	if (MISC::GET_GAME_TIMER() >= iLocal_82)
-		func_8(flag, "TIMER_TIME" /*TIME*/, 0, 0, -1, 0, 2, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, -1);
+		func_8(type, "TIMER_TIME" /*TIME*/, 0, 0, -1, 0, 2, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, -1);
 	else
-		func_8(flag, "TIMER_TIME" /*TIME*/, 0, 0, -1, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, -1);
+		func_8(type, "TIMER_TIME" /*TIME*/, 0, 0, PV_COMP_INVALID, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, -1);
 
 	switch (iLocal_79)
 	{
@@ -499,7 +499,7 @@ void func_7() // Position - 0x526 (1318)
 	return;
 }
 
-void func_8(BOOL bParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x816 (2070)
+void func_8(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x816 (2070)
 {
 	int num;
 	int i;
@@ -517,11 +517,11 @@ void func_8(BOOL bParam0, char* sParam1, int iParam2, int iParam3, int iParam4, 
 	{
 		Global_1679155.f_1 = 1;
 		func_5(7, num);
-		Global_1679155.f_4714[num] = bParam0;
+		Global_1679155.f_4714[num] = epctParam0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1679155.f_4714.f_11[num /*16*/], sParam1, 64);
 		Global_1679155.f_4714.f_172[num] = iParam2;
 		Global_1679155.f_4714.f_216[num] = iParam3;
-		Global_1679155.f_4714.f_183[num] = iParam4;
+		Global_1679155.f_4714.f_183[num] = epctParam4;
 		Global_1679155.f_4714.f_194[num] = iParam5;
 		Global_1679155.f_4714.f_249[num] = iParam6;
 		Global_1679155.f_4714.f_260[num] = iParam7;
@@ -3263,24 +3263,24 @@ BOOL func_78(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x41B9 (168
 	return true;
 }
 
-BOOL func_79(Player plParam0) // Position - 0x4412 (17426)
+BOOL func_79(ePedComponentType epctParam0) // Position - 0x4412 (17426)
 {
-	if (plParam0 != _INVALID_PLAYER_INDEX())
-		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			return Global_2658294[plParam0 /*468*/].f_325.f_8 != -1;
-		else if (Global_1575092 && plParam0 == PLAYER::PLAYER_ID() && _NETWORK_IS_PLAYER_VALID(plParam0, true, false))
-			return Global_2658294[plParam0 /*468*/].f_325.f_8 != -1;
+	if (epctParam0 != _INVALID_PLAYER_INDEX())
+		if (_NETWORK_IS_PLAYER_VALID(epctParam0, true, true))
+			return Global_2658294[epctParam0 /*468*/].f_325.f_8 != -1;
+		else if (Global_1575092 && epctParam0 == PLAYER::PLAYER_ID() && _NETWORK_IS_PLAYER_VALID(epctParam0, true, false))
+			return Global_2658294[epctParam0 /*468*/].f_325.f_8 != -1;
 
 	return false;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x4478 (17528)
+BOOL _NETWORK_IS_PLAYER_VALID(ePedComponentType player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x4478 (17528)
 {
-	Player player;
+	ePedComponentType type;
 
-	player = player;
+	type = player;
 
-	if (player != -1)
+	if (type != PV_COMP_INVALID)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(player))
 		{
@@ -3289,9 +3289,9 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 					return false;
 		
 			if (bUnk)
-				if (player == Global_2673274.f_3)
+				if (type == Global_2673274.f_3)
 					return Global_2673274.f_2;
-				else if (Global_2658294[player /*468*/] != 4)
+				else if (Global_2658294[type /*468*/] != 4)
 					return false;
 		
 			return true;
@@ -4910,7 +4910,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x6731 (26417)
 	return false;
 }
 
-BOOL func_128(Hash hParam0, int iParam1) // Position - 0x6748 (26440)
+BOOL func_128(ePedComponentType epctParam0, int iParam1) // Position - 0x6748 (26440)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -4926,7 +4926,7 @@ BOOL func_128(Hash hParam0, int iParam1) // Position - 0x6748 (26440)
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (hParam0)
+	switch (epctParam0)
 	{
 		case 1730644782:
 			num = Global_262145.f_36257[0];
@@ -4994,7 +4994,7 @@ BOOL func_128(Hash hParam0, int iParam1) // Position - 0x6748 (26440)
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (hParam0 == Global_1835471[i])
+		if (epctParam0 == Global_1835471[i])
 			return true;
 	}
 

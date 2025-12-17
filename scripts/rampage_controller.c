@@ -526,17 +526,17 @@ void func_20(int iParam0, BOOL bParam1) // Position - 0x9A0 (2464)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 20);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 20);
 	return;
 }
 
 BOOL func_21(int iParam0, int iParam1) // Position - 0xA26 (2598)
 {
-	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == 1)
+	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == true)
 	{
 		iParam1 == 1;
 		return true;
@@ -556,10 +556,10 @@ void func_22(int iParam0, int iParam1) // Position - 0xA4D (2637)
 
 	MISC::SET_BITS_IN_RANGE(&(Global_34172[num /*23*/].f_11), 21, 26, iParam1);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	return;
 }
@@ -581,10 +581,10 @@ void func_23(int iParam0, BOOL bParam1) // Position - 0xAAB (2731)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 7);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	return;
 }
@@ -669,10 +669,10 @@ void func_26(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0xC81 (3201)
 	{
 		MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	
-		if (Global_34169 == 1)
-			Global_34170 = 1;
+		if (Global_34169 == true)
+			Global_34170 = true;
 	
-		Global_34169 = 1;
+		Global_34169 = true;
 	}
 
 	if (bParam1)
@@ -716,7 +716,7 @@ void func_27(int iParam0, int iParam1, int iParam2) // Position - 0xD81 (3457)
 
 	flag = true;
 
-	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == 1)
+	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == true)
 	{
 		if (Global_114931.f_10201[iParam0 /*12*/].f_6 == 11 || Global_114931.f_10201[iParam0 /*12*/].f_6 == 12)
 			flag = false;
@@ -776,7 +776,7 @@ void func_28() // Position - 0xE67 (3687)
 
 	while (num < 321)
 	{
-		if (Global_114931.f_10201[num /*12*/].f_5 == 1)
+		if (Global_114931.f_10201[num /*12*/].f_5 == true)
 		{
 			switch (Global_114931.f_10201[num /*12*/].f_6)
 			{
@@ -902,7 +902,7 @@ void func_28() // Position - 0xE67 (3687)
 			if (func_31() == 2 == false && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				if (NETWORK::NETWORK_IS_CLOUD_AVAILABLE())
-					Global_114665 = 0;
+					Global_114665 = false;
 			
 				if (!Global_65027)
 					func_29();

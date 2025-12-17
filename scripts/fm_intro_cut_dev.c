@@ -2974,7 +2974,7 @@ void func_24() // Position - 0x421D (16925)
 {
 	if (Global_21627.f_1 == 9 || Global_21627.f_1 == 10)
 	{
-		Global_23053 = 0;
+		Global_23053 = false;
 		Global_23049 = 1;
 	}
 
@@ -3539,9 +3539,9 @@ BOOL func_45(var uParam0, char* sParam1, char* sParam2, char* sParam3, int iPara
 
 	Global_23007 = false;
 	Global_23014 = false;
-	Global_23009 = 0;
+	Global_23009 = false;
 	Global_23991 = 1;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	TEXT_LABEL_ASSIGN_STRING(&Global_24004, sParam3, 24);
 	Global_2883585 = 0;
@@ -3564,10 +3564,10 @@ BOOL func_46(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x4ED7 (201
 					Global_21627.f_1 = 3;
 					Global_23000 = 0;
 					Global_23001 = 1;
-					Global_23053 = 0;
+					Global_23053 = false;
 					Global_22996 = 0;
 					Global_22997 = 0;
-					Global_23011 = 0;
+					Global_23011 = false;
 					Global_23010 = false;
 					Global_21626 = 0;
 				}
@@ -3735,9 +3735,9 @@ void func_47() // Position - 0x51A5 (20901)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -4354,7 +4354,7 @@ void func_78(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		}
 	
 		func_85(true, bParam3, bParam2, false);
-		Global_65033 = true;
+		Global_65033 = 1;
 		Global_77362 = true;
 		Global_80303 = true;
 	}
@@ -4362,7 +4362,7 @@ void func_78(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	{
 		func_86(0);
 		HUD::THEFEED_RESUME();
-		Global_65033 = false;
+		Global_65033 = 0;
 	
 		if (bParam1)
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
@@ -4396,7 +4396,7 @@ BOOL func_80(Player plParam0, int iParam1) // Position - 0x5EAE (24238)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_81(-1, false) == CHAR_MIKE_FRANK_CONF;
+		flag = func_81(-1, false) == 8;
 	else
 		flag = Global_1845299[plParam0 /*883*/].f_198 == 8;
 
@@ -4407,28 +4407,28 @@ BOOL func_80(Player plParam0, int iParam1) // Position - 0x5EAE (24238)
 	return flag;
 }
 
-eCharacter func_81(int iParam0, BOOL bParam1) // Position - 0x5F07 (24327)
+int func_81(int iParam0, BOOL bParam1) // Position - 0x5F07 (24327)
 {
-	eCharacter character;
 	int num;
+	int num2;
 
-	num = iParam0;
+	num2 = iParam0;
 
-	if (num == -1)
-		num = func_13();
+	if (num2 == -1)
+		num2 = func_13();
 
-	if (Global_1575072[num] == true)
+	if (Global_1575072[num2] == true)
 	{
 		bParam1;
-		character = CHAR_MIKE_FRANK_CONF;
+		num = 8;
 	}
 	else
 	{
-		character = Global_1574921[num];
+		num = Global_1574921[num2];
 		bParam1;
 	}
 
-	return character;
+	return num;
 }
 
 BOOL func_82(Player plParam0) // Position - 0x5F48 (24392)
@@ -5006,13 +5006,13 @@ BOOL func_105(int* piParam0, int iParam1) // Position - 0x7018 (28696)
 	return false;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x7053 (28755)
+BOOL _NETWORK_IS_PLAYER_VALID(ePedComponentType player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x7053 (28755)
 {
-	Player player;
+	ePedComponentType type;
 
-	player = player;
+	type = player;
 
-	if (player != -1)
+	if (type != PV_COMP_INVALID)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(player))
 		{
@@ -5021,9 +5021,9 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 					return false;
 		
 			if (bUnk)
-				if (player == Global_2673274.f_3)
+				if (type == Global_2673274.f_3)
 					return Global_2673274.f_2;
-				else if (Global_2658294[player /*468*/] != 4)
+				else if (Global_2658294[type /*468*/] != 4)
 					return false;
 		
 			return true;
@@ -5047,7 +5047,7 @@ void func_108(int* piParam0) // Position - 0x7106 (28934)
 {
 	int num;
 	int i;
-	Player player;
+	ePedComponentType type;
 
 	num = 0;
 
@@ -5058,11 +5058,11 @@ void func_108(int* piParam0) // Position - 0x7106 (28934)
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		player = PLAYER::INT_TO_PLAYERINDEX(i);
+		type = PLAYER::INT_TO_PLAYERINDEX(i);
 	
-		if (_NETWORK_IS_PLAYER_VALID(player, false, true))
+		if (_NETWORK_IS_PLAYER_VALID(type, false, true))
 		{
-			if (PLAYER::PLAYER_ID() != player)
+			if (PLAYER::PLAYER_ID() != type)
 			{
 				if (num < 4)
 				{
@@ -8670,12 +8670,12 @@ BOOL func_170() // Position - 0xD545 (54597)
 	return Global_2685153.f_24;
 }
 
-int func_171(int iParam0) // Position - 0xD553 (54611)
+int func_171(BOOL bParam0) // Position - 0xD553 (54611)
 {
-	switch (iParam0)
+	switch (bParam0)
 	{
-		case 0:
-		case 1:
+		case false:
+		case true:
 		case 2:
 		case 3:
 		case 4:
@@ -9052,22 +9052,22 @@ BOOL func_183() // Position - 0xDD3C (56636)
 	return IS_BIT_SET(Global_2685153.f_2, 11);
 }
 
-BOOL func_184(Player plParam0) // Position - 0xDD4D (56653)
+BOOL func_184(ePedComponentType epctParam0) // Position - 0xDD4D (56653)
 {
-	if (plParam0 != _INVALID_PLAYER_INDEX())
-		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2658294[plParam0 /*468*/].f_325.f_8 != -1)
-				return func_171(Global_2658294[plParam0 /*468*/].f_325.f_8) == 13;
+	if (epctParam0 != _INVALID_PLAYER_INDEX())
+		if (_NETWORK_IS_PLAYER_VALID(epctParam0, true, true))
+			if (Global_2658294[epctParam0 /*468*/].f_325.f_8 != -1)
+				return func_171(Global_2658294[epctParam0 /*468*/].f_325.f_8) == 13;
 
 	return false;
 }
 
-BOOL func_185(Player plParam0, BOOL bParam1) // Position - 0xDD94 (56724)
+BOOL func_185(ePedComponentType epctParam0, BOOL bParam1) // Position - 0xDD94 (56724)
 {
-	if (plParam0 != _INVALID_PLAYER_INDEX())
-		if (bParam1 || _NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2658294[plParam0 /*468*/].f_325.f_8 != -1)
-				return func_171(Global_2658294[plParam0 /*468*/].f_325.f_8) == 35;
+	if (epctParam0 != _INVALID_PLAYER_INDEX())
+		if (bParam1 || _NETWORK_IS_PLAYER_VALID(epctParam0, true, true))
+			if (Global_2658294[epctParam0 /*468*/].f_325.f_8 != -1)
+				return func_171(Global_2658294[epctParam0 /*468*/].f_325.f_8) == 35;
 
 	return false;
 }

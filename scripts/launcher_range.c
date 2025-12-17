@@ -1989,7 +1989,7 @@ BOOL func_50(int iParam0, BOOL bParam1) // Position - 0x200E (8206)
 
 	if (num > -1 && num < 6)
 	{
-		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == 1)
+		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == true)
 		{
 			if (bParam1)
 				if (Global_45660[num /*32*/].f_29)
@@ -2475,7 +2475,7 @@ BOOL func_82() // Position - 0x2E99 (11929)
 	return false;
 }
 
-Entity func_83() // Position - 0x2EB3 (11955)
+Ped func_83() // Position - 0x2EB3 (11955)
 {
 	return Global_98261;
 }
@@ -2833,10 +2833,10 @@ void func_95(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x381A (1436
 	{
 		MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	
-		if (Global_34169 == 1)
-			Global_34170 = 1;
+		if (Global_34169 == true)
+			Global_34170 = true;
 	
-		Global_34169 = 1;
+		Global_34169 = true;
 	}
 
 	if (bParam1)

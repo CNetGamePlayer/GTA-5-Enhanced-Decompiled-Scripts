@@ -394,7 +394,7 @@ void func_7(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Positio
 					if (Global_21627 != echParam1)
 					{
 						Global_10156[echParam1 /*4*/] = { _GET_CHARACTER_NAME(echParam0) };
-						Global_10173[echParam1] = 1;
+						Global_10173[echParam1] = true;
 						Global_10178[echParam1] = echParam0;
 					}
 					else if (echParam0 == Global_21627)

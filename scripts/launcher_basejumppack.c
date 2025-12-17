@@ -1872,7 +1872,7 @@ void func_53(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		func_61(true, bParam3, bParam2, false);
 		Global_65033 = 1;
 		Global_77362 = true;
-		Global_80303 = 1;
+		Global_80303 = true;
 	}
 	else
 	{
@@ -1893,7 +1893,7 @@ void func_53(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_59(PLAYER::PLAYER_ID()) && !bParam4 && !bParam5)
 			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false, false);
 	
-		Global_80303 = 0;
+		Global_80303 = false;
 	}
 
 	return;
@@ -1933,7 +1933,7 @@ int func_56(int iParam0, BOOL bParam1) // Position - 0x1ED6 (7894)
 	if (num2 == -1)
 		num2 = func_57();
 
-	if (Global_1575072[num2] == 1)
+	if (Global_1575072[num2] == true)
 	{
 		bParam1;
 		num = 8;
@@ -2124,7 +2124,7 @@ void func_70() // Position - 0x21A7 (8615)
 {
 	if (Global_21627.f_1 == 9 || Global_21627.f_1 == 10)
 	{
-		Global_23053 = 0;
+		Global_23053 = false;
 		Global_23049 = 1;
 	}
 
@@ -2614,7 +2614,7 @@ BOOL func_90(int iParam0, BOOL bParam1) // Position - 0x29D2 (10706)
 
 	if (num > -1 && num < 6)
 	{
-		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == 1)
+		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == true)
 		{
 			if (bParam1)
 				if (Global_45660[num /*32*/].f_29)
@@ -2981,7 +2981,7 @@ BOOL func_113() // Position - 0x3639 (13881)
 	return false;
 }
 
-Entity func_114() // Position - 0x3653 (13907)
+Ped func_114() // Position - 0x3653 (13907)
 {
 	return Global_98261;
 }
@@ -3250,10 +3250,10 @@ void func_129(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3A7E (149
 	{
 		MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	
-		if (Global_34169 == 1)
-			Global_34170 = 1;
+		if (Global_34169 == true)
+			Global_34170 = true;
 	
-		Global_34169 = 1;
+		Global_34169 = true;
 	}
 
 	if (bParam1)

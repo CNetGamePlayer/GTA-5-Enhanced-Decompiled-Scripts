@@ -3939,11 +3939,11 @@ void func_61(int iParam0) // Position - 0x2F6B (12139)
 	TEXT_LABEL_ASSIGN_STRING(&componentType, "", 16);
 	func_62(Global_4521275[iParam0 /*296*/].f_49, &componentType);
 
-	if (IS_BIT_SET(Global_1989317, 0))
+	if (IS_BIT_SET(Global_1989318, 0))
 	{
 		TEXT_LABEL_APPEND_STRING(&componentType, "p", 16);
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&componentType);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1989318[num /*4*/]);
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1989319[num /*4*/]);
 		num = num + 1;
 	}
 	else
@@ -3956,7 +3956,7 @@ void func_61(int iParam0) // Position - 0x2F6B (12139)
 		switch (Global_4521275[iParam0 /*296*/].f_32)
 		{
 			case 13:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1989318[num /*4*/]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1989319[num /*4*/]);
 				break;
 		}
 	

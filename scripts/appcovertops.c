@@ -821,9 +821,9 @@ void func_13() // Position - 0x581 (1409)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -1123,10 +1123,10 @@ void func_33() // Position - 0xADB (2779)
 	return;
 }
 
-void func_34(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xB32 (2866)
+void func_34(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xB32 (2866)
 {
 	Global_22454 = { *uParam0 };
-	Global_8779 = iParam1;
+	Global_8779 = echParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_23070, sParam2, 24);
 	Global_23989 = iParam5;
 
@@ -1650,7 +1650,7 @@ void func_63(var uParam0, int iParam1, int iParam2, float fParam3, float fParam4
 	BOOL flag;
 	float amplitude;
 	BOOL flag2;
-	BOOL flag3;
+	int num;
 	var unk5;
 
 	func_159(uParam0, iParam1, 1, iParam14, true);
@@ -1785,18 +1785,18 @@ void func_63(var uParam0, int iParam1, int iParam2, float fParam3, float fParam4
 	}
 	else if (IS_BIT_SET(iParam16, 5))
 	{
-		flag3 = func_126(PLAYER::PLAYER_ID());
-		entityCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_125(flag3), func_124(flag3), 3.5688f, 7.9792f, 4.1641f) };
-		finalRenderedCamRot = { -21.6791f, 0f, func_124(flag3) + 40.237f };
+		num = func_126(PLAYER::PLAYER_ID());
+		entityCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_125(num), func_124(num), 3.5688f, 7.9792f, 4.1641f) };
+		finalRenderedCamRot = { -21.6791f, 0f, func_124(num) + 40.237f };
 		finalRenderedCamFov = 70f;
 	}
 	else if (IS_BIT_SET(iParam16, 6) || func_123())
 	{
 		if (IS_BIT_SET(iParam16, 6))
 		{
-			entityCoords = { Global_1980034.f_1081 };
-			finalRenderedCamRot = { Global_1980034.f_1081.f_3 };
-			finalRenderedCamFov = Global_1980034.f_1081.f_6;
+			entityCoords = { Global_1980035.f_1081 };
+			finalRenderedCamRot = { Global_1980035.f_1081.f_3 };
+			finalRenderedCamFov = Global_1980035.f_1081.f_6;
 		}
 		else
 		{
@@ -1822,8 +1822,8 @@ void func_63(var uParam0, int iParam1, int iParam2, float fParam3, float fParam4
 		if (!func_115())
 			flag2 = false;
 	
-		if (IS_BIT_SET(Global_1983884.f_1, 19))
-			MISC::CLEAR_BIT(&(Global_1983884.f_1), 19);
+		if (IS_BIT_SET(Global_1983885.f_1, 19))
+			MISC::CLEAR_BIT(&(Global_1983885.f_1), 19);
 	}
 	else if (IS_BIT_SET(iParam16, 10))
 	{
@@ -4315,17 +4315,17 @@ BOOL func_123() // Position - 0x51E0 (20960)
 	return false;
 }
 
-float func_124(BOOL bParam0) // Position - 0x51FE (20990)
+float func_124(int iParam0) // Position - 0x51FE (20990)
 {
-	return Global_4280768[bParam0 /*45*/].f_7;
+	return Global_4280768[iParam0 /*45*/].f_7;
 }
 
-Vector3 func_125(BOOL bParam0) // Position - 0x5210 (21008)
+Vector3 func_125(int iParam0) // Position - 0x5210 (21008)
 {
-	return Global_4280768[bParam0 /*45*/].f_4;
+	return Global_4280768[iParam0 /*45*/].f_4;
 }
 
-BOOL func_126(Player plParam0) // Position - 0x5224 (21028)
+int func_126(Player plParam0) // Position - 0x5224 (21028)
 {
 	return Global_2652582[plParam0 /*3*/];
 }

@@ -493,7 +493,7 @@ void func_7(int iParam0) // Position - 0x2D7 (727)
 	return;
 }
 
-void func_8(eCharacter echParam0, int iParam1, int iParam2, char* sParam3, char* sParam4, char* sParam5, char* sParam6, char* sParam7, char* sParam8, char* sParam9, char* sParam10, char* sParam11, char* sParam12, char* sParam13) // Position - 0x643 (1603)
+void func_8(eCharacter echParam0, int iParam1, int iParam2, char* sParam3, const char* sParam4, const char* sParam5, const char* sParam6, const char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11, const char* sParam12, const char* sParam13) // Position - 0x643 (1603)
 {
 	eCharacter character;
 	BOOL flag;
@@ -2468,9 +2468,9 @@ BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x2FE4 (
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-void func_60(int iParam0) // Position - 0x2FF7 (12279)
+void func_60(eCharacter echParam0) // Position - 0x2FF7 (12279)
 {
-	Global_21856 = iParam0;
+	Global_21856 = echParam0;
 	return;
 }
 

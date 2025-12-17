@@ -2673,9 +2673,9 @@ void func_81() // Position - 0x2144 (8516)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;
@@ -4511,7 +4511,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x46E3 (18147)
 	return false;
 }
 
-BOOL func_145(ePedComponentType epctParam0, int iParam1) // Position - 0x46FA (18170)
+BOOL func_145(Hash hParam0, int iParam1) // Position - 0x46FA (18170)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -4527,7 +4527,7 @@ BOOL func_145(ePedComponentType epctParam0, int iParam1) // Position - 0x46FA (1
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (epctParam0)
+	switch (hParam0)
 	{
 		case 1730644782:
 			num = Global_262145.f_36257[0];
@@ -4595,7 +4595,7 @@ BOOL func_145(ePedComponentType epctParam0, int iParam1) // Position - 0x46FA (1
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (epctParam0 == Global_1835471[i])
+		if (hParam0 == Global_1835471[i])
 			return true;
 	}
 
@@ -6387,7 +6387,7 @@ BOOL func_187(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, v
 	return false;
 }
 
-int func_188(Vector3 vParam0, var uParam1, var uParam2, eCharacter echParam3, int iParam4) // Position - 0x7494 (29844)
+int func_188(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4) // Position - 0x7494 (29844)
 {
 	int i;
 	float distanceBetweenCoords;
@@ -6401,7 +6401,7 @@ int func_188(Vector3 vParam0, var uParam1, var uParam2, eCharacter echParam3, in
 	{
 		if (Global_97467[i /*10*/].f_7 != 263)
 		{
-			if (Global_97467[i /*10*/].f_9 == echParam3 || echParam3 == _CHAR_NULL)
+			if (Global_97467[i /*10*/].f_9 == iParam3 || iParam3 == 145)
 			{
 				if (func_189(i) || iParam4 == 0)
 				{

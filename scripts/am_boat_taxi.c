@@ -4087,14 +4087,14 @@ void func_84(int iParam0) // Position - 0x3F45 (16197)
 
 void func_85(var uParam0) // Position - 0x3F53 (16211)
 {
-	Global_1990131 = 0;
+	Global_1990132 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
 BOOL func_86(var uParam0) // Position - 0x3F66 (16230)
 {
-	return Global_1990131 || uParam0->f_692;
+	return Global_1990132 || uParam0->f_692;
 }
 
 void func_87(int iParam0) // Position - 0x3F7D (16253)
@@ -4187,7 +4187,7 @@ void func_91(var uParam0) // Position - 0x4059 (16473)
 	uParam0->f_697 = 0f;
 	uParam0->f_698 = 0f;
 	uParam0->f_699 = 1f;
-	Global_1990131 = 0;
+	Global_1990132 = 0;
 	return;
 }
 
@@ -5069,9 +5069,9 @@ void func_113() // Position - 0x5292 (21138)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;

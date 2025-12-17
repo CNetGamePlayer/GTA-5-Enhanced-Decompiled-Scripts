@@ -55,7 +55,7 @@ void main() // Position - 0x0 (0)
 	return;
 }
 
-BOOL func_1(var uParam0, var uParam1) // Position - 0x6D (109)
+BOOL func_1(var uParam0, BOOL bParam1) // Position - 0x6D (109)
 {
 	float value;
 	var value2;
@@ -73,7 +73,7 @@ BOOL func_1(var uParam0, var uParam1) // Position - 0x6D (109)
 	}
 	else
 	{
-		if (!*uParam1)
+		if (!*bParam1)
 			return false;
 	
 		num2 = 5;
@@ -127,7 +127,7 @@ BOOL func_1(var uParam0, var uParam1) // Position - 0x6D (109)
 				if (*uParam0 >= 31)
 				{
 					*uParam0 = 0;
-					*uParam1 = 0;
+					*bParam1 = 0;
 					return true;
 				}
 			}

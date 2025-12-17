@@ -3161,20 +3161,20 @@ void func_93(int iParam0, BOOL bParam1) // Position - 0x2A90 (10896)
 	{
 		if (bParam1)
 		{
-			if (Global_1990770[i] == iParam0)
+			if (Global_1990771[i] == iParam0)
 				return;
-			else if (Global_1990770[i] == -1)
+			else if (Global_1990771[i] == -1)
 				num = i;
 		}
-		else if (Global_1990770[i] == iParam0)
+		else if (Global_1990771[i] == iParam0)
 		{
-			Global_1990770[i] = -1;
+			Global_1990771[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1990770[num] = iParam0;
+		Global_1990771[num] = iParam0;
 
 	return;
 }
@@ -4526,20 +4526,20 @@ char* func_116(int iParam0, int iParam1) // Position - 0x3FB8 (16312)
 
 BOOL func_117(int iParam0) // Position - 0x44A1 (17569)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_118(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_100(num2));
+	p_num = func_118(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_100(num));
 }
 
-int func_118(int iParam0) // Position - 0x44BE (17598)
+int* func_118(int iParam0) // Position - 0x44BE (17598)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_2740438.f_1032[func_98(iParam0)];
-	return unk;
+	p_num = Global_2740438.f_1032[func_98(iParam0)];
+	return p_num;
 }
 
 void func_119(int iParam0, BOOL bParam1, int iParam2) // Position - 0x44D9 (17625)

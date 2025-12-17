@@ -443,7 +443,7 @@ void main() // Position - 0x0 (0)
 
 	if (func_332())
 	{
-		Global_80551 = true;
+		Global_80551 = 1;
 		iLocal_77 = 0;
 	
 		while (!func_323(&uLocal_81))
@@ -451,7 +451,7 @@ void main() // Position - 0x0 (0)
 			BUILTIN::WAIT(0);
 		}
 	
-		Global_80551 = false;
+		Global_80551 = 0;
 		func_322(1843.1725f, 4701.249f, 37.5487f, 320.2838f, 1, 0);
 		func_321(0);
 	}
@@ -744,9 +744,9 @@ void func_4() // Position - 0x57E (1406)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;

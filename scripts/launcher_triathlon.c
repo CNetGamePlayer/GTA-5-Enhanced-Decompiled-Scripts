@@ -929,10 +929,10 @@ void func_9(int iParam0, BOOL bParam1) // Position - 0xDAF (3503)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 20);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 20);
 	return;
 }
@@ -962,10 +962,10 @@ void func_11(int iParam0, BOOL bParam1) // Position - 0xE53 (3667)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 4);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	return;
 }
@@ -987,10 +987,10 @@ void func_12(int iParam0, BOOL bParam1) // Position - 0xED6 (3798)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 5);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	return;
 }
@@ -1017,10 +1017,10 @@ void func_13(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0xF59 (3929)
 	else
 		MISC::CLEAR_BIT(&(Global_34172[num /*23*/].f_11), 11);
 
-	if (Global_34169 == 1)
-		Global_34170 = 1;
+	if (Global_34169 == true)
+		Global_34170 = true;
 
-	Global_34169 = 1;
+	Global_34169 = true;
 	MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	return;
 }
@@ -1170,7 +1170,7 @@ void func_20(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) 
 			Global_114931.f_7268.f_227[iParam0] = iParam1;
 	
 		Global_41426[iParam0] = bParam2;
-		Global_41625[iParam0] = 1;
+		Global_41625[iParam0] = true;
 		func_23(iParam0, bParam3, iParam4, false);
 		func_21(iParam0, iParam1);
 	}
@@ -1317,7 +1317,7 @@ BOOL func_23(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 						if (vector.f_4[num2] != 0)
 							ENTITY::CREATE_MODEL_HIDE(vector, 10f, vector.f_4[num2], true);
 					
-						Global_43020[iParam0] = 1;
+						Global_43020[iParam0] = true;
 					}
 				
 					flag = true;
@@ -1399,8 +1399,8 @@ BOOL func_23(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 								STREAMING::REQUEST_IPL(&vector.f_8[2 /*8*/]);
 					}
 				
-					Global_42821[iParam0] = 1;
-					Global_43020[iParam0] = 1;
+					Global_42821[iParam0] = true;
+					Global_43020[iParam0] = true;
 					flag = true;
 					break;
 			
@@ -1460,8 +1460,8 @@ BOOL func_23(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 							INTERIOR::REFRESH_INTERIOR(interiorAtCoordsWithType);
 					}
 				
-					Global_43020[iParam0] = 1;
-					Global_42821[iParam0] = 1;
+					Global_43020[iParam0] = true;
+					Global_42821[iParam0] = true;
 					flag = true;
 					break;
 			
@@ -1475,7 +1475,7 @@ BOOL func_23(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 							if (num == 0)
 							{
 								OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 3);
-								Global_43020[iParam0] = 1;
+								Global_43020[iParam0] = true;
 								flag = true;
 							}
 							else if (num == 1)
@@ -1483,7 +1483,7 @@ BOOL func_23(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 								if (OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 6 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 7 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 8)
 								{
 									OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 10);
-									Global_43020[iParam0] = 1;
+									Global_43020[iParam0] = true;
 									flag = true;
 								}
 							}
@@ -1513,7 +1513,7 @@ BOOL func_23(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position -
 		
 			if (flag)
 			{
-				Global_41625[iParam0] = 0;
+				Global_41625[iParam0] = false;
 				Global_41824[iParam0] = num;
 			
 				if (!func_24())
@@ -4122,7 +4122,7 @@ BOOL func_76(int iParam0, BOOL bParam1) // Position - 0x6605 (26117)
 
 	if (num > -1 && num < 6)
 	{
-		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == 1)
+		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == true)
 		{
 			if (bParam1)
 				if (Global_45660[num /*32*/].f_29)
@@ -4496,7 +4496,7 @@ BOOL func_100() // Position - 0x7283 (29315)
 	return false;
 }
 
-Entity func_101() // Position - 0x729D (29341)
+Ped func_101() // Position - 0x729D (29341)
 {
 	return Global_98261;
 }
@@ -4894,10 +4894,10 @@ void func_114(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x7C18 (317
 	{
 		MISC::SET_BIT(&(Global_34172[num /*23*/].f_11), 18);
 	
-		if (Global_34169 == 1)
-			Global_34170 = 1;
+		if (Global_34169 == true)
+			Global_34170 = true;
 	
-		Global_34169 = 1;
+		Global_34169 = true;
 	}
 
 	if (bParam1)

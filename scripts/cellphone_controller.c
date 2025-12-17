@@ -494,7 +494,7 @@ void main() // Position - 0x0 (0)
 	
 		if (Global_80305)
 			if (iLocal_92 == 0)
-				if (IS_BIT_SET(Global_1984028, 0))
+				if (IS_BIT_SET(Global_1984029, 0))
 					if (func_71(&uLocal_93, 10000, false))
 						if (func_68())
 							iLocal_92 = 1;
@@ -2841,11 +2841,11 @@ void func_74(int iParam0, char* sParam1) // Position - 0x3656 (13910)
 	num = 0;
 	func_75(Global_4521275[iParam0 /*296*/].f_49, sParam1);
 
-	if (IS_BIT_SET(Global_1989317, 0))
+	if (IS_BIT_SET(Global_1989318, 0))
 	{
 		TEXT_LABEL_APPEND_STRING(sParam1, "p", 16);
 		HUD::BEGIN_TEXT_COMMAND_THEFEED_POST(sParam1);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1989318[num /*4*/]);
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1989319[num /*4*/]);
 		num = num + 1;
 	}
 	else
@@ -2858,7 +2858,7 @@ void func_74(int iParam0, char* sParam1) // Position - 0x3656 (13910)
 		switch (Global_4521275[iParam0 /*296*/].f_32)
 		{
 			case 13:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1989318[num /*4*/]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1989319[num /*4*/]);
 				break;
 		}
 	
@@ -3803,7 +3803,7 @@ int func_89(eCharacter echParam0, const char* sParam1, int iParam2, int iParam3,
 		}
 	}
 
-	if (Global_1979863 != -1 && echParam0 == Global_1979863)
+	if (Global_1979864 != -1 && echParam0 == Global_1979864)
 		num2 = 1;
 
 	func_90(echParam0, sParam1, num2, func_96(PLAYER::PLAYER_ID()));
@@ -3823,18 +3823,18 @@ void func_90(eCharacter echParam0, const char* sParam1, BOOL bParam2, int iParam
 	character.f_3 = 0;
 	character.f_4 = bParam2;
 	character.f_5 = iParam3;
-	character.f_6 = Global_1979846.f_7;
-	character.f_7 = Global_1979846.f_8;
-	character.f_8 = Global_1979846.f_9;
-	character.f_9 = Global_1979846.f_10;
-	character.f_10 = Global_1979846.f_11;
-	character.f_11 = Global_1979846.f_12;
-	character.f_12 = Global_1979846.f_13;
-	character.f_13 = Global_1979846.f_14;
+	character.f_6 = Global_1979847.f_7;
+	character.f_7 = Global_1979847.f_8;
+	character.f_8 = Global_1979847.f_9;
+	character.f_9 = Global_1979847.f_10;
+	character.f_10 = Global_1979847.f_11;
+	character.f_11 = Global_1979847.f_12;
+	character.f_12 = Global_1979847.f_13;
+	character.f_13 = Global_1979847.f_14;
 	STATS::PLAYSTATS_NPC_PHONE(&character);
 
 	if (bParam2)
-		Global_1979863 = -1;
+		Global_1979864 = -1;
 
 	return;
 }

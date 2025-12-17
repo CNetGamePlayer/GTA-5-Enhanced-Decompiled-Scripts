@@ -4214,7 +4214,7 @@ void func_79(Ped pedParam0, BOOL bParam1, BOOL bParam2, ePedComponentType epctPa
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_125() || Global_1990799 || SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME() == joaat("maintransition"))
+		if (!bParam4 || num != func_125() || Global_1990800 || SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME() == joaat("maintransition"))
 		{
 			characterType = func_124(pedParam0);
 		
@@ -4255,7 +4255,7 @@ void func_79(Ped pedParam0, BOOL bParam1, BOOL bParam2, ePedComponentType epctPa
 				}
 			}
 		
-			if (Global_1990798)
+			if (Global_1990799)
 				func_83();
 		}
 		else
@@ -4276,7 +4276,7 @@ void func_80(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 	int num;
 	int decorationIndex;
 
-	if (!Global_1990798)
+	if (!Global_1990799)
 		func_81(&pedParam0);
 
 	i = 0;
@@ -4284,7 +4284,7 @@ void func_80(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		num = Global_1990770[i];
+		num = Global_1990771[i];
 	
 		if (num <= -1)
 		{
@@ -4338,7 +4338,7 @@ void func_81(var uParam0) // Position - 0x2BE1 (11233)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1990770[i] = -1;
+		Global_1990771[i] = -1;
 	}
 
 	i = 0;
@@ -4365,7 +4365,7 @@ void func_81(var uParam0) // Position - 0x2BE1 (11233)
 		}
 	}
 
-	Global_1990798 = true;
+	Global_1990799 = true;
 	return;
 }
 
@@ -4380,20 +4380,20 @@ void func_82(int iParam0, BOOL bParam1) // Position - 0x2C87 (11399)
 	{
 		if (bParam1)
 		{
-			if (Global_1990770[i] == iParam0)
+			if (Global_1990771[i] == iParam0)
 				return;
-			else if (Global_1990770[i] == -1)
+			else if (Global_1990771[i] == -1)
 				num = i;
 		}
-		else if (Global_1990770[i] == iParam0)
+		else if (Global_1990771[i] == iParam0)
 		{
-			Global_1990770[i] = -1;
+			Global_1990771[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1990770[num] = iParam0;
+		Global_1990771[num] = iParam0;
 
 	return;
 }
@@ -4404,10 +4404,10 @@ void func_83() // Position - 0x2D01 (11521)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1990770[i] = -1;
+		Global_1990771[i] = -1;
 	}
 
-	Global_1990798 = false;
+	Global_1990799 = false;
 	return;
 }
 

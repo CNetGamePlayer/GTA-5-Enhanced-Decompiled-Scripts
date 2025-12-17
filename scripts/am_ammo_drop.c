@@ -1328,15 +1328,15 @@ void func_19(int iParam0) // Position - 0x11C6 (4550)
 	return;
 }
 
-void func_20(var uParam0) // Position - 0x121A (4634)
+void func_20(Hash hParam0) // Position - 0x121A (4634)
 {
-	uParam0->f_65 = 0;
-	uParam0->f_65 = 2147483647;
-	uParam0->f_65.f_1 = 0;
-	uParam0->f_65.f_2 = 0;
-	uParam0->f_65.f_3 = joaat("NET_SHOP_TTYPE_INVALID");
-	uParam0->f_65.f_4 = joaat("SERVICE_INVALID");
-	uParam0->f_65.f_5 = 0;
+	hParam0->f_65 = 0;
+	hParam0->f_65 = 2147483647;
+	hParam0->f_65.f_1 = 0;
+	hParam0->f_65.f_2 = 0;
+	hParam0->f_65.f_3 = joaat("NET_SHOP_TTYPE_INVALID");
+	hParam0->f_65.f_4 = joaat("SERVICE_INVALID");
+	hParam0->f_65.f_5 = 0;
 	hParam0->f_65.f_6 = joaat("CATEGORY_CLOTH");
 	hParam0->f_65.f_7 = joaat("NET_SHOP_ACTION_INVALID");
 	*hParam0 = 0;
@@ -2182,9 +2182,9 @@ void func_49() // Position - 0x226A (8810)
 
 	if (Global_23006)
 	{
-		TEXT_LABEL_COPY(&(Global_1979846.f_1), { Global_22619 }, 4);
-		Global_1979846 = Global_8778;
-		Global_1979846.f_6 = Global_23010;
+		TEXT_LABEL_COPY(&(Global_1979847.f_1), { Global_22619 }, 4);
+		Global_1979847 = Global_8778;
+		Global_1979847.f_6 = Global_23010;
 	}
 
 	return;

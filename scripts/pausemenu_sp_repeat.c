@@ -404,14 +404,14 @@ void main() // Position - 0x0 (0)
 	return;
 }
 
-void func_1(int iParam0, int iParam1) // Position - 0x321 (801)
+void func_1(eCharacter echParam0, int iParam1) // Position - 0x321 (801)
 {
-	Global_80552 = iParam0;
+	Global_80552 = echParam0;
 	Global_80552.f_1 = iParam1;
 
 	if (iParam1 == 7)
-		if (iParam0 >= 0 && iParam0 < 63)
-			Global_114018[iParam0 /*10*/].f_3 = 1;
+		if (echParam0 >= CHAR_MICHAEL && echParam0 < CHAR_MRS_THORNHILL)
+			Global_114018[echParam0 /*10*/].f_3 = 1;
 
 	MISC::SET_BIT(&Global_80554, 0);
 	return;

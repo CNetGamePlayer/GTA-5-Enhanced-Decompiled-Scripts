@@ -206,25 +206,25 @@ struct<5> func_3(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, int iP
 	return hash;
 }
 
-int func_4(var uParam0) // Position - 0x399 (921)
+int func_4(Any* panParam0) // Position - 0x399 (921)
 {
 	int i;
 
-	if (!func_7(uParam0))
+	if (!func_7(panParam0))
 		return -1;
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (func_5(uParam0, &Global_2652582.f_2452[i /*16*/]))
+		if (func_5(panParam0, &Global_2652582.f_2452[i /*16*/]))
 			return i;
 	}
 
 	return -1;
 }
 
-BOOL func_5(var uParam0, var uParam1) // Position - 0x3DC (988)
+BOOL func_5(Any* panParam0, Any* panParam1) // Position - 0x3DC (988)
 {
-	if (*uParam0 == *uParam1 && func_6(uParam0->f_1, uParam1->f_1, false) && uParam0->f_4 == uParam1->f_4)
+	if (*panParam0 == *panParam1 && func_6(panParam0->f_1, panParam1->f_1, false) && panParam0->f_4 == panParam1->f_4)
 		return true;
 
 	return false;
@@ -238,9 +238,9 @@ BOOL func_6(float fParam0, var uParam1, var uParam2, float fParam3, var uParam4,
 	return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1 && fParam0.f_2 == fParam3.f_2;
 }
 
-BOOL func_7(var uParam0) // Position - 0x45E (1118)
+BOOL func_7(Any* panParam0) // Position - 0x45E (1118)
 {
-	if (*uParam0 == 123 || func_8(uParam0->f_1) || uParam0->f_4 == 0)
+	if (*panParam0 == 123 || func_8(panParam0->f_1) || panParam0->f_4 == 0)
 		return false;
 
 	return true;

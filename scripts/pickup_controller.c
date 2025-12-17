@@ -585,23 +585,23 @@ void func_14() // Position - 0x5B6 (1462)
 			{
 				case 0:
 					if (OBJECT::DOES_PICKUP_EXIST(uLocal_18[Global_34039]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(uLocal_18[Global_34039]))
-						Global_34040 = 0;
+						Global_34040 = false;
 					else
-						Global_34040 = 1;
+						Global_34040 = true;
 					break;
 			
 				case 1:
 					if (OBJECT::DOES_PICKUP_EXIST(uLocal_84[Global_34039]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(uLocal_84[Global_34039]))
-						Global_34040 = 0;
+						Global_34040 = false;
 					else
-						Global_34040 = 1;
+						Global_34040 = true;
 					break;
 			
 				case 2:
 					if (OBJECT::DOES_PICKUP_EXIST(uLocal_161[Global_34039]) && OBJECT::DOES_PICKUP_OBJECT_EXIST(uLocal_161[Global_34039]))
-						Global_34040 = 0;
+						Global_34040 = false;
 					else
-						Global_34040 = 1;
+						Global_34040 = true;
 					break;
 			
 				case 3:
@@ -617,7 +617,7 @@ void func_14() // Position - 0x5B6 (1462)
 	
 		case 3:
 			Global_34039 = 0;
-			Global_34040 = 0;
+			Global_34040 = false;
 			Global_34037 = 0;
 			break;
 	}

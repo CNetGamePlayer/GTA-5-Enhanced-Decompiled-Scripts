@@ -370,18 +370,18 @@ void func_17(int* piParam0) // Position - 0x28E (654)
 	return;
 }
 
-int func_18(int* piParam0, int iParam1) // Position - 0x2A6 (678)
+int func_18(int* piParam0, ePedComponentType epctParam1) // Position - 0x2A6 (678)
 {
 	var src;
 
-	if (!func_30(piParam0, iParam1))
+	if (!func_30(piParam0, epctParam1))
 		return 0;
 
-	piParam0->f_1 = iParam1;
+	piParam0->f_1 = epctParam1;
 	src = { func_29(piParam0) };
 	MISC::COPY_SCRIPT_STRUCT(&(piParam0->f_72), &src, 33);
 
-	if (!func_28(&(piParam0->f_6), iParam1, &(piParam0->f_72)))
+	if (!func_28(&(piParam0->f_6), epctParam1, &(piParam0->f_72)))
 		return 0;
 
 	if (!func_27(&(piParam0->f_72)) && func_26(&(piParam0->f_72)))
@@ -525,7 +525,7 @@ struct<33> func_29(int* piParam0) // Position - 0x46D (1133)
 	return unk;
 }
 
-BOOL func_30(int* piParam0, int iParam1) // Position - 0x493 (1171)
+BOOL func_30(int* piParam0, ePedComponentType epctParam1) // Position - 0x493 (1171)
 {
 	int num;
 	int num2;
@@ -536,7 +536,7 @@ BOOL func_30(int* piParam0, int iParam1) // Position - 0x493 (1171)
 	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
 		num = -1;
 
-	if (iParam1 < num || iParam1 > num2)
+	if (epctParam1 < num || epctParam1 > num2)
 		return false;
 
 	return true;
@@ -2556,7 +2556,7 @@ void func_114(BOOL bParam0, BOOL bParam1) // Position - 0x298A (10634)
 
 	for (i = 0; i < 256; i = i + 1)
 	{
-		Global_24546.f_4469[i] = 0;
+		Global_24546.f_4469[i] = PV_COMP_HEAD;
 	}
 
 	for (i = 0; i < 128; i = i + 1)
@@ -3049,7 +3049,7 @@ int func_136(int* piParam0) // Position - 0x334F (13135)
 void func_137(int* piParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3375 (13173)
 {
 	var unk;
-	int num;
+	ePedComponentType type;
 	BOOL flag;
 	function func;
 
@@ -3064,25 +3064,25 @@ void func_137(int* piParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3375 (1
 		return;
 	}
 
-	num = func_139(&(piParam0->f_6));
+	type = func_139(&(piParam0->f_6));
 	flag = func_14(&(piParam0->f_6.f_7), 2);
 
 	if (func_13(piParam0, 4))
-		num = 0;
+		type = PV_COMP_HEAD;
 
 	func = func_138(&(piParam0->f_6));
 	func_36(piParam0, &unk, false, true);
 
-	if (func_30(piParam0, num))
+	if (func_30(piParam0, type))
 	{
 		if (func != 0)
 			func();
 	
-		func_18(piParam0, num);
+		func_18(piParam0, type);
 	}
 	else
 	{
-		func_18(piParam0, 0);
+		func_18(piParam0, PV_COMP_HEAD);
 		func_24(&(piParam0->f_72));
 	}
 
@@ -3093,7 +3093,7 @@ void func_137(int* piParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3375 (1
 	else if (func_14(&(piParam0->f_72.f_7), 2) && !bParam1)
 	{
 		func_66(piParam0, true, true);
-		func_18(piParam0, num);
+		func_18(piParam0, type);
 	}
 
 	func_9(piParam0, 1);
@@ -3105,7 +3105,7 @@ function func_138(var uParam0) // Position - 0x345C (13404)
 	return uParam0->f_17;
 }
 
-int func_139(var uParam0) // Position - 0x3468 (13416)
+ePedComponentType func_139(var uParam0) // Position - 0x3468 (13416)
 {
 	return *uParam0;
 }
@@ -3214,8 +3214,8 @@ int func_147(int* piParam0) // Position - 0x356C (13676)
 BOOL func_148(int* piParam0, int iParam1) // Position - 0x35BB (13755)
 {
 	BOOL flag;
-	int num;
-	int num2;
+	ePedComponentType type;
+	ePedComponentType type2;
 
 	if (!func_14(&(piParam0->f_6.f_7), 2))
 		return false;
@@ -3224,10 +3224,10 @@ BOOL func_148(int* piParam0, int iParam1) // Position - 0x35BB (13755)
 
 	if (flag)
 	{
-		num = func_150(piParam0);
-		num2 = func_149(piParam0);
+		type = func_150(piParam0);
+		type2 = func_149(piParam0);
 	
-		if (iParam1 < 0 && num <= 0 || iParam1 > 0 && num >= num2)
+		if (iParam1 < 0 && type <= PV_COMP_HEAD || iParam1 > 0 && type >= type2)
 			return false;
 	}
 
@@ -3252,15 +3252,15 @@ int func_149(int* piParam0) // Position - 0x363B (13883)
 	return func_31(&unk);
 }
 
-int func_150(int* piParam0) // Position - 0x3679 (13945)
+ePedComponentType func_150(int* piParam0) // Position - 0x3679 (13945)
 {
 	if (!func_14(&(piParam0->f_6.f_7), 2))
-		return 0;
+		return PV_COMP_HEAD;
 
 	return func_151(piParam0);
 }
 
-int func_151(int* piParam0) // Position - 0x369A (13978)
+ePedComponentType func_151(int* piParam0) // Position - 0x369A (13978)
 {
 	return func_139(&(piParam0->f_6));
 }
@@ -3336,7 +3336,7 @@ BOOL func_158() // Position - 0x37B9 (14265)
 
 BOOL func_159() // Position - 0x37C9 (14281)
 {
-	return Global_4521271 > -1;
+	return Global_4521271 > PV_COMP_INVALID;
 }
 
 void func_160(int* piParam0) // Position - 0x37D7 (14295)
@@ -3474,7 +3474,7 @@ void func_168(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	if (!PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
 	{
-		Global_4521271 = -1;
+		Global_4521271 = PV_COMP_INVALID;
 		return;
 	}
 
@@ -3505,7 +3505,7 @@ void func_168(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (Global_4521271 == -6)
 		return;
 
-	Global_4521271 = -1;
+	Global_4521271 = PV_COMP_INVALID;
 	num4 = Global_4521265;
 	num5 = Global_4521266;
 
@@ -3539,7 +3539,7 @@ void func_168(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	
 		if (Global_24546.f_6336 == -1)
 		{
-			Global_4521271 = 0;
+			Global_4521271 = PV_COMP_HEAD;
 			num10 = 0;
 			return;
 		}
@@ -3583,7 +3583,7 @@ void func_168(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		return;
 	}
 
-	Global_4521271 = -1;
+	Global_4521271 = PV_COMP_INVALID;
 	return;
 }
 
@@ -3660,7 +3660,7 @@ void func_176(var uParam0, var uParam1) // Position - 0x3DC0 (15808)
 	return;
 }
 
-void func_177(int iParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x3DD9 (15833)
+void func_177(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x3DD9 (15833)
 {
 	int num;
 	float num2;
@@ -3668,7 +3668,7 @@ void func_177(int iParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam
 	var unk;
 	float num4;
 
-	if (Global_24546.f_5821 > iParam0)
+	if (Global_24546.f_5821 > epctParam0)
 		return;
 
 	if (Global_24546.f_5821 >= 128)
@@ -3680,9 +3680,9 @@ void func_177(int iParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam
 	if (Global_24546.f_6346 < Global_24546.f_6344)
 		return;
 
-	if (Global_24546.f_5821 != iParam0)
+	if (Global_24546.f_5821 != epctParam0)
 	{
-		Global_24546.f_5821 = iParam0;
+		Global_24546.f_5821 = epctParam0;
 		Global_24546.f_5822 = 0;
 	}
 
@@ -3732,12 +3732,12 @@ void func_177(int iParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam
 		{
 			num4 = func_178(&Global_24546.f_79[Global_24546.f_5823 /*6*/]);
 		
-			if (num4 > Global_24546.f_6348[iParam0])
-				Global_24546.f_6348[iParam0] = num4;
+			if (num4 > Global_24546.f_6348[epctParam0])
+				Global_24546.f_6348[epctParam0] = num4;
 		}
 	}
 
-	MISC::SET_BIT(&Global_24546.f_5692[iParam0], Global_24546.f_5822);
+	MISC::SET_BIT(&Global_24546.f_5692[epctParam0], Global_24546.f_5822);
 	Global_24546.f_5822 = Global_24546.f_5822 + 1;
 	Global_24546.f_6347 = 1;
 	Global_24546.f_6345 = Global_24546.f_5823 - 1;
@@ -4156,7 +4156,7 @@ char* func_183(int iParam0, BOOL bParam1) // Position - 0x42CA (17098)
 	return unk[1];
 }
 
-char* func_184(const char* sParam0) // Position - 0x482C (18476)
+char* func_184(char* sParam0) // Position - 0x482C (18476)
 {
 	return sParam0;
 }
@@ -4497,16 +4497,16 @@ void func_193(int iParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	return;
 }
 
-void func_194(int iParam0, BOOL bParam1) // Position - 0x4D86 (19846)
+void func_194(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x4D86 (19846)
 {
 	int num;
 
-	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(iParam0) / 32f);
+	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(epctParam0) / 32f);
 
 	if (bParam1)
-		MISC::SET_BIT(&Global_24546.f_6618[num], iParam0 - (num * 32));
+		MISC::SET_BIT(&Global_24546.f_6618[num], epctParam0 - (num * 32));
 	else
-		MISC::CLEAR_BIT(&Global_24546.f_6618[num], iParam0 - (num * 32));
+		MISC::CLEAR_BIT(&Global_24546.f_6618[num], epctParam0 - (num * 32));
 
 	return;
 }
@@ -4563,7 +4563,7 @@ void func_200(var uParam0) // Position - 0x4E6F (20079)
 
 void func_201(var uParam0, BOOL bParam1, int iParam2) // Position - 0x4E7F (20095)
 {
-	int i;
+	ePedComponentType i;
 	int num;
 
 	Global_24546.f_6342 = uParam0;
@@ -4577,7 +4577,7 @@ void func_201(var uParam0, BOOL bParam1, int iParam2) // Position - 0x4E7F (2009
 	{
 		for (i = Global_24546.f_6341; i <= Global_24546.f_6342; i = i + 1)
 		{
-			if (i >= 0 && i < 127)
+			if (i >= PV_COMP_HEAD && i < 127)
 				if (Global_24546.f_5692[i] != 0)
 					num = num + 1;
 		}
@@ -4589,7 +4589,7 @@ void func_201(var uParam0, BOOL bParam1, int iParam2) // Position - 0x4E7F (2009
 		
 			for (i = Global_24546.f_6341; i <= Global_24546.f_6342; i = i + 1)
 			{
-				if (i >= 0 && i < 127)
+				if (i >= PV_COMP_HEAD && i < 127)
 					if (Global_24546.f_5692[i] != 0)
 						num = num + 1;
 			}
@@ -4628,8 +4628,8 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	int b;
 	int a;
 	int i;
-	int numberOfLinesForString;
-	int j;
+	ePedComponentType numberOfLinesForString;
+	ePedComponentType j;
 	int k;
 	int num2;
 	int num3;
@@ -4688,21 +4688,21 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	float num42;
 	float size;
 	float size2;
-	int num43;
+	ePedComponentType type;
+	float num43;
 	float num44;
-	float num45;
 	int m;
 	int r2;
 	int g2;
 	int b2;
 	int a2;
-	int num46;
+	int num45;
 	var text;
 	float value;
 	float value2;
+	float num46;
 	float num47;
 	float num48;
-	float num49;
 
 	if (!func_113(&num, false, iParam1))
 		return;
@@ -4737,7 +4737,7 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 
 	if (bParam3)
 	{
-		if (Global_24546.f_5821 <= 1)
+		if (Global_24546.f_5821 <= PV_COMP_BERD)
 		{
 			func_177(Global_24546.f_5821 + 1, "DFLT_MNU_OPT" /*Exit*/, 0, true, false, false, false);
 			Global_24546.f_6617 = 1;
@@ -4877,7 +4877,7 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		
 			while (num2 < Global_24546.f_5828 && numberOfLinesForString <= Global_24546.f_5821)
 			{
-				if (numberOfLinesForString >= 0)
+				if (numberOfLinesForString >= PV_COMP_HEAD)
 				{
 					if (Global_24546.f_6088[numberOfLinesForString])
 					{
@@ -5359,15 +5359,15 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 			num4 = 0;
 			num5 = 0;
 			num6 = 0;
-			num43 = Global_24546.f_5821;
+			type = Global_24546.f_5821;
 		
 			if (Global_24546.f_6332)
-				num43 = Global_24546.f_6335 - 1;
+				type = Global_24546.f_6335 - 1;
 		
+			num43 = 0f;
 			num44 = 0f;
-			num45 = 0f;
 		
-			for (j = 0; j <= num43; j = j + 1)
+			for (j = PV_COMP_HEAD; j <= type; j = j + 1)
 			{
 				num37 = 0.034722f;
 			
@@ -5387,12 +5387,12 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 					flag2 = true;
 				
 					if (Global_24546.f_6342 == numberOfLinesForString)
-						num45 = num44;
+						num44 = num43;
 				
 					if (Global_24546.f_5959[numberOfLinesForString])
 						num5 = num5 + 1;
 				
-					num25 = num40 + num44 + (0.00277776f * (float)num5) + 0.00277776f;
+					num25 = num40 + num43 + (0.00277776f * (float)num5) + 0.00277776f;
 				}
 			
 				Global_24546.f_6482[numberOfLinesForString] = num25;
@@ -5412,7 +5412,7 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 					else
 						HUD::GET_HUD_COLOUR(HUD_COLOUR_WHITE, &r2, &g2, &b2, &a2);
 				
-					func_232("CommonMenu", "Gradient_Nav", Global_24543 + (iParam5 * 0.5f), num40 + num45 + (0.00277776f * (float)num5) + (num37 * 0.5f), iParam5, num37, 0f, r2, g2, b2, a2, false, 0);
+					func_232("CommonMenu", "Gradient_Nav", Global_24543 + (iParam5 * 0.5f), num40 + num44 + (0.00277776f * (float)num5) + (num37 * 0.5f), iParam5, num37, 0f, r2, g2, b2, a2, false, 0);
 					Global_24546.f_6480 = num25;
 				}
 			
@@ -5437,7 +5437,7 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 							Global_24546.f_9045[(num2 * Global_24546.f_5829) + k] = num15;
 						}
 					
-						num46 = 0;
+						num45 = 0;
 						flag7 = false;
 					
 						if (Global_24546.f_6614[0] != -1)
@@ -5445,7 +5445,7 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 							if ((numberOfLinesForString * 5) + k == Global_24546.f_6611[0])
 							{
 								flag7 = true;
-								num46 = 0;
+								num45 = 0;
 							}
 						}
 					
@@ -5454,7 +5454,7 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 							if ((numberOfLinesForString * 5) + k == Global_24546.f_6611[1])
 							{
 								flag7 = true;
-								num46 = 1;
+								num45 = 1;
 							}
 						}
 					
@@ -5507,7 +5507,7 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 											if (Global_24546.f_2130[num16])
 												flag5 = true;
 										
-											func_191(flag, Global_24546.f_1616[num16], Global_24546.f_1873[num16], flag7, num46, flag5, flag4);
+											func_191(flag, Global_24546.f_1616[num16], Global_24546.f_1873[num16], flag7, num45, flag5, flag4);
 											HUD::BEGIN_TEXT_COMMAND_GET_SCREEN_WIDTH_OF_DISPLAY_TEXT(&Global_24546.f_79[num16 /*6*/]);
 										}
 									
@@ -5803,15 +5803,15 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 													TEXT_LABEL_ASSIGN_STRING(&text, "TEST_LABEL", 16);
 													value = 0f;
 													value2 = 55f;
-													num47 = 0.0185f;
-													num48 = 0.004f;
-													num49 = 0.02f;
+													num46 = 0.0185f;
+													num47 = 0.004f;
+													num48 = 0.02f;
 													HUD::SET_TEXT_SCALE(0f, 0.35f * 0.7f);
 													HUD::SET_TEXT_COLOUR(255, 255, 255, 150);
-													GRAPHICS::DRAW_RECT(num24 - (num49 * 0.6f), num25 + (num47 * 0.75f), 0.0175f, 0.035f, BUILTIN::FLOOR(value), BUILTIN::FLOOR(value), BUILTIN::FLOOR(value), BUILTIN::FLOOR(value2), false);
+													GRAPHICS::DRAW_RECT(num24 - (num48 * 0.6f), num25 + (num46 * 0.75f), 0.0175f, 0.035f, BUILTIN::FLOOR(value), BUILTIN::FLOOR(value), BUILTIN::FLOOR(value), BUILTIN::FLOOR(value2), false);
 													HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(&text);
 													HUD::ADD_TEXT_COMPONENT_INTEGER(Global_24546.f_6341 + num22);
-													func_230(num24 - num49, num25 + num48, 0);
+													func_230(num24 - num48, num25 + num47, 0);
 													num22 = num22 + 1;
 												}
 											}
@@ -6132,9 +6132,9 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 							num6 = num6 + 1;
 					
 						if (Global_24546.f_6348[numberOfLinesForString] != 0f)
-							num44 = num44 + Global_24546.f_6348[numberOfLinesForString];
+							num43 = num43 + Global_24546.f_6348[numberOfLinesForString];
 						else
-							num44 = num44 + 0.034722f;
+							num43 = num43 + 0.034722f;
 					}
 				
 					if (!Global_24546.f_6331)
@@ -6161,7 +6161,7 @@ void func_204(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		
 			if (!Global_24546.f_6331)
 			{
-				Global_24546.f_6333 = num40 + num44 + (0.00277776f * (float)num5);
+				Global_24546.f_6333 = num40 + num43 + (0.00277776f * (float)num5);
 				Global_24546.f_6336 = num4;
 				Global_24546.f_6334 = num3;
 				Global_24546.f_6331 = 1;
@@ -6351,10 +6351,10 @@ void func_214(float fParam0, float fParam1, char* sParam2, float fParam3, int iP
 	return;
 }
 
-void func_215(float fParam0, float fParam1, char* sParam2, int iParam3, int iParam4) // Position - 0x8424 (33828)
+void func_215(float fParam0, float fParam1, char* sParam2, ePedComponentType epctParam3, int iParam4) // Position - 0x8424 (33828)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam3);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(epctParam3);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_170(fParam0), fParam1, iParam4);
 	return;
 }

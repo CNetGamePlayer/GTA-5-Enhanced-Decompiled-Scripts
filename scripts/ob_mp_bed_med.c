@@ -731,7 +731,7 @@ void func_2() // Position - 0x30E (782)
 			if (!func_9() && INTERIOR::IS_INTERIOR_READY(INTERIOR::GET_INTERIOR_AT_COORDS(uLocal_337)) && iLocal_329 == 1)
 				CAM::DISABLE_ON_FOOT_FIRST_PERSON_VIEW_THIS_UPDATE();
 		
-			if (INTERIOR::IS_INTERIOR_READY(INTERIOR::GET_INTERIOR_AT_COORDS(uLocal_337)) && !func_9() && !func_7() && Global_1574634.f_8 == 0)
+			if (INTERIOR::IS_INTERIOR_READY(INTERIOR::GET_INTERIOR_AT_COORDS(uLocal_337)) && !func_9() && !func_7() && Global_1574634.f_8 == false)
 			{
 				bLocal_328 = true;
 				MISC::CLEAR_BIT(&iLocal_324, 0);
@@ -954,15 +954,15 @@ void func_18(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		}
 	
 		func_26(true, bParam3, bParam2, false);
-		Global_65033 = 1;
-		Global_77362 = 1;
+		Global_65033 = true;
+		Global_77362 = true;
 		Global_80303 = true;
 	}
 	else
 	{
 		func_28(0);
 		HUD::THEFEED_RESUME();
-		Global_65033 = 0;
+		Global_65033 = false;
 	
 		if (bParam1)
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
@@ -996,7 +996,7 @@ BOOL func_20(Player plParam0, int iParam1) // Position - 0xD90 (3472)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_21(-1, false) == 8;
+		flag = func_21(-1, false) == CHAR_MIKE_FRANK_CONF;
 	else
 		flag = Global_1845299[plParam0 /*883*/].f_198 == 8;
 
@@ -1007,28 +1007,28 @@ BOOL func_20(Player plParam0, int iParam1) // Position - 0xD90 (3472)
 	return flag;
 }
 
-int func_21(int iParam0, BOOL bParam1) // Position - 0xDE9 (3561)
+eCharacter func_21(int iParam0, BOOL bParam1) // Position - 0xDE9 (3561)
 {
+	eCharacter character;
 	int num;
-	int num2;
 
-	num2 = iParam0;
+	num = iParam0;
 
-	if (num2 == -1)
-		num2 = func_22();
+	if (num == -1)
+		num = func_22();
 
-	if (Global_1575072[num2] == true)
+	if (Global_1575072[num] == true)
 	{
 		bParam1;
-		num = 8;
+		character = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		num = Global_1574921[num2];
+		character = Global_1574921[num];
 		bParam1;
 	}
 
-	return num;
+	return character;
 }
 
 int func_22() // Position - 0xE2A (3626)
@@ -1623,7 +1623,7 @@ BOOL func_46(int iParam0, BOOL bParam1) // Position - 0x1748 (5960)
 
 	if (num > -1 && num < 6)
 	{
-		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == 1)
+		if (Global_45660[num /*32*/] == true && Global_45660[num /*32*/].f_4 == true)
 		{
 			if (bParam1)
 				if (Global_45660[num /*32*/].f_29)

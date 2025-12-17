@@ -870,7 +870,7 @@ BOOL func_15(Player plParam0) // Position - 0x95B (2395)
 	Player player;
 	int num2;
 
-	if (Global_1990814)
+	if (Global_1990815)
 		return true;
 
 	if (func_22(plParam0))

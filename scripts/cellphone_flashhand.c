@@ -4252,7 +4252,7 @@ void func_54(var uParam0) // Position - 0x4CE6 (19686)
 		if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("HROBA_INGNG_BLK" /*The Darnell Inc. phone app is unavailable while working for another Boss.*/))
 			_DISPLAY_HELP_TEXT("HROBA_INGNG_BLK" /*The Darnell Inc. phone app is unavailable while working for another Boss.*/, -1);
 	}
-	else if (func_73(PLAYER::PLAYER_ID()) || func_68(PLAYER::PLAYER_ID()) || func_67() || func_65(PLAYER::PLAYER_ID()) || func_63() || func_80(false) || func_62() || Global_1057441 != -1 || Global_1845299[PLAYER::PLAYER_ID() /*883*/] == 5 || func_59(PLAYER::PLAYER_ID(), true, false) || Global_1990806)
+	else if (func_73(PLAYER::PLAYER_ID()) || func_68(PLAYER::PLAYER_ID()) || func_67() || func_65(PLAYER::PLAYER_ID()) || func_63() || func_80(false) || func_62() || Global_1057441 != -1 || Global_1845299[PLAYER::PLAYER_ID() /*883*/] == 5 || func_59(PLAYER::PLAYER_ID(), true, false) || Global_1990807)
 	{
 		*uParam0 = 1;
 	

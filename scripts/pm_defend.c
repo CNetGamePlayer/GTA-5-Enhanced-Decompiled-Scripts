@@ -1903,7 +1903,7 @@ int func_35(int iParam0, int iParam1) // Position - 0x1D29 (7465)
 	return 0;
 }
 
-var func_36() // Position - 0x1D63 (7523)
+int func_36() // Position - 0x1D63 (7523)
 {
 	return Global_113638.f_20;
 }

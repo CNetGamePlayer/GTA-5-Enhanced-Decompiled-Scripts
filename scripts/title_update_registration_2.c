@@ -3,13 +3,13 @@ void main() // Position - 0x0 (0)
 {
 	Global_4456520 = -1;
 	Global_4456521 = -1;
-	Global_4456522 = -1;
-	Global_4456523 = -1;
-	Global_4456524 = -1;
-	Global_4516883 = 1;
+	Global_4456522 = PV_COMP_INVALID;
+	Global_4456523 = PV_COMP_INVALID;
+	Global_4456524 = PV_COMP_INVALID;
+	Global_4516883 = true;
 	Global_4516885 = 1;
 	Global_4516886 = 1;
-	Global_4516894 = 1;
+	Global_4516894 = true;
 	Global_4516901 = -1;
 	Global_4516922 = true;
 	Global_4518916 = 16003972;

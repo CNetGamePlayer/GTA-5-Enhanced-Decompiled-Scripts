@@ -1201,7 +1201,7 @@ void func_24(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, in
 				{
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					{
-						func_32(1);
+						func_32(true);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(*piParam5, 100, 100, 100, 255, 0);
 					}
 				}
@@ -1216,7 +1216,7 @@ void func_24(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, in
 				{
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					{
-						func_32(1);
+						func_32(true);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(*piParam5, 100, 100, 100, 255, 0);
 					}
 				}
@@ -1226,7 +1226,7 @@ void func_24(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, in
 				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam5);
 			
-				func_32(0);
+				func_32(false);
 				*uParam1 = 0;
 				*uParam0 = 0;
 				*uParam4 = 0;
@@ -1348,10 +1348,10 @@ int func_31(int iParam0) // Position - 0xCBF (3263)
 	return 15;
 }
 
-void func_32(int iParam0) // Position - 0xD0F (3343)
+void func_32(BOOL bParam0) // Position - 0xD0F (3343)
 {
-	if (Global_80573 != iParam0)
-		Global_80573 = iParam0;
+	if (Global_80573 != bParam0)
+		Global_80573 = bParam0;
 
 	return;
 }
@@ -2301,7 +2301,7 @@ void func_65(int iParam0, int iParam1) // Position - 0x2563 (9571)
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
 
-	Global_114931.f_8620[iParam0] = 1;
+	Global_114931.f_8620[iParam0] = true;
 	Global_114931.f_8620.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
 	return;
 }
@@ -2334,7 +2334,7 @@ void func_67(int iParam0, int iParam1, int iParam2) // Position - 0x25E5 (9701)
 
 	flag = true;
 
-	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == 1)
+	if (Global_114931.f_10201[iParam0 /*12*/].f_5 == true)
 	{
 		if (Global_114931.f_10201[iParam0 /*12*/].f_6 == 11 || Global_114931.f_10201[iParam0 /*12*/].f_6 == 12)
 			flag = false;
@@ -2394,7 +2394,7 @@ void func_68() // Position - 0x26CB (9931)
 
 	while (num < 321)
 	{
-		if (Global_114931.f_10201[num /*12*/].f_5 == 1)
+		if (Global_114931.f_10201[num /*12*/].f_5 == true)
 		{
 			switch (Global_114931.f_10201[num /*12*/].f_6)
 			{
@@ -2520,7 +2520,7 @@ void func_68() // Position - 0x26CB (9931)
 			if (func_69() == 2 == false && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				if (NETWORK::NETWORK_IS_CLOUD_AVAILABLE())
-					Global_114665 = 0;
+					Global_114665 = false;
 			
 				if (!Global_65027)
 					func_41();
