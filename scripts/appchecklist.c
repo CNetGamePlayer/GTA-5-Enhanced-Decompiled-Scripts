@@ -575,19 +575,19 @@ BOOL func_14() // Position - 0x811 (2065)
 {
 	eViewModeContext camActiveViewModeContext;
 	eViewMode camViewModeForContext;
-	BOOL flag;
+	int num;
 
 	if (Global_80305)
 		return false;
 
-	flag = 0;
+	num = 0;
 	camActiveViewModeContext = CAM::GET_CAM_ACTIVE_VIEW_MODE_CONTEXT();
 	camViewModeForContext = CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(camActiveViewModeContext);
 
 	if (camViewModeForContext == FIRST_PERSON)
-		flag = 1;
+		num = 1;
 
-	if (Global_4525122 || flag)
+	if (Global_4525122 || num)
 		return true;
 
 	return true;

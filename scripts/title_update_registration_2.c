@@ -33,13 +33,13 @@ void main() // Position - 0x0 (0)
 	Global_4520635 = -1;
 	Global_4520636 = true;
 	Global_4520863 = -1;
-	Global_4520963 = 1;
+	Global_4520963 = true;
 	Global_4520964 = true;
 	Global_4521274 = -1;
 	Global_4525120 = 1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_4525133, "", 16);
 	Global_4525143 = 8f;
-	Global_4525839 = 12;
+	Global_4525839 = HUD_COLOUR_YELLOW;
 	Global_4525840 = 12;
 	Global_4576535 = 100f;
 	return;

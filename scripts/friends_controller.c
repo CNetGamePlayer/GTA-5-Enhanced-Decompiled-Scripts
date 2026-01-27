@@ -874,7 +874,7 @@ int func_14(int iParam0, BOOL bParam1) // Position - 0xB1E (2846)
 	if (num2 == -1)
 		num2 = func_15();
 
-	if (Global_1575072[num2] == true)
+	if (Global_1575072[num2] == 1)
 	{
 		bParam1;
 		num = 8;

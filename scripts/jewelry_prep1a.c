@@ -11197,7 +11197,7 @@ int func_235(Player plParam0) // Position - 0xC11F (49439)
 BOOL func_236(Player plParam0, BOOL bParam1) // Position - 0xC142 (49474)
 {
 	if (func_237(plParam0))
-		if (Global_1892798[plParam0 /*615*/].f_10.f_34 != -1 || bParam1 && Global_1892798[plParam0 /*615*/].f_10.f_33 != -1)
+		if (Global_1892798[plParam0 /*615*/].f_10.f_34 != PV_COMP_INVALID || bParam1 && Global_1892798[plParam0 /*615*/].f_10.f_33 != PV_COMP_INVALID)
 			return true;
 
 	return false;
@@ -11218,13 +11218,13 @@ BOOL func_237(Player plParam0) // Position - 0xC186 (49542)
 	return true;
 }
 
-int func_238(Player plParam0) // Position - 0xC1A8 (49576)
+ePedComponentType func_238(Player plParam0) // Position - 0xC1A8 (49576)
 {
 	if (func_237(plParam0))
 		if (func_236(plParam0, false))
 			return Global_1892798[plParam0 /*615*/].f_10.f_34;
 
-	return -1;
+	return PV_COMP_INVALID;
 }
 
 BOOL _IS_PLAYER_IN_VEHICLE_SEAT(Player plParam0, int iParam1) // Position - 0xC1D4 (49620)

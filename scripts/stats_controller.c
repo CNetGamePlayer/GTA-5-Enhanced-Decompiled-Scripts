@@ -1060,49 +1060,49 @@ int func_35(int iParam0) // Position - 0xF8F (3983)
 	return num;
 }
 
-void _STOPWATCH_DESTROY(var uParam0) // Position - 0xFF2 (4082)
+void _STOPWATCH_DESTROY(int iParam0) // Position - 0xFF2 (4082)
 {
-	uParam0->f_1 = 0;
+	iParam0->f_1 = 0;
 	return;
 }
 
-int func_37(var uParam0, int iParam1, BOOL bParam2) // Position - 0xFFF (4095)
+int func_37(int iParam0, int iParam1, BOOL bParam2) // Position - 0xFFF (4095)
 {
 	if (iParam1 == -1)
 		return 1;
 
-	func_38(uParam0, bParam2, false);
+	func_38(iParam0, bParam2, false);
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam2)
 	{
-		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
+		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *iParam0)) >= iParam1)
 		{
-			_STOPWATCH_DESTROY(uParam0);
+			_STOPWATCH_DESTROY(iParam0);
 			return 1;
 		}
 	}
-	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *uParam0)) >= iParam1)
+	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *iParam0)) >= iParam1)
 	{
-		_STOPWATCH_DESTROY(uParam0);
+		_STOPWATCH_DESTROY(iParam0);
 		return 1;
 	}
 
 	return 0;
 }
 
-void func_38(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x1069 (4201)
+void func_38(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x1069 (4201)
 {
-	if (uParam0->f_1 == 0)
+	if (iParam0->f_1 == 0)
 	{
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
 			if (!bParam2)
-				*uParam0 = NETWORK::GET_NETWORK_TIME();
+				*iParam0 = NETWORK::GET_NETWORK_TIME();
 			else
-				*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
+				*iParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 		else
-			*uParam0 = MISC::GET_GAME_TIMER();
+			*iParam0 = MISC::GET_GAME_TIMER();
 	
-		uParam0->f_1 = 1;
+		iParam0->f_1 = 1;
 	}
 
 	return;
@@ -3196,15 +3196,15 @@ void func_100(int iParam0) // Position - 0x395B (14683)
 	return;
 }
 
-void func_101(var uParam0) // Position - 0x3A10 (14864)
+void func_101(BOOL bParam0) // Position - 0x3A10 (14864)
 {
-	*uParam0 = 0;
-	uParam0->f_1 = _INVALID_PLAYER_INDEX();
-	uParam0->f_2 = 0;
-	uParam0->f_4 = 0;
+	*bParam0 = 0;
+	bParam0->f_1 = _INVALID_PLAYER_INDEX();
+	bParam0->f_2 = 0;
+	bParam0->f_4 = 0;
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-		uParam0->f_3 = NETWORK::GET_NETWORK_TIME();
+		bParam0->f_3 = NETWORK::GET_NETWORK_TIME();
 
 	return;
 }

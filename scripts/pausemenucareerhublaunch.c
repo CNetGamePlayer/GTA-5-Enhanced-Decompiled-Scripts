@@ -248,7 +248,7 @@ void main() // Position - 0x0 (0)
 					bLocal_168 = false;
 				}
 			
-				Global_79072 = 1;
+				Global_79072 = true;
 			
 				if (!func_113())
 				{
@@ -292,7 +292,7 @@ void main() // Position - 0x0 (0)
 	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 	HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
 	HUD::RELEASE_CONTROL_OF_FRONTEND();
-	Global_79072 = 0;
+	Global_79072 = false;
 	return;
 }
 
@@ -1937,7 +1937,7 @@ int func_39(int iParam0, int iParam1) // Position - 0x2381 (9089)
 BOOL func_40(Player plParam0) // Position - 0x25D1 (9681)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845299[plParam0 /*883*/].f_260.f_364 != false;
+		return Global_1845299[plParam0 /*883*/].f_260.f_364 != PV_COMP_HEAD;
 
 	return false;
 }
@@ -17090,10 +17090,10 @@ void func_101(Hash hParam0, var uParam1) // Position - 0x113CD (70605)
 
 BOOL func_102() // Position - 0x12F1B (77595)
 {
-	return func_103() != false;
+	return func_103() != PV_COMP_HEAD;
 }
 
-BOOL func_103() // Position - 0x12F29 (77609)
+ePedComponentType func_103() // Position - 0x12F29 (77609)
 {
 	return Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_364;
 }

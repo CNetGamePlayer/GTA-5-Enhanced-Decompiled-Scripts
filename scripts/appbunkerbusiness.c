@@ -26742,7 +26742,7 @@ int func_366(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 				value = BUILTIN::FLOOR((float)value * *Global_262145.f_32951);
 		
 			if (func_368(flag))
-				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37613);
+				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37615);
 			break;
 	
 		case 6:
@@ -26755,7 +26755,7 @@ int func_366(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 				value = value / 2;
 		
 			if (func_368(flag))
-				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37618);
+				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37620);
 			break;
 	
 		case 3:
@@ -26771,7 +26771,7 @@ int func_366(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 				value = BUILTIN::FLOOR((float)value * *Global_262145.f_32952);
 		
 			if (func_368(flag))
-				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37612);
+				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37614);
 			break;
 	
 		case 4:
@@ -26787,7 +26787,7 @@ int func_366(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 				value = BUILTIN::FLOOR((float)value * *Global_262145.f_32953);
 		
 			if (func_368(flag))
-				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37614);
+				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37616);
 			break;
 	
 		case 0:
@@ -26803,7 +26803,7 @@ int func_366(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 				value = BUILTIN::FLOOR((float)value * *Global_262145.f_32954);
 		
 			if (func_368(flag))
-				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37616);
+				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37618);
 			break;
 	
 		case 2:
@@ -26819,7 +26819,7 @@ int func_366(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 				value = BUILTIN::FLOOR((float)value * *Global_262145.f_32955);
 		
 			if (func_368(flag))
-				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37615);
+				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37617);
 			break;
 	
 		case 5:
@@ -26850,7 +26850,7 @@ int func_366(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 				value = value * 2;
 		
 			if (func_368(flag))
-				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37617);
+				value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) / *Global_262145.f_37619);
 			break;
 	}
 
@@ -28341,11 +28341,11 @@ int func_402(int iParam0) // Position - 0x1E6AA (124586)
 	return -1;
 }
 
-int func_403(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x1E6D1 (124625)
+int func_403(int iParam0, int iParam1, int iParam2) // Position - 0x1E6D1 (124625)
 {
-	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (hParam1)
+		switch (iParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -28524,7 +28524,7 @@ int func_403(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x1E6D1 (124
 				return 2;
 		}
 	
-		switch (hParam1)
+		switch (iParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -28656,7 +28656,7 @@ int func_403(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x1E6D1 (124
 	
 		return 0;
 	}
-	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -33429,7 +33429,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 
 	Global_23007 = false;
 	Global_23009 = 0;
-	Global_23014 = false;
+	Global_23014 = 0;
 	Global_23991 = 0;
 	Global_23993 = 0;
 	Global_23997 = 0;
@@ -33908,10 +33908,10 @@ void func_631() // Position - 0x248F1 (149745)
 	return;
 }
 
-void func_632(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x24948 (149832)
+void func_632(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x24948 (149832)
 {
 	Global_22454 = { *uParam0 };
-	Global_8779 = echParam1;
+	Global_8779 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_23070, sParam2, 24);
 	Global_23989 = iParam5;
 

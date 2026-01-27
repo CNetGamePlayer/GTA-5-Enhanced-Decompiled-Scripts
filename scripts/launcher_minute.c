@@ -5151,7 +5151,7 @@ BOOL func_82(float fParam0, var uParam1, var uParam2) // Position - 0x7820 (3075
 	return false;
 }
 
-BOOL func_83() // Position - 0x784A (30794)
+ePedComponentType func_83() // Position - 0x784A (30794)
 {
 	return Global_2658294[PLAYER::PLAYER_ID() /*468*/].f_325.f_8;
 }
@@ -5774,7 +5774,7 @@ Vector3 func_96(int iParam0) // Position - 0x87A6 (34726)
 			return -1070f, -70f, -100f;
 	
 		case 24:
-			if (Global_2732089.f_1 != -1)
+			if (Global_2732089.f_1 != PV_COMP_INVALID)
 				if (func_98() != 1)
 					return func_97(Global_2732089.f_1, 1);
 				else
@@ -5801,12 +5801,12 @@ Vector3 func_96(int iParam0) // Position - 0x87A6 (34726)
 	return 0f, 0f, -200f;
 }
 
-Vector3 func_97(int iParam0, int iParam1) // Position - 0x8ABE (35518)
+Vector3 func_97(ePedComponentType epctParam0, int iParam1) // Position - 0x8ABE (35518)
 {
 	switch (iParam1)
 	{
 		case 0:
-			switch (iParam0)
+			switch (epctParam0)
 			{
 				case 177:
 					return -2586.065f, 1909.995f, 166.37543f;
@@ -5820,7 +5820,7 @@ Vector3 func_97(int iParam0, int iParam1) // Position - 0x8ABE (35518)
 			break;
 	
 		case 1:
-			switch (iParam0)
+			switch (epctParam0)
 			{
 				case 177:
 					return -2568.9338f, 1920.2028f, 155.51825f;
@@ -5834,7 +5834,7 @@ Vector3 func_97(int iParam0, int iParam1) // Position - 0x8ABE (35518)
 			break;
 	
 		case 2:
-			switch (iParam0)
+			switch (epctParam0)
 			{
 				case 177:
 					return -2587.4958f, 1893.193f, 155.51833f;
@@ -5848,7 +5848,7 @@ Vector3 func_97(int iParam0, int iParam1) // Position - 0x8ABE (35518)
 			break;
 	
 		default:
-			switch (iParam0)
+			switch (epctParam0)
 			{
 				case 177:
 					return -2586.065f, 1909.995f, 166.37543f;

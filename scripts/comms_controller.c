@@ -3045,7 +3045,7 @@ void _DISPLAY_HELP_TEXT(char* text, int iParam1) // Position - 0x39F5 (14837)
 BOOL func_84() // Position - 0x3A0C (14860)
 {
 	if (IS_BIT_SET(Global_9464, 23))
-		if (Global_23053 == 1)
+		if (Global_23053 == true)
 			return true;
 		else
 			return false;
@@ -3087,7 +3087,7 @@ void func_86(char* sParam0, char* sParam1) // Position - 0x3AAF (15023)
 {
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 	{
-		Global_23057 = 1;
+		Global_23057 = true;
 		TEXT_LABEL_ASSIGN_STRING(&Global_23064, sParam0, 24);
 		TEXT_LABEL_ASSIGN_STRING(&Global_23058, sParam1, 24);
 	}
@@ -6049,7 +6049,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 	Global_23009 = false;
 	Global_23014 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_2883585 = 0;
 	return func_164(sParam2, iParam3, false);
@@ -6071,7 +6071,7 @@ BOOL func_164(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x714D (29
 					Global_21627.f_1 = 3;
 					Global_23000 = 0;
 					Global_23001 = 1;
-					Global_23053 = 0;
+					Global_23053 = false;
 					Global_22996 = 0;
 					Global_22997 = 0;
 					Global_23011 = false;
@@ -10258,7 +10258,7 @@ BOOL func_235(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					Global_21627.f_1 = 3;
 					Global_23000 = 0;
 					Global_23001 = 1;
-					Global_23053 = 0;
+					Global_23053 = false;
 					Global_22996 = 0;
 					Global_22997 = 0;
 				}
@@ -10456,12 +10456,12 @@ void func_237() // Position - 0xD697 (54935)
 	Global_23014 = false;
 	Global_23009 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23014 = false;
 	Global_23997 = 0;
 	Global_23005 = 0;
-	Global_23052 = 0;
-	Global_23054 = 0;
+	Global_23052 = false;
+	Global_23054 = false;
 	Global_2883585 = 0;
 	return;
 }
@@ -10699,11 +10699,11 @@ BOOL func_249(var uParam0, eCharacter echParam1, char* sParam2, char* sParam3, i
 	Global_23014 = false;
 	Global_23009 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_23005 = 0;
-	Global_23052 = 0;
-	Global_23054 = 0;
+	Global_23052 = false;
+	Global_23054 = false;
 
 	if (iParam5 == 1)
 		Global_23012 = true;
@@ -11150,7 +11150,7 @@ BOOL func_258(var uParam0, eCharacter echParam1, char* sParam2, char* sParam3, i
 	Global_23014 = false;
 	Global_23009 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_23005 = 0;
 
@@ -11159,8 +11159,8 @@ BOOL func_258(var uParam0, eCharacter echParam1, char* sParam2, char* sParam3, i
 	else
 		Global_23012 = false;
 
-	Global_23052 = 1;
-	Global_23054 = 0;
+	Global_23052 = true;
+	Global_23054 = false;
 	TEXT_LABEL_ASSIGN_STRING(&Global_23082, sParam6, 24);
 	TEXT_LABEL_ASSIGN_STRING(&Global_23088, sParam7, 24);
 	TEXT_LABEL_ASSIGN_STRING(&Global_23148, sParam5, 24);
@@ -13067,11 +13067,11 @@ BOOL func_289(var uParam0, eCharacter echParam1, char* sParam2, char* sParam3, i
 	Global_23014 = false;
 	Global_23009 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_23005 = 0;
-	Global_23052 = 0;
-	Global_23054 = 0;
+	Global_23052 = false;
+	Global_23054 = false;
 	Global_2883585 = 0;
 	return func_164(sParam3, iParam4, bParam7);
 }
@@ -13084,11 +13084,11 @@ BOOL func_290(var uParam0, eCharacter echParam1, char* sParam2, char* sParam3, i
 	Global_23014 = false;
 	Global_23009 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_23005 = 0;
-	Global_23052 = 0;
-	Global_23054 = 0;
+	Global_23052 = false;
+	Global_23054 = false;
 	Global_2883585 = 0;
 	return func_164(sParam3, iParam4, bParam7);
 }
@@ -13101,11 +13101,11 @@ BOOL func_291(var uParam0, eCharacter echParam1, char* sParam2, char* sParam3, i
 	Global_23014 = false;
 	Global_23009 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_23005 = 0;
-	Global_23052 = 1;
-	Global_23054 = 0;
+	Global_23052 = true;
+	Global_23054 = false;
 	TEXT_LABEL_ASSIGN_STRING(&Global_23082, sParam6, 24);
 	TEXT_LABEL_ASSIGN_STRING(&Global_23088, sParam7, 24);
 	TEXT_LABEL_ASSIGN_STRING(&Global_23148, sParam5, 24);
@@ -13121,11 +13121,11 @@ BOOL func_292(var uParam0, var uParam1, char* sParam2, char* sParam3, int iParam
 	Global_23014 = false;
 	Global_23009 = false;
 	Global_23991 = 0;
-	Global_23993 = 0;
+	Global_23993 = false;
 	Global_23997 = 0;
 	Global_23005 = 0;
-	Global_23052 = 1;
-	Global_23054 = 0;
+	Global_23052 = true;
+	Global_23054 = false;
 	TEXT_LABEL_ASSIGN_STRING(&Global_23082, sParam6, 24);
 	TEXT_LABEL_ASSIGN_STRING(&Global_23088, sParam7, 24);
 	TEXT_LABEL_ASSIGN_STRING(&Global_23148, sParam5, 24);

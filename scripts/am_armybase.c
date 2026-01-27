@@ -4864,7 +4864,7 @@ void func_184() // Position - 0x69EC (27116)
 
 void func_185(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20) // Position - 0x6A3F (27199)
 {
-	func_189(func_190(uParam0), uParam0);
+	func_191(func_192(uParam0), uParam0);
 	func_187(0, -1, false);
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(5);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(3);
@@ -4977,11 +4977,33 @@ int func_187(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6AFE (27390
 
 BOOL func_188(BOOL bParam0) // Position - 0x6C14 (27668)
 {
-	bParam0;
+	if (bParam0 && Global_1575064)
+		if (func_189())
+			return false;
+		else
+			return true;
+
 	return Global_1575064;
 }
 
-void func_189(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x6C25 (27685)
+BOOL func_189() // Position - 0x6C40 (27712)
+{
+	if (func_190())
+		return true;
+
+	return Global_1575067;
+}
+
+BOOL func_190() // Position - 0x6C5B (27739)
+{
+	if (Global_1575064 || Global_1575070)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_controler")) != 0)
+			return true;
+
+	return false;
+}
+
+void func_191(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x6C86 (27782)
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		func_183();
@@ -4990,7 +5012,7 @@ void func_189(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return;
 }
 
-int func_190(int iParam0) // Position - 0x6C44 (27716)
+int func_192(int iParam0) // Position - 0x6CA5 (27813)
 {
 	switch (iParam0)
 	{
@@ -5535,7 +5557,7 @@ int func_190(int iParam0) // Position - 0x6C44 (27716)
 		
 	}
 
-	switch (func_191(func_192(iParam0, true)))
+	switch (func_193(func_194(iParam0, true)))
 	{
 		case 0:
 			return 8;
@@ -5553,7 +5575,7 @@ int func_190(int iParam0) // Position - 0x6C44 (27716)
 	return 0;
 }
 
-int func_191(int iParam0) // Position - 0x7418 (29720)
+int func_193(int iParam0) // Position - 0x7479 (29817)
 {
 	switch (iParam0)
 	{
@@ -5852,7 +5874,7 @@ int func_191(int iParam0) // Position - 0x7418 (29720)
 	return -1;
 }
 
-int func_192(int iParam0, BOOL bParam1) // Position - 0x77E8 (30696)
+int func_194(int iParam0, BOOL bParam1) // Position - 0x7849 (30793)
 {
 	switch (iParam0)
 	{

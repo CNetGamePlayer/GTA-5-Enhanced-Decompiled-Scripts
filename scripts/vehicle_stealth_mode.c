@@ -1137,7 +1137,7 @@ BOOL func_68(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x12E6 (
 			return true;
 
 	if (bParam2)
-		if (Global_2658294[plParam0 /*468*/].f_325.f_8 != -1)
+		if (Global_2658294[plParam0 /*468*/].f_325.f_8 != PV_COMP_INVALID)
 			return true;
 
 	return false;

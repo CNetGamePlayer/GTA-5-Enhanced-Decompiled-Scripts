@@ -1095,7 +1095,7 @@ void func_2() // Position - 0x8C (140)
 	else
 	{
 		Global_1925329.f_700 = 0;
-		Global_1926035 = -1;
+		Global_1926035 = PV_COMP_INVALID;
 	}
 
 	func_5(&Global_1926039, true, false);
@@ -6115,7 +6115,7 @@ void func_130() // Position - 0x7643 (30275)
 		{
 			iLocal_19.f_3 = i + 1;
 		
-			if (func_101(i) && iLocal_19.f_2 == -1 && Global_1926035 == -1)
+			if (func_101(i) && iLocal_19.f_2 == -1 && Global_1926035 == PV_COMP_INVALID)
 			{
 				func_123(i, false, 1);
 				iLocal_19.f_2 = i;
@@ -6123,10 +6123,10 @@ void func_130() // Position - 0x7643 (30275)
 		}
 	}
 
-	if (Global_1926035 != -1 && func_101(Global_1926035))
+	if (Global_1926035 != PV_COMP_INVALID && func_101(Global_1926035))
 	{
 		iLocal_19.f_2 = Global_1926035;
-		Global_1926035 = -1;
+		Global_1926035 = PV_COMP_INVALID;
 		func_123(iLocal_19.f_2, false, 1);
 	}
 

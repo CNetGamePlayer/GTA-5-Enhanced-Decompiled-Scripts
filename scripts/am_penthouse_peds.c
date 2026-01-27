@@ -7202,7 +7202,29 @@ int func_47(int iParam0, int iParam1, BOOL bParam2) // Position - 0x84AD (33965)
 
 BOOL func_48(BOOL bParam0) // Position - 0x85C3 (34243)
 {
-	bParam0;
+	if (bParam0 && Global_1575064)
+		if (func_49())
+			return false;
+		else
+			return true;
+
 	return Global_1575064;
+}
+
+BOOL func_49() // Position - 0x85EF (34287)
+{
+	if (func_50())
+		return true;
+
+	return Global_1575067;
+}
+
+BOOL func_50() // Position - 0x860A (34314)
+{
+	if (Global_1575064 || Global_1575070)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_controler")) != 0)
+			return true;
+
+	return false;
 }
 

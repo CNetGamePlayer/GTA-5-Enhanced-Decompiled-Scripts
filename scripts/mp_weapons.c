@@ -21235,12 +21235,12 @@ BOOL func_170(Hash hParam0) // Position - 0x188C9 (100553)
 	return false;
 }
 
-int func_171() // Position - 0x18958 (100696)
+BOOL func_171() // Position - 0x18958 (100696)
 {
 	if (_STAT_GET_PACKED_BOOL(28158, -1))
-		return 1;
+		return true;
 
-	return 0;
+	return false;
 }
 
 BOOL func_172() // Position - 0x18970 (100720)
@@ -21251,12 +21251,12 @@ BOOL func_172() // Position - 0x18970 (100720)
 	return false;
 }
 
-int func_173() // Position - 0x18989 (100745)
+BOOL func_173() // Position - 0x18989 (100745)
 {
 	if (_STAT_GET_PACKED_INT(18981, -1) >= 4)
-		return 1;
+		return true;
 
-	return 0;
+	return false;
 }
 
 BOOL _IS_EXCLUSIVE_CONTENT_UNLOCKED() // Position - 0x189A2 (100770)

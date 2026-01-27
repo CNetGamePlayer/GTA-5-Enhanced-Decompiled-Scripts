@@ -618,7 +618,7 @@ BOOL func_8() // Position - 0x6B3 (1715)
 
 void func_9() // Position - 0x6C1 (1729)
 {
-	Global_1574848 = 1;
+	Global_1574848 = true;
 	return;
 }
 
@@ -2548,7 +2548,7 @@ void func_91() // Position - 0x2C52 (11346)
 	return;
 }
 
-void func_92(ePedComponentType epctParam0, int iParam1, char* sParam2, eHudColour ehcParam3, ePedComponentType epctParam4, int iParam5, float fParam6, int iParam7, BOOL bParam8, int iParam9, int iParam10, int iParam11, BOOL bParam12, int iParam13, BOOL bParam14, int iParam15, eHudColour ehcParam16, eHudColour ehcParam17, BOOL bParam18, eHudColour ehcParam19, BOOL bParam20, int iParam21, eHudColour ehcParam22, ePedComponentType epctParam23, BOOL bParam24, ePedComponentType epctParam25, int iParam26, int iParam27, BOOL bParam28, eHudColour ehcParam29, int iParam30, BOOL bParam31, eHudColour ehcParam32, ePedComponentType epctParam33, int iParam34, int iParam35, BOOL bParam36, int iParam37, eHudColour ehcParam38, int iParam39) // Position - 0x2C6B (11371)
+void func_92(ePedComponentType epctParam0, int iParam1, char* sParam2, ePedComponentType epctParam3, ePedComponentType epctParam4, int iParam5, float fParam6, int iParam7, BOOL bParam8, int iParam9, int iParam10, int iParam11, BOOL bParam12, int iParam13, BOOL bParam14, int iParam15, eHudColour ehcParam16, eHudColour ehcParam17, BOOL bParam18, ePedComponentType epctParam19, BOOL bParam20, int iParam21, eHudColour ehcParam22, ePedComponentType epctParam23, BOOL bParam24, ePedComponentType epctParam25, int iParam26, int iParam27, BOOL bParam28, ePedComponentType epctParam29, int iParam30, BOOL bParam31, eHudColour ehcParam32, ePedComponentType epctParam33, int iParam34, int iParam35, BOOL bParam36, int iParam37, ePedComponentType epctParam38, int iParam39) // Position - 0x2C6B (11371)
 {
 	int num;
 	int i;
@@ -2569,7 +2569,7 @@ void func_92(ePedComponentType epctParam0, int iParam1, char* sParam2, eHudColou
 		Global_1679155.f_1177[num] = epctParam0;
 		Global_1679155.f_1177.f_11[num] = iParam1;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1679155.f_1177.f_22[num /*16*/], sParam2, 64);
-		Global_1679155.f_1177.f_194[num] = ehcParam3;
+		Global_1679155.f_1177.f_194[num] = epctParam3;
 		Global_1679155.f_1177.f_183[num] = epctParam4;
 		Global_1679155.f_1177.f_227[num] = iParam5;
 		Global_1679155.f_1177.f_238[num /*3*/] = fParam6;
@@ -2586,7 +2586,7 @@ void func_92(ePedComponentType epctParam0, int iParam1, char* sParam2, eHudColou
 		Global_1679155.f_1177.f_389[num] = ehcParam16;
 		Global_1679155.f_1177.f_400[num] = ehcParam17;
 		Global_1679155.f_1177.f_411[num] = bParam18;
-		Global_1679155.f_1177.f_422[num] = ehcParam19;
+		Global_1679155.f_1177.f_422[num] = epctParam19;
 		Global_1679155.f_1177.f_433[num] = bParam20;
 		Global_1679155.f_1177.f_444[num] = iParam21;
 		Global_1679155.f_1177.f_455[num] = ehcParam22;
@@ -2597,7 +2597,7 @@ void func_92(ePedComponentType epctParam0, int iParam1, char* sParam2, eHudColou
 		Global_1679155.f_1177.f_488[num] = iParam26;
 		Global_1679155.f_1177.f_499[num] = iParam27;
 		Global_1679155.f_1177.f_510[num] = bParam28;
-		Global_1679155.f_1177.f_521[num] = ehcParam29;
+		Global_1679155.f_1177.f_521[num] = epctParam29;
 		Global_1679155.f_1177.f_532[num] = iParam30;
 		Global_1679155.f_1177.f_543[num] = bParam31;
 		Global_1679155.f_1177.f_554[num] = ehcParam32;
@@ -2606,7 +2606,7 @@ void func_92(ePedComponentType epctParam0, int iParam1, char* sParam2, eHudColou
 		Global_1679155.f_1177.f_587[num] = iParam35;
 		Global_1679155.f_1177.f_598[num] = bParam36;
 		Global_1679155.f_1177.f_609[num] = iParam37;
-		Global_1679155.f_1177.f_620[num] = ehcParam38;
+		Global_1679155.f_1177.f_620[num] = epctParam38;
 	}
 
 	return;
@@ -3807,7 +3807,29 @@ int func_156(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4370 (17264
 
 BOOL func_157(BOOL bParam0) // Position - 0x4486 (17542)
 {
-	bParam0;
+	if (bParam0 && Global_1575064)
+		if (func_158())
+			return false;
+		else
+			return true;
+
 	return Global_1575064;
+}
+
+BOOL func_158() // Position - 0x44B2 (17586)
+{
+	if (func_159())
+		return true;
+
+	return Global_1575067;
+}
+
+BOOL func_159() // Position - 0x44CD (17613)
+{
+	if (Global_1575064 || Global_1575070)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_controler")) != 0)
+			return true;
+
+	return false;
 }
 

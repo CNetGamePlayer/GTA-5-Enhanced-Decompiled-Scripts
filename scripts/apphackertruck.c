@@ -15817,11 +15817,11 @@ int func_406(int iParam0) // Position - 0xF955 (63829)
 	return -1;
 }
 
-int func_407(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xF97C (63868)
+int func_407(int iParam0, int iParam1, int iParam2) // Position - 0xF97C (63868)
 {
-	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (hParam1)
+		switch (iParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -16000,7 +16000,7 @@ int func_407(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xF97C (6386
 				return 2;
 		}
 	
-		switch (hParam1)
+		switch (iParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -16132,7 +16132,7 @@ int func_407(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xF97C (6386
 	
 		return 0;
 	}
-	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}

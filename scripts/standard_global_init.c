@@ -284,7 +284,7 @@ void main() // Position - 0x0 (0)
 	Global_104646 = -1f;
 	Global_104647 = -360f;
 	Global_104648 = 360f;
-	Global_105033 = 1;
+	Global_105033 = true;
 	Global_105034 = 1;
 	Global_105036 = 1;
 	Global_105037 = 1;
@@ -305,7 +305,7 @@ void main() // Position - 0x0 (0)
 	Global_114920 = -1;
 	Global_114930 = -1;
 	Global_153524 = true;
-	Global_153771 = PV_COMP_INVALID;
+	Global_153771 = -1;
 	Global_153772 = -1;
 	Global_153774 = 1000;
 	Global_153816 = 1;
@@ -4172,10 +4172,11 @@ void func_87() // Position - 0x9C32 (39986)
 	DECORATOR::DECOR_REGISTER("Player_Field_Duster", INT);
 	DECORATOR::DECOR_REGISTER("Player_Mansion_Heli", INT);
 	DECORATOR::DECOR_REGISTER("Mansion_Spawned_Heli", BOOL);
+	DECORATOR::DECOR_REGISTER("Mansion_Carmod_Vehicle", BOOL);
 	return;
 }
 
-void func_88() // Position - 0x9F7F (40831)
+void func_88() // Position - 0x9F88 (40840)
 {
 	DECORATOR::DECOR_REGISTER("PHOTO_TAKEN", BOOL);
 	DECORATOR::DECOR_REGISTER("doe_elk", BOOL);
@@ -4197,7 +4198,7 @@ void func_88() // Position - 0x9F7F (40831)
 	return;
 }
 
-void func_89() // Position - 0xA020 (40992)
+void func_89() // Position - 0xA029 (41001)
 {
 	if (MISC::GET_INDEX_OF_CURRENT_LEVEL() == LEVEL_GTA5)
 	{

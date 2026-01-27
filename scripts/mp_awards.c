@@ -2119,16 +2119,16 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 					if (!*Global_262145.f_37479)
 						num = num + 3;
 				
-					if (!*Global_262145.f_37820)
+					if (!*Global_262145.f_37822)
 						num = num + 2;
 				
-					if (!*Global_262145.f_37821)
-						num = num + 1;
-				
-					if (!*Global_262145.f_37822)
-						num = num + 1;
-				
 					if (!*Global_262145.f_37823)
+						num = num + 1;
+				
+					if (!*Global_262145.f_37824)
+						num = num + 1;
+				
+					if (!*Global_262145.f_37825)
 						num = num + 2;
 				
 					iLocal_110 = iLocal_110 - num;
@@ -2402,16 +2402,16 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 					iLocal_109 = 1;
 					iLocal_110 = 12;
 				
-					if (!*Global_262145.f_37820)
+					if (!*Global_262145.f_37822)
 						iLocal_110 = iLocal_110 - 2;
 				
-					if (!*Global_262145.f_37821)
-						iLocal_110 = iLocal_110 - 1;
-				
-					if (!*Global_262145.f_37822)
-						iLocal_110 = iLocal_110 - 1;
-				
 					if (!*Global_262145.f_37823)
+						iLocal_110 = iLocal_110 - 1;
+				
+					if (!*Global_262145.f_37824)
+						iLocal_110 = iLocal_110 - 1;
+				
+					if (!*Global_262145.f_37825)
 						iLocal_110 = iLocal_110 - 2;
 					break;
 			
@@ -3125,19 +3125,19 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 							func_181(159, 8, num2, &uLocal_111);
 							func_181(160, 8, num2, &uLocal_111);
 						
-							if (*Global_262145.f_37820)
+							if (*Global_262145.f_37822)
 							{
 								func_181(161, 8, num2, &uLocal_111);
 								func_169(224, 8, num2, &uLocal_111);
 							}
 						
-							if (*Global_262145.f_37821)
+							if (*Global_262145.f_37823)
 								func_181(162, 8, num2, &uLocal_111);
 						
-							if (*Global_262145.f_37822)
+							if (*Global_262145.f_37824)
 								func_181(163, 8, num2, &uLocal_111);
 						
-							if (*Global_262145.f_37823)
+							if (*Global_262145.f_37825)
 							{
 								func_181(164, 8, num2, &uLocal_111);
 								func_169(225, 8, num2, &uLocal_111);
@@ -3268,7 +3268,7 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 								if (_STAT_GET_PACKED_BOOL(3608, -1))
 									type = PV_COMP_BERD;
 							
-								func_130("CLO_LTS_T_0", "CLO_LTS_TD_0", "Elitas_Tshirt", "MPTshirtAwardLTS", true, type, -1, 1, &uLocal_111, 235, 189);
+								func_130("CLO_LTS_T_0", "CLO_LTS_TD_0", "Elitas_Tshirt", "MPTshirtAwardLTS", PV_COMP_BERD, type, -1, 1, &uLocal_111, 235, 189);
 								func_127(0, &uLocal_111);
 								func_127(1, &uLocal_111);
 								func_127(2, &uLocal_111);
@@ -3277,7 +3277,7 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 								if (func_119(4))
 									type = PV_COMP_BERD;
 							
-								func_130("CLO_HST_A_4", "CLO_HST_AD_5", "CantTouchThis", "MPTShirtAwards2", true, type, -1, 1, &uLocal_111, 235, 189);
+								func_130("CLO_HST_A_4", "CLO_HST_AD_5", "CantTouchThis", "MPTShirtAwards2", PV_COMP_BERD, type, -1, 1, &uLocal_111, 235, 189);
 								func_127(5, &uLocal_111);
 								func_127(7, &uLocal_111);
 								func_127(6, &uLocal_111);
@@ -3325,7 +3325,7 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 							if (func_119(9))
 								type = PV_COMP_BERD;
 						
-							func_130("CLO_HST_A_9", "CLO_HST_AD_9", "Showroom", "MPTShirtAwards2", true, type, -1, 1, &uLocal_111, 235, 189);
+							func_130("CLO_HST_A_9", "CLO_HST_AD_9", "Showroom", "MPTShirtAwards2", PV_COMP_BERD, type, -1, 1, &uLocal_111, 235, 189);
 							func_130("CHR_HST_A_0", "CHR_HST_AD_0", "SportMod", "MPAwardMods", func_118(171, 5, 0), func_116(171, -1), -1, 1, &uLocal_111, 235, 189);
 							func_130("CHR_HST_A_1", "CHR_HST_AD_1", "LowriderMod", "MPAwardMods", func_118(172, 5, 0), func_116(172, -1), -1, 1, &uLocal_111, 235, 189);
 							func_130("CHR_HST_A_2", "CHR_HST_AD_2", "OffroadMod", "MPAwardMods", func_118(174, 5, 0), func_116(174, -1), -1, 1, &uLocal_111, 235, 189);
@@ -3335,7 +3335,7 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 							func_130("CHR_HST_A_6", "CHR_HST_AD_6", "SUVMod", "MPAwardMods", func_118(180, 5, 0), func_116(180, -1), -1, 1, &uLocal_111, 235, 189);
 							func_130("CHR_HST_A_7", "CHR_HST_AD_7", "MuscleMod", "MPAwardMods", func_118(181, 5, 0), func_116(181, -1), -1, 1, &uLocal_111, 235, 189);
 							func_127(34, &uLocal_111);
-							func_130("CLO_S1M_DEC_25", "CLO_S1M_D_24_25" /*Complete all the Lowriders Lamar missions.*/, "BennyTshirt01", "MPTShirtAwards4", 8, type, -1, 1, &uLocal_111, 235, 189);
+							func_130("CLO_S1M_DEC_25", "CLO_S1M_D_24_25" /*Complete all the Lowriders Lamar missions.*/, "BennyTshirt01", "MPTShirtAwards4", PV_COMP_ACCS, type, -1, 1, &uLocal_111, 235, 189);
 							break;
 					}
 					break;
@@ -3373,7 +3373,7 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 										type = type - 1;
 								}
 							
-								func_130("CLO_S1M_DEC_24", "CLO_S1M_D_24_25" /*Complete all the Lowriders Lamar missions.*/, "BennyTshirt02", "MPTShirtAwards4", 8, type, -1, 1, &uLocal_111, 235, 189);
+								func_130("CLO_S1M_DEC_24", "CLO_S1M_D_24_25" /*Complete all the Lowriders Lamar missions.*/, "BennyTshirt02", "MPTShirtAwards4", PV_COMP_ACCS, type, -1, 1, &uLocal_111, 235, 189);
 							}
 							break;
 					}
@@ -4144,19 +4144,19 @@ void func_15(var uParam0) // Position - 0xE97 (3735)
 					func_181(159, 8, num2, &uLocal_111);
 					func_181(160, 8, num2, &uLocal_111);
 				
-					if (*Global_262145.f_37820)
+					if (*Global_262145.f_37822)
 					{
 						func_181(161, 8, num2, &uLocal_111);
 						func_169(224, 8, num2, &uLocal_111);
 					}
 				
-					if (*Global_262145.f_37821)
+					if (*Global_262145.f_37823)
 						func_181(162, 8, num2, &uLocal_111);
 				
-					if (*Global_262145.f_37822)
+					if (*Global_262145.f_37824)
 						func_181(163, 8, num2, &uLocal_111);
 				
-					if (*Global_262145.f_37823)
+					if (*Global_262145.f_37825)
 					{
 						func_181(164, 8, num2, &uLocal_111);
 						func_169(225, 8, num2, &uLocal_111);
@@ -10618,7 +10618,7 @@ ePedComponentType func_91(int iParam0, int iParam1) // Position - 0xA9AF (43439)
 					break;
 			
 				case 333:
-					if (func_116(48, -1) >= 10)
+					if (func_116(48, -1) >= PV_COMP_DECL)
 						type = PV_COMP_BERD;
 					break;
 			
@@ -15639,14 +15639,14 @@ ePedComponentType func_115(int iParam0, int iParam1) // Position - 0x12555 (7509
 ePedComponentType func_116(int iParam0, int iParam1) // Position - 0x12584 (75140)
 {
 	Hash statHash;
-	BOOL outValue;
+	ePedComponentType outValue;
 
 	statHash = func_117(iParam0, iParam1);
 
 	if (STATS::STAT_GET_INT(statHash, &outValue, -1))
 		return outValue;
 
-	return false;
+	return PV_COMP_HEAD;
 }
 
 Hash func_117(int iParam0, int iParam1) // Position - 0x125A8 (75176)
@@ -15654,7 +15654,7 @@ Hash func_117(int iParam0, int iParam1) // Position - 0x125A8 (75176)
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(8, iParam0, func_94(iParam1));
 }
 
-BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (75198)
+ePedComponentType func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (75198)
 {
 	iParam2 == 0;
 
@@ -15664,16 +15664,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -15690,16 +15690,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -15716,16 +15716,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -15742,16 +15742,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -15768,13 +15768,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 30;
@@ -15794,16 +15794,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -15820,22 +15820,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 3:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 4:
-					return 4;
+					return PV_COMP_LOWR;
 			
 				case 5:
-					return 5;
+					return PV_COMP_HAND;
 			
 				default:
 					break;
@@ -15846,22 +15846,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 3:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 4:
-					return 4;
+					return PV_COMP_LOWR;
 			
 				case 5:
-					return 5;
+					return PV_COMP_HAND;
 			
 				default:
 					break;
@@ -15872,22 +15872,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 4:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 5:
-					return 4;
+					return PV_COMP_LOWR;
 			
 				default:
 					break;
@@ -15898,22 +15898,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 4:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 5:
-					return 4;
+					return PV_COMP_LOWR;
 			
 				default:
 					break;
@@ -15924,13 +15924,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -15950,13 +15950,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -15976,16 +15976,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16002,16 +16002,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16028,16 +16028,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16054,16 +16054,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16080,16 +16080,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16106,13 +16106,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -16132,13 +16132,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -16158,16 +16158,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16184,13 +16184,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -16210,13 +16210,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -16236,16 +16236,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16262,16 +16262,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16288,16 +16288,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16314,13 +16314,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -16340,13 +16340,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -16366,16 +16366,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16392,16 +16392,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16418,16 +16418,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16444,16 +16444,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16470,13 +16470,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -16496,13 +16496,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -16522,16 +16522,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16548,16 +16548,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16574,16 +16574,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16600,16 +16600,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16626,16 +16626,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16652,16 +16652,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16678,16 +16678,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16704,16 +16704,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16730,16 +16730,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16756,16 +16756,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16782,16 +16782,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16808,16 +16808,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -16834,16 +16834,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16860,16 +16860,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16886,16 +16886,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16912,13 +16912,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -16938,13 +16938,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 100;
@@ -16964,16 +16964,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -16990,16 +16990,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17016,10 +17016,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 1000;
@@ -17042,22 +17042,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 3:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 4:
-					return 7;
+					return PV_COMP_TEEF;
 			
 				case 5:
-					return 10;
+					return PV_COMP_DECL;
 			
 				default:
 					break;
@@ -17068,16 +17068,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17094,16 +17094,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17120,13 +17120,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 250;
@@ -17146,16 +17146,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17172,16 +17172,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17198,16 +17198,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17224,16 +17224,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17250,16 +17250,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17276,13 +17276,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -17302,13 +17302,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -17328,13 +17328,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -17354,16 +17354,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17380,16 +17380,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17406,16 +17406,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17432,16 +17432,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17458,16 +17458,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17484,16 +17484,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17510,16 +17510,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17536,13 +17536,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -17562,16 +17562,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17588,13 +17588,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -17614,16 +17614,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17640,16 +17640,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17666,16 +17666,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17692,16 +17692,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17718,16 +17718,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -17744,13 +17744,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -17770,10 +17770,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_24938;
@@ -17796,10 +17796,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_24938;
@@ -17822,10 +17822,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_24938;
@@ -17848,10 +17848,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_24938;
@@ -17874,13 +17874,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 25;
@@ -17900,22 +17900,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 4:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 5:
-					return 10;
+					return PV_COMP_DECL;
 			
 				default:
 					break;
@@ -17926,22 +17926,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 4:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 5:
-					return 10;
+					return PV_COMP_DECL;
 			
 				default:
 					break;
@@ -17952,16 +17952,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -17978,16 +17978,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18004,16 +18004,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18030,22 +18030,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 4:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 5:
-					return 10;
+					return PV_COMP_DECL;
 			
 				default:
 					break;
@@ -18056,22 +18056,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 4:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 5:
-					return 10;
+					return PV_COMP_DECL;
 			
 				default:
 					break;
@@ -18082,22 +18082,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 4:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 5:
-					return 10;
+					return PV_COMP_DECL;
 			
 				default:
 					break;
@@ -18108,16 +18108,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18134,16 +18134,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18160,16 +18160,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18186,13 +18186,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -18212,13 +18212,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 20;
@@ -18238,10 +18238,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 100000;
@@ -18264,13 +18264,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -18290,10 +18290,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 1000;
@@ -18316,13 +18316,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -18342,16 +18342,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18368,16 +18368,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -18394,16 +18394,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -18420,10 +18420,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 25000;
@@ -18446,13 +18446,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 20;
@@ -18472,10 +18472,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_28315;
@@ -18498,10 +18498,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_28498;
@@ -18524,10 +18524,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_28526;
@@ -18550,10 +18550,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_28530;
@@ -18576,10 +18576,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_28246;
@@ -18602,10 +18602,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return Global_262145.f_28502;
@@ -18628,13 +18628,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 15;
@@ -18654,16 +18654,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -18680,10 +18680,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 50000;
@@ -18706,13 +18706,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 15;
@@ -18732,13 +18732,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 15;
@@ -18758,13 +18758,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 15;
@@ -18784,10 +18784,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 1000000;
@@ -18810,16 +18810,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -18836,13 +18836,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 25;
@@ -18862,16 +18862,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18888,16 +18888,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18914,16 +18914,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18940,16 +18940,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -18966,16 +18966,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -18992,13 +18992,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 25;
@@ -19018,16 +19018,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19044,10 +19044,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 30;
@@ -19070,13 +19070,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -19096,13 +19096,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 15;
@@ -19122,13 +19122,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 15;
@@ -19148,13 +19148,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 15;
@@ -19174,22 +19174,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 4:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 5:
-					return 5;
+					return PV_COMP_HAND;
 			
 				default:
 					break;
@@ -19200,16 +19200,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19226,16 +19226,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19252,16 +19252,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19278,16 +19278,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19304,22 +19304,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 4:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 5:
-					return 5;
+					return PV_COMP_HAND;
 			
 				default:
 					break;
@@ -19330,13 +19330,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
 					return 15;
@@ -19356,16 +19356,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19382,16 +19382,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19408,16 +19408,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19434,10 +19434,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 250000;
@@ -19460,10 +19460,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 250000;
@@ -19486,16 +19486,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19512,16 +19512,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19538,16 +19538,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19564,10 +19564,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 250000;
@@ -19590,10 +19590,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 250000;
@@ -19616,16 +19616,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19642,16 +19642,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19668,19 +19668,19 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 3:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 4:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 5:
 					return 20;
@@ -19694,16 +19694,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19720,19 +19720,19 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 7;
+					return PV_COMP_TEEF;
 			
 				case 4:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 5:
 					return 15;
@@ -19746,16 +19746,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19772,16 +19772,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 20;
@@ -19798,10 +19798,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 250000;
@@ -19824,10 +19824,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 5000;
@@ -19850,22 +19850,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 4:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 5:
-					return 5;
+					return PV_COMP_HAND;
 			
 				default:
 					break;
@@ -19876,22 +19876,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 4:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 5:
-					return 8;
+					return PV_COMP_ACCS;
 			
 				default:
 					break;
@@ -19902,16 +19902,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -19928,22 +19928,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return true;
+					return PV_COMP_BERD;
 			
 				case 3:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 4:
-					return 3;
+					return PV_COMP_UPPR;
 			
 				case 5:
-					return 4;
+					return PV_COMP_LOWR;
 			
 				default:
 					break;
@@ -19954,16 +19954,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -19980,10 +19980,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 250000;
@@ -20006,10 +20006,10 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
 					return 50000;
@@ -20032,16 +20032,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -20058,16 +20058,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -20084,19 +20084,19 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 7;
+					return PV_COMP_TEEF;
 			
 				case 4:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 5:
 					return 15;
@@ -20110,16 +20110,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 30;
@@ -20136,16 +20136,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -20162,16 +20162,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 25;
@@ -20188,13 +20188,13 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 50;
@@ -20214,22 +20214,22 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 2;
+					return PV_COMP_HAIR;
 			
 				case 3:
-					return 4;
+					return PV_COMP_LOWR;
 			
 				case 4:
-					return 6;
+					return PV_COMP_FEET;
 			
 				case 5:
-					return 10;
+					return PV_COMP_DECL;
 			
 				default:
 					break;
@@ -20240,16 +20240,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -20266,16 +20266,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -20292,16 +20292,16 @@ BOOL func_118(int iParam0, int iParam1, int iParam2) // Position - 0x125BE (7519
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -20827,8 +20827,8 @@ void func_127(int iParam0, var uParam1) // Position - 0x16760 (92000)
 	int num;
 	int num2;
 	int num3;
-	BOOL flag;
-	BOOL flag2;
+	ePedComponentType type;
+	ePedComponentType type2;
 
 	switch (iParam0)
 	{
@@ -20903,20 +20903,20 @@ void func_127(int iParam0, var uParam1) // Position - 0x16760 (92000)
 
 	if (iParam0 != 34)
 	{
-		flag = func_118(num, num3, 9);
-		flag2 = func_116(num, -1);
+		type = func_118(num, num3, 9);
+		type2 = func_116(num, -1);
 	}
 	else
 	{
-		flag = 5;
-		flag2 = func_128();
+		type = PV_COMP_HAND;
+		type2 = func_128();
 	}
 
-	func_130(str, str2, str3, str4, flag, flag2, -1, num2, uParam1, 235, 189);
+	func_130(str, str2, str3, str4, type, type2, -1, num2, uParam1, 235, 189);
 	return;
 }
 
-BOOL func_128() // Position - 0x168DD (92381)
+ePedComponentType func_128() // Position - 0x168DD (92381)
 {
 	int num;
 
@@ -21339,7 +21339,7 @@ int func_129(int iParam0, int iParam1) // Position - 0x1693C (92476)
 	return 0;
 }
 
-void func_130(char* sParam0, char* sParam1, char* sParam2, char* sParam3, BOOL bParam4, ePedComponentType epctParam5, int iParam6, int iParam7, var uParam8, int iParam9, int iParam10) // Position - 0x16F33 (94003)
+void func_130(char* sParam0, char* sParam1, char* sParam2, char* sParam3, ePedComponentType epctParam4, ePedComponentType epctParam5, int iParam6, int iParam7, var uParam8, int iParam9, int iParam10) // Position - 0x16F33 (94003)
 {
 	int i;
 
@@ -21348,7 +21348,7 @@ void func_130(char* sParam0, char* sParam1, char* sParam2, char* sParam3, BOOL b
 		if (uParam8->f_1[i] == 0)
 		{
 			func_132(i, sParam2, sParam3, iParam6, iParam7, uParam8);
-			func_131(i, sParam0, sParam1, bParam4, epctParam5, uParam8);
+			func_131(i, sParam0, sParam1, epctParam4, epctParam5, uParam8);
 			uParam8->f_1[i] = 1;
 			uParam8->f_473[i] = iParam9;
 			uParam8->f_486[i] = iParam10;
@@ -21359,12 +21359,12 @@ void func_130(char* sParam0, char* sParam1, char* sParam2, char* sParam3, BOOL b
 	return;
 }
 
-void func_131(int iParam0, char* sParam1, char* sParam2, BOOL bParam3, BOOL bParam4, var uParam5) // Position - 0x16F9D (94109)
+void func_131(int iParam0, char* sParam1, char* sParam2, ePedComponentType epctParam3, ePedComponentType epctParam4, var uParam5) // Position - 0x16F9D (94109)
 {
 	TEXT_LABEL_ASSIGN_STRING(&uParam5->f_14[iParam0 /*8*/], sParam1, 32);
 	TEXT_LABEL_ASSIGN_STRING(&uParam5->f_111[iParam0 /*8*/], sParam2, 32);
-	uParam5->f_208[iParam0] = bParam3;
-	uParam5->f_221[iParam0] = bParam4;
+	uParam5->f_208[iParam0] = epctParam3;
+	uParam5->f_221[iParam0] = epctParam4;
 	return;
 }
 
@@ -21415,10 +21415,10 @@ void func_135(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	char* str2;
 	char* str3;
 	char* str4;
-	BOOL flag;
-	BOOL flag2;
+	ePedComponentType type;
+	ePedComponentType type2;
 	int num2;
-	BOOL flag3;
+	ePedComponentType type3;
 	int value;
 	int value2;
 	int num3;
@@ -21470,14 +21470,14 @@ void func_135(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	str2 = func_141(iParam0, iParam1, iParam2, false);
 	str3 = func_140(iParam0, iParam2);
 	str4 = func_139(iParam0, iParam2);
-	flag = func_138(iParam0, num, iParam2);
-	flag2 = func_137(iParam0);
+	type = func_138(iParam0, num, iParam2);
+	type2 = func_137(iParam0);
 	num2 = func_136(iParam1);
-	flag3 = func_138(iParam0, num2, iParam2);
-	value = flag - flag3;
-	value2 = flag2 - flag3;
+	type3 = func_138(iParam0, num2, iParam2);
+	value = type - type3;
+	value2 = type2 - type3;
 	num3 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
-	func_130(str, str2, str3, str4, flag, flag2, num3, iParam1, uParam3, 235, 189);
+	func_130(str, str2, str3, str4, type, type2, num3, iParam1, uParam3, 235, 189);
 	return;
 }
 
@@ -21515,11 +21515,11 @@ int func_136(int iParam0) // Position - 0x171B3 (94643)
 	return num;
 }
 
-BOOL func_137(int iParam0) // Position - 0x1720C (94732)
+ePedComponentType func_137(int iParam0) // Position - 0x1720C (94732)
 {
 	Hash hash;
 	Hash statHash;
-	BOOL outValue;
+	ePedComponentType outValue;
 
 	hash = Global_1689076[iParam0];
 	statHash = hash;
@@ -21527,10 +21527,10 @@ BOOL func_137(int iParam0) // Position - 0x1720C (94732)
 	if (STATS::STAT_GET_INT(statHash, &outValue, -1))
 		return outValue;
 
-	return false;
+	return PV_COMP_HEAD;
 }
 
-BOOL func_138(int iParam0, int iParam1, int iParam2) // Position - 0x17234 (94772)
+ePedComponentType func_138(int iParam0, int iParam1, int iParam2) // Position - 0x17234 (94772)
 {
 	iParam2 == 0;
 
@@ -21540,16 +21540,16 @@ BOOL func_138(int iParam0, int iParam1, int iParam2) // Position - 0x17234 (9477
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -21566,16 +21566,16 @@ BOOL func_138(int iParam0, int iParam1, int iParam2) // Position - 0x17234 (9477
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 5;
+					return PV_COMP_HAND;
 			
 				case 3:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 4:
 					return 15;
@@ -21592,13 +21592,13 @@ BOOL func_138(int iParam0, int iParam1, int iParam2) // Position - 0x17234 (9477
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -21618,13 +21618,13 @@ BOOL func_138(int iParam0, int iParam1, int iParam2) // Position - 0x17234 (9477
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 1:
-					return false;
+					return PV_COMP_HEAD;
 			
 				case 2:
-					return 10;
+					return PV_COMP_DECL;
 			
 				case 3:
 					return 25;
@@ -21698,7 +21698,7 @@ char* func_141(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 {
 	iParam2 == 9;
 	bParam3;
-	func_138(iParam0, iParam1, iParam2) == true;
+	func_138(iParam0, iParam1, iParam2) == PV_COMP_BERD;
 
 	switch (iParam0)
 	{
@@ -21789,9 +21789,9 @@ int func_144(int iParam0, int iParam1) // Position - 0x17519 (95513)
 	return 2;
 }
 
-BOOL func_145(BOOL bParam0, BOOL bParam1) // Position - 0x1758A (95626)
+BOOL func_145(ePedComponentType epctParam0, ePedComponentType epctParam1) // Position - 0x1758A (95626)
 {
-	if (bParam1 <= bParam0)
+	if (epctParam1 <= epctParam0)
 		return true;
 
 	return false;
@@ -21822,8 +21822,8 @@ void func_147(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	char* str2;
 	char* str3;
 	char* str4;
-	BOOL flag;
-	BOOL flag2;
+	ePedComponentType type;
+	ePedComponentType type2;
 	int num3;
 
 	switch (iParam1)
@@ -21862,27 +21862,27 @@ void func_147(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	str2 = func_150(iParam0, num);
 	str3 = func_149(iParam0, num);
 	str4 = func_148(iParam0, num);
-	flag = func_118(num2, iParam1, 0);
-	flag2 = func_116(num2, -1);
+	type = func_118(num2, iParam1, 0);
+	type2 = func_116(num2, -1);
 
 	if (num2 == 64)
 	{
-		flag = true;
-		flag2 = false;
+		type = PV_COMP_BERD;
+		type2 = PV_COMP_HEAD;
 	}
 
 	num3 = -1;
 
 	if (func_120(iParam0, -1))
 	{
-		flag2 = func_118(func_152(iParam0), iParam1, 0);
+		type2 = func_118(func_152(iParam0), iParam1, 0);
 	
 		if (num2 == 64)
-			flag2 = true;
+			type2 = PV_COMP_BERD;
 	}
 
 	iParam1 = 1;
-	func_130(str, str2, str3, str4, flag, flag2, num3, iParam1, uParam3, 235, 189);
+	func_130(str, str2, str3, str4, type, type2, num3, iParam1, uParam3, 235, 189);
 	return;
 }
 
@@ -22716,12 +22716,12 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	char* str2;
 	char* str3;
 	char* str4;
-	BOOL flag;
-	BOOL flag2;
+	ePedComponentType type;
+	ePedComponentType type2;
 	int num2;
 	int num3;
 	int value;
-	BOOL value2;
+	ePedComponentType value2;
 	int num4;
 	int num5;
 
@@ -22771,12 +22771,12 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	str2 = func_163(iParam0, iParam1, iParam2, false);
 	str3 = func_162(iParam0, iParam2);
 	str4 = func_161(iParam0, iParam2);
-	flag = func_159(iParam0, num, iParam2);
-	flag2 = func_156(iParam0, num, iParam2);
+	type = func_159(iParam0, num, iParam2);
+	type2 = func_156(iParam0, num, iParam2);
 	num2 = func_136(iParam1);
 	num3 = func_159(iParam0, num2, iParam2);
-	value = flag - num3;
-	value2 = flag2 - num3;
+	value = type - num3;
+	value2 = type2 - num3;
 
 	if (func_155(iParam0))
 	{
@@ -22785,28 +22785,28 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 		switch (iParam0)
 		{
 			case 17:
-				flag2 = 26;
-				flag = 26;
+				type2 = 26;
+				type = 26;
 				break;
 		
 			case 18:
-				flag2 = 26;
-				flag = 26;
+				type2 = 26;
+				type = 26;
 				break;
 		
 			case 19:
-				flag2 = 26;
-				flag = 26;
+				type2 = 26;
+				type = 26;
 				break;
 		
 			case 20:
-				flag2 = 26;
-				flag = 26;
+				type2 = 26;
+				type = 26;
 				break;
 		
 			case 21:
-				flag2 = 26;
-				flag = 26;
+				type2 = 26;
+				type = 26;
 				break;
 		
 			case 1:
@@ -22820,8 +22820,8 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 			case 9:
 			case 10:
 			case 11:
-				flag2 = 26;
-				flag = 26;
+				type2 = 26;
+				type = 26;
 				break;
 		}
 	}
@@ -22848,13 +22848,13 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 				if (value2 < 0)
 					value2 = 0;
 			
-				flag2 = value2;
-				flag = 26;
+				type2 = value2;
+				type = 26;
 				value = 26;
 				break;
 		
 			case 18:
-				value2 = false;
+				value2 = PV_COMP_HEAD;
 				num5 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEISTTEAMPROGRESSBITSET"));
 			
 				for (i = 0; i < 28; i = i + 1)
@@ -22869,16 +22869,16 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 				if (IS_BIT_SET(num5, 26))
 					value2 = value2 - 1;
 			
-				if (value2 < false)
-					value2 = false;
+				if (value2 < PV_COMP_HEAD)
+					value2 = PV_COMP_HEAD;
 			
-				flag2 = value2;
-				flag = 26;
+				type2 = value2;
+				type = 26;
 				value = 26;
 				break;
 		
 			case 19:
-				value2 = false;
+				value2 = PV_COMP_HEAD;
 				num5 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEISTNODEATHPROGREITSET"));
 			
 				for (i = 0; i < 28; i = i + 1)
@@ -22893,16 +22893,16 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 				if (IS_BIT_SET(num5, 26))
 					value2 = value2 - 1;
 			
-				if (value2 < false)
-					value2 = false;
+				if (value2 < PV_COMP_HEAD)
+					value2 = PV_COMP_HEAD;
 			
-				flag2 = value2;
-				flag = 26;
+				type2 = value2;
+				type = 26;
 				value = 26;
 				break;
 		
 			case 20:
-				value2 = false;
+				value2 = PV_COMP_HEAD;
 				num5 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEIST_1STPERSON_PROG"));
 			
 				for (i = 0; i < 28; i = i + 1)
@@ -22917,16 +22917,16 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 				if (IS_BIT_SET(num5, 26))
 					value2 = value2 - 1;
 			
-				if (value2 < false)
-					value2 = false;
+				if (value2 < PV_COMP_HEAD)
+					value2 = PV_COMP_HEAD;
 			
-				flag2 = value2;
-				flag = 26;
+				type2 = value2;
+				type = 26;
 				value = 26;
 				break;
 		
 			case 21:
-				value2 = false;
+				value2 = PV_COMP_HEAD;
 				num5 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEISTMEMBERPROGRESSBITSET"));
 			
 				for (i = 0; i < 28; i = i + 1)
@@ -22941,11 +22941,11 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 				if (IS_BIT_SET(num5, 26))
 					value2 = value2 - 1;
 			
-				if (value2 < false)
-					value2 = false;
+				if (value2 < PV_COMP_HEAD)
+					value2 = PV_COMP_HEAD;
 			
-				flag2 = value2;
-				flag = 26;
+				type2 = value2;
+				type = 26;
 				value = 26;
 				break;
 		
@@ -22965,7 +22965,7 @@ void func_153(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 		num4 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 	}
 
-	func_130(str, str2, str3, str4, flag, flag2, num4, iParam1, uParam3, 235, 189);
+	func_130(str, str2, str3, str4, type, type2, num4, iParam1, uParam3, 235, 189);
 	return;
 }
 
@@ -22997,7 +22997,7 @@ BOOL func_155(int iParam0) // Position - 0x18B8D (101261)
 	return false;
 }
 
-BOOL func_156(int iParam0, int iParam1, int iParam2) // Position - 0x18BB5 (101301)
+ePedComponentType func_156(int iParam0, int iParam1, int iParam2) // Position - 0x18BB5 (101301)
 {
 	iParam1 == 5;
 	iParam2 == 0;
@@ -23562,13 +23562,13 @@ void func_169(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	char* str2;
 	char* str3;
 	char* str4;
-	BOOL flag;
-	BOOL flag2;
+	ePedComponentType type;
+	ePedComponentType type2;
 	int num2;
 	int num3;
 	int num4;
 	int value;
-	BOOL value2;
+	ePedComponentType value2;
 	int num5;
 
 	switch (iParam1)
@@ -23617,153 +23617,153 @@ void func_169(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	str2 = func_176(iParam0, iParam1, iParam2, false);
 	str3 = func_175(iParam0, iParam2);
 	str4 = func_174(iParam0, iParam2);
-	flag = func_173(iParam0, num, iParam2);
+	type = func_173(iParam0, num, iParam2);
 
 	if (func_92(iParam0, -1) == true)
-		flag2 = 1;
+		type2 = 1;
 	else
-		flag2 = 0;
+		type2 = 0;
 
 	num3 = func_136(iParam1);
 	num4 = func_173(iParam0, num3, iParam2);
-	value = flag - num4;
-	value2 = flag2 - num4;
+	value = type - num4;
+	value2 = type2 - num4;
 
 	switch (iParam0)
 	{
 		case 15:
-			flag2 = func_115(1153, -1);
+			type2 = func_115(1153, -1);
 		
-			if (flag2 > 25)
-				flag2 = 25;
+			if (type2 > 25)
+				type2 = 25;
 		
 			value = 25;
-			value2 = flag2;
+			value2 = type2;
 			break;
 	
 		case 16:
-			flag2 = func_115(1152, -1);
+			type2 = func_115(1152, -1);
 		
-			if (flag2 > 25)
-				flag2 = 25;
+			if (type2 > 25)
+				type2 = 25;
 		
 			value = 25;
-			value2 = flag2;
+			value2 = type2;
 			break;
 	
 		case 12:
-			flag2 = func_115(1088, -1);
+			type2 = func_115(1088, -1);
 		
-			if (flag2 > 25)
-				flag2 = 25;
+			if (type2 > 25)
+				type2 = 25;
 		
 			value = 25;
-			value2 = flag2;
+			value2 = type2;
 			break;
 	
 		case 25:
 			if (func_92(iParam0, -1))
 			{
-				flag2 = func_115(2117, -1) * 7;
+				type2 = func_115(2117, -1) * 7;
 				num2 = func_115(2116, -1);
-				flag2 = 7;
+				type2 = PV_COMP_TEEF;
 				value = 7;
-				value2 = flag2;
+				value2 = type2;
 			}
 			else
 			{
-				flag2 = func_115(2117, -1) * 7;
+				type2 = func_115(2117, -1) * 7;
 				num2 = func_115(2116, -1);
-				flag2 = flag2 + num2;
+				type2 = type2 + num2;
 			
-				if (flag2 > 7)
-					flag2 = 7;
+				if (type2 > PV_COMP_TEEF)
+					type2 = PV_COMP_TEEF;
 			
 				value = 7;
-				value2 = flag2;
+				value2 = type2;
 			}
 			break;
 	
 		case 26:
 			if (func_92(iParam0, -1))
 			{
-				flag2 = func_115(2117, -1) * 7;
+				type2 = func_115(2117, -1) * 7;
 				num2 = func_115(2116, -1);
-				flag2 = 28;
+				type2 = 28;
 				value = 28;
-				value2 = flag2;
+				value2 = type2;
 			}
 			else
 			{
-				flag2 = func_115(2117, -1) * 7;
+				type2 = func_115(2117, -1) * 7;
 				num2 = func_115(2116, -1);
-				flag2 = flag2 + num2;
+				type2 = type2 + num2;
 			
-				if (flag2 > 28)
-					flag2 = 28;
+				if (type2 > 28)
+					type2 = 28;
 			
 				value = 28;
-				value2 = flag2;
+				value2 = type2;
 			}
 			break;
 	
 		case 229:
 			if (func_92(iParam0, -1))
 			{
-				flag2 = 43;
+				type2 = 43;
 				value = 43;
-				value2 = flag2;
+				value2 = type2;
 			}
 			else
 			{
-				flag2 = func_171();
+				type2 = func_171();
 				value = 43;
-				value2 = flag2;
+				value2 = type2;
 			}
 			break;
 	
 		case 234:
 			if (func_92(iParam0, -1))
 			{
-				flag2 = 4;
+				type2 = PV_COMP_LOWR;
 				value = 4;
-				value2 = flag2;
+				value2 = type2;
 			}
 			else
 			{
-				flag2 = func_115(7254, -1);
+				type2 = func_115(7254, -1);
 				value = 4;
-				value2 = flag2;
+				value2 = type2;
 			}
 			break;
 	
 		case 233:
 			if (func_92(iParam0, -1))
 			{
-				flag2 = 100;
+				type2 = 100;
 				value = 100;
-				value2 = flag2;
+				value2 = type2;
 			}
 			else
 			{
-				flag2 = func_115(7238, -1);
+				type2 = func_115(7238, -1);
 				value = 100;
-				value2 = flag2;
+				value2 = type2;
 			}
 			break;
 	
 		case 59:
 			if (func_92(iParam0, -1))
 			{
-				flag2 = 6;
+				type2 = PV_COMP_FEET;
 				value = 6;
-				value2 = flag2;
+				value2 = type2;
 			}
 			else
 			{
-				flag2 = func_170();
+				type2 = func_170();
 				value = 6;
-				value2 = flag2;
+				value2 = type2;
 			}
 			break;
 	}
@@ -23773,11 +23773,11 @@ void func_169(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	else
 		num5 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 
-	func_130(str, str2, str3, str4, flag, flag2, num5, iParam1, uParam3, iParam0, 189);
+	func_130(str, str2, str3, str4, type, type2, num5, iParam1, uParam3, iParam0, 189);
 	return;
 }
 
-BOOL func_170() // Position - 0x19734 (104244)
+ePedComponentType func_170() // Position - 0x19734 (104244)
 {
 	int num;
 
@@ -23799,7 +23799,7 @@ BOOL func_170() // Position - 0x19734 (104244)
 	return 0;
 }
 
-BOOL func_171() // Position - 0x19799 (104345)
+ePedComponentType func_171() // Position - 0x19799 (104345)
 {
 	int i;
 	int num;
@@ -27099,10 +27099,10 @@ void func_181(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	char* str2;
 	char* str3;
 	char* str4;
-	BOOL flag;
-	BOOL flag2;
+	ePedComponentType type;
+	ePedComponentType type2;
 	int num2;
-	BOOL flag3;
+	ePedComponentType type3;
 	int value;
 	int value2;
 	int num3;
@@ -27154,14 +27154,14 @@ void func_181(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	str2 = func_184(iParam0, iParam1, iParam2);
 	str3 = func_183(iParam0, iParam1, iParam2);
 	str4 = func_182(iParam0, iParam1, iParam2);
-	flag = func_118(iParam0, num, iParam2);
-	flag2 = func_116(iParam0, -1);
+	type = func_118(iParam0, num, iParam2);
+	type2 = func_116(iParam0, -1);
 	num2 = func_136(iParam1);
-	flag3 = func_118(iParam0, num2, iParam2);
-	value = flag - flag3;
-	value2 = flag2 - flag3;
+	type3 = func_118(iParam0, num2, iParam2);
+	value = type - type3;
+	value2 = type2 - type3;
 	num3 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
-	func_130(str, str2, str3, str4, flag, flag2, num3, iParam1, uParam3, 235, iParam0);
+	func_130(str, str2, str3, str4, type, type2, num3, iParam1, uParam3, 235, iParam0);
 	return;
 }
 

@@ -6317,7 +6317,7 @@ BOOL func_188(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, v
 	return false;
 }
 
-int func_189(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4) // Position - 0x7267 (29287)
+int func_189(Vector3 vParam0, var uParam1, var uParam2, eCharacter echParam3, int iParam4) // Position - 0x7267 (29287)
 {
 	int i;
 	float distanceBetweenCoords;
@@ -6331,7 +6331,7 @@ int func_189(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4
 	{
 		if (Global_97467[i /*10*/].f_7 != 263)
 		{
-			if (Global_97467[i /*10*/].f_9 == iParam3 || iParam3 == 145)
+			if (Global_97467[i /*10*/].f_9 == echParam3 || echParam3 == _CHAR_NULL)
 			{
 				if (func_190(i) || iParam4 == 0)
 				{

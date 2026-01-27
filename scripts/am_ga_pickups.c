@@ -1192,7 +1192,7 @@ BOOL func_44(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	unk.f_20 = -1;
 	unk = uParam0;
 	unk.f_16 = uParam0.f_1;
-	func_49(func_50(uParam0), unk);
+	func_51(func_52(uParam0), unk);
 	func_47(0, -1, false);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_149, 144, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_293, 65, 0);
@@ -1335,11 +1335,33 @@ int func_47(int iParam0, int iParam1, BOOL bParam2) // Position - 0x1077 (4215)
 
 BOOL func_48(BOOL bParam0) // Position - 0x118D (4493)
 {
-	bParam0;
+	if (bParam0 && Global_1575064)
+		if (func_49())
+			return false;
+		else
+			return true;
+
 	return Global_1575064;
 }
 
-void func_49(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x119E (4510)
+BOOL func_49() // Position - 0x11B9 (4537)
+{
+	if (func_50())
+		return true;
+
+	return Global_1575067;
+}
+
+BOOL func_50() // Position - 0x11D4 (4564)
+{
+	if (Global_1575064 || Global_1575070)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_controler")) != 0)
+			return true;
+
+	return false;
+}
+
+void func_51(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x11FF (4607)
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		func_43();
@@ -1348,7 +1370,7 @@ void func_49(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	return;
 }
 
-int func_50(int iParam0) // Position - 0x11BD (4541)
+int func_52(int iParam0) // Position - 0x121E (4638)
 {
 	switch (iParam0)
 	{
@@ -1893,7 +1915,7 @@ int func_50(int iParam0) // Position - 0x11BD (4541)
 		
 	}
 
-	switch (func_51(func_52(iParam0, true)))
+	switch (func_53(func_54(iParam0, true)))
 	{
 		case 0:
 			return 8;
@@ -1911,7 +1933,7 @@ int func_50(int iParam0) // Position - 0x11BD (4541)
 	return 0;
 }
 
-int func_51(int iParam0) // Position - 0x1991 (6545)
+int func_53(int iParam0) // Position - 0x19F2 (6642)
 {
 	switch (iParam0)
 	{
@@ -2210,7 +2232,7 @@ int func_51(int iParam0) // Position - 0x1991 (6545)
 	return -1;
 }
 
-int func_52(int iParam0, BOOL bParam1) // Position - 0x1D61 (7521)
+int func_54(int iParam0, BOOL bParam1) // Position - 0x1DC2 (7618)
 {
 	switch (iParam0)
 	{

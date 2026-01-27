@@ -18052,7 +18052,7 @@ BOOL func_301(int iParam0) // Position - 0x13B68 (80744)
 int func_302(int iParam0) // Position - 0x13B9D (80797)
 {
 	if (iParam0 != -1)
-		return Global_262145.f_37656[iParam0];
+		return Global_262145.f_37658[iParam0];
 
 	return -1;
 }
@@ -23169,7 +23169,7 @@ void func_460() // Position - 0x1936A (103274)
 
 void func_461(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20) // Position - 0x19377 (103287)
 {
-	func_465(func_466(uParam0), uParam0);
+	func_467(func_468(uParam0), uParam0);
 	func_463(0, -1, false);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_109, 14, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_535, 97, 0);
@@ -23276,11 +23276,33 @@ int func_463(int iParam0, int iParam1, BOOL bParam2) // Position - 0x19418 (1034
 
 BOOL func_464(BOOL bParam0) // Position - 0x1952E (103726)
 {
-	bParam0;
+	if (bParam0 && Global_1575064)
+		if (func_465())
+			return false;
+		else
+			return true;
+
 	return Global_1575064;
 }
 
-void func_465(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x1953F (103743)
+BOOL func_465() // Position - 0x1955A (103770)
+{
+	if (func_466())
+		return true;
+
+	return Global_1575067;
+}
+
+BOOL func_466() // Position - 0x19575 (103797)
+{
+	if (Global_1575064 || Global_1575070)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_controler")) != 0)
+			return true;
+
+	return false;
+}
+
+void func_467(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x195A0 (103840)
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		func_445();
@@ -23289,7 +23311,7 @@ void func_465(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return;
 }
 
-int func_466(int iParam0) // Position - 0x1955E (103774)
+int func_468(int iParam0) // Position - 0x195BF (103871)
 {
 	switch (iParam0)
 	{
@@ -23834,7 +23856,7 @@ int func_466(int iParam0) // Position - 0x1955E (103774)
 		
 	}
 
-	switch (func_467(func_65(iParam0, true)))
+	switch (func_469(func_65(iParam0, true)))
 	{
 		case 0:
 			return 8;
@@ -23852,7 +23874,7 @@ int func_466(int iParam0) // Position - 0x1955E (103774)
 	return 0;
 }
 
-int func_467(int iParam0) // Position - 0x19D32 (105778)
+int func_469(int iParam0) // Position - 0x19D93 (105875)
 {
 	switch (iParam0)
 	{
