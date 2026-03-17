@@ -61678,7 +61678,7 @@ BOOL func_373(var uParam0) // Position - 0x46578 (288120)
 				if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 				{
 					Global_2698717 = true;
-					Global_2698718 = true;
+					Global_2698718 = 1;
 				}
 			
 				AUDIO::PLAY_SOUND_FRONTEND(-1, "NAV", "HUD_AMMO_SHOP_SOUNDSET", true);
@@ -61716,7 +61716,7 @@ BOOL func_373(var uParam0) // Position - 0x46578 (288120)
 					if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					{
 						Global_2698717 = true;
-						Global_2698718 = true;
+						Global_2698718 = 1;
 					}
 				
 					if (NETWORK::IS_STORE_AVAILABLE_TO_USER())
@@ -69750,7 +69750,7 @@ BOOL func_535(int iParam0, Hash hParam1, Hash hParam2, Hash hParam3, int iParam4
 		{
 			if (hParam1 == joaat("CATEGORY_WEAPON_AMMO") || hParam1 == joaat("CATEGORY_MART"))
 			{
-				Global_4516904 = true;
+				Global_4516904 = 1;
 				return false;
 			}
 		}
@@ -69847,7 +69847,7 @@ BOOL func_537(var uParam0, int iParam1, Hash hParam2, Hash hParam3, int iParam4,
 		{
 			if (hParam2 == joaat("CATEGORY_WEAPON_AMMO") || hParam2 == joaat("CATEGORY_MART"))
 			{
-				Global_4516904 = true;
+				Global_4516904 = 1;
 				return false;
 			}
 		}
@@ -71478,7 +71478,7 @@ int func_568(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 		{
 			if (hParam3 == joaat("CATEGORY_WEAPON_AMMO") || hParam3 == joaat("CATEGORY_MART"))
 			{
-				Global_4516904 = true;
+				Global_4516904 = 1;
 				return 0;
 			}
 		}
@@ -71525,7 +71525,7 @@ int func_568(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	{
 		if (iParam7 & 2 != 0)
 		{
-			Global_4516902 = true;
+			Global_4516902 = 1;
 			Global_4516905 = hParam4;
 			Global_4516907 = hParam3;
 			Global_4516908 = 1;
@@ -71545,7 +71545,7 @@ int func_568(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 		if (flag4)
 		{
 			func_570(1, hParam4);
-			Global_4516902 = false;
+			Global_4516902 = 0;
 		}
 	
 		if (iParam7 & 4 != 0)
@@ -89068,7 +89068,7 @@ BOOL func_692() // Position - 0x67799 (423833)
 		{
 			if (Global_4515413[num /*84*/].f_65.f_6 == joaat("CATEGORY_WEAPON_AMMO") || Global_4515413[num /*84*/].f_65.f_6 == joaat("CATEGORY_MART"))
 			{
-				Global_4516904 = true;
+				Global_4516904 = 1;
 				return false;
 			}
 		}

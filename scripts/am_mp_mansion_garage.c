@@ -38225,7 +38225,7 @@ void func_380() // Position - 0x2D229 (184873)
 				func_381(false, false, true, false, true, false, false);
 		
 			Global_1950687 = false;
-			Global_1950688 = false;
+			Global_1950688 = 0;
 		}
 	
 		MISC::SET_BIT(&iLocal_165, 12);
@@ -40190,7 +40190,7 @@ int func_458(BOOL bParam0, BOOL bParam1, int iParam2, int iParam3) // Position -
 
 	flag = _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM();
 	flag = true;
-	Global_1957359 = true;
+	Global_1957359 = 1;
 
 	if (Global_262145.f_10745)
 	{
@@ -41410,11 +41410,11 @@ int func_497(Player plParam0) // Position - 0x32270 (205424)
 	return address;
 }
 
-int func_498(int iParam0, int iParam1, int iParam2) // Position - 0x3228B (205451)
+int func_498(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x3228B (205451)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -41593,7 +41593,7 @@ int func_498(int iParam0, int iParam1, int iParam2) // Position - 0x3228B (20545
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -41725,7 +41725,7 @@ int func_498(int iParam0, int iParam1, int iParam2) // Position - 0x3228B (20545
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -147066,7 +147066,7 @@ void func_1646(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 		func_1648(true, bParam3, bParam2, false);
 		Global_65033 = 1;
 		Global_77362 = true;
-		Global_80303 = true;
+		Global_80303 = 1;
 	}
 	else
 	{
@@ -147087,7 +147087,7 @@ void func_1646(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 		else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_642(PLAYER::PLAYER_ID()) && !bParam4 && !bParam5)
 			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false, false);
 	
-		Global_80303 = false;
+		Global_80303 = 0;
 	}
 
 	return;

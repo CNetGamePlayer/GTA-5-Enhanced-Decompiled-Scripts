@@ -135175,11 +135175,11 @@ void func_1343(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1344(int iParam0, int iParam1, int iParam2) // Position - 0xA762D (685613)
+int func_1344(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xA762D (685613)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -135358,7 +135358,7 @@ int func_1344(int iParam0, int iParam1, int iParam2) // Position - 0xA762D (6856
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -135490,7 +135490,7 @@ int func_1344(int iParam0, int iParam1, int iParam2) // Position - 0xA762D (6856
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -361886,15 +361886,15 @@ void func_6991(int iParam0) // Position - 0x207590 (2127248)
 	return;
 }
 
-void func_6992(var uParam0, int iParam1) // Position - 0x2075DC (2127324)
+void func_6992(int iParam0, int iParam1) // Position - 0x2075DC (2127324)
 {
-	func_6993(uParam0, iParam1);
+	func_6993(iParam0, iParam1);
 	return;
 }
 
-void func_6993(var uParam0, int iParam1) // Position - 0x2075EC (2127340)
+void func_6993(int iParam0, int iParam1) // Position - 0x2075EC (2127340)
 {
-	*uParam0 = *uParam0 || iParam1;
+	*iParam0 = *iParam0 || iParam1;
 	return;
 }
 
@@ -376741,9 +376741,9 @@ char* func_7434() // Position - 0x21D4B3 (2217139)
 	switch (Global_1845299[PLAYER::PLAYER_ID() /*883*/])
 	{
 		case 1:
-			if (Global_4718592.f_3570 == 1)
+			if (Global_4718592.f_3570 == PV_COMP_BERD)
 				return "DM_CUT_2";
-			else if (Global_4718592.f_3572 == 1)
+			else if (Global_4718592.f_3572 == PV_COMP_BERD)
 				return "DM_CUT_4";
 			else
 				return "DM_CUT_1";

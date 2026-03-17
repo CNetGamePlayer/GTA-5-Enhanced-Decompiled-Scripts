@@ -120040,7 +120040,7 @@ void func_946(BOOL bParam0) // Position - 0x9B9DE (637406)
 
 void func_947(Ped pedParam0, int iParam1) // Position - 0x9BA14 (637460)
 {
-	Hash weaponHash;
+	int weaponHash;
 
 	weaponHash = 0;
 

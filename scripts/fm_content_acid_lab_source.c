@@ -107163,10 +107163,10 @@ BOOL func_1019(Ped pedParam0, Any* panParam1, int iParam2, var uParam3) // Posit
 	return false;
 }
 
-ePedComponentType func_1020(ePedComponentType epctParam0) // Position - 0x8455B (542043)
+int func_1020(ePedComponentType epctParam0) // Position - 0x8455B (542043)
 {
 	if (epctParam0 <= PV_COMP_INVALID || epctParam0 >= PV_COMP_LOWR)
-		return PV_COMP_INVALID;
+		return -1;
 
 	return Global_2686095.f_6512[epctParam0];
 }
@@ -157836,11 +157836,11 @@ void func_1733(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1734(int iParam0, int iParam1, int iParam2) // Position - 0xC1FBC (794556)
+int func_1734(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xC1FBC (794556)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -158019,7 +158019,7 @@ int func_1734(int iParam0, int iParam1, int iParam2) // Position - 0xC1FBC (7945
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -158151,7 +158151,7 @@ int func_1734(int iParam0, int iParam1, int iParam2) // Position - 0xC1FBC (7945
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -386511,7 +386511,7 @@ int func_7529() // Position - 0x224286 (2245254)
 	return uLocal_7846.f_1236.f_1;
 }
 
-Hash func_7530() // Position - 0x224296 (2245270)
+ePedComponentType func_7530() // Position - 0x224296 (2245270)
 {
 	return uLocal_7846.f_1236;
 }
@@ -404405,14 +404405,14 @@ void func_8556() // Position - 0x23B177 (2339191)
 	return;
 }
 
-void func_8557(eBlipSprite ebsParam0) // Position - 0x23B197 (2339223)
+void func_8557(int iParam0) // Position - 0x23B197 (2339223)
 {
 	Player player;
 
 	player = PLAYER::PLAYER_ID();
 
-	if (Global_1912540[player /*319*/].f_286 != ebsParam0)
-		Global_1912540[player /*319*/].f_286 = ebsParam0;
+	if (Global_1912540[player /*319*/].f_286 != iParam0)
+		Global_1912540[player /*319*/].f_286 = iParam0;
 
 	return;
 }
@@ -424653,9 +424653,9 @@ BOOL func_9052() // Position - 0x25BADA (2472666)
 	return IS_BIT_SET(Global_2621446, 4);
 }
 
-void func_9053(int iParam0, int iParam1) // Position - 0x25BAE8 (2472680)
+void func_9053(var uParam0, int iParam1) // Position - 0x25BAE8 (2472680)
 {
-	func_9054(iParam0, iParam1);
+	func_9054(uParam0, iParam1);
 	return;
 }
 
@@ -452208,7 +452208,7 @@ BOOL func_9643(Player plParam0) // Position - 0x27FD2F (2620719)
 	return func_9641(&Global_2647285.f_756[plParam0]);
 }
 
-void func_9644(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position - 0x27FD46 (2620742)
+void func_9644(Player plParam0, eBlipSprite ebsParam1, BOOL bParam2, BOOL bParam3) // Position - 0x27FD46 (2620742)
 {
 	BOOL flag;
 
@@ -452218,7 +452218,7 @@ void func_9644(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Posi
 	if (func_9638(&Global_2647285.f_591[plParam0], &Global_2647285.f_954[plParam0], &(Global_2647285.f_388), bParam2, plParam0, bParam3, &flag))
 	{
 		if (bParam2)
-			Global_2647285.f_426[plParam0] = iParam1;
+			Global_2647285.f_426[plParam0] = ebsParam1;
 	
 		if (flag)
 			func_9645();
@@ -467990,7 +467990,7 @@ void func_10369(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x293
 	return;
 }
 
-int func_10370(Player plParam0) // Position - 0x293851 (2701393)
+eBlipSprite func_10370(Player plParam0) // Position - 0x293851 (2701393)
 {
 	return Global_2647285.f_426[plParam0];
 }
@@ -469281,7 +469281,7 @@ void func_10428() // Position - 0x294F8B (2707339)
 
 	player = PLAYER::PLAYER_ID();
 
-	if (Global_1912540[player /*319*/].f_286 != INVALID)
+	if (Global_1912540[player /*319*/].f_286 != -1)
 		Global_1912540[player /*319*/].f_286 = -1;
 
 	return;

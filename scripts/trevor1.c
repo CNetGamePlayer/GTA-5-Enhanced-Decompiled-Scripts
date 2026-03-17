@@ -135199,7 +135199,7 @@ void func_981(int iParam0) // Position - 0xAD08B (708747)
 	if (iParam0 == -1)
 		return;
 
-	Global_79095[iParam0] = 0;
+	Global_79095[iParam0] = false;
 	Global_79095.f_69[iParam0] = 0;
 	return;
 }
@@ -135218,7 +135218,7 @@ void func_982(int iParam0, BOOL bParam1) // Position - 0xAD0B0 (708784)
 			func_983(iParam0, 3, false);
 			func_983(iParam0, 4, false);
 			func_983(iParam0, 0, true);
-			Global_79095[iParam0] = 1;
+			Global_79095[iParam0] = true;
 		}
 	}
 	else

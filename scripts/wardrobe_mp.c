@@ -4552,43 +4552,43 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 		case 0:
 			switch (ecaParam1)
 			{
-				case INPUT_NEXT_CAMERA:
+				case 0:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_01", "singleplayer_overlays", "MK_000", "", hParam2, 300, 3);
 					break;
 			
-				case INPUT_LOOK_LR:
+				case 1:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_02", "singleplayer_overlays", "MK_001", "", hParam2, 450, 0);
 					break;
 			
-				case INPUT_LOOK_UD:
+				case 2:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_03", "singleplayer_overlays", "MK_002", "", hParam2, 250, 4);
 					break;
 			
-				case INPUT_LOOK_UP_ONLY:
+				case 3:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_04", "singleplayer_overlays", "MK_003", "", hParam2, 175, 0);
 					break;
 			
-				case INPUT_LOOK_DOWN_ONLY:
+				case 4:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_06", "singleplayer_overlays", "MK_005", "", hParam2, 380, 0);
 					break;
 			
-				case INPUT_LOOK_LEFT_ONLY:
+				case 5:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_07", "singleplayer_overlays", "MK_006", "", hParam2, 180, 0);
 					break;
 			
-				case INPUT_LOOK_RIGHT_ONLY:
+				case 6:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_08", "singleplayer_overlays", "MK_007", "", hParam2, 240, 0);
 					break;
 			
-				case INPUT_CINEMATIC_SLOWMO:
+				case 7:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_10", "singleplayer_overlays", "MK_009", "", hParam2, 195, 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_UD:
+				case 8:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_11", "singleplayer_overlays", "MK_010", "", hParam2, 280, 6);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_LR:
+				case 9:
 					if (func_118() || func_117())
 					{
 						num = 400;
@@ -4600,47 +4600,47 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 					}
 					break;
 			
-				case INPUT_SCRIPTED_FLY_ZUP:
+				case 10:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_13", "singleplayer_overlays", "MK_012", "", hParam2, 320, 3);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_ZDOWN:
+				case 11:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_14", "singleplayer_overlays", "MK_013", "", hParam2, 500, 2);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_UD:
+				case 12:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_16", "singleplayer_overlays", "MK_015", "", hParam2, 220, 0);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_LR:
+				case 13:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_17", "singleplayer_overlays", "MK_016", "", hParam2, 320, 4);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_NEXT:
+				case 14:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_18", "singleplayer_overlays", "MK_017", "", hParam2, 140, 2);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_PREV:
+				case 15:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_20", "singleplayer_overlays", "MK_019", "", hParam2, 350, 0);
 					break;
 			
-				case INPUT_SELECT_NEXT_WEAPON:
+				case 16:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_21", "singleplayer_overlays", "MK_020", "", hParam2, 350, 0);
 					break;
 			
-				case INPUT_SELECT_PREV_WEAPON:
+				case 17:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_05", "singleplayer_overlays", "MK_004", "", hParam2, 120, 1);
 					break;
 			
-				case INPUT_SKIP_CUTSCENE:
+				case 18:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_09", "singleplayer_overlays", "MK_008", "", hParam2, 99, 1);
 					break;
 			
-				case INPUT_CHARACTER_WHEEL:
+				case 19:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_15", "singleplayer_overlays", "MK_014", "", hParam2, 400, 1);
 					break;
 			
-				case INPUT_MULTIPLAYER_INFO:
+				case 20:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_MIC_19", "singleplayer_overlays", "MK_018", "", hParam2, 420, 1);
 					break;
 			
@@ -4653,7 +4653,7 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 		case 1:
 			switch (ecaParam1)
 			{
-				case INPUT_NEXT_CAMERA:
+				case 0:
 					if (func_118() || func_117())
 					{
 						num = 450;
@@ -4665,158 +4665,158 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 					}
 					break;
 			
-				case INPUT_LOOK_LR:
+				case 1:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_02", "singleplayer_overlays", "fr_001", "", hParam2, 230, 0);
 					break;
 			
-				case INPUT_LOOK_UD:
+				case 2:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_03", "singleplayer_overlays", "fr_002", "", hParam2, 310, 0);
 					break;
 			
-				case INPUT_LOOK_UP_ONLY:
+				case 3:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_04", "singleplayer_overlays", "fr_003", "", hParam2, 260, 0);
 					break;
 			
-				case INPUT_LOOK_DOWN_ONLY:
+				case 4:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_07", "singleplayer_overlays", "fr_006", "", hParam2, 240, 2);
 					break;
 			
-				case INPUT_LOOK_LEFT_ONLY:
+				case 5:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_08", "singleplayer_overlays", "fr_007", "", hParam2, 190, 3);
 					break;
 			
-				case INPUT_LOOK_RIGHT_ONLY:
+				case 6:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_09", "singleplayer_overlays", "fr_008", "", hParam2, 200, 2);
 					break;
 			
-				case INPUT_CINEMATIC_SLOWMO:
+				case 7:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_10", "singleplayer_overlays", "fr_009", "", hParam2, 225, 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_UD:
+				case 8:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_12", "singleplayer_overlays", "fr_011", "", hParam2, 195, 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_LR:
+				case 9:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_13", "singleplayer_overlays", "fr_012", "", hParam2, 275, 2);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_ZUP:
+				case 10:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_14", "singleplayer_overlays", "fr_013", "", hParam2, 80, 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_ZDOWN:
+				case 11:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_15", "singleplayer_overlays", "fr_014", "", hParam2, 95, 0);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_UD:
+				case 12:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_16", "singleplayer_overlays", "fr_015", "", hParam2, 300, 3);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_LR:
+				case 13:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_17", "singleplayer_overlays", "fr_016", "", hParam2, 450, 3);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_NEXT:
+				case 14:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_18", "singleplayer_overlays", "fr_017", "", hParam2, 345, 3);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_PREV:
+				case 15:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_19", "singleplayer_overlays", "fr_018", "", hParam2, 550, 0);
 					break;
 			
-				case INPUT_SELECT_NEXT_WEAPON:
+				case 16:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_20", "singleplayer_overlays", "fr_019", "", hParam2, 200, 0);
 					break;
 			
-				case INPUT_SELECT_PREV_WEAPON:
+				case 17:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_21", "singleplayer_overlays", "fr_020", "", hParam2, 180, 0);
 					break;
 			
-				case INPUT_SKIP_CUTSCENE:
+				case 18:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_22", "singleplayer_overlays", "fr_021", "", hParam2, 140, 0);
 					break;
 			
-				case INPUT_CHARACTER_WHEEL:
+				case 19:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_24", "singleplayer_overlays", "fr_023", "", hParam2, 245, 0);
 					break;
 			
-				case INPUT_MULTIPLAYER_INFO:
+				case 20:
 					break;
 			
-				case INPUT_SPRINT:
+				case 21:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_26", "singleplayer_overlays", "fr_025", "", hParam2, 370, 0);
 					break;
 			
-				case INPUT_JUMP:
+				case 22:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_27", "singleplayer_overlays", "fr_026", "", hParam2, 350, 0);
 					break;
 			
-				case INPUT_ENTER:
+				case 23:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_28", "singleplayer_overlays", "fr_027", "", hParam2, 310, 0);
 					break;
 			
-				case INPUT_ATTACK:
+				case 24:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_29", "singleplayer_overlays", "fr_028", "", hParam2, 210, 0);
 					break;
 			
-				case INPUT_AIM:
+				case 25:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_30", "singleplayer_overlays", "fr_029", "", hParam2, 245, 0);
 					break;
 			
-				case INPUT_LOOK_BEHIND:
+				case 26:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_31", "singleplayer_overlays", "fr_030", "", hParam2, 85, 0);
 					break;
 			
-				case INPUT_PHONE:
+				case 27:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_32", "singleplayer_overlays", "fr_031", "", hParam2, 210, 0);
 					break;
 			
-				case INPUT_SPECIAL_ABILITY:
+				case 28:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_33", "singleplayer_overlays", "fr_032", "", hParam2, 225, 0);
 					break;
 			
-				case INPUT_SPECIAL_ABILITY_SECONDARY:
+				case 29:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_34", "singleplayer_overlays", "fr_033", "", hParam2, 145, 0);
 					break;
 			
-				case INPUT_MOVE_LR:
+				case 30:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_35", "singleplayer_overlays", "fr_034", "", hParam2, 230, 0);
 					break;
 			
-				case INPUT_MOVE_UD:
+				case 31:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_36", "singleplayer_overlays", "fr_035", "", hParam2, 195, 0);
 					break;
 			
-				case INPUT_MOVE_UP_ONLY:
+				case 32:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_37", "singleplayer_overlays", "fr_036", "", hParam2, 255, 0);
 					break;
 			
-				case INPUT_MOVE_DOWN_ONLY:
+				case 33:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_38", "singleplayer_overlays", "fr_037", "", hParam2, 300, 0);
 					break;
 			
-				case INPUT_MOVE_LEFT_ONLY:
+				case 34:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_40", "singleplayer_overlays", "fr_039", "", hParam2, 300, 0);
 					break;
 			
-				case INPUT_MOVE_RIGHT_ONLY:
+				case 35:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_05", "singleplayer_overlays", "fr_004", "", hParam2, 255, 1);
 					break;
 			
-				case INPUT_DUCK:
+				case 36:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_06", "singleplayer_overlays", "fr_005", "", hParam2, 175, 1);
 					break;
 			
-				case INPUT_SELECT_WEAPON:
+				case 37:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_11", "singleplayer_overlays", "fr_010", "", hParam2, 520, 1);
 					break;
 			
-				case INPUT_PICKUP:
+				case 38:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_23", "singleplayer_overlays", "fr_022", "", hParam2, 125, 1);
 					break;
 			
-				case INPUT_SNIPER_ZOOM:
+				case 39:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FRA_39", "singleplayer_overlays", "fr_038", "", hParam2, 365, 1);
 					break;
 			
@@ -4829,27 +4829,27 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 		case 2:
 			switch (ecaParam1)
 			{
-				case INPUT_NEXT_CAMERA:
+				case 0:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_01", "singleplayer_overlays", "tp_000", "", hParam2, 120, 0);
 					break;
 			
-				case INPUT_LOOK_LR:
+				case 1:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_02", "singleplayer_overlays", "tp_001", "", hParam2, 150, 3);
 					break;
 			
-				case INPUT_LOOK_UD:
+				case 2:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_03", "singleplayer_overlays", "tp_002", "", hParam2, 100, 0);
 					break;
 			
-				case INPUT_LOOK_UP_ONLY:
+				case 3:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_04", "singleplayer_overlays", "tp_003", "", hParam2, 140, 0);
 					break;
 			
-				case INPUT_LOOK_DOWN_ONLY:
+				case 4:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_05", "singleplayer_overlays", "tp_004", "", hParam2, 250, 0);
 					break;
 			
-				case INPUT_LOOK_LEFT_ONLY:
+				case 5:
 					if (func_118() || func_117())
 					{
 						num = 380;
@@ -4861,115 +4861,115 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 					}
 					break;
 			
-				case INPUT_LOOK_RIGHT_ONLY:
+				case 6:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_07", "singleplayer_overlays", "tp_006", "", hParam2, 120, 0);
 					break;
 			
-				case INPUT_CINEMATIC_SLOWMO:
+				case 7:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_08", "singleplayer_overlays", "tp_007", "", hParam2, 250, 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_UD:
+				case 8:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_09", "singleplayer_overlays", "tp_008", "", hParam2, 50, 3);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_LR:
+				case 9:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_10", "singleplayer_overlays", "tp_009", "", hParam2, 135, 2);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_ZUP:
+				case 10:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_11", "singleplayer_overlays", "tp_010", "", hParam2, 245, 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_ZDOWN:
+				case 11:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_12", "singleplayer_overlays", "tp_011", "", hParam2, 280, 0);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_UD:
+				case 12:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_13", "singleplayer_overlays", "tp_012", "", hParam2, 65, 0);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_LR:
+				case 13:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_14", "singleplayer_overlays", "tp_013", "", hParam2, 150, 6);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_NEXT:
+				case 14:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_15", "singleplayer_overlays", "tp_014", "", hParam2, 200, 0);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_PREV:
+				case 15:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_16", "singleplayer_overlays", "tp_015", "", hParam2, 145, 0);
 					break;
 			
-				case INPUT_SELECT_NEXT_WEAPON:
+				case 16:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_17", "singleplayer_overlays", "tp_016", "", hParam2, 290, 0);
 					break;
 			
-				case INPUT_SELECT_PREV_WEAPON:
+				case 17:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_18", "singleplayer_overlays", "tp_017", "", hParam2, 350, 3);
 					break;
 			
-				case INPUT_SKIP_CUTSCENE:
+				case 18:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_19", "singleplayer_overlays", "tp_018", "", hParam2, 70, 0);
 					break;
 			
-				case INPUT_CHARACTER_WHEEL:
+				case 19:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_20", "singleplayer_overlays", "tp_019", "", hParam2, 180, 6);
 					break;
 			
-				case INPUT_MULTIPLAYER_INFO:
+				case 20:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_21", "singleplayer_overlays", "tp_020", "", hParam2, 230, 0);
 					break;
 			
-				case INPUT_SPRINT:
+				case 21:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_22", "singleplayer_overlays", "tp_021", "", hParam2, 200, 0);
 					break;
 			
-				case INPUT_JUMP:
+				case 22:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_24", "singleplayer_overlays", "tp_023", "", hParam2, 240, 0);
 					break;
 			
-				case INPUT_ENTER:
+				case 23:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_25", "singleplayer_overlays", "tp_024", "", hParam2, 195, 0);
 					break;
 			
-				case INPUT_ATTACK:
+				case 24:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_26", "singleplayer_overlays", "tp_025", "", hParam2, 225, 2);
 					break;
 			
-				case INPUT_AIM:
+				case 25:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_28", "singleplayer_overlays", "tp_027", "", hParam2, 175, 0);
 					break;
 			
-				case INPUT_LOOK_BEHIND:
+				case 26:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_29", "singleplayer_overlays", "tp_028", "", hParam2, 65, 0);
 					break;
 			
-				case INPUT_PHONE:
+				case 27:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_30", "singleplayer_overlays", "tp_029", "", hParam2, 50, 0);
 					break;
 			
-				case INPUT_SPECIAL_ABILITY:
+				case 28:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_31", "singleplayer_overlays", "tp_030", "", hParam2, 70, 0);
 					break;
 			
-				case INPUT_SPECIAL_ABILITY_SECONDARY:
+				case 29:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_34", "singleplayer_overlays", "tp_033", "", hParam2, 70, 0);
 					break;
 			
-				case INPUT_MOVE_LR:
+				case 30:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_23", "singleplayer_overlays", "tp_022", "", hParam2, 500, 1);
 					break;
 			
-				case INPUT_MOVE_UD:
+				case 31:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_27", "singleplayer_overlays", "tp_026", "", hParam2, 300, 1);
 					break;
 			
-				case INPUT_MOVE_UP_ONLY:
+				case 32:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_32", "singleplayer_overlays", "tp_031", "", hParam2, 190, 1);
 					break;
 			
-				case INPUT_MOVE_DOWN_ONLY:
+				case 33:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_TRV_33", "singleplayer_overlays", "tp_032", "", hParam2, 129, 1);
 					break;
 			
@@ -4983,271 +4983,271 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 		case 4:
 			switch (ecaParam1)
 			{
-				case INPUT_NEXT_CAMERA:
+				case 0:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_008", "multiplayer_overlays", "000", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(20000) * Global_262145.f_2825), 0);
 					break;
 			
-				case INPUT_LOOK_LR:
+				case 1:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_009", "multiplayer_overlays", "001", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1400) * Global_262145.f_2826), 2);
 					break;
 			
-				case INPUT_LOOK_UD:
+				case 2:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_010", "multiplayer_overlays", "002", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(9750) * Global_262145.f_2827), 3);
 					break;
 			
-				case INPUT_LOOK_UP_ONLY:
+				case 3:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_011", "multiplayer_overlays", "003", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2150) * Global_262145.f_2828), 0);
 					break;
 			
-				case INPUT_LOOK_DOWN_ONLY:
+				case 4:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_012", "multiplayer_overlays", "004", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2829), 0);
 					break;
 			
-				case INPUT_WEAPON_SPECIAL_TWO:
+				case 54:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_013", "multiplayer_overlays", "005", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(12400) * Global_262145.f_2830), 1);
 					break;
 			
-				case INPUT_LOOK_LEFT_ONLY:
+				case 5:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_014", "multiplayer_overlays", "006", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(3500) * Global_262145.f_2831), 0);
 					break;
 			
-				case INPUT_LOOK_RIGHT_ONLY:
+				case 6:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_015", "multiplayer_overlays", "007", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(4950) * Global_262145.f_2832), 2);
 					break;
 			
-				case INPUT_DIVE:
+				case 55:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_016", "multiplayer_overlays", "008", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1350) * Global_262145.f_2833), 1);
 					break;
 			
-				case INPUT_CINEMATIC_SLOWMO:
+				case 7:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_017", "multiplayer_overlays", "009", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1450) * Global_262145.f_2834), 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_UD:
+				case 8:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_018", "multiplayer_overlays", "010", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2700) * Global_262145.f_2835), 7);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_LR:
+				case 9:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_019", "multiplayer_overlays", "011", "rank", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1200) * Global_262145.f_2836), 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_ZUP:
+				case 10:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_020", "multiplayer_overlays", "012", "rank", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1500) * Global_262145.f_2837), 0);
 					break;
 			
-				case INPUT_SCRIPTED_FLY_ZDOWN:
+				case 11:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_021", "multiplayer_overlays", "013", "rank", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2650) * Global_262145.f_2838), 0);
 					break;
 			
-				case INPUT_DROP_WEAPON:
+				case 56:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_022", "multiplayer_overlays", "014", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1900) * Global_262145.f_2839), 1);
 					break;
 			
-				case INPUT_WEAPON_WHEEL_UD:
+				case 12:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_023", "multiplayer_overlays", "015", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(4950) * Global_262145.f_2840), 2);
 					break;
 			
-				case INPUT_DROP_AMMO:
+				case 57:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_024", "multiplayer_overlays", "016", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2400) * Global_262145.f_2841), 1);
 					break;
 			
-				case INPUT_THROW_GRENADE:
+				case 58:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_025", "multiplayer_overlays", "017", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5100) * Global_262145.f_2842), 1);
 					break;
 			
-				case INPUT_VEH_MOVE_LR:
+				case 59:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_026", "multiplayer_overlays", "018", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7400) * Global_262145.f_2843), 1);
 					break;
 			
-				case INPUT_VEH_MOVE_UD:
+				case 60:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_027", "multiplayer_overlays", "019", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2844), 1);
 					break;
 			
-				case INPUT_SELECT_PREV_WEAPON:
+				case 17:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_201", "multiplayer_overlays", "005", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2400) * Global_262145.f_2849), 2);
 					break;
 			
-				case INPUT_SKIP_CUTSCENE:
+				case 18:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_202", "multiplayer_overlays", "006", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5100) * Global_262145.f_2850), 2);
 					break;
 			
-				case INPUT_CHARACTER_WHEEL:
+				case 19:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_203", "multiplayer_overlays", "015", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(3600) * Global_262145.f_2851), 2);
 					break;
 			
-				case INPUT_MULTIPLAYER_INFO:
+				case 20:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_204", "multiplayer_overlays", "000", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2852), 3);
 					break;
 			
-				case INPUT_SPRINT:
+				case 21:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_205", "multiplayer_overlays", "001", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(12500) * Global_262145.f_2853), 3);
 					break;
 			
-				case INPUT_JUMP:
+				case 22:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_206", "multiplayer_overlays", "003", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2854), 3);
 					break;
 			
-				case INPUT_ENTER:
+				case 23:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_207", "multiplayer_overlays", "014", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5000) * Global_262145.f_2855), 3);
 					break;
 			
-				case INPUT_ATTACK:
+				case 24:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_208", "multiplayer_overlays", "018", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7500) * Global_262145.f_2856), 3);
 					break;
 			
-				case INPUT_AIM:
+				case 25:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_209", "multiplayer_overlays", "002", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(3750) * Global_262145.f_2857), 2);
 					break;
 			
-				case INPUT_LOOK_BEHIND:
+				case 26:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_210", "multiplayer_overlays", "007", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(3750) * Global_262145.f_2858), 3);
 					break;
 			
-				case INPUT_PHONE:
+				case 27:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_211", "multiplayer_overlays", "008", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(4800) * Global_262145.f_2859), 3);
 					break;
 			
-				case INPUT_SPECIAL_ABILITY:
+				case 28:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_212", "multiplayer_overlays", "017", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(3500) * Global_262145.f_2860), 3);
 					break;
 			
-				case INPUT_VEH_MOVE_UP_ONLY:
+				case 61:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_213", "multiplayer_overlays", "009", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(12350) * Global_262145.f_2861), 1);
 					break;
 			
-				case INPUT_VEH_MOVE_DOWN_ONLY:
+				case 62:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_214", "multiplayer_overlays", "011", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1900) * Global_262145.f_2862), 1);
 					break;
 			
-				case INPUT_VEH_MOVE_LEFT_ONLY:
+				case 63:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_215", "multiplayer_overlays", "013", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(4500) * Global_262145.f_2863), 1);
 					break;
 			
-				case INPUT_VEH_MOVE_RIGHT_ONLY:
+				case 64:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_216", "multiplayer_overlays", "016", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(12250) * Global_262145.f_2864), 1);
 					break;
 			
-				case INPUT_VEH_SPECIAL:
+				case 65:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_217", "multiplayer_overlays", "019", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(12300) * Global_262145.f_2865), 1);
 					break;
 			
-				case INPUT_SPECIAL_ABILITY_SECONDARY:
+				case 29:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_218", "multiplayer_overlays", "010", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2500) * Global_262145.f_2866), 0);
 					break;
 			
-				case INPUT_MOVE_LR:
+				case 30:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_219", "multiplayer_overlays", "004", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2867), 0);
 					break;
 			
-				case INPUT_MOVE_UD:
+				case 31:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_220", "multiplayer_overlays", "012", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2868), 0);
 					break;
 			
-				case INPUT_VEH_GUN_LR:
+				case 66:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_221", "multiplayer_overlays", "020", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7500) * Global_262145.f_2869), 1);
 					break;
 			
-				case INPUT_MOVE_UP_ONLY:
+				case 32:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_222", "multiplayer_overlays", "021", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5000) * Global_262145.f_2870), 2);
 					break;
 			
-				case INPUT_MOVE_DOWN_ONLY:
+				case 33:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_223", "multiplayer_overlays", "022", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7300) * Global_262145.f_2871), 3);
 					break;
 			
-				case INPUT_MOVE_LEFT_ONLY:
+				case 34:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_224", "multiplayer_overlays", "023", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7250) * Global_262145.f_2872), 2);
 					break;
 			
-				case INPUT_MOVE_RIGHT_ONLY:
+				case 35:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_225", "multiplayer_overlays", "024", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(11900) * Global_262145.f_2873), 0);
 					break;
 			
-				case INPUT_DUCK:
+				case 36:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_226", "multiplayer_overlays", "025", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2750) * Global_262145.f_2874), 0);
 					break;
 			
-				case INPUT_SELECT_WEAPON:
+				case 37:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_227", "multiplayer_overlays", "026", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1750) * Global_262145.f_2875), 0);
 					break;
 			
-				case INPUT_PICKUP:
+				case 38:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_228", "multiplayer_overlays", "027", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7300) * Global_262145.f_2876), 3);
 					break;
 			
-				case INPUT_SNIPER_ZOOM:
+				case 39:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_229", "multiplayer_overlays", "028", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(3250) * Global_262145.f_2877), 2);
 					break;
 			
-				case INPUT_SNIPER_ZOOM_IN_ONLY:
+				case 40:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_230", "multiplayer_overlays", "029", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1000) * Global_262145.f_2878), 0);
 					break;
 			
-				case INPUT_VEH_GUN_UD:
+				case 67:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_231", "multiplayer_overlays", "030", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5000) * Global_262145.f_2879), 1);
 					break;
 			
-				case INPUT_SNIPER_ZOOM_OUT_ONLY:
+				case 41:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_232", "multiplayer_overlays", "031", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7500) * Global_262145.f_2880), 2);
 					break;
 			
-				case INPUT_VEH_AIM:
+				case 68:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_233", "multiplayer_overlays", "032", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5100) * Global_262145.f_2881), 1);
 					break;
 			
-				case INPUT_SNIPER_ZOOM_IN_SECONDARY:
+				case 42:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_234", "multiplayer_overlays", "033", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5050) * Global_262145.f_2882), 0);
 					break;
 			
-				case INPUT_SNIPER_ZOOM_OUT_SECONDARY:
+				case 43:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_235", "multiplayer_overlays", "034", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2450) * Global_262145.f_2883), 2);
 					break;
 			
-				case INPUT_COVER:
+				case 44:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_236", "multiplayer_overlays", "035", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(4950) * Global_262145.f_2884), 0);
 					break;
 			
-				case INPUT_RELOAD:
+				case 45:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_237", "multiplayer_overlays", "036", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5100) * Global_262145.f_2885), 0);
 					break;
 			
-				case INPUT_TALK:
+				case 46:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_238", "multiplayer_overlays", "037", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(12250) * Global_262145.f_2886), 0);
 					break;
 			
-				case INPUT_DETONATE:
+				case 47:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_239", "multiplayer_overlays", "038", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(1150) * Global_262145.f_2887), 3);
 					break;
 			
-				case INPUT_HUD_SPECIAL:
+				case 48:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_240", "multiplayer_overlays", "039", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7500) * Global_262145.f_2888), 3);
 					break;
 			
-				case INPUT_ARREST:
+				case 49:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_241", "multiplayer_overlays", "040", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7600) * Global_262145.f_2889), 3);
 					break;
 			
-				case INPUT_ACCURATE_AIM:
+				case 50:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_242", "multiplayer_overlays", "041", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2600) * Global_262145.f_2890), 2);
 					break;
 			
-				case INPUT_CONTEXT:
+				case 51:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_243", "multiplayer_overlays", "042", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2500) * Global_262145.f_2891), 3);
 					break;
 			
-				case INPUT_CONTEXT_SECONDARY:
+				case 52:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_244", "multiplayer_overlays", "043", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7450) * Global_262145.f_2892), 3);
 					break;
 			
-				case INPUT_WEAPON_SPECIAL:
+				case 53:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_245", "multiplayer_overlays", "044", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(7500) * Global_262145.f_2893), 0);
 					break;
 			
-				case INPUT_VEH_ATTACK:
+				case 69:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_246", "multiplayer_overlays", "045", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2894), 1);
 					break;
 			
-				case INPUT_VEH_ATTACKRIGHT:
+				case 70:
 					func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_247", "multiplayer_overlays", "047", "", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(2500) * Global_262145.f_2895), 2);
 					break;
 			}
@@ -5256,215 +5256,215 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 			{
 				switch (ecaParam1)
 				{
-					case INPUT_VEH_DUCK:
+					case 73:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_001", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HEADLIGHT:
+					case 74:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_002", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_EXIT:
+					case 75:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_003", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HANDBRAKE:
+					case 76:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_004", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HOTWIRE_LEFT:
+					case 77:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_005", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HOTWIRE_RIGHT:
+					case 78:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_006", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_LOOK_BEHIND:
+					case 79:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_009", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CIN_CAM:
+					case 80:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_013", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_NEXT_RADIO:
+					case 81:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_014", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_PREV_RADIO:
+					case 82:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_015", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_NEXT_RADIO_TRACK:
+					case 83:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_016", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_PREV_RADIO_TRACK:
+					case 84:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_019", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_RADIO_WHEEL:
+					case 85:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_020", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HORN:
+					case 86:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_036", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_YAW_RIGHT:
+					case 90:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_017", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_PASSENGER_AIM:
+					case 91:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_018", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SUB_TURN_LEFT_ONLY:
+					case 124:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_046", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SUB_TURN_RIGHT_ONLY:
+					case 125:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_045", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_THROTTLE_UP:
+					case 87:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_000", "torsoDecal", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(100) * Global_262145.f_2896), 0);
 						break;
 				
-					case INPUT_VEH_FLY_THROTTLE_DOWN:
+					case 88:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_001", "torsoDecal", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(100) * Global_262145.f_2897), 0);
 						break;
 				
-					case INPUT_VEH_FLY_YAW_LEFT:
+					case 89:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_002", "torsoDecal", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(100) * Global_262145.f_2898), 0);
 						break;
 				
-					case INPUT_VEH_SPECIAL_ABILITY_FRANKLIN:
+					case 93:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_001", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_STUNT_UD:
+					case 94:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_002", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CINEMATIC_UD:
+					case 95:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_003", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CINEMATIC_UP_ONLY:
+					case 96:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_004", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CINEMATIC_DOWN_ONLY:
+					case 97:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_005", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CINEMATIC_LR:
+					case 98:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_006", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SELECT_NEXT_WEAPON:
+					case 99:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_007", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SELECT_PREV_WEAPON:
+					case 100:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_008", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_ROOF:
+					case 101:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_009", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_JUMP:
+					case 102:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_010", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_GRAPPLING_HOOK:
+					case 103:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_011", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SHUFFLE:
+					case 104:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_012", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_DROP_PROJECTILE:
+					case 105:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_013", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_MOUSE_CONTROL_OVERRIDE:
+					case 106:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_014", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ROLL_LR:
+					case 107:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_015", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ROLL_LEFT_ONLY:
+					case 108:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_M_Hair_000", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ROLL_RIGHT_ONLY:
+					case 109:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_M_Hair_001", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_PITCH_UD:
+					case 110:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_M_Hair_000", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_PITCH_UP_ONLY:
+					case 111:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_M_Hair_001", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_PITCH_DOWN_ONLY:
+					case 112:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_M_Hair_000", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_UNDERCARRIAGE:
+					case 113:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_M_Hair_001", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ATTACK:
+					case 114:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGInd_M_Hair_000", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_SELECT_NEXT_WEAPON:
+					case 115:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_SELECT_PREV_WEAPON:
+					case 116:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_SELECT_TARGET_LEFT:
+					case 117:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SUB_TURN_LR:
+					case 123:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "mpBeach_overlays", "FM_Hair_Fuzz", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_WEAPON_WHEEL_LR:
+					case 13:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_100" /*Crew Emblem Small*/, "multiplayer_overlays", "000_A", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5000) * Global_262145.f_2845), 0);
 						break;
 				
-					case INPUT_WEAPON_WHEEL_NEXT:
+					case 14:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_101" /*Crew Emblem Large*/, "multiplayer_overlays", "000_B", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2846), 0);
 						break;
 				
-					case INPUT_WEAPON_WHEEL_PREV:
+					case 15:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FMM_CLB" /*Crew Emblem Back*/, "multiplayer_overlays", "000_C", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2847), 2);
 						break;
 				
-					case INPUT_SELECT_NEXT_WEAPON:
+					case 16:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_100" /*Crew Emblem Small*/, "multiplayer_overlays", "000_D", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5000) * Global_262145.f_2848), 0);
 						break;
 				
-					case INPUT_VEH_ACCELERATE:
+					case 71:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_101" /*Crew Emblem Large*/, "multiplayer_overlays", "000_E", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2848), 0);
 						break;
 				
-					case INPUT_VEH_BRAKE:
+					case 72:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FMM_CLB" /*Crew Emblem Back*/, "multiplayer_overlays", "000_F", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2848), 0);
 						break;
 				}
@@ -5473,211 +5473,211 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 			{
 				switch (ecaParam1)
 				{
-					case INPUT_VEH_DUCK:
+					case 73:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_027_f", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HEADLIGHT:
+					case 74:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_028_f", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_EXIT:
+					case 75:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_034_f", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HANDBRAKE:
+					case 76:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_036_f", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HOTWIRE_LEFT:
+					case 77:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_048", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_HOTWIRE_RIGHT:
+					case 78:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_052", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_LOOK_BEHIND:
+					case 79:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_053", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CIN_CAM:
+					case 80:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_054", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_NEXT_RADIO:
+					case 81:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_055", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_PREV_RADIO:
+					case 82:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_056", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_NEXT_RADIO_TRACK:
+					case 83:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_058", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_PREV_RADIO_TRACK:
+					case 84:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_067", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_RADIO_WHEEL:
+					case 85:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_068", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_PASSENGER_ATTACK:
+					case 92:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_051", "torsoDecal", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_THROTTLE_UP:
+					case 87:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_000", "torsoDecal", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(100) * Global_262145.f_2896), 0);
 						break;
 				
-					case INPUT_VEH_FLY_THROTTLE_DOWN:
+					case 88:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_001", "torsoDecal", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(100) * Global_262145.f_2897), 0);
 						break;
 				
-					case INPUT_VEH_FLY_YAW_LEFT:
+					case 89:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_002", "torsoDecal", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(100) * Global_262145.f_2898), 0);
 						break;
 				
-					case INPUT_VEH_SPECIAL_ABILITY_FRANKLIN:
+					case 93:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_001", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_STUNT_UD:
+					case 94:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_002", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CINEMATIC_UD:
+					case 95:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_003", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CINEMATIC_UP_ONLY:
+					case 96:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_004", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CINEMATIC_DOWN_ONLY:
+					case 97:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_005", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_CINEMATIC_LR:
+					case 98:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_006", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SELECT_NEXT_WEAPON:
+					case 99:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_007", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SELECT_PREV_WEAPON:
+					case 100:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_008", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_ROOF:
+					case 101:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_009", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_JUMP:
+					case 102:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_010", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_GRAPPLING_HOOK:
+					case 103:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_011", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SHUFFLE:
+					case 104:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_012", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_DROP_PROJECTILE:
+					case 105:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_013", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_MOUSE_CONTROL_OVERRIDE:
+					case 106:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_014", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ROLL_LR:
+					case 107:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_015", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ROLL_LEFT_ONLY:
+					case 108:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_F_Hair_000", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ROLL_RIGHT_ONLY:
+					case 109:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_F_Hair_001", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_PITCH_UD:
+					case 110:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_F_Hair_000", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_PITCH_UP_ONLY:
+					case 111:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_F_Hair_001", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_PITCH_DOWN_ONLY:
+					case 112:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_F_Hair_000", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_UNDERCARRIAGE:
+					case 113:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_F_Hair_001", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ATTACK:
+					case 114:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "NGInd_F_Hair_000", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_SELECT_NEXT_WEAPON:
+					case 115:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_SELECT_PREV_WEAPON:
+					case 116:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_SELECT_TARGET_LEFT:
+					case 117:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_SELECT_TARGET_RIGHT:
+					case 118:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_VERTICAL_FLIGHT_MODE:
+					case 119:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_DUCK:
+					case 120:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_ATTACK_CAMERA:
+					case 121:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_FLY_MOUSE_CONTROL_OVERRIDE:
+					case 122:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_VEH_SUB_TURN_LR:
+					case 123:
 						func_119(sParam0, ecaParam1, pedParam3, "NO_LABEL", "mpBeach_overlays", "FM_Hair_Fuzz", "hairOverlay", hParam2, 100, 0);
 						break;
 				
-					case INPUT_WEAPON_WHEEL_LR:
+					case 13:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_100" /*Crew Emblem Small*/, "multiplayer_overlays", "000_A", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5000) * Global_262145.f_2845), 0);
 						break;
 				
-					case INPUT_WEAPON_WHEEL_NEXT:
+					case 14:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_100" /*Crew Emblem Small*/, "multiplayer_overlays", "000_B", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(5000) * Global_262145.f_2846), 0);
 						break;
 				
-					case INPUT_WEAPON_WHEEL_PREV:
+					case 15:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_101" /*Crew Emblem Large*/, "multiplayer_overlays", "000_C", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2847), 2);
 						break;
 				
-					case INPUT_SELECT_NEXT_WEAPON:
+					case 16:
 						func_119(sParam0, ecaParam1, pedParam3, "TAT_FM_101" /*Crew Emblem Large*/, "multiplayer_overlays", "000_D", "crewLogo", hParam2, BUILTIN::ROUND(BUILTIN::TO_FLOAT(10000) * Global_262145.f_2848), 0);
 						break;
 				}
@@ -5685,7 +5685,7 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 			break;
 	}
 
-	if (hParam2 == 3 || hParam2 == 4 && ecaParam1 >= INPUT_VEH_SUB_THROTTLE_UP)
+	if (hParam2 == 3 || hParam2 == 4 && ecaParam1 >= 129)
 		func_111(sParam0, hParam2, ecaParam1, 129);
 
 	if (iParam4 == 22)
@@ -5694,13 +5694,13 @@ BOOL func_110(char* sParam0, eControlAction ecaParam1, Hash hParam2, Ped pedPara
 	return sParam0->f_11 != -1;
 }
 
-void func_111(char* sParam0, Hash hParam1, eControlAction ecaParam2, int iParam3) // Position - 0x824A (33354)
+void func_111(char* sParam0, Hash hParam1, int iParam2, int iParam3) // Position - 0x824A (33354)
 {
 	int decorationIndex;
 	int numTattooShopDlcItems;
 	Hash outComponent;
 
-	decorationIndex = ecaParam2 - iParam3;
+	decorationIndex = iParam2 - iParam3;
 	numTattooShopDlcItems = EXTRAMETADATA::GET_NUM_TATTOO_SHOP_DLC_ITEMS(hParam1);
 
 	if (numTattooShopDlcItems > 0 && decorationIndex < numTattooShopDlcItems)
@@ -5709,15 +5709,15 @@ void func_111(char* sParam0, Hash hParam1, eControlAction ecaParam2, int iParam3
 		{
 			if (!EXTRAMETADATA::IS_CONTENT_ITEM_LOCKED(outComponent))
 			{
-				sParam0->f_11 = ecaParam2;
+				sParam0->f_11 = iParam2;
 				TEXT_LABEL_COPY(sParam0, { outComponent.f_7 }, 4);
 				sParam0->f_5 = outComponent.f_3;
 				sParam0->f_4 = outComponent.f_2;
 				sParam0->f_8 = outComponent.f_6;
 				sParam0->f_6 = hParam1;
 				sParam0->f_7 = outComponent.f_4;
-				sParam0->f_9 = ecaParam2 / 32;
-				sParam0->f_10 = ecaParam2 % 32;
+				sParam0->f_9 = iParam2 / 32;
+				sParam0->f_10 = iParam2 % 32;
 				sParam0->f_12 = outComponent.f_5;
 			}
 		}
@@ -5910,19 +5910,19 @@ BOOL func_118() // Position - 0x85C7 (34247)
 	return true;
 }
 
-void func_119(char* sParam0, eControlAction ecaParam1, Ped pedParam2, char* sParam3, char* sParam4, char* sParam5, char* sParam6, Hash hParam7, int iParam8, int iParam9) // Position - 0x85D0 (34256)
+void func_119(char* sParam0, int iParam1, Ped pedParam2, char* sParam3, char* sParam4, char* sParam5, char* sParam6, Hash hParam7, int iParam8, int iParam9) // Position - 0x85D0 (34256)
 {
 	var unk;
 
-	sParam0->f_11 = ecaParam1;
+	sParam0->f_11 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(sParam0, sParam3, 16);
 	sParam0->f_4 = MISC::GET_HASH_KEY(sParam4);
 	sParam0->f_5 = MISC::GET_HASH_KEY(sParam5);
 	sParam0->f_8 = MISC::GET_HASH_KEY(sParam6);
 	sParam0->f_6 = hParam7;
 	sParam0->f_7 = iParam8;
-	sParam0->f_9 = ecaParam1 / 32;
-	sParam0->f_10 = ecaParam1 % 32;
+	sParam0->f_9 = iParam1 / 32;
+	sParam0->f_10 = iParam1 % 32;
 	sParam0->f_12 = iParam9;
 
 	if (ENTITY::DOES_ENTITY_EXIST(pedParam2) && !PED::IS_PED_INJURED(pedParam2))
@@ -6007,25 +6007,25 @@ eControlAction func_121(ePedComponentType epctParam0, int iParam1, ePedComponent
 	int shopPedApparelForcedComponentCount;
 	int i;
 	int nameHash;
-	eControlAction enumValue;
+	int enumValue;
 	int componentType;
 	Hash componentHash2;
 	int shopPedApparelForcedComponentCount2;
 	int j;
 	ePedComponentType nameHash2;
-	eControlAction enumValue2;
+	int enumValue2;
 	int componentType2;
 	Hash componentHash3;
 	int shopPedApparelForcedComponentCount3;
 	int k;
 	ePedComponentType nameHash3;
-	eControlAction enumValue3;
+	int enumValue3;
 	int componentType3;
 	Hash componentHash4;
 	int shopPedApparelForcedComponentCount4;
 	int l;
 	ePedComponentType nameHash4;
-	eControlAction enumValue4;
+	int enumValue4;
 	int componentType4;
 
 	if (epctParam0 == joaat("MP_M_Freemode_01"))
@@ -6034,73 +6034,73 @@ eControlAction func_121(ePedComponentType epctParam0, int iParam1, ePedComponent
 		{
 			if (epctParam2 == PV_COMP_BERD)
 			{
-				return INPUT_VEH_DUCK;
+				return 73;
 			}
 			else if (epctParam2 == PV_COMP_UPPR)
 			{
-				return INPUT_VEH_HEADLIGHT;
+				return 74;
 			}
 			else if (epctParam2 == PV_COMP_HAND)
 			{
-				return INPUT_VEH_EXIT;
+				return 75;
 			}
 			else if (epctParam2 == PV_COMP_TEEF)
 			{
-				return INPUT_VEH_HANDBRAKE;
+				return 76;
 			}
 			else if (epctParam2 == PV_COMP_LOWR)
 			{
-				return INPUT_VEH_HOTWIRE_LEFT;
+				return 77;
 			}
 			else if (epctParam2 == PV_COMP_ACCS)
 			{
-				return INPUT_VEH_HOTWIRE_RIGHT;
+				return 78;
 			}
 			else if (epctParam2 == PV_COMP_JBIB)
 			{
-				return INPUT_VEH_LOOK_BEHIND;
+				return 79;
 			}
 			else if (epctParam2 == 19)
 			{
-				return INPUT_VEH_CIN_CAM;
+				return 80;
 			}
 			else if (epctParam2 == 21)
 			{
-				return INPUT_VEH_NEXT_RADIO;
+				return 81;
 			}
 			else if (epctParam2 == 22)
 			{
-				return INPUT_VEH_PREV_RADIO;
+				return 82;
 			}
 			else if (epctParam2 == 24)
 			{
-				return INPUT_VEH_NEXT_RADIO_TRACK;
+				return 83;
 			}
 			else if (epctParam2 == 20)
 			{
-				return INPUT_VEH_PREV_RADIO_TRACK;
+				return 84;
 			}
 			else if (epctParam2 == 30)
 			{
-				return INPUT_VEH_RADIO_WHEEL;
+				return 85;
 			}
 			else if (epctParam2 == 23)
 			{
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
-					return INPUT_VEH_FLY_YAW_LEFT;
+				if (func_123(89, -1))
+					return 89;
 			}
 			else if (epctParam2 == 17)
 			{
-				return INPUT_VEH_FLY_THROTTLE_DOWN;
+				return 88;
 			}
 			else if (epctParam2 == 28)
 			{
-				if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
-					return INPUT_VEH_FLY_THROTTLE_UP;
+				if (func_123(87, -1))
+					return 87;
 			}
 			else if (epctParam2 == 41)
 			{
-				return INPUT_VEH_HORN;
+				return 86;
 			}
 			else if (epctParam2 >= 237)
 			{
@@ -6137,135 +6137,135 @@ eControlAction func_121(ePedComponentType epctParam0, int iParam1, ePedComponent
 		{
 			if (epctParam2 == PV_COMP_BERD)
 			{
-				return INPUT_VEH_DUCK;
+				return 73;
 			}
 			else if (epctParam2 == PV_COMP_UPPR)
 			{
-				return INPUT_VEH_HEADLIGHT;
+				return 74;
 			}
 			else if (epctParam2 == PV_COMP_HAND)
 			{
-				return INPUT_VEH_EXIT;
+				return 75;
 			}
 			else if (epctParam2 == PV_COMP_TEEF)
 			{
-				return INPUT_VEH_HANDBRAKE;
+				return 76;
 			}
 			else if (epctParam2 == PV_COMP_LOWR)
 			{
-				return INPUT_VEH_HOTWIRE_LEFT;
+				return 77;
 			}
 			else if (epctParam2 == PV_COMP_ACCS)
 			{
-				return INPUT_VEH_HOTWIRE_RIGHT;
+				return 78;
 			}
 			else if (epctParam2 == PV_COMP_JBIB)
 			{
-				return INPUT_VEH_LOOK_BEHIND;
+				return 79;
 			}
 			else if (epctParam2 == 23)
 			{
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
-					return INPUT_VEH_FLY_YAW_LEFT;
+				if (func_123(89, -1))
+					return 89;
 			}
 			else if (epctParam2 == 17)
 			{
-				return INPUT_VEH_FLY_THROTTLE_DOWN;
+				return 88;
 			}
 			else if (epctParam2 == 28)
 			{
-				if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
-					return INPUT_VEH_FLY_THROTTLE_UP;
+				if (func_123(87, -1))
+					return 87;
 			}
 			else if (epctParam2 == 33)
 			{
-				return INPUT_VEH_DUCK;
+				return 73;
 			}
 			else if (epctParam2 == 35)
 			{
-				return INPUT_VEH_HEADLIGHT;
+				return 74;
 			}
 			else if (epctParam2 == 37)
 			{
-				return INPUT_VEH_EXIT;
+				return 75;
 			}
 			else if (epctParam2 == 39)
 			{
-				return INPUT_VEH_HANDBRAKE;
+				return 76;
 			}
 			else if (epctParam2 == 36)
 			{
-				return INPUT_VEH_HOTWIRE_LEFT;
+				return 77;
 			}
 			else if (epctParam2 == 40)
 			{
-				return INPUT_VEH_HOTWIRE_RIGHT;
+				return 78;
 			}
 			else if (epctParam2 == 43)
 			{
-				return INPUT_VEH_LOOK_BEHIND;
+				return 79;
 			}
 			else if (epctParam2 == 19)
 			{
-				return INPUT_VEH_CIN_CAM;
+				return 80;
 			}
 			else if (epctParam2 == 21)
 			{
-				return INPUT_VEH_NEXT_RADIO;
+				return 81;
 			}
 			else if (epctParam2 == 22)
 			{
-				return INPUT_VEH_PREV_RADIO;
+				return 82;
 			}
 			else if (epctParam2 == 24)
 			{
-				return INPUT_VEH_NEXT_RADIO_TRACK;
+				return 83;
 			}
 			else if (epctParam2 == 20)
 			{
-				return INPUT_VEH_PREV_RADIO_TRACK;
+				return 84;
 			}
 			else if (epctParam2 == 30)
 			{
-				return INPUT_VEH_RADIO_WHEEL;
+				return 85;
 			}
 			else if (epctParam2 == 227)
 			{
-				return INPUT_VEH_CIN_CAM;
+				return 80;
 			}
 			else if (epctParam2 == 229)
 			{
-				return INPUT_VEH_NEXT_RADIO;
+				return 81;
 			}
 			else if (epctParam2 == 230)
 			{
-				return INPUT_VEH_PREV_RADIO;
+				return 82;
 			}
 			else if (epctParam2 == 232)
 			{
-				return INPUT_VEH_NEXT_RADIO_TRACK;
+				return 83;
 			}
 			else if (epctParam2 == 228)
 			{
-				return INPUT_VEH_PREV_RADIO_TRACK;
+				return 84;
 			}
 			else if (epctParam2 == 238)
 			{
-				return INPUT_VEH_RADIO_WHEEL;
+				return 85;
 			}
 			else if (epctParam2 == 231)
 			{
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
-					return INPUT_VEH_FLY_YAW_LEFT;
+				if (func_123(89, -1))
+					return 89;
 			}
 			else if (epctParam2 == 225)
 			{
-				return INPUT_VEH_FLY_THROTTLE_DOWN;
+				return 88;
 			}
 			else if (epctParam2 == 236)
 			{
-				if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
-					return INPUT_VEH_FLY_THROTTLE_UP;
+				if (func_123(87, -1))
+					return 87;
 			}
 			else if (epctParam2 >= 241)
 			{
@@ -6305,65 +6305,65 @@ eControlAction func_121(ePedComponentType epctParam0, int iParam1, ePedComponent
 		{
 			if (epctParam2 == PV_COMP_BERD)
 			{
-				return INPUT_VEH_EXIT;
+				return 75;
 			}
 			else if (epctParam2 == PV_COMP_HAIR)
 			{
-				return INPUT_VEH_HOTWIRE_LEFT;
+				return 77;
 			}
 			else if (epctParam2 == PV_COMP_LOWR)
 			{
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
-					return INPUT_VEH_FLY_YAW_LEFT;
+				if (func_123(89, -1))
+					return 89;
 			}
 			else if (epctParam2 == PV_COMP_TEEF)
 			{
-				return INPUT_VEH_FLY_THROTTLE_DOWN;
+				return 88;
 			}
 			else if (epctParam2 == PV_COMP_TASK)
 			{
-				if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
-					return INPUT_VEH_FLY_THROTTLE_UP;
+				if (func_123(87, -1))
+					return 87;
 			}
 			else if (epctParam2 == 32)
 			{
-				return INPUT_VEH_HOTWIRE_RIGHT;
+				return 78;
 			}
 			else if (epctParam2 == 33)
 			{
-				return INPUT_VEH_LOOK_BEHIND;
+				return 79;
 			}
 			else if (epctParam2 == 34)
 			{
-				return INPUT_VEH_CIN_CAM;
+				return 80;
 			}
 			else if (epctParam2 == 35)
 			{
-				return INPUT_VEH_NEXT_RADIO;
+				return 81;
 			}
 			else if (epctParam2 == 36)
 			{
-				return INPUT_VEH_PREV_RADIO;
+				return 82;
 			}
 			else if (epctParam2 == 62)
 			{
-				return INPUT_VEH_HANDBRAKE;
+				return 76;
 			}
 			else if (epctParam2 == 63)
 			{
-				return INPUT_VEH_NEXT_RADIO_TRACK;
+				return 83;
 			}
 			else if (epctParam2 == 186)
 			{
-				return INPUT_VEH_PREV_RADIO_TRACK;
+				return 84;
 			}
 			else if (epctParam2 == 187)
 			{
-				return INPUT_VEH_RADIO_WHEEL;
+				return 85;
 			}
 			else if (epctParam2 == 191)
 			{
-				return INPUT_VEH_HEADLIGHT;
+				return 74;
 			}
 			else if (epctParam2 >= 256)
 			{
@@ -6400,59 +6400,59 @@ eControlAction func_121(ePedComponentType epctParam0, int iParam1, ePedComponent
 		{
 			if (epctParam2 == PV_COMP_BERD)
 			{
-				return INPUT_VEH_EXIT;
+				return 75;
 			}
 			else if (epctParam2 == PV_COMP_HAIR)
 			{
-				return INPUT_VEH_HOTWIRE_LEFT;
+				return 77;
 			}
 			else if (epctParam2 == PV_COMP_LOWR)
 			{
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
-					return INPUT_VEH_FLY_YAW_LEFT;
+				if (func_123(89, -1))
+					return 89;
 			}
 			else if (epctParam2 == PV_COMP_TEEF)
 			{
-				return INPUT_VEH_FLY_THROTTLE_DOWN;
+				return 88;
 			}
 			else if (epctParam2 == PV_COMP_TASK)
 			{
-				if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
-					return INPUT_VEH_FLY_THROTTLE_UP;
+				if (func_123(87, -1))
+					return 87;
 			}
 			else if (epctParam2 == 17)
 			{
-				return INPUT_VEH_EXIT;
+				return 75;
 			}
 			else if (epctParam2 == 18)
 			{
-				return INPUT_VEH_HOTWIRE_LEFT;
+				return 77;
 			}
 			else if (epctParam2 == 20)
 			{
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
-					return INPUT_VEH_FLY_YAW_LEFT;
+				if (func_123(89, -1))
+					return 89;
 			}
 			else if (epctParam2 == 23)
 			{
-				return INPUT_VEH_FLY_THROTTLE_DOWN;
+				return 88;
 			}
 			else if (epctParam2 == 25)
 			{
-				if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
-					return INPUT_VEH_FLY_THROTTLE_UP;
+				if (func_123(87, -1))
+					return 87;
 			}
 			else if (epctParam2 == 81)
 			{
-				return INPUT_VEH_PREV_RADIO_TRACK;
+				return 84;
 			}
 			else if (epctParam2 == 82)
 			{
-				return INPUT_VEH_RADIO_WHEEL;
+				return 85;
 			}
 			else if (epctParam2 == 86)
 			{
-				return INPUT_VEH_HEADLIGHT;
+				return 74;
 			}
 			else if (epctParam2 >= 136)
 			{
@@ -6502,16 +6502,16 @@ eControlAction func_122(ePedComponentType epctParam0, Hash hParam1) // Position 
 	return -1;
 }
 
-BOOL func_123(eControlAction ecaParam0, int iParam1) // Position - 0x912A (37162)
+BOOL func_123(int iParam0, int iParam1) // Position - 0x912A (37162)
 {
 	ePedComponentType type;
 	int num;
 
-	if (func_125(ecaParam0) == 18486)
+	if (func_125(iParam0) == 18486)
 		return false;
 
-	type = func_124(ecaParam0, iParam1);
-	num = ecaParam0;
+	type = func_124(iParam0, iParam1);
+	num = iParam0;
 	return IS_BIT_SET(type, func_104(num));
 }
 
@@ -6896,7 +6896,7 @@ void func_129(Hash hParam0, Ped pedParam1) // Position - 0x9AE6 (39654)
 	int l;
 	int numTattooShopDlcItems4;
 	var outComponent4;
-	eControlAction m;
+	int m;
 
 	if (!PED::IS_PED_INJURED(pedParam1))
 	{
@@ -7065,7 +7065,7 @@ void func_129(Hash hParam0, Ped pedParam1) // Position - 0x9AE6 (39654)
 				}
 			}
 		
-			for (m = INPUT_NEXT_CAMERA; m < INPUT_VEH_SUB_PITCH_UP_ONLY; m = m + 1)
+			for (m = 0; m < 127; m = m + 1)
 			{
 				if (func_110(&unk, m, hash, pedParam1, -1))
 					if (unk.f_8 == hParam0)
@@ -45579,71 +45579,71 @@ Hash func_293(int iParam0, int iParam1) // Position - 0x36272 (221810)
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(8, iParam0, func_31(iParam1));
 }
 
-BOOL func_294(eControlAction ecaParam0, int iParam1, BOOL bParam2) // Position - 0x36288 (221832)
+BOOL func_294(int iParam0, int iParam1, BOOL bParam2) // Position - 0x36288 (221832)
 {
-	if (ecaParam0 == -1)
+	if (iParam0 == -1)
 		if (bParam2)
-			ecaParam0 = func_122(iParam1, 3);
+			iParam0 = func_122(iParam1, 3);
 		else
-			ecaParam0 = func_122(iParam1, 4);
+			iParam0 = func_122(iParam1, 4);
 
-	return func_123(ecaParam0, -1) || func_295(ecaParam0, -1);
+	return func_123(iParam0, -1) || func_295(iParam0, -1);
 }
 
-BOOL func_295(eControlAction ecaParam0, int iParam1) // Position - 0x362C4 (221892)
+BOOL func_295(int iParam0, int iParam1) // Position - 0x362C4 (221892)
 {
-	return _STAT_GET_PACKED_BOOL(func_296(ecaParam0), iParam1);
+	return _STAT_GET_PACKED_BOOL(func_296(iParam0), iParam1);
 }
 
-int func_296(eControlAction ecaParam0) // Position - 0x362D8 (221912)
+int func_296(int iParam0) // Position - 0x362D8 (221912)
 {
 	int num;
-	eControlAction action;
-	eControlAction action2;
+	int num2;
+	int num3;
 
-	if (ecaParam0 <= 480)
+	if (iParam0 <= 480)
 	{
-		action = ecaParam0;
-		num = 3112 + action;
+		num2 = iParam0;
+		num = 3112 + num2;
 	}
-	else if (ecaParam0 < 864)
+	else if (iParam0 < 864)
 	{
-		action = ecaParam0 - 480;
-		num = 6029 + action;
+		num2 = iParam0 - 480;
+		num = 6029 + num2;
 	}
-	else if (ecaParam0 < 1248)
+	else if (iParam0 < 1248)
 	{
-		action = ecaParam0 - 864;
-		num = 15562 + action;
+		num2 = iParam0 - 864;
+		num = 15562 + num2;
 	}
-	else if (ecaParam0 < 1372)
+	else if (iParam0 < 1372)
 	{
-		action = ecaParam0 - 1248;
-		num = 28355 + action;
+		num2 = iParam0 - 1248;
+		num = 28355 + num2;
 	}
-	else if (ecaParam0 < 1500)
+	else if (iParam0 < 1500)
 	{
-		action = ecaParam0 - 1372;
-		num = 30355 + action;
+		num2 = iParam0 - 1372;
+		num = 30355 + num2;
 	}
-	else if (ecaParam0 < 1564)
+	else if (iParam0 < 1564)
 	{
-		action = ecaParam0 - 1500;
-		num = 32411 + action;
+		num2 = iParam0 - 1500;
+		num = 32411 + num2;
 	}
-	else if (ecaParam0 < 1628)
+	else if (iParam0 < 1628)
 	{
-		action = ecaParam0 - 1564;
-		num = 41251 + action;
+		num2 = iParam0 - 1564;
+		num = 41251 + num2;
 	}
-	else if (ecaParam0 < 1756)
+	else if (iParam0 < 1756)
 	{
-		action = ecaParam0 - 1628;
-		num = 51059 + action;
+		num2 = iParam0 - 1628;
+		num = 51059 + num2;
 	}
 	else
 	{
-		action2 = ecaParam0;
+		num3 = iParam0;
 	}
 
 	return num;
@@ -363864,7 +363864,7 @@ void func_7263(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 	BOOL flag31;
 	int num20;
 	int num21;
-	eControlAction action;
+	int num22;
 	var unk78;
 
 	num = 0;
@@ -364824,7 +364824,7 @@ void func_7263(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 
 	flag30 = false;
 	flag31 = false;
-	action = -1;
+	num22 = -1;
 
 	for (l = 0; l < num15; l = l + 1)
 	{
@@ -364838,11 +364838,11 @@ void func_7263(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			{
 				if (nameHash != 0 && nameHash != joaat("0"))
 				{
-					action = func_122(nameHash, characterType);
+					num22 = func_122(nameHash, characterType);
 				
-					if (action != -1 && func_110(&unk78, action, characterType, PLAYER::PLAYER_PED_ID(), -1))
+					if (num22 != -1 && func_110(&unk78, num22, characterType, PLAYER::PLAYER_PED_ID(), -1))
 					{
-						decorationIndex = action - 129;
+						decorationIndex = num22 - 129;
 					
 						if (decorationIndex >= 0 && EXTRAMETADATA::GET_TATTOO_SHOP_DLC_ITEM_DATA(characterType, decorationIndex, &outComponent2) && nameHash == outComponent2.f_3)
 						{
@@ -402343,14 +402343,14 @@ void func_7320(var uParam0, var uParam1, int iParam2, int iParam3, ePedComponent
 			*uParam0(iParam2, iParam3, joaat("MP_M_Freemode_01"), epctParam4, 11, 20, 11, 0, 0, flag18, 0, 0, -1);
 			*uParam0(iParam2, iParam3, joaat("MP_M_Freemode_01"), epctParam4, 11, 21, 11, 0, 0, flag18, 0, 0, -1);
 		
-			if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1) || _STAT_GET_PACKED_BOOL(4244, -1))
+			if (func_123(89, -1) || _STAT_GET_PACKED_BOOL(4244, -1))
 				*uParam0(iParam2, iParam3, joaat("MP_M_Freemode_01"), epctParam4, 122, 23, 11, 0, 0, flag18, 0, 0, -1);
 			else
 				*uParam0(iParam2, iParam3, joaat("MP_M_Freemode_01"), epctParam4, 11, 23, 11, 0, 0, flag18, 0, 0, -1);
 		
 			*uParam0(iParam2, iParam3, joaat("MP_M_Freemode_01"), epctParam4, 11, 27, 11, 0, 0, flag18, 0, 0, -1);
 		
-			if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1) || _STAT_GET_PACKED_BOOL(4242, -1))
+			if (func_123(87, -1) || _STAT_GET_PACKED_BOOL(4242, -1))
 				*uParam0(iParam2, iParam3, joaat("MP_M_Freemode_01"), epctParam4, 122, 28, 11, 0, 0, flag18, 0, 0, -1);
 			else
 				*uParam0(iParam2, iParam3, joaat("MP_M_Freemode_01"), epctParam4, 11, 28, 11, 0, 0, flag18, 0, 0, -1);
@@ -402773,7 +402773,7 @@ void func_7320(var uParam0, var uParam1, int iParam2, int iParam3, ePedComponent
 		
 			*uParam0(iParam2, iParam3, joaat("MP_F_Freemode_01"), epctParam4, 11, 3, 11, 0, 0, flag18, 0, 0, -1);
 		
-			if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1) || _STAT_GET_PACKED_BOOL(4244, -1))
+			if (func_123(89, -1) || _STAT_GET_PACKED_BOOL(4244, -1))
 				*uParam0(iParam2, iParam3, joaat("MP_F_Freemode_01"), epctParam4, 122, 4, 11, 0, 0, flag18, 0, 0, -1);
 			else
 				*uParam0(iParam2, iParam3, joaat("MP_F_Freemode_01"), epctParam4, 11, 4, 11, 0, 0, flag18, 0, 0, -1);
@@ -402783,7 +402783,7 @@ void func_7320(var uParam0, var uParam1, int iParam2, int iParam3, ePedComponent
 			*uParam0(iParam2, iParam3, joaat("MP_F_Freemode_01"), epctParam4, 11, 7, 11, 0, 0, flag18, 0, 0, -1);
 			*uParam0(iParam2, iParam3, joaat("MP_F_Freemode_01"), epctParam4, 11, 8, 11, 0, 0, flag18, 0, 0, -1);
 		
-			if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1) || _STAT_GET_PACKED_BOOL(4242, -1))
+			if (func_123(87, -1) || _STAT_GET_PACKED_BOOL(4242, -1))
 				*uParam0(iParam2, iParam3, joaat("MP_F_Freemode_01"), epctParam4, 122, 9, 11, 0, 0, flag18, 0, 0, -1);
 			else
 				*uParam0(iParam2, iParam3, joaat("MP_F_Freemode_01"), epctParam4, 11, 9, 11, 0, 0, flag18, 0, 0, -1);
@@ -418373,381 +418373,381 @@ eControlAction func_7407(ePedComponentType epctParam0, ePedComponentType epctPar
 	int shopPedApparelForcedComponentCount;
 	int i;
 	ePedComponentType nameHash;
-	eControlAction enumValue;
+	int enumValue;
 	int componentType;
 	Hash componentHash2;
 	int shopPedApparelForcedComponentCount2;
 	int j;
 	ePedComponentType nameHash2;
-	eControlAction enumValue2;
+	int enumValue2;
 	int componentType2;
 
 	if (epctParam0 == joaat("MP_M_Freemode_01"))
 	{
 		if (epctParam1 == PV_COMP_HEAD)
 		{
-			return INPUT_VEH_SUB_TURN_LR;
+			return 123;
 			return -1;
 		}
 		else if (epctParam1 == PV_COMP_BERD)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_HAIR)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_UPPR)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_LOWR)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_HAND)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_FEET)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_TEEF)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_ACCS)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_TASK)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_DECL)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_JBIB)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_MAX)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == 13)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 14)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 15)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 16)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 17)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 18)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 19)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 20)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 21)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 22)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 23)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 24)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 25)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 26)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 27)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 28)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 29)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 30)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 31)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 32)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 33)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 34)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 35)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 36)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 37)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 38)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 39)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 40)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 41)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 42)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 43)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 44)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 45)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 46)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 47)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 48)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 49)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 50)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 51)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 52)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 53)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 54)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 55)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 56)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 57)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 58)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 59)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 60)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 61)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 62)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 63)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 64)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 65)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 66)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 67)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 68)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 69)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 70)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 71)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 72)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 73)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 74)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 75)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 76)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 77)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 78)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 79)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 80)
 		{
-			return INPUT_VEH_MOUSE_CONTROL_OVERRIDE;
+			return 106;
 		}
 		else if (epctParam1 == 81)
 		{
-			return INPUT_VEH_MOUSE_CONTROL_OVERRIDE;
+			return 106;
 		}
 		else if (epctParam1 == 82)
 		{
-			return INPUT_VEH_MOUSE_CONTROL_OVERRIDE;
+			return 106;
 		}
 		else if (epctParam1 == 83)
 		{
-			return INPUT_VEH_MOUSE_CONTROL_OVERRIDE;
+			return 106;
 		}
 		else if (epctParam1 == 84)
 		{
-			return INPUT_VEH_MOUSE_CONTROL_OVERRIDE;
+			return 106;
 		}
 		else if (epctParam1 == 85)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 86)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 87)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 88)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 89)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 90)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 >= 91)
 		{
@@ -418763,7 +418763,7 @@ eControlAction func_7407(ePedComponentType epctParam0, ePedComponentType epctPar
 					case joaat("DLC_MP_BEACH_M_HAIR03"):
 					case joaat("DLC_MP_BEACH_M_HAIR04"):
 					case joaat("DLC_MP_GR_M_HAIR_15_0"):
-						return INPUT_VEH_FLY_ROLL_LEFT_ONLY;
+						return 108;
 				
 					case joaat("DLC_MP_BEACH_M_HAIR05"):
 					case joaat("DLC_MP_BEACH_M_HAIR06"):
@@ -418771,42 +418771,42 @@ eControlAction func_7407(ePedComponentType epctParam0, ePedComponentType epctPar
 					case joaat("DLC_MP_BEACH_M_HAIR08"):
 					case joaat("DLC_MP_BEACH_M_HAIR09"):
 					case joaat("DLC_MP_GR_M_HAIR_16_0"):
-						return INPUT_VEH_FLY_ROLL_RIGHT_ONLY;
+						return 109;
 				
 					case joaat("DLC_MP_BUSI_M_HAIR0_0"):
 					case joaat("DLC_MP_BUSI_M_HAIR0_1"):
 					case joaat("DLC_MP_BUSI_M_HAIR0_2"):
 					case joaat("DLC_MP_BUSI_M_HAIR0_3"):
 					case joaat("DLC_MP_BUSI_M_HAIR0_4"):
-						return INPUT_VEH_FLY_PITCH_UD;
+						return 110;
 				
 					case joaat("DLC_MP_BUSI_M_HAIR1_0"):
 					case joaat("DLC_MP_BUSI_M_HAIR1_1"):
 					case joaat("DLC_MP_BUSI_M_HAIR1_2"):
 					case joaat("DLC_MP_BUSI_M_HAIR1_3"):
 					case joaat("DLC_MP_BUSI_M_HAIR1_4"):
-						return INPUT_VEH_FLY_PITCH_UP_ONLY;
+						return 111;
 				
 					case joaat("DLC_MP_HIPS_M_HAIR0_0"):
 					case joaat("DLC_MP_HIPS_M_HAIR0_1"):
 					case joaat("DLC_MP_HIPS_M_HAIR0_2"):
 					case joaat("DLC_MP_HIPS_M_HAIR0_3"):
 					case joaat("DLC_MP_HIPS_M_HAIR0_4"):
-						return INPUT_VEH_FLY_PITCH_DOWN_ONLY;
+						return 112;
 				
 					case joaat("DLC_MP_HIPS_M_HAIR1_0"):
 					case joaat("DLC_MP_HIPS_M_HAIR1_1"):
 					case joaat("DLC_MP_HIPS_M_HAIR1_2"):
 					case joaat("DLC_MP_HIPS_M_HAIR1_3"):
 					case joaat("DLC_MP_HIPS_M_HAIR1_4"):
-						return INPUT_VEH_FLY_UNDERCARRIAGE;
+						return 113;
 				
 					case joaat("CLO_IND_H_0_0"):
 					case joaat("CLO_IND_H_0_1"):
 					case joaat("CLO_IND_H_0_2"):
 					case joaat("CLO_IND_H_0_3"):
 					case joaat("CLO_IND_H_0_4"):
-						return INPUT_VEH_FLY_ATTACK;
+						return 114;
 				}
 			
 				shopPedApparelForcedComponentCount = EXTRAMETADATA::GET_SHOP_PED_APPAREL_FORCED_COMPONENT_COUNT(componentHash);
@@ -418828,320 +418828,320 @@ eControlAction func_7407(ePedComponentType epctParam0, ePedComponentType epctPar
 	{
 		if (epctParam1 == PV_COMP_HEAD)
 		{
-			return INPUT_VEH_SUB_TURN_LR;
+			return 123;
 			return -1;
 		}
 		else if (epctParam1 == PV_COMP_BERD)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_HAIR)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_UPPR)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_LOWR)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_HAND)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_FEET)
 		{
-			return INPUT_VEH_SPECIAL_ABILITY_FRANKLIN;
+			return 93;
 		}
 		else if (epctParam1 == PV_COMP_TEEF)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_ACCS)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_TASK)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_DECL)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_JBIB)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == PV_COMP_MAX)
 		{
-			return INPUT_VEH_STUNT_UD;
+			return 94;
 		}
 		else if (epctParam1 == 13)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 14)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 15)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 16)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 17)
 		{
-			return INPUT_VEH_CINEMATIC_UD;
+			return 95;
 		}
 		else if (epctParam1 == 18)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 19)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 20)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 21)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 22)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 23)
 		{
-			return INPUT_VEH_CINEMATIC_UP_ONLY;
+			return 96;
 		}
 		else if (epctParam1 == 24)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 25)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 26)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 27)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 28)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 29)
 		{
-			return INPUT_VEH_CINEMATIC_DOWN_ONLY;
+			return 97;
 		}
 		else if (epctParam1 == 30)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 31)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 32)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 33)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 34)
 		{
-			return INPUT_VEH_CINEMATIC_LR;
+			return 98;
 		}
 		else if (epctParam1 == 35)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 36)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 37)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 38)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 39)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 40)
 		{
-			return INPUT_VEH_SELECT_NEXT_WEAPON;
+			return 99;
 		}
 		else if (epctParam1 == 41)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 42)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 43)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 44)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 45)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 46)
 		{
-			return INPUT_VEH_SELECT_PREV_WEAPON;
+			return 100;
 		}
 		else if (epctParam1 == 47)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 48)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 49)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 50)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 51)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 52)
 		{
-			return INPUT_VEH_ROOF;
+			return 101;
 		}
 		else if (epctParam1 == 53)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 54)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 55)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 56)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 57)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 58)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 59)
 		{
-			return INPUT_VEH_JUMP;
+			return 102;
 		}
 		else if (epctParam1 == 60)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 61)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 62)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 63)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 64)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 65)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 66)
 		{
-			return INPUT_VEH_GRAPPLING_HOOK;
+			return 103;
 		}
 		else if (epctParam1 == 67)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 68)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 69)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 70)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 71)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 72)
 		{
-			return INPUT_VEH_SHUFFLE;
+			return 104;
 		}
 		else if (epctParam1 == 73)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 74)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 75)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 76)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 77)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 78)
 		{
-			return INPUT_VEH_DROP_PROJECTILE;
+			return 105;
 		}
 		else if (epctParam1 == 79)
 		{
@@ -419169,31 +419169,31 @@ eControlAction func_7407(ePedComponentType epctParam0, ePedComponentType epctPar
 		}
 		else if (epctParam1 == 85)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 86)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 87)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 88)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 89)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 90)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 == 91)
 		{
-			return INPUT_VEH_FLY_ROLL_LR;
+			return 107;
 		}
 		else if (epctParam1 >= 92)
 		{
@@ -419209,7 +419209,7 @@ eControlAction func_7407(ePedComponentType epctParam0, ePedComponentType epctPar
 					case joaat("DLC_MP_BEACH_F_HAIR03"):
 					case joaat("DLC_MP_BEACH_F_HAIR04"):
 					case joaat("DLC_MP_GR_F_HAIR_16_0"):
-						return INPUT_VEH_FLY_ROLL_LEFT_ONLY;
+						return 108;
 				
 					case joaat("DLC_MP_BEACH_F_HAIR05"):
 					case joaat("DLC_MP_BEACH_F_HAIR06"):
@@ -419217,42 +419217,42 @@ eControlAction func_7407(ePedComponentType epctParam0, ePedComponentType epctPar
 					case joaat("DLC_MP_BEACH_F_HAIR08"):
 					case joaat("DLC_MP_BEACH_F_HAIR09"):
 					case joaat("DLC_MP_GR_F_HAIR_15_0"):
-						return INPUT_VEH_FLY_ROLL_RIGHT_ONLY;
+						return 109;
 				
 					case joaat("DLC_MP_BUSI_F_HAIR0_0"):
 					case joaat("DLC_MP_BUSI_F_HAIR0_1"):
 					case joaat("DLC_MP_BUSI_F_HAIR0_2"):
 					case joaat("DLC_MP_BUSI_F_HAIR0_3"):
 					case joaat("DLC_MP_BUSI_F_HAIR0_4"):
-						return INPUT_VEH_FLY_PITCH_UD;
+						return 110;
 				
 					case joaat("DLC_MP_BUSI_F_HAIR1_0"):
 					case joaat("DLC_MP_BUSI_F_HAIR1_1"):
 					case joaat("DLC_MP_BUSI_F_HAIR1_2"):
 					case joaat("DLC_MP_BUSI_F_HAIR1_3"):
 					case joaat("DLC_MP_BUSI_F_HAIR1_4"):
-						return INPUT_VEH_FLY_PITCH_UP_ONLY;
+						return 111;
 				
 					case joaat("DLC_MP_HIPS_F_HAIR0_0"):
 					case joaat("DLC_MP_HIPS_F_HAIR0_1"):
 					case joaat("DLC_MP_HIPS_F_HAIR0_2"):
 					case joaat("DLC_MP_HIPS_F_HAIR0_3"):
 					case joaat("DLC_MP_HIPS_F_HAIR0_4"):
-						return INPUT_VEH_FLY_PITCH_DOWN_ONLY;
+						return 112;
 				
 					case joaat("DLC_MP_HIPS_F_HAIR1_0"):
 					case joaat("DLC_MP_HIPS_F_HAIR1_1"):
 					case joaat("DLC_MP_HIPS_F_HAIR1_2"):
 					case joaat("DLC_MP_HIPS_F_HAIR1_3"):
 					case joaat("DLC_MP_HIPS_F_HAIR1_4"):
-						return INPUT_VEH_FLY_PITCH_DOWN_ONLY;
+						return 112;
 				
 					case joaat("CLO_INDF_H_0_0"):
 					case joaat("CLO_INDF_H_0_1"):
 					case joaat("CLO_INDF_H_0_2"):
 					case joaat("CLO_INDF_H_0_3"):
 					case joaat("CLO_INDF_H_0_4"):
-						return INPUT_VEH_FLY_ATTACK;
+						return 114;
 				}
 			
 				shopPedApparelForcedComponentCount2 = EXTRAMETADATA::GET_SHOP_PED_APPAREL_FORCED_COMPONENT_COUNT(componentHash2);
@@ -428111,16 +428111,16 @@ BOOL func_7433(ePedComponentType epctParam0, ePedComponentType epctParam1, ePedC
 	if (epctParam0 == joaat("MP_M_Freemode_01"))
 		if (epctParam1 == PV_COMP_JBIB)
 			if (epctParam2 == 23)
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
+				if (func_123(89, -1))
 					return true;
 			else if (epctParam2 == 17)
 				return true;
 			else if (epctParam2 == 28)
-				if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
+				if (func_123(87, -1))
 					return true;
 		else if (epctParam1 == PV_COMP_ACCS)
 			if (epctParam2 == 23 || epctParam2 == 231)
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
+				if (func_123(89, -1))
 					return true;
 			else if (epctParam2 == 17 || epctParam2 == 225)
 				return true;
@@ -428129,16 +428129,16 @@ BOOL func_7433(ePedComponentType epctParam0, ePedComponentType epctParam1, ePedC
 	else if (epctParam0 == joaat("MP_F_Freemode_01"))
 		if (epctParam1 == PV_COMP_JBIB)
 			if (epctParam2 == PV_COMP_LOWR)
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
+				if (func_123(89, -1))
 					return true;
 			else if (epctParam2 == PV_COMP_TEEF)
 				return true;
 			else if (epctParam2 == PV_COMP_TASK)
-				if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
+				if (func_123(87, -1))
 					return true;
 		else if (epctParam1 == PV_COMP_ACCS)
 			if (epctParam2 == PV_COMP_LOWR || epctParam2 == 20)
-				if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
+				if (func_123(89, -1))
 					return true;
 			else if (epctParam2 == PV_COMP_TEEF || epctParam2 == 23)
 				return true;
@@ -442484,7 +442484,7 @@ void func_7453(int iParam0, Hash hParam1) // Position - 0x28EA41 (2681409)
 
 	if (iParam0 == 4 || iParam0 == 20)
 	{
-		if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
+		if (func_123(89, -1))
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "REW_RS" /*Rockstar V Neck*/, 16);
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(1250) * Global_262145.f_2898);
@@ -442501,7 +442501,7 @@ void func_7453(int iParam0, Hash hParam1) // Position - 0x28EA41 (2681409)
 	}
 	else if (iParam0 == 9 || iParam0 == 25)
 	{
-		if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
+		if (func_123(87, -1))
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "REW_REDSK" /*Red Skull V Neck*/, 16);
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(500) * Global_262145.f_2896);
@@ -444261,7 +444261,7 @@ void func_7454(int iParam0, Hash hParam1) // Position - 0x28FE66 (2686566)
 
 	if (iParam0 == 4)
 	{
-		if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
+		if (func_123(89, -1))
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "REW_RS" /*Rockstar V Neck*/, 16);
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(1250) * Global_262145.f_2898 * Global_300131.f_18);
@@ -444278,7 +444278,7 @@ void func_7454(int iParam0, Hash hParam1) // Position - 0x28FE66 (2686566)
 	}
 	else if (iParam0 == 9)
 	{
-		if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
+		if (func_123(87, -1))
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "REW_REDSK" /*Red Skull V Neck*/, 16);
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(500) * Global_262145.f_2896 * Global_300131.f_18);
@@ -455375,7 +455375,7 @@ void func_7469(int iParam0, Hash hParam1) // Position - 0x299865 (2725989)
 
 	if (iParam0 == 23 || iParam0 == 231)
 	{
-		if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
+		if (func_123(89, -1))
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "REW_RS" /*Rockstar V Neck*/, 16);
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(1250) * Global_262145.f_2898);
@@ -455392,7 +455392,7 @@ void func_7469(int iParam0, Hash hParam1) // Position - 0x299865 (2725989)
 	}
 	else if (iParam0 == 28 || iParam0 == 236)
 	{
-		if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
+		if (func_123(87, -1))
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "REW_REDSK" /*Red Skull V Neck*/, 16);
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(500) * Global_262145.f_2896);
@@ -457027,7 +457027,7 @@ void func_7470(int iParam0, Hash hParam1) // Position - 0x29BE4A (2735690)
 
 	if (iParam0 == 23)
 	{
-		if (func_123(INPUT_VEH_FLY_YAW_LEFT, -1))
+		if (func_123(89, -1))
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "REW_RS" /*Rockstar V Neck*/, 16);
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(1250) * Global_262145.f_2898 * Global_300131.f_10);
@@ -457044,7 +457044,7 @@ void func_7470(int iParam0, Hash hParam1) // Position - 0x29BE4A (2735690)
 	}
 	else if (iParam0 == 28)
 	{
-		if (func_123(INPUT_VEH_FLY_THROTTLE_UP, -1))
+		if (func_123(87, -1))
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "REW_REDSK" /*Red Skull V Neck*/, 16);
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(500) * Global_262145.f_2896 * Global_300131.f_10);

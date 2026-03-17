@@ -46321,9 +46321,9 @@ int func_384(Vehicle veParam0, int iParam1) // Position - 0x33954 (211284)
 	return 0;
 }
 
-int func_385(Vehicle veParam0, int iParam1) // Position - 0x33A3D (211517)
+ePedComponentType func_385(Vehicle veParam0, int iParam1) // Position - 0x33A3D (211517)
 {
-	int i;
+	ePedComponentType i;
 
 	if (STREAMING::IS_MODEL_VALID(Global_153827) && VEHICLE::IS_VEHICLE_MODEL(veParam0, Global_153827) && Global_153828 == iParam1)
 		return Global_153829;
@@ -79701,10 +79701,10 @@ BOOL func_603(Ped pedParam0, Any* panParam1, int iParam2, var uParam3) // Positi
 	return false;
 }
 
-int func_604(ePedComponentType epctParam0) // Position - 0x67579 (423289)
+ePedComponentType func_604(ePedComponentType epctParam0) // Position - 0x67579 (423289)
 {
 	if (epctParam0 <= PV_COMP_INVALID || epctParam0 >= PV_COMP_LOWR)
-		return -1;
+		return PV_COMP_INVALID;
 
 	return Global_2686095.f_6512[epctParam0];
 }
@@ -114457,7 +114457,7 @@ BOOL func_1028(BOOL bParam0, int iParam1) // Position - 0x90F95 (593813)
 			return 1;
 		}
 	
-		if (Global_4718592.f_2 == 2 && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
+		if (Global_4718592.f_2 == PV_COMP_HAIR && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 		{
 			bParam0;
 			return 1;
@@ -130689,11 +130689,11 @@ void func_1331(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1332(int iParam0, int iParam1, int iParam2) // Position - 0xA4E89 (675465)
+int func_1332(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xA4E89 (675465)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -130872,7 +130872,7 @@ int func_1332(int iParam0, int iParam1, int iParam2) // Position - 0xA4E89 (6754
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -131004,7 +131004,7 @@ int func_1332(int iParam0, int iParam1, int iParam2) // Position - 0xA4E89 (6754
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}

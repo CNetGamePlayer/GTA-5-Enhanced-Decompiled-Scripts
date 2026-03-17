@@ -233,7 +233,7 @@ void main() // Position - 0x0 (0)
 	
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && !func_50())
 		{
-			if (Global_4718592 == 0 && Global_4718592.f_2 == PV_COMP_TEEF || Global_4718592.f_2 == PV_COMP_BERD)
+			if (Global_4718592 == PV_COMP_HEAD && Global_4718592.f_2 == PV_COMP_TEEF || Global_4718592.f_2 == PV_COMP_BERD)
 			{
 				if (func_45(PLAYER::PLAYER_ID()) || func_44(PLAYER::PLAYER_ID()))
 				{
@@ -408,7 +408,7 @@ void func_4(var uParam0, int iParam1) // Position - 0x407 (1031)
 
 void func_5() // Position - 0x414 (1044)
 {
-	Global_2694245 = 0;
+	Global_2694245 = false;
 	return;
 }
 
@@ -753,7 +753,7 @@ BOOL func_45(Player plParam0) // Position - 0x991 (2449)
 
 void func_46() // Position - 0x9A6 (2470)
 {
-	Global_2694245 = 1;
+	Global_2694245 = true;
 	return;
 }
 
@@ -2127,7 +2127,7 @@ void func_77(var uParam0, BOOL bParam1) // Position - 0x20AB (8363)
 	Global_1011388.f_33[num /*95*/].f_75 = DATAFILE::DATADICT_GET_INT(dict2, "min");
 	Global_1011388.f_33[num /*95*/].f_77 = DATAFILE::DATADICT_GET_INT(dict2, "num");
 
-	if (Global_1011388.f_33[num /*95*/].f_77 == -1)
+	if (Global_1011388.f_33[num /*95*/].f_77 == PV_COMP_INVALID)
 		Global_1011388.f_33[num /*95*/].f_77 = func_119();
 
 	TEXT_LABEL_ASSIGN_STRING(&(Global_1011388.f_33[num /*95*/].f_22), NETWORK::UGC_GET_CONTENT_NAME(uParam0->f_6), 64);
@@ -2719,16 +2719,16 @@ BOOL func_114(Hash hParam0) // Position - 0x3223 (12835)
 	return false;
 }
 
-void func_115(Hash hParam0, int iParam1, int iParam2) // Position - 0x32B0 (12976)
+void func_115(ePedComponentType epctParam0, ePedComponentType epctParam1, ePedComponentType epctParam2) // Position - 0x32B0 (12976)
 {
-	if (hParam0 == 1)
-		if (*iParam2 < 2)
-			*iParam2 = 2;
-	else if (*iParam2 < 1)
-		*iParam2 = 1;
+	if (epctParam0 == PV_COMP_BERD)
+		if (*epctParam2 < 2)
+			*epctParam2 = 2;
+	else if (*epctParam2 < 1)
+		*epctParam2 = 1;
 
-	if (*iParam1 < *iParam2)
-		*iParam1 = *iParam2;
+	if (*epctParam1 < *epctParam2)
+		*epctParam1 = *epctParam2;
 
 	return;
 }
@@ -2875,7 +2875,7 @@ BOOL func_125(Hash hParam0) // Position - 0x3651 (13905)
 	{
 		for (j = 0; j < 25; j = j + 1)
 		{
-			if (Global_262145.f_7031[j] == 2)
+			if (Global_262145.f_7031[j] == PV_COMP_HAIR)
 			{
 				for (i = 0; i < Global_262145.f_6183[j]; i = i + 1)
 				{
@@ -3427,11 +3427,11 @@ void func_161(var uParam0, int iParam1, int iParam2) // Position - 0x4013 (16403
 {
 	if (iParam1 == 0 || iParam1 == 1)
 		if (NETWORK::UGC_GET_CONTENT_IS_VERIFIED(uParam0->f_6))
-			if (Global_993502.f_4[iParam2 /*95*/].f_71 == 2)
+			if (Global_993502.f_4[iParam2 /*95*/].f_71 == PV_COMP_HAIR)
 				func_165(Global_999464.f_4[iParam2 /*95*/].f_22);
-			else if (Global_993502.f_4[iParam2 /*95*/].f_71 == 1)
+			else if (Global_993502.f_4[iParam2 /*95*/].f_71 == PV_COMP_BERD)
 				func_164(Global_999464.f_4[iParam2 /*95*/].f_22);
-			else if (Global_993502.f_4[iParam2 /*95*/].f_71 == 4)
+			else if (Global_993502.f_4[iParam2 /*95*/].f_71 == PV_COMP_LOWR)
 				func_162(Global_999464.f_4[iParam2 /*95*/].f_22);
 
 	return;
@@ -34890,18 +34890,18 @@ void func_262(var uParam0, var uParam1, BOOL bParam2, int iParam3, int iParam4) 
 	return;
 }
 
-void func_263(Hash hParam0, int iParam1, ePedComponentType epctParam2, BOOL bParam3) // Position - 0x22F07 (143111)
+void func_263(ePedComponentType epctParam0, int iParam1, ePedComponentType epctParam2, BOOL bParam3) // Position - 0x22F07 (143111)
 {
 	Hash hash;
 
 	if (func_28())
 	{
-		if (hParam0 == 0)
+		if (epctParam0 == PV_COMP_HEAD)
 			if (iParam1 != 6 && iParam1 != 5 && iParam1 != 4 && iParam1 != 9)
 				if (func_268(PLAYER::PLAYER_ID()) < epctParam2)
 					return;
 	
-		hash = func_267(hParam0, iParam1, bParam3);
+		hash = func_267(epctParam0, iParam1, bParam3);
 	
 		if (hash == -1)
 			return;
@@ -34947,39 +34947,39 @@ int _MPPLY_STAT_GET_INT(Hash hParam0) // Position - 0x22FA6 (143270)
 	return 0;
 }
 
-Hash func_267(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x22FC4 (143300)
+Hash func_267(ePedComponentType epctParam0, int iParam1, BOOL bParam2) // Position - 0x22FC4 (143300)
 {
-	switch (hParam0)
+	switch (epctParam0)
 	{
-		case 2:
+		case PV_COMP_HAIR:
 			if (bParam2)
 				return joaat("MPPLY_AVAILABLE_RACES_V");
 			else
 				return joaat("MPPLY_AVAILABLE_RACES");
 			break;
 	
-		case 1:
+		case PV_COMP_BERD:
 			if (bParam2)
 				return joaat("MPPLY_AVAILABLE_DMS_V");
 			else
 				return joaat("MPPLY_AVAILABLE_DMS");
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			if (bParam2)
 				return joaat("MPPLY_AVAILABLE_PARAS_V");
 			else
 				return joaat("MPPLY_AVAILABLE_PARAS");
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			if (bParam2)
 				return joaat("MPPLY_AVAILABLE_SURVIVAL_V");
 			else
 				return joaat("MPPLY_AVAILABLE_SURVIVAL");
 			break;
 	
-		case 0:
+		case PV_COMP_HEAD:
 			switch (iParam1)
 			{
 				case 6:
@@ -35448,7 +35448,7 @@ BOOL func_273(Player plParam0) // Position - 0x237BB (145339)
 	return true;
 }
 
-void func_274(Hash hParam0, int iParam1, BOOL bParam2, ePedComponentType epctParam3, BOOL bParam4) // Position - 0x237DD (145373)
+void func_274(ePedComponentType epctParam0, int iParam1, BOOL bParam2, ePedComponentType epctParam3, BOOL bParam4) // Position - 0x237DD (145373)
 {
 	Hash hash;
 
@@ -35458,15 +35458,15 @@ void func_274(Hash hParam0, int iParam1, BOOL bParam2, ePedComponentType epctPar
 	if (!bParam2)
 		return;
 
-	if (hParam0 == 0)
+	if (epctParam0 == PV_COMP_HEAD)
 		if (iParam1 != 6 && iParam1 != 5 && iParam1 != 4 && iParam1 != 9)
 			if (func_268(PLAYER::PLAYER_ID()) < epctParam3)
 				return;
-	else if (hParam0 == 2)
+	else if (epctParam0 == PV_COMP_HAIR)
 		if (epctParam3 >= 9999)
 			return;
 
-	hash = func_275(hParam0, iParam1, bParam4);
+	hash = func_275(epctParam0, iParam1, bParam4);
 
 	if (hash == -1)
 		return;
@@ -35475,39 +35475,39 @@ void func_274(Hash hParam0, int iParam1, BOOL bParam2, ePedComponentType epctPar
 	return;
 }
 
-Hash func_275(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x23862 (145506)
+Hash func_275(ePedComponentType epctParam0, int iParam1, BOOL bParam2) // Position - 0x23862 (145506)
 {
-	switch (hParam0)
+	switch (epctParam0)
 	{
-		case 2:
+		case PV_COMP_HAIR:
 			if (bParam2)
 				return joaat("MPPLY_UNIQUE_RACES_V");
 			else
 				return joaat("MPPLY_UNIQUE_RACES");
 			break;
 	
-		case 1:
+		case PV_COMP_BERD:
 			if (bParam2)
 				return joaat("MPPLY_UNIQUE_DMS_V");
 			else
 				return joaat("MPPLY_UNIQUE_DMS");
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			if (bParam2)
 				return joaat("MPPLY_UNIQUE_PARAS_V");
 			else
 				return joaat("MPPLY_UNIQUE_PARAS");
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			if (bParam2)
 				return joaat("MPPLY_UNIQUE_SURVIVAL_V");
 			else
 				return joaat("MPPLY_UNIQUE_SURVIVAL");
 			break;
 	
-		case 0:
+		case PV_COMP_HEAD:
 			switch (iParam1)
 			{
 				case 6:
@@ -35691,7 +35691,7 @@ void func_278(var uParam0, BOOL bParam1) // Position - 0x239E3 (145891)
 	Global_794954.f_4[uParam0->f_8 /*95*/].f_75 = DATAFILE::DATADICT_GET_INT(dict2, "min");
 	Global_794954.f_4[uParam0->f_8 /*95*/].f_77 = DATAFILE::DATADICT_GET_INT(dict2, "num");
 
-	if (Global_794954.f_4[uParam0->f_8 /*95*/].f_77 == -1)
+	if (Global_794954.f_4[uParam0->f_8 /*95*/].f_77 == PV_COMP_INVALID)
 		Global_794954.f_4[uParam0->f_8 /*95*/].f_77 = func_119();
 
 	TEXT_LABEL_ASSIGN_STRING(&(Global_794954.f_4[uParam0->f_8 /*95*/].f_22), NETWORK::UGC_GET_CONTENT_NAME(uParam0->f_6), 64);
@@ -35717,7 +35717,7 @@ void func_278(var uParam0, BOOL bParam1) // Position - 0x239E3 (145891)
 	hashKey = MISC::GET_HASH_KEY(&Global_794954.f_4[uParam0->f_8 /*95*/]);
 	Global_794954.f_144215[uParam0->f_8 /*13*/].f_3 = hashKey;
 
-	if (Global_794954.f_4[uParam0->f_8 /*95*/].f_71 == 6 && !bParam1)
+	if (Global_794954.f_4[uParam0->f_8 /*95*/].f_71 == PV_COMP_FEET && !bParam1)
 	{
 		if (Global_1014403.f_684 < 85)
 		{
@@ -35798,7 +35798,7 @@ void func_278(var uParam0, BOOL bParam1) // Position - 0x239E3 (145891)
 	
 		Global_794954.f_144215[uParam0->f_8 /*13*/].f_10 = -1;
 	
-		if (*Global_794954.f_163994 < 5 && Global_794954.f_4[uParam0->f_8 /*95*/].f_71 == 0 && Global_794954.f_4[uParam0->f_8 /*95*/].f_74 == 1)
+		if (*Global_794954.f_163994 < 5 && Global_794954.f_4[uParam0->f_8 /*95*/].f_71 == PV_COMP_HEAD && Global_794954.f_4[uParam0->f_8 /*95*/].f_74 == 1)
 		{
 			Global_794954.f_144215[uParam0->f_8 /*13*/].f_10 = *Global_794954.f_163994;
 			TEXT_LABEL_ASSIGN_STRING(&Global_794954.f_163963[*Global_794954.f_163994 /*6*/], NETWORK::UGC_GET_ROOT_CONTENT_ID(uParam0->f_6), 24);
@@ -35845,7 +35845,7 @@ void func_278(var uParam0, BOOL bParam1) // Position - 0x239E3 (145891)
 		}
 	}
 
-	if (Global_794954.f_4[uParam0->f_8 /*95*/].f_71 == 6)
+	if (Global_794954.f_4[uParam0->f_8 /*95*/].f_71 == PV_COMP_FEET)
 		Global_1015088[0 /*50*/] = Global_1015088[0 /*50*/] + 1;
 
 	uParam0->f_8 = uParam0->f_8 + 1;
@@ -35857,12 +35857,12 @@ void func_278(var uParam0, BOOL bParam1) // Position - 0x239E3 (145891)
 	return;
 }
 
-void func_279(Hash hParam0, int iParam1, int iParam2, ePedComponentType epctParam3) // Position - 0x2474B (149323)
+void func_279(ePedComponentType epctParam0, int iParam1, int iParam2, ePedComponentType epctParam3) // Position - 0x2474B (149323)
 {
 	var unk;
 	Hash hash;
 
-	if (!func_281(hParam0, iParam1, iParam2, &unk, epctParam3))
+	if (!func_281(epctParam0, iParam1, iParam2, &unk, epctParam3))
 		return;
 
 	hash = func_280(unk);
@@ -35906,11 +35906,11 @@ Hash func_280(int iParam0) // Position - 0x24780 (149376)
 	return -1;
 }
 
-BOOL func_281(Hash hParam0, int iParam1, int iParam2, var uParam3, ePedComponentType epctParam4) // Position - 0x247F2 (149490)
+BOOL func_281(ePedComponentType epctParam0, int iParam1, int iParam2, var uParam3, ePedComponentType epctParam4) // Position - 0x247F2 (149490)
 {
 	int num;
 
-	if (hParam0 != 0)
+	if (epctParam0 != PV_COMP_HEAD)
 		return false;
 
 	if (iParam1 != 2)
@@ -36344,7 +36344,7 @@ int func_286(int iParam0) // Position - 0x24C19 (150553)
 	return 19;
 }
 
-void func_287(Hash hParam0, int iParam1, int iParam2, ePedComponentType epctParam3, BOOL bParam4) // Position - 0x24E63 (151139)
+void func_287(ePedComponentType epctParam0, int iParam1, int iParam2, ePedComponentType epctParam3, BOOL bParam4) // Position - 0x24E63 (151139)
 {
 	var unk;
 	Hash hash;
@@ -36352,7 +36352,7 @@ void func_287(Hash hParam0, int iParam1, int iParam2, ePedComponentType epctPara
 	if (!bParam4)
 		return;
 
-	if (!func_281(hParam0, iParam1, iParam2, &unk, epctParam3))
+	if (!func_281(epctParam0, iParam1, iParam2, &unk, epctParam3))
 		return;
 
 	hash = func_288(unk);
@@ -36419,7 +36419,7 @@ BOOL func_291(Hash hParam0) // Position - 0x25032 (151602)
 
 void func_292(Hash hParam0, int iParam1) // Position - 0x2503F (151615)
 {
-	BOOL i;
+	ePedComponentType i;
 
 	if (iParam1 >= 1500)
 		return;
@@ -37910,7 +37910,7 @@ void func_354(var uParam0) // Position - 0x26E92 (159378)
 	Global_786550.f_1[uParam0->f_8 + uParam0->f_12 /*95*/].f_75 = DATAFILE::DATADICT_GET_INT(dict2, "min");
 	Global_786550.f_1[uParam0->f_8 + uParam0->f_12 /*95*/].f_77 = DATAFILE::DATADICT_GET_INT(dict2, "num");
 
-	if (Global_786550.f_1[uParam0->f_8 + uParam0->f_12 /*95*/].f_77 == -1)
+	if (Global_786550.f_1[uParam0->f_8 + uParam0->f_12 /*95*/].f_77 == PV_COMP_INVALID)
 		Global_786550.f_1[uParam0->f_8 + uParam0->f_12 /*95*/].f_77 = func_119();
 
 	TEXT_LABEL_ASSIGN_STRING(&(Global_786550.f_1[uParam0->f_8 + uParam0->f_12 /*95*/].f_22), NETWORK::UGC_GET_CONTENT_NAME(uParam0->f_6), 64);

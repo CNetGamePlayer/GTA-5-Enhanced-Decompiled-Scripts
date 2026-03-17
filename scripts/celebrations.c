@@ -3087,7 +3087,7 @@ void func_58() // Position - 0x1DE3 (7651)
 {
 	if (Global_21627.f_1 == 9 || Global_21627.f_1 == 10)
 	{
-		Global_23053 = 0;
+		Global_23053 = false;
 		Global_23049 = 1;
 	}
 
@@ -101741,7 +101741,7 @@ BOOL func_790(Hash hParam0, int iParam1, var uParam2, var uParam3) // Position -
 	return *uParam2 != 0;
 }
 
-void func_791(Ped pedParam0, var uParam1, BOOL bParam2, ePedComponentType epctParam3) // Position - 0x81F1B (532251)
+void func_791(Ped pedParam0, Any* panParam1, BOOL bParam2, ePedComponentType epctParam3) // Position - 0x81F1B (532251)
 {
 	var unk;
 	Hash characterType;
@@ -101767,13 +101767,13 @@ void func_791(Ped pedParam0, var uParam1, BOOL bParam2, ePedComponentType epctPa
 	
 		for (i = 0; i < 127; i = i + 1)
 		{
-			if (IS_BIT_SET(uParam1->[i / 32], i % 32))
+			if (IS_BIT_SET(panParam1->[i / 32], i % 32))
 				if (func_186(&unk, i, characterType, pedParam0, -1))
 					if (func_183(pedParam0, &unk, i, unk.f_4, unk.f_8, flag, flag2, bParam2, flag3))
 						PED::ADD_PED_DECORATION_FROM_HASHES_IN_CORONA(pedParam0, unk.f_4, unk.f_5);
 		}
 	
-		if (IS_BIT_SET(uParam1->[123 / 32], 123 % 32))
+		if (IS_BIT_SET(panParam1->[123 / 32], 123 % 32))
 			if (PED::GET_PED_DECORATION_ZONE_FROM_HASHES(joaat("mpBeach_overlays"), joaat("FM_Hair_Fuzz")) != 7)
 				PED::ADD_PED_DECORATION_FROM_HASHES_IN_CORONA(pedParam0, joaat("mpBeach_overlays"), joaat("FM_Hair_Fuzz"));
 	
@@ -101787,10 +101787,10 @@ void func_791(Ped pedParam0, var uParam1, BOOL bParam2, ePedComponentType epctPa
 				{
 					num = 129 + j;
 				
-					if (num / 32 >= *uParam1)
+					if (num / 32 >= *panParam1)
 					{
 					}
-					else if (IS_BIT_SET(uParam1->[num / 32], num % 32))
+					else if (IS_BIT_SET(panParam1->[num / 32], num % 32))
 					{
 						if (func_183(pedParam0, &(outComponent.f_7), num, outComponent.f_2, outComponent.f_6, flag, flag2, bParam2, flag3))
 						{
@@ -136295,7 +136295,7 @@ BOOL func_1396() // Position - 0xABEE2 (704226)
 
 BOOL func_1397() // Position - 0xABF3C (704316)
 {
-	if (Global_4502481.f_910 == 1)
+	if (Global_4502481.f_910 == true)
 		return true;
 
 	return false;
@@ -138204,11 +138204,11 @@ void func_1475(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1476(int iParam0, int iParam1, int iParam2) // Position - 0xAE0D8 (712920)
+int func_1476(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xAE0D8 (712920)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -138387,7 +138387,7 @@ int func_1476(int iParam0, int iParam1, int iParam2) // Position - 0xAE0D8 (7129
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -138519,7 +138519,7 @@ int func_1476(int iParam0, int iParam1, int iParam2) // Position - 0xAE0D8 (7129
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -385213,13 +385213,13 @@ BOOL func_7304(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var u
 
 BOOL func_7305(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 0x231D51 (2301265)
 {
-	int i;
+	ePedComponentType i;
 
 	if (func_1565(PLAYER::PLAYER_ID(), true, false))
 	{
 		if (Global_5242880 > 0)
 		{
-			for (i = 0; i < Global_5242880; i = i + 1)
+			for (i = PV_COMP_HEAD; i < Global_5242880; i = i + 1)
 			{
 				if (Global_5242880.f_1[i /*165*/].f_7 != PV_COMP_HEAD)
 					if (func_7166(uParam0, Global_5242880.f_1[i /*165*/], Global_5242880.f_1[i /*165*/].f_6, Global_5242880.f_1[i /*165*/].f_7, iParam3))
@@ -385229,7 +385229,7 @@ BOOL func_7305(var uParam0, var uParam1, var uParam2, int iParam3) // Position -
 	
 		if (Global_4980736.f_7062 > 0)
 		{
-			for (i = 0; i < Global_4980736.f_7062; i = i + 1)
+			for (i = PV_COMP_HEAD; i < Global_4980736.f_7062; i = i + 1)
 			{
 				if (Global_4980736.f_7065[i /*648*/].f_16 != PV_COMP_HEAD)
 					if (func_7166(uParam0, Global_4980736.f_7065[i /*648*/], Global_4980736.f_7065[i /*648*/].f_3, Global_4980736.f_7065[i /*648*/].f_16, 0.5f))
@@ -385239,7 +385239,7 @@ BOOL func_7305(var uParam0, var uParam1, var uParam2, int iParam3) // Position -
 	
 		if (*Global_4980736.f_68411 > 0)
 		{
-			for (i = 0; i < *Global_4980736.f_68411; i = i + 1)
+			for (i = PV_COMP_HEAD; i < *Global_4980736.f_68411; i = i + 1)
 			{
 				if (Global_4980736.f_68415[i /*626*/].f_13 != PV_COMP_HEAD)
 					if (func_7166(uParam0, Global_4980736.f_68415[i /*626*/], Global_4980736.f_68415[i /*626*/].f_3, Global_4980736.f_68415[i /*626*/].f_13, 0.5f))
@@ -385249,7 +385249,7 @@ BOOL func_7305(var uParam0, var uParam1, var uParam2, int iParam3) // Position -
 	
 		if (Global_1058124.f_273 > 0)
 		{
-			for (i = 0; i < Global_1058124.f_273; i = i + 1)
+			for (i = PV_COMP_HEAD; i < Global_1058124.f_273; i = i + 1)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(Global_1058124.f_238[i]) && !ENTITY::IS_ENTITY_DEAD(Global_1058124.f_238[i], false))
 					if (func_7166(uParam0, ENTITY::GET_ENTITY_COORDS(Global_1058124.f_238[i], true), ENTITY::GET_ENTITY_HEADING(Global_1058124.f_238[i]), ENTITY::GET_ENTITY_MODEL(Global_1058124.f_238[i]), 0.5f))
@@ -385259,7 +385259,7 @@ BOOL func_7305(var uParam0, var uParam1, var uParam2, int iParam3) // Position -
 	
 		if (Global_1058124.f_271 > 0)
 		{
-			for (i = 0; i < Global_1058124.f_271; i = i + 1)
+			for (i = PV_COMP_HEAD; i < Global_1058124.f_271; i = i + 1)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(Global_1058124.f_124[i]) && !ENTITY::IS_ENTITY_DEAD(Global_1058124.f_124[i], false))
 					if (func_7166(uParam0, ENTITY::GET_ENTITY_COORDS(Global_1058124.f_124[i], true), ENTITY::GET_ENTITY_HEADING(Global_1058124.f_124[i]), ENTITY::GET_ENTITY_MODEL(Global_1058124.f_124[i]), 0.5f))

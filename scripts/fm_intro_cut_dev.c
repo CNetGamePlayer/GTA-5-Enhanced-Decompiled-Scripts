@@ -4417,7 +4417,7 @@ int func_81(int iParam0, BOOL bParam1) // Position - 0x5F07 (24327)
 	if (num2 == -1)
 		num2 = func_13();
 
-	if (Global_1575072[num2] == 1)
+	if (Global_1575072[num2] == true)
 	{
 		bParam1;
 		num = 8;
@@ -5006,13 +5006,13 @@ BOOL func_105(int* piParam0, int iParam1) // Position - 0x7018 (28696)
 	return false;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x7053 (28755)
+BOOL _NETWORK_IS_PLAYER_VALID(ePedComponentType player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x7053 (28755)
 {
-	Player player;
+	ePedComponentType type;
 
-	player = player;
+	type = player;
 
-	if (player != -1)
+	if (type != PV_COMP_INVALID)
 	{
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(player))
 		{
@@ -5021,9 +5021,9 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 					return false;
 		
 			if (bUnk)
-				if (player == Global_2673274.f_3)
+				if (type == Global_2673274.f_3)
 					return Global_2673274.f_2;
-				else if (Global_2658294[player /*468*/] != 4)
+				else if (Global_2658294[type /*468*/] != 4)
 					return false;
 		
 			return true;
@@ -5047,7 +5047,7 @@ void func_108(int* piParam0) // Position - 0x7106 (28934)
 {
 	int num;
 	int i;
-	Player player;
+	ePedComponentType type;
 
 	num = 0;
 
@@ -5058,11 +5058,11 @@ void func_108(int* piParam0) // Position - 0x7106 (28934)
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		player = PLAYER::INT_TO_PLAYERINDEX(i);
+		type = PLAYER::INT_TO_PLAYERINDEX(i);
 	
-		if (_NETWORK_IS_PLAYER_VALID(player, false, true))
+		if (_NETWORK_IS_PLAYER_VALID(type, false, true))
 		{
-			if (PLAYER::PLAYER_ID() != player)
+			if (PLAYER::PLAYER_ID() != type)
 			{
 				if (num < 4)
 				{
@@ -9052,22 +9052,22 @@ BOOL func_183() // Position - 0xDD3C (56636)
 	return IS_BIT_SET(Global_2685153.f_2, 11);
 }
 
-BOOL func_184(Player plParam0) // Position - 0xDD4D (56653)
+BOOL func_184(ePedComponentType epctParam0) // Position - 0xDD4D (56653)
 {
-	if (plParam0 != _INVALID_PLAYER_INDEX())
-		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2658294[plParam0 /*468*/].f_325.f_8 != -1)
-				return func_171(Global_2658294[plParam0 /*468*/].f_325.f_8) == 13;
+	if (epctParam0 != _INVALID_PLAYER_INDEX())
+		if (_NETWORK_IS_PLAYER_VALID(epctParam0, true, true))
+			if (Global_2658294[epctParam0 /*468*/].f_325.f_8 != -1)
+				return func_171(Global_2658294[epctParam0 /*468*/].f_325.f_8) == 13;
 
 	return false;
 }
 
-BOOL func_185(Player plParam0, BOOL bParam1) // Position - 0xDD94 (56724)
+BOOL func_185(ePedComponentType epctParam0, BOOL bParam1) // Position - 0xDD94 (56724)
 {
-	if (plParam0 != _INVALID_PLAYER_INDEX())
-		if (bParam1 || _NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2658294[plParam0 /*468*/].f_325.f_8 != -1)
-				return func_171(Global_2658294[plParam0 /*468*/].f_325.f_8) == 35;
+	if (epctParam0 != _INVALID_PLAYER_INDEX())
+		if (bParam1 || _NETWORK_IS_PLAYER_VALID(epctParam0, true, true))
+			if (Global_2658294[epctParam0 /*468*/].f_325.f_8 != -1)
+				return func_171(Global_2658294[epctParam0 /*468*/].f_325.f_8) == 35;
 
 	return false;
 }

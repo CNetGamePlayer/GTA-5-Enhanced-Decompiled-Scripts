@@ -38260,7 +38260,7 @@ void func_323(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		}
 	
 		func_330(true, bParam3, bParam2, false);
-		Global_65033 = 1;
+		Global_65033 = true;
 		Global_77362 = true;
 		Global_80303 = true;
 	}
@@ -38268,7 +38268,7 @@ void func_323(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 	{
 		func_331(0);
 		HUD::THEFEED_RESUME();
-		Global_65033 = 0;
+		Global_65033 = false;
 	
 		if (bParam1)
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
@@ -104110,13 +104110,13 @@ BOOL func_689(var uParam0) // Position - 0x7FAD1 (522961)
 
 void func_690() // Position - 0x804E2 (525538)
 {
-	Global_65033 = 0;
+	Global_65033 = false;
 	return;
 }
 
 void func_691() // Position - 0x804EE (525550)
 {
-	Global_65033 = 1;
+	Global_65033 = true;
 	return;
 }
 
@@ -117851,7 +117851,7 @@ void func_933(int iParam0) // Position - 0x9613E (614718)
 	BOOL flag;
 	int i;
 
-	Global_65028 = 0;
+	Global_65028 = false;
 
 	if (!(Global_65252[iParam0 /*13*/] == 3))
 		return;

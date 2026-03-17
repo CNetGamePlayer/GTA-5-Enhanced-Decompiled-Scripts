@@ -144127,11 +144127,11 @@ void func_1531(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1532(int iParam0, int iParam1, int iParam2) // Position - 0xB000E (720910)
+int func_1532(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xB000E (720910)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -144310,7 +144310,7 @@ int func_1532(int iParam0, int iParam1, int iParam2) // Position - 0xB000E (7209
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -144442,7 +144442,7 @@ int func_1532(int iParam0, int iParam1, int iParam2) // Position - 0xB000E (7209
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -170726,7 +170726,7 @@ BOOL func_2285() // Position - 0xD798D (883085)
 
 BOOL func_2286() // Position - 0xD79C7 (883143)
 {
-	BOOL num;
+	int num;
 	int num2;
 	int i;
 	Hash model;
@@ -170735,7 +170735,7 @@ BOOL func_2286() // Position - 0xD79C7 (883143)
 	num = -1;
 	num2 = -1;
 
-	if (Global_1950382 >= false)
+	if (Global_1950382 >= 0)
 	{
 		func_1025(Global_1950382, &num2, false);
 	
@@ -170779,7 +170779,7 @@ BOOL func_2286() // Position - 0xD79C7 (883143)
 	
 		func_2287(13);
 	
-		if (Global_1950382 < false)
+		if (Global_1950382 < 0)
 		{
 			func_2288(14);
 			func_2287(14);
@@ -170789,7 +170789,7 @@ BOOL func_2286() // Position - 0xD79C7 (883143)
 
 	if (func_978(13) && func_978(14))
 	{
-		if (Global_1950382 < false)
+		if (Global_1950382 < 0)
 		{
 			num = 415 + Global_1950383;
 			func_1025(num, &num2, false);

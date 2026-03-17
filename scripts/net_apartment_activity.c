@@ -66345,9 +66345,9 @@ BOOL func_362(ePedComponentType epctParam0) // Position - 0x5514E (348494)
 	return false;
 }
 
-BOOL func_363(Hash hParam0) // Position - 0x55171 (348529)
+BOOL func_363(ePedComponentType epctParam0) // Position - 0x55171 (348529)
 {
-	return Global_262145.f_4699[4] == hParam0;
+	return Global_262145.f_4699[4] == epctParam0;
 }
 
 BOOL func_364(Vehicle veParam0) // Position - 0x55186 (348550)

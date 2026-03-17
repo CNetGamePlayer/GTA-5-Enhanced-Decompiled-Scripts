@@ -153879,11 +153879,11 @@ void func_1748(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1749(int iParam0, int iParam1, int iParam2) // Position - 0xC333A (799546)
+int func_1749(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xC333A (799546)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -154062,7 +154062,7 @@ int func_1749(int iParam0, int iParam1, int iParam2) // Position - 0xC333A (7995
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -154194,7 +154194,7 @@ int func_1749(int iParam0, int iParam1, int iParam2) // Position - 0xC333A (7995
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -245061,7 +245061,7 @@ BOOL func_4406() // Position - 0x14C703 (1361667)
 	return IS_BIT_SET(Global_1950714, 13);
 }
 
-void func_4407(BOOL bParam0, int iParam1, int iParam2) // Position - 0x14C712 (1361682)
+void func_4407(BOOL bParam0, int iParam1, eHudColour ehcParam2) // Position - 0x14C712 (1361682)
 {
 	int num;
 	int offset;
@@ -245073,7 +245073,7 @@ void func_4407(BOOL bParam0, int iParam1, int iParam2) // Position - 0x14C712 (1
 		if (bParam0 && !IS_BIT_SET(Global_1950714.f_4227[num], offset))
 		{
 			MISC::SET_BIT(&Global_1950714.f_4227[num], offset);
-			Global_1950714.f_4044[iParam1] = iParam2;
+			Global_1950714.f_4044[iParam1] = ehcParam2;
 		}
 		else if (!bParam0 && IS_BIT_SET(Global_1950714.f_4227[num], offset))
 		{
@@ -296353,7 +296353,7 @@ BOOL func_5628(int iParam0) // Position - 0x19A052 (1679442)
 	{
 		if (ENTITY::GET_ENTITY_SPEED(vehicle) > 0.5f && !IS_BIT_SET(Global_2658294[PLAYER::PLAYER_ID() /*468*/].f_325, 19) && !func_3406(PLAYER::PLAYER_ID()))
 		{
-			func_4407(false, iParam0, 0);
+			func_4407(false, iParam0, HUD_COLOUR_PURE_WHITE);
 			return true;
 		}
 	}
@@ -338360,7 +338360,7 @@ int func_6621(int iParam0) // Position - 0x1DE8BB (1960123)
 	{
 		if (ENTITY::GET_ENTITY_SPEED(func_5945()) > 0.5f)
 		{
-			func_4407(false, iParam0, 0);
+			func_4407(false, iParam0, HUD_COLOUR_PURE_WHITE);
 			return 1;
 		}
 	}
@@ -348467,7 +348467,7 @@ BOOL func_6753(int iParam0) // Position - 0x1EFCB8 (2030776)
 	{
 		if (ENTITY::GET_ENTITY_SPEED(vehicle) > 0.5f && !IS_BIT_SET(Global_2658294[PLAYER::PLAYER_ID() /*468*/].f_325, 19) && !func_3406(PLAYER::PLAYER_ID()))
 		{
-			func_4407(false, iParam0, 0);
+			func_4407(false, iParam0, HUD_COLOUR_PURE_WHITE);
 			return true;
 		}
 	}

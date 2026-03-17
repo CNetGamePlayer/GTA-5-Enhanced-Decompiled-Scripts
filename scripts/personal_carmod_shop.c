@@ -387035,9 +387035,9 @@ BOOL func_4020(int iParam0) // Position - 0x234995 (2312597)
 	return func_32(iParam0, 4, true);
 }
 
-BOOL func_4021(int iParam0) // Position - 0x2349A5 (2312613)
+BOOL func_4021(BOOL bParam0) // Position - 0x2349A5 (2312613)
 {
-	return Global_114016 && iParam0 != false;
+	return Global_114016 && bParam0 != false;
 }
 
 BOOL func_4022(int iParam0) // Position - 0x2349B6 (2312630)

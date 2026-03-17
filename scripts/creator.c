@@ -111826,7 +111826,7 @@ void func_747(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_4718592.f_128133 = 0;
 	Global_4718592.f_128134 = 0;
 	Global_4718592.f_132260 = 0f;
-	Global_5242880 = PV_COMP_HEAD;
+	Global_5242880 = 0;
 
 	for (i = 0; i <= func_857() - 1; i = i + 1)
 	{

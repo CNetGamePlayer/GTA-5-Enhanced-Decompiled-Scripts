@@ -132197,11 +132197,11 @@ void func_1271(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1272(int iParam0, int iParam1, int iParam2) // Position - 0xA22B5 (664245)
+int func_1272(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xA22B5 (664245)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -132380,7 +132380,7 @@ int func_1272(int iParam0, int iParam1, int iParam2) // Position - 0xA22B5 (6642
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -132512,7 +132512,7 @@ int func_1272(int iParam0, int iParam1, int iParam2) // Position - 0xA22B5 (6642
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -555188,13 +555188,13 @@ BOOL func_9997(Player plParam0, int iParam1) // Position - 0x318A6F (3246703)
 	return false;
 }
 
-BOOL func_9998(BOOL bParam0) // Position - 0x318ACC (3246796)
+BOOL func_9998(int iParam0) // Position - 0x318ACC (3246796)
 {
 	int i;
 
 	for (i = 0; i < 36; i = i + 1)
 	{
-		if (Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260[i] == bParam0)
+		if (Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260[i] == iParam0)
 			return true;
 	}
 

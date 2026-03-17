@@ -45252,7 +45252,7 @@ void func_377(Vehicle veParam0, var uParam1) // Position - 0x2E4DE (189662)
 	return;
 }
 
-void func_378(Vehicle veParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4) // Position - 0x2E554 (189780)
+void func_378(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4) // Position - 0x2E554 (189780)
 {
 	Hash entityModel;
 	float num;
@@ -45264,69 +45264,69 @@ void func_378(Vehicle veParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bP
 			entityModel = ENTITY::GET_ENTITY_MODEL(veParam0);
 		
 			if (PLAYER::PLAYER_ID() != _INVALID_PLAYER_INDEX())
-				iParam1->f_100 = PLAYER::PLAYER_ID();
+				uParam1->f_100 = PLAYER::PLAYER_ID();
 		
-			if (iParam1->f_70 == 0)
-				iParam1->f_70 = 1;
+			if (uParam1->f_70 == 0)
+				uParam1->f_70 = 1;
 		
-			func_434(veParam0, iParam1, bParam2, bParam3);
+			func_434(veParam0, uParam1, bParam2, bParam3);
 		
-			if (iParam1->f_102 != 0)
+			if (uParam1->f_102 != 0)
 			{
-				if (iParam1->f_102 == 2)
+				if (uParam1->f_102 == 2)
 				{
 					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(veParam0, true);
 					VEHICLE::SET_DRIFT_TYRES(veParam0, false);
 				}
-				else if (iParam1->f_102 == 1)
+				else if (uParam1->f_102 == 1)
 				{
 					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(veParam0, false);
 					VEHICLE::SET_DRIFT_TYRES(veParam0, false);
 				}
-				else if (iParam1->f_102 == 3)
+				else if (uParam1->f_102 == 3)
 				{
 					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(veParam0, true);
 					VEHICLE::SET_DRIFT_TYRES(veParam0, true);
 				}
 			}
 		
-			func_429(veParam0, iParam1);
+			func_429(veParam0, uParam1);
 		
 			if (ENTITY::GET_ENTITY_MODEL(veParam0) == 858355070)
 				VEHICLE::SET_PLANE_CONTROL_SECTIONS_SHOULD_BREAK_OFF_FROM_EXPLOSIONS(veParam0, false);
 		
-			if (!(iParam1->f_78 == -1) && iParam1->f_9[14] == -1)
-				AUDIO::OVERRIDE_VEH_HORN(veParam0, true, iParam1->f_78);
+			if (!(uParam1->f_78 == -1) && uParam1->f_9[14] == -1)
+				AUDIO::OVERRIDE_VEH_HORN(veParam0, true, uParam1->f_78);
 		
-			if (!(iParam1->f_79 == -1))
-				AUDIO::SET_VEHICLE_HORN_SOUND_INDEX(veParam0, iParam1->f_79);
+			if (!(uParam1->f_79 == -1))
+				AUDIO::SET_VEHICLE_HORN_SOUND_INDEX(veParam0, uParam1->f_79);
 		
-			if (func_428(iParam1->f_66, &num) && iParam1->f_80 != num)
-				iParam1->f_80 = num;
+			if (func_428(uParam1->f_66, &num) && uParam1->f_80 != num)
+				uParam1->f_80 = num;
 		
-			VEHICLE::SET_VEHICLE_ENVEFF_SCALE(veParam0, iParam1->f_80);
+			VEHICLE::SET_VEHICLE_ENVEFF_SCALE(veParam0, uParam1->f_80);
 		
-			if (iParam1->f_97 >= 0)
-				VEHICLE::SET_VEHICLE_EXTRA_COLOUR_5(veParam0, iParam1->f_97);
+			if (uParam1->f_97 >= 0)
+				VEHICLE::SET_VEHICLE_EXTRA_COLOUR_5(veParam0, uParam1->f_97);
 		
-			if (iParam1->f_99 >= 0)
-				VEHICLE::SET_VEHICLE_EXTRA_COLOUR_6(veParam0, iParam1->f_99);
+			if (uParam1->f_99 >= 0)
+				VEHICLE::SET_VEHICLE_EXTRA_COLOUR_6(veParam0, uParam1->f_99);
 		
 			if (func_427(veParam0))
-				func_421(veParam0, func_424(iParam1->f_74, iParam1->f_75, iParam1->f_76));
+				func_421(veParam0, func_424(uParam1->f_74, uParam1->f_75, uParam1->f_76));
 		
-			if (VEHICLE::GET_VEHICLE_LIVERY2_COUNT(veParam0) > 1 && iParam1->f_98 >= 0)
-				VEHICLE::SET_VEHICLE_LIVERY2(veParam0, iParam1->f_98);
+			if (VEHICLE::GET_VEHICLE_LIVERY2_COUNT(veParam0) > 1 && uParam1->f_98 >= 0)
+				VEHICLE::SET_VEHICLE_LIVERY2(veParam0, uParam1->f_98);
 		
-			if (IS_BIT_SET(iParam1->f_95, 0))
-				func_395(veParam0, &(iParam1->f_81));
+			if (IS_BIT_SET(uParam1->f_95, 0))
+				func_395(veParam0, &(uParam1->f_81));
 		
 			if (!func_389(4) && !bParam4 && !NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 				func_386(veParam0);
 		
 			if (func_385(entityModel))
 			{
-				switch (iParam1->f_9[5])
+				switch (uParam1->f_9[5])
 				{
 					case 0:
 						VEHICLE::REMOVE_VEHICLE_MOD(veParam0, 16);
@@ -45360,7 +45360,7 @@ void func_378(Vehicle veParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bP
 						break;
 				
 					default:
-						if (iParam1->f_9[5] != -1)
+						if (uParam1->f_9[5] != -1)
 						{
 							VEHICLE::REMOVE_VEHICLE_MOD(veParam0, 16);
 						
@@ -45375,13 +45375,13 @@ void func_378(Vehicle veParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bP
 		
 			if (func_382(ENTITY::GET_ENTITY_MODEL(veParam0)))
 			{
-				switch (iParam1->f_9[5])
+				switch (uParam1->f_9[5])
 				{
 					case 1:
 						VEHICLE::SET_VEHICLE_EXPLODES_ON_HIGH_EXPLOSION_DAMAGE(veParam0, false);
 						VEHICLE::SET_VEHICLE_STRONG(veParam0, true);
 					
-						if (iParam1->f_9[16] == 5)
+						if (uParam1->f_9[16] == 5)
 							VEHICLE::SET_VEHICLE_DAMAGE_SCALE(veParam0, Global_262145.f_21547 + 0.05f);
 						else
 							VEHICLE::SET_VEHICLE_DAMAGE_SCALE(veParam0, Global_262145.f_21547);
@@ -45400,15 +45400,15 @@ void func_378(Vehicle veParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bP
 			if (func_380(veParam0))
 				VEHICLE::TOGGLE_VEHICLE_MOD(veParam0, 18, true);
 		
-			switch (iParam1->f_94)
+			switch (uParam1->f_94)
 			{
 				case 0:
 					break;
 			
 				case 1:
-					if (IS_BIT_SET(iParam1->f_95, 1) && IS_BIT_SET(iParam1->f_95, 2))
+					if (IS_BIT_SET(uParam1->f_95, 1) && IS_BIT_SET(uParam1->f_95, 2))
 					{
-						if (IS_BIT_SET(iParam1->f_95, 3))
+						if (IS_BIT_SET(uParam1->f_95, 3))
 						{
 						}
 					}
@@ -45419,12 +45419,12 @@ void func_378(Vehicle veParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bP
 					break;
 			
 				case 2:
-					if (IS_BIT_SET(iParam1->f_95, 1) && IS_BIT_SET(iParam1->f_95, 2))
+					if (IS_BIT_SET(uParam1->f_95, 1) && IS_BIT_SET(uParam1->f_95, 2))
 						if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Veh_Modded_By_Player", INT))
 							DECORATOR::DECOR_SET_INT(veParam0, "Veh_Modded_By_Player", NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()));
 					else if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Veh_Modded_By_Player", INT))
-						if (IS_GAMER_HANDLE_VALID(iParam1->f_81) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(&(iParam1->f_81)))
-							DECORATOR::DECOR_SET_INT(veParam0, "Veh_Modded_By_Player", NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(&(iParam1->f_81))));
+						if (IS_GAMER_HANDLE_VALID(uParam1->f_81) && NETWORK::NETWORK_IS_GAMER_IN_MY_SESSION(&(uParam1->f_81)))
+							DECORATOR::DECOR_SET_INT(veParam0, "Veh_Modded_By_Player", NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(NETWORK::NETWORK_GET_PLAYER_FROM_GAMER_HANDLE(&(uParam1->f_81))));
 						else
 							DECORATOR::DECOR_SET_INT(veParam0, "Veh_Modded_By_Player", -1);
 					break;
@@ -136616,11 +136616,11 @@ void func_1386(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1387(int iParam0, int iParam1, int iParam2) // Position - 0xAA2D4 (697044)
+int func_1387(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xAA2D4 (697044)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -136799,7 +136799,7 @@ int func_1387(int iParam0, int iParam1, int iParam2) // Position - 0xAA2D4 (6970
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -136931,7 +136931,7 @@ int func_1387(int iParam0, int iParam1, int iParam2) // Position - 0xAA2D4 (6970
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -214886,7 +214886,7 @@ BOOL func_3653(int iParam0) // Position - 0x120A10 (1182224)
 	num = func_3591(iParam0);
 
 	if (func_1464())
-		return false;
+		return 0;
 
 	if (Global_1950714.f_5449.f_23[num /*2*/].f_1 == MISC::GET_FRAME_COUNT())
 		return Global_1950714.f_5449.f_23[num /*2*/];
@@ -214897,13 +214897,13 @@ BOOL func_3653(int iParam0) // Position - 0x120A10 (1182224)
 	{
 		if (func_3651(i, num))
 		{
-			Global_1950714.f_5449.f_23[num /*2*/] = true;
-			return true;
+			Global_1950714.f_5449.f_23[num /*2*/] = 1;
+			return 1;
 		}
 	}
 
-	Global_1950714.f_5449.f_23[num /*2*/] = false;
-	return false;
+	Global_1950714.f_5449.f_23[num /*2*/] = 0;
+	return 0;
 }
 
 void func_3654(var uParam0, var uParam1) // Position - 0x120AA8 (1182376)

@@ -171716,11 +171716,11 @@ int func_1921(int iParam0) // Position - 0xD1FAD (860077)
 	return -1;
 }
 
-int func_1922(int iParam0, int iParam1, int iParam2) // Position - 0xD1FD4 (860116)
+int func_1922(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xD1FD4 (860116)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -171899,7 +171899,7 @@ int func_1922(int iParam0, int iParam1, int iParam2) // Position - 0xD1FD4 (8601
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -172031,7 +172031,7 @@ int func_1922(int iParam0, int iParam1, int iParam2) // Position - 0xD1FD4 (8601
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -220388,7 +220388,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 			iParam3 = 7;
 
 	Global_23007 = false;
-	Global_23009 = 0;
+	Global_23009 = false;
 	Global_23014 = false;
 	Global_23991 = 0;
 	Global_23993 = 0;
@@ -221355,7 +221355,7 @@ void func_2837(int iParam0) // Position - 0x1175F4 (1144308)
 				{
 					if (i == Global_9470[num /*15*/].f_4)
 					{
-						if (Global_10064[i] == 0)
+						if (Global_10064[i] == false)
 						{
 							Global_10026[i] = num;
 						
@@ -221386,7 +221386,7 @@ void func_2837(int iParam0) // Position - 0x1175F4 (1144308)
 								if (num == 14)
 									func_2838(Global_21608, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(1), BUILTIN::TO_FLOAT(i), BUILTIN::TO_FLOAT(Global_9470[num /*15*/].f_10), BUILTIN::TO_FLOAT(Global_24063), -1f, &Global_9470[num /*15*/], 0, 0, 0, 0);
 						
-							Global_10064[i] = 1;
+							Global_10064[i] = true;
 						}
 					}
 				}
@@ -221402,7 +221402,7 @@ void func_2837(int iParam0) // Position - 0x1175F4 (1144308)
 				{
 					if (i == Global_9470[num /*15*/].f_4)
 					{
-						if (Global_10064[i] == 0)
+						if (Global_10064[i] == false)
 						{
 							Global_10026[i] = num;
 						
@@ -221544,7 +221544,7 @@ void func_2837(int iParam0) // Position - 0x1175F4 (1144308)
 								func_2838(Global_21608, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(1), BUILTIN::TO_FLOAT(i), BUILTIN::TO_FLOAT(Global_9470[num /*15*/].f_10), BUILTIN::TO_FLOAT(0), -1f, &Global_9470[num /*15*/], 0, 0, 0, 0);
 							}
 						
-							Global_10064[i] = 1;
+							Global_10064[i] = true;
 						}
 					}
 				}
@@ -221599,7 +221599,7 @@ void func_2839() // Position - 0x117C3C (1145916)
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		Global_10064[i] = 0;
+		Global_10064[i] = false;
 	}
 
 	return;
@@ -221995,7 +221995,7 @@ BOOL func_2851(var uParam0, eCharacter echParam1, char* sParam2, char* sParam3, 
 	Global_23048 = true;
 	Global_23007 = true;
 	Global_23014 = false;
-	Global_23009 = 0;
+	Global_23009 = false;
 	Global_23991 = 0;
 	Global_23993 = 0;
 	Global_23997 = 0;
@@ -252803,7 +252803,7 @@ void func_3516(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Posi
 					if (Global_21627 != echParam1)
 					{
 						Global_10156[echParam1 /*4*/] = { _GET_CHARACTER_NAME(echParam0) };
-						Global_10173[echParam1] = 1;
+						Global_10173[echParam1] = true;
 						Global_10178[echParam1] = echParam0;
 					}
 					else if (echParam0 == Global_21627)

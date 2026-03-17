@@ -41325,13 +41325,13 @@ BOOL func_398(Vehicle veParam0) // Position - 0x314F9 (201977)
 		if (func_404() || func_403(PLAYER::PLAYER_ID()))
 			return false;
 	
-		if (func_402(PLAYER::PLAYER_ID(), true, false) && Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_39 > PV_COMP_HEAD || IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_37, 14) || IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_37, 11))
+		if (func_402(PLAYER::PLAYER_ID(), true, false) && Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_39 > false || IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_37, 14) || IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_37, 11))
 			return false;
 	
 		if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Player_Vehicle", INT))
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
-					if (func_400() != PV_COMP_INVALID && func_400() < 607)
+					if (func_400() != -1 && func_400() < 607)
 						if (!func_399(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1583772[func_400() /*143*/].f_66)
 							return true;
 						else if (ENTITY::GET_ENTITY_MODEL(veParam0) == joaat("caddy3"))
@@ -41351,7 +41351,7 @@ BOOL func_399(Vehicle veParam0) // Position - 0x31607 (202247)
 	return false;
 }
 
-ePedComponentType func_400() // Position - 0x31620 (202272)
+BOOL func_400() // Position - 0x31620 (202272)
 {
 	return Global_2359296[func_401() /*5574*/].f_681.f_2;
 }

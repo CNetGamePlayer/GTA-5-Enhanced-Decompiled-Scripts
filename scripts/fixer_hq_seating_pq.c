@@ -135269,11 +135269,11 @@ void func_1346(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1347(int iParam0, int iParam1, int iParam2) // Position - 0xA762D (685613)
+int func_1347(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xA762D (685613)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -135452,7 +135452,7 @@ int func_1347(int iParam0, int iParam1, int iParam2) // Position - 0xA762D (6856
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -135584,7 +135584,7 @@ int func_1347(int iParam0, int iParam1, int iParam2) // Position - 0xA762D (6856
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -361980,15 +361980,15 @@ void func_6994(int iParam0) // Position - 0x207590 (2127248)
 	return;
 }
 
-void func_6995(var uParam0, int iParam1) // Position - 0x2075DC (2127324)
+void func_6995(int iParam0, int iParam1) // Position - 0x2075DC (2127324)
 {
-	func_6996(uParam0, iParam1);
+	func_6996(iParam0, iParam1);
 	return;
 }
 
-void func_6996(var uParam0, int iParam1) // Position - 0x2075EC (2127340)
+void func_6996(int iParam0, int iParam1) // Position - 0x2075EC (2127340)
 {
-	*uParam0 = *uParam0 || iParam1;
+	*iParam0 = *iParam0 || iParam1;
 	return;
 }
 
@@ -374717,7 +374717,7 @@ int func_7368(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bPa
 		playerTeam = PLAYER::GET_PLAYER_TEAM(plParam0);
 	
 		if (playerTeam > -1 && playerTeam < 4)
-			if (Global_4718592.f_133253[playerTeam] != -1)
+			if (Global_4718592.f_133253[playerTeam] != PV_COMP_INVALID)
 				iParam1 = playerTeam;
 	}
 
@@ -374730,14 +374730,14 @@ int func_7368(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bPa
 				if (NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(ped) != -1)
 					if (_NETWORK_IS_PLAYER_VALID(NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(ped), false, true))
 						if (iParam1 > -1 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && iParam1 < 4)
-							if (Global_4718592.f_133253[iParam1] != -1)
+							if (Global_4718592.f_133253[iParam1] != PV_COMP_INVALID)
 								return func_7379(iParam1, plParam0, false);
 							else
 								return func_7369(plParam0, NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(ped), iParam1, bParam2, bParam3);
 						else
 							return func_7369(plParam0, NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(ped), iParam1, bParam2, bParam3);
 			else if (iParam1 > -1 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && iParam1 < 4)
-				if (Global_4718592.f_133253[iParam1] != -1)
+				if (Global_4718592.f_133253[iParam1] != PV_COMP_INVALID)
 					return func_7379(iParam1, plParam0, false);
 				else
 					return func_7384(false, -1, false);
@@ -374746,7 +374746,7 @@ int func_7368(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bPa
 	}
 
 	if (iParam1 > -1 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && iParam1 < 4)
-		if (Global_4718592.f_133253[iParam1] != -1)
+		if (Global_4718592.f_133253[iParam1] != PV_COMP_INVALID)
 			return func_7379(iParam1, plParam0, false);
 		else
 			return func_7369(plParam0, PLAYER::PLAYER_ID(), iParam1, bParam2, bParam3);
@@ -374972,7 +374972,7 @@ int func_7379(int iParam0, Player plParam1, BOOL bParam2) // Position - 0x21AAC8
 				if (IS_BIT_SET(Global_4718592.f_16, 29))
 					num = 21;
 				else
-					num = 6;
+					num = PV_COMP_FEET;
 			else
 				num = Global_4718592.f_133253[iParam0];
 		else
@@ -374982,20 +374982,20 @@ int func_7379(int iParam0, Player plParam1, BOOL bParam2) // Position - 0x21AAC8
 			num = func_7380(iParam0);
 	
 		if (IS_BIT_SET(Global_4718592.f_25, 29))
-			num = 0;
+			num = PV_COMP_HEAD;
 	
 		if (IS_BIT_SET(Global_4718592.f_16, 26) && !func_7116(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))
 			num = func_7376(true);
 	}
 	else
 	{
-		num = 1;
+		num = PV_COMP_BERD;
 	}
 
 	return num;
 }
 
-int func_7380(int iParam0) // Position - 0x21AC48 (2206792)
+ePedComponentType func_7380(int iParam0) // Position - 0x21AC48 (2206792)
 {
 	int num;
 
@@ -376837,7 +376837,7 @@ char* func_7437() // Position - 0x21D4B3 (2217139)
 		case 1:
 			if (Global_4718592.f_3570 == PV_COMP_BERD)
 				return "DM_CUT_2";
-			else if (Global_4718592.f_3572 == 1)
+			else if (Global_4718592.f_3572 == PV_COMP_BERD)
 				return "DM_CUT_4";
 			else
 				return "DM_CUT_1";

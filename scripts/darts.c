@@ -23522,7 +23522,7 @@ void func_492() // Position - 0x22EA7 (143015)
 {
 	if (Global_21627.f_1 == 9 || Global_21627.f_1 == 10)
 	{
-		Global_23053 = false;
+		Global_23053 = 0;
 		Global_23049 = 1;
 	}
 

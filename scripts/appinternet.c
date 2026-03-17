@@ -49254,63 +49254,63 @@ ePedComponentType func_322(int iParam0, int iParam1) // Position - 0x35268 (2177
 		return func_326(num);
 	}
 
-	return func_323(iParam0, PV_COMP_INVALID, true) * (iParam0 + 1);
+	return func_323(iParam0, -1, true) * (iParam0 + 1);
 }
 
-int func_323(int iParam0, ePedComponentType epctParam1, BOOL bParam2) // Position - 0x3547A (218234)
+int func_323(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3547A (218234)
 {
 	if (iParam0 == -1)
-		if (epctParam1 >= PV_COMP_BERD)
-			if (func_9559(epctParam1, false, false))
+		if (bParam1 >= true)
+			if (func_9559(bParam1, false, false))
 				return 20;
-			else if (func_325(epctParam1))
+			else if (func_325(bParam1))
 				return 0;
-			else if (func_329(epctParam1, -1))
+			else if (func_329(bParam1, -1))
 				return 10;
-			else if (epctParam1 == 115)
+			else if (bParam1 == 115)
 				return 8;
-			else if (epctParam1 == 116)
+			else if (bParam1 == 116)
 				return func_324();
-			else if (epctParam1 == 117)
+			else if (bParam1 == 117)
 				return 7;
-			else if (epctParam1 == 118)
+			else if (bParam1 == 118)
 				return 1;
-			else if (epctParam1 == 119 || epctParam1 == 120 || epctParam1 == 121)
+			else if (bParam1 == 119 || bParam1 == 120 || bParam1 == 121)
 				return 10;
-			else if (epctParam1 == 122)
+			else if (bParam1 == 122)
 				return 9;
-			else if (epctParam1 == 123 || epctParam1 == 124)
+			else if (bParam1 == 123 || bParam1 == 124)
 				return 10;
-			else if (epctParam1 == 125)
+			else if (bParam1 == 125)
 				return 10;
-			else if (epctParam1 == 126)
+			else if (bParam1 == 126)
 				return 10;
-			else if (epctParam1 == 127)
+			else if (bParam1 == 127)
 				return 10;
-			else if (epctParam1 == 128)
+			else if (bParam1 == 128)
 				return 20;
-			else if (epctParam1 == 129)
+			else if (bParam1 == 129)
 				return 50;
-			else if (epctParam1 == 131)
+			else if (bParam1 == 131)
 				return 100;
-			else if (epctParam1 == 132)
+			else if (bParam1 == 132)
 				return 2;
-			else if (epctParam1 == 133)
+			else if (bParam1 == 133)
 				return 10;
-			else if (epctParam1 == 137 || epctParam1 == 136 || epctParam1 == 135)
+			else if (bParam1 == 137 || bParam1 == 136 || bParam1 == 135)
 				return 20;
-			else if (epctParam1 <= 131 && epctParam1 > PV_COMP_HEAD)
-				if (Global_1312440[epctParam1 /*1951*/].f_33 == 2)
+			else if (bParam1 <= 131 && bParam1 > false)
+				if (Global_1312440[bParam1 /*1951*/].f_33 == 2)
 					if (bParam2)
 						return 3;
 					else
 						return 2;
-				else if (Global_1312440[epctParam1 /*1951*/].f_33 == 6)
+				else if (Global_1312440[bParam1 /*1951*/].f_33 == 6)
 					if (bParam2)
 						return 8;
 					else
 						return 6;
-				else if (Global_1312440[epctParam1 /*1951*/].f_33 == 10)
+				else if (Global_1312440[bParam1 /*1951*/].f_33 == 10)
 					if (bParam2)
 						return 13;
 					else
@@ -49633,7 +49633,7 @@ ePedComponentType func_331(int iParam0, int iParam1) // Position - 0x359AE (2195
 		return func_332(num);
 	}
 
-	return func_323(iParam0, PV_COMP_INVALID, true) * iParam0;
+	return func_323(iParam0, -1, true) * iParam0;
 }
 
 int func_332(int iParam0) // Position - 0x35BBD (220093)
@@ -63698,7 +63698,7 @@ ePedComponentType func_368(int iParam0, BOOL bParam1, ePedComponentType epctPara
 				}
 			
 				if (flag)
-					num3 = func_323(i, PV_COMP_INVALID, true);
+					num3 = func_323(i, -1, true);
 				else if (func_382(i, iParam4) <= 131)
 					num3 = Global_1312440[func_382(i, iParam4) /*1951*/].f_33;
 			
@@ -64187,7 +64187,7 @@ int func_375(int iParam0, BOOL bParam1, Hash hParam2, ePedComponentType epctPara
 				}
 			
 				if (flag)
-					num3 = func_323(i, PV_COMP_INVALID, true);
+					num3 = func_323(i, -1, true);
 				else if (func_382(i, iParam4) <= 131)
 					num3 = Global_1312440[func_382(i, iParam4) /*1951*/].f_33;
 			
@@ -147364,9 +147364,9 @@ void func_1058(var uParam0, var uParam1) // Position - 0xB1AF6 (727798)
 {
 	BOOL flag;
 	var unk;
+	BOOL flag2;
+	BOOL i;
 	ePedComponentType type;
-	ePedComponentType i;
-	ePedComponentType type2;
 	int num;
 
 	if (!func_1056())
@@ -147380,22 +147380,22 @@ void func_1058(var uParam0, var uParam1) // Position - 0xB1AF6 (727798)
 	}
 
 	unk = 3;
-	type2 = func_428(*uParam0);
+	type = func_428(*uParam0);
 
-	if (!func_427(PLAYER::PLAYER_ID(), type2))
+	if (!func_427(PLAYER::PLAYER_ID(), type))
 	{
 		uParam1->f_4 = 1;
 		return;
 	}
 
-	for (i = PV_COMP_HEAD; i < PV_COMP_UPPR; i = i + 1)
+	for (i = false; i < 3; i = i + 1)
 	{
 		unk[i] = func_1090(i);
 	
 		if (!flag && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk[i]))
 			flag = true;
 	
-		type = type + 1;
+		flag2 = flag2 + 1;
 	}
 
 	if (uParam0->f_5 || flag)
@@ -147403,7 +147403,7 @@ void func_1058(var uParam0, var uParam1) // Position - 0xB1AF6 (727798)
 		func_1088(false, true);
 		func_1084();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk[i], 0, true, false, false, false);
 		}
@@ -147537,7 +147537,7 @@ void func_1063(ePedComponentType epctParam0, BOOL bParam1, int iParam2) // Posit
 	return;
 }
 
-void func_1064(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0xB1E6B (728683)
+void func_1064(BOOL bParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0xB1E6B (728683)
 {
 	int num;
 	float num2;
@@ -147545,7 +147545,7 @@ void func_1064(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bP
 	var unk;
 	float num4;
 
-	if (Global_24546.f_5821 > epctParam0)
+	if (Global_24546.f_5821 > bParam0)
 		return;
 
 	if (Global_24546.f_5821 >= 128)
@@ -147557,9 +147557,9 @@ void func_1064(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bP
 	if (Global_24546.f_6346 < Global_24546.f_6344)
 		return;
 
-	if (Global_24546.f_5821 != epctParam0)
+	if (Global_24546.f_5821 != bParam0)
 	{
-		Global_24546.f_5821 = epctParam0;
+		Global_24546.f_5821 = bParam0;
 		Global_24546.f_5822 = 0;
 	}
 
@@ -147609,12 +147609,12 @@ void func_1064(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bP
 		{
 			num4 = func_1065(&Global_24546.f_79[Global_24546.f_5823 /*6*/]);
 		
-			if (num4 > Global_24546.f_6348[epctParam0])
-				Global_24546.f_6348[epctParam0] = num4;
+			if (num4 > Global_24546.f_6348[bParam0])
+				Global_24546.f_6348[bParam0] = num4;
 		}
 	}
 
-	MISC::SET_BIT(&Global_24546.f_5692[epctParam0], Global_24546.f_5822);
+	MISC::SET_BIT(&Global_24546.f_5692[bParam0], Global_24546.f_5822);
 	Global_24546.f_5822 = Global_24546.f_5822 + 1;
 	Global_24546.f_6347 = 1;
 	Global_24546.f_6345 = Global_24546.f_5823 - 1;
@@ -148382,16 +148382,16 @@ void func_1082(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 	return;
 }
 
-void func_1083(ePedComponentType epctParam0, BOOL bParam1) // Position - 0xB2E8C (732812)
+void func_1083(BOOL bParam0, BOOL bParam1) // Position - 0xB2E8C (732812)
 {
 	int num;
 
-	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(epctParam0) / 32f);
+	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(bParam0) / 32f);
 
 	if (bParam1)
-		MISC::SET_BIT(&Global_24546.f_6618[num], epctParam0 - (num * 32));
+		MISC::SET_BIT(&Global_24546.f_6618[num], bParam0 - (num * 32));
 	else
-		MISC::CLEAR_BIT(&Global_24546.f_6618[num], epctParam0 - (num * 32));
+		MISC::CLEAR_BIT(&Global_24546.f_6618[num], bParam0 - (num * 32));
 
 	return;
 }
@@ -160022,11 +160022,11 @@ void func_1440(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1441(int iParam0, int iParam1, int iParam2) // Position - 0xC1BC4 (793540)
+int func_1441(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xC1BC4 (793540)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -160205,7 +160205,7 @@ int func_1441(int iParam0, int iParam1, int iParam2) // Position - 0xC1BC4 (7935
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -160337,7 +160337,7 @@ int func_1441(int iParam0, int iParam1, int iParam2) // Position - 0xC1BC4 (7935
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -174892,21 +174892,21 @@ void func_1910(var uParam0, var uParam1) // Position - 0xD7435 (881717)
 	var unk;
 	var unk4;
 	var unk7;
-	ePedComponentType type;
-	ePedComponentType i;
+	BOOL flag2;
+	BOOL i;
 	int num;
 
 	unk = 2;
 	unk4 = 2;
 	unk7 = 2;
-	flag = func_1927(&unk, &unk4, &unk7, &type);
+	flag = func_1927(&unk, &unk4, &unk7, &flag2);
 
 	if (uParam0->f_5 || flag)
 	{
 		func_1088(false, true);
 		func_1923();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk7[i], 0, unk4[i], false, false, false);
 		}
@@ -175172,9 +175172,9 @@ int func_1928(int iParam0) // Position - 0xD7893 (882835)
 	return 1;
 }
 
-char* func_1929(ePedComponentType epctParam0) // Position - 0xD790D (882957)
+char* func_1929(BOOL bParam0) // Position - 0xD790D (882957)
 {
-	switch (epctParam0)
+	switch (bParam0)
 	{
 		case 0:
 			return "HD_ENT_F0" /*First Floor*/;
@@ -175318,10 +175318,10 @@ void func_1935(var uParam0, var uParam1) // Position - 0xD7B1D (883485)
 		func_1923();
 		str = func_1870();
 		func_1924(true, str, str);
-		func_1064(PV_COMP_HEAD, "HACK_ENT_OWNED" /*Enter your Garment Factory*/, 0, true, false, false, false);
+		func_1064(false, "HACK_ENT_OWNED" /*Enter your Garment Factory*/, 0, true, false, false, false);
 		currentLanguage = LOCALIZATION::GET_CURRENT_LANGUAGE();
 		flag2 = currentLanguage != 12 && currentLanguage != 9 && currentLanguage != 8 && currentLanguage != 10;
-		func_1064(PV_COMP_BERD, "HACK_ENT_BOSS" /*Enter ~a~'s Garment Factory*/, 1, true, false, false, false);
+		func_1064(true, "HACK_ENT_BOSS" /*Enter ~a~'s Garment Factory*/, 1, true, false, false, false);
 		TEXT_LABEL_ASSIGN_STRING(&unk, PLAYER::GET_PLAYER_NAME(_GET_BOSS_OF_LOCAL_PLAYER()), 64);
 	
 		if (flag2)
@@ -175710,29 +175710,29 @@ void func_1942(var uParam0, var uParam1) // Position - 0xD8504 (886020)
 {
 	BOOL flag;
 	var unk;
-	ePedComponentType type;
-	ePedComponentType i;
-	ePedComponentType type2;
 	BOOL flag2;
+	BOOL i;
+	ePedComponentType type;
+	BOOL flag3;
 
 	unk = 2;
-	type2 = func_1850(*uParam0);
+	type = func_1850(*uParam0);
 
-	if (!func_1849(PLAYER::PLAYER_ID(), type2) || func_845(PLAYER::PLAYER_ID(), false) && !IS_BIT_SET(Global_1950714.f_3, 9))
+	if (!func_1849(PLAYER::PLAYER_ID(), type) || func_845(PLAYER::PLAYER_ID(), false) && !IS_BIT_SET(Global_1950714.f_3, 9))
 	{
 		Global_1950714.f_5248 = 0;
 		uParam1->f_4 = 1;
 		return;
 	}
 
-	for (i = PV_COMP_HEAD; i < PV_COMP_HAIR; i = i + 1)
+	for (i = false; i < 2; i = i + 1)
 	{
 		unk[i] = func_1929(i);
 	
 		if (!flag && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk[i]))
 			flag = true;
 	
-		type = type + 1;
+		flag2 = flag2 + 1;
 	}
 
 	if (uParam0->f_5 || flag)
@@ -175740,7 +175740,7 @@ void func_1942(var uParam0, var uParam1) // Position - 0xD8504 (886020)
 		func_1088(false, true);
 		func_1923();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk[i], 0, func_1944(i), false, false, false);
 		}
@@ -175749,12 +175749,12 @@ void func_1942(var uParam0, var uParam1) // Position - 0xD8504 (886020)
 	}
 	else
 	{
-		flag2 = uParam0->f_4;
-		func_1020(func_1943(flag2), 0, 0);
+		flag3 = uParam0->f_4;
+		func_1020(func_1943(flag3), 0, 0);
 	
 		if (uParam0->f_2)
 		{
-			func_973(flag2);
+			func_973(flag3);
 			*uParam1 = 1;
 			func_1091(2);
 		}
@@ -175852,10 +175852,10 @@ void func_1945(var uParam0, var uParam1) // Position - 0xD8745 (886597)
 		func_1923();
 		str = func_1870();
 		func_1924(true, str, str);
-		func_1064(PV_COMP_HEAD, "HACK_ENT_OWNED" /*Enter your Garment Factory*/, 0, true, false, false, false);
+		func_1064(false, "HACK_ENT_OWNED" /*Enter your Garment Factory*/, 0, true, false, false, false);
 		currentLanguage = LOCALIZATION::GET_CURRENT_LANGUAGE();
 		flag2 = currentLanguage != 12 && currentLanguage != 9 && currentLanguage != 8 && currentLanguage != 10;
-		func_1064(PV_COMP_BERD, "HACK_ENT_BOSS" /*Enter ~a~'s Garment Factory*/, 1, true, false, false, false);
+		func_1064(true, "HACK_ENT_BOSS" /*Enter ~a~'s Garment Factory*/, 1, true, false, false, false);
 		TEXT_LABEL_ASSIGN_STRING(&unk, PLAYER::GET_PLAYER_NAME(_GET_BOSS_OF_LOCAL_PLAYER()), 64);
 	
 		if (flag2)
@@ -188231,9 +188231,9 @@ void func_2253(var uParam0, char* sParam1, var uParam2, var uParam3, var uParam4
 	return;
 }
 
-char* func_2254(ePedComponentType epctParam0) // Position - 0xEB745 (964421)
+char* func_2254(BOOL bParam0) // Position - 0xEB745 (964421)
 {
-	switch (epctParam0)
+	switch (bParam0)
 	{
 		case 0:
 			return "VPG_E_O_2" /*Basement Level 1*/;
@@ -189504,11 +189504,11 @@ void func_2281(var uParam0, var uParam1) // Position - 0xED743 (972611)
 {
 	BOOL flag;
 	var unk;
-	ePedComponentType type;
-	ePedComponentType i;
-	ePedComponentType type2;
-	char* str;
 	BOOL flag2;
+	BOOL i;
+	BOOL flag3;
+	char* str;
+	BOOL flag4;
 
 	unk = 6;
 
@@ -189518,16 +189518,16 @@ void func_2281(var uParam0, var uParam1) // Position - 0xED743 (972611)
 		return;
 	}
 
-	type2 = 5;
+	flag3 = 5;
 
-	for (i = PV_COMP_HEAD; i < type2; i = i + 1)
+	for (i = false; i < flag3; i = i + 1)
 	{
 		unk[i] = func_2254(i);
 	
 		if (!flag && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk[i]))
 			flag = true;
 	
-		type = type + 1;
+		flag2 = flag2 + 1;
 	}
 
 	if (uParam0->f_5 || flag)
@@ -189537,7 +189537,7 @@ void func_2281(var uParam0, var uParam1) // Position - 0xED743 (972611)
 		str = func_2252();
 		func_1924(true, str, str);
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk[i], 0, true, false, false, false);
 		}
@@ -189546,12 +189546,12 @@ void func_2281(var uParam0, var uParam1) // Position - 0xED743 (972611)
 	}
 	else
 	{
-		flag2 = uParam0->f_4;
-		func_1020(func_2282(flag2), 0, 0);
+		flag4 = uParam0->f_4;
+		func_1020(func_2282(flag4), 0, 0);
 	
 		if (uParam0->f_2)
 		{
-			func_973(flag2);
+			func_973(flag4);
 			*uParam1 = 1;
 			func_1091(1);
 		}
@@ -203934,9 +203934,9 @@ void func_2742(var uParam0, char* sParam1, var uParam2, var uParam3, var uParam4
 	return;
 }
 
-char* func_2743(ePedComponentType epctParam0) // Position - 0x102D5A (1060186)
+char* func_2743(BOOL bParam0) // Position - 0x102D5A (1060186)
 {
-	switch (epctParam0)
+	switch (bParam0)
 	{
 		case 0:
 			return "MSG_E_O_3" /*Basement Level 1*/;
@@ -205352,9 +205352,9 @@ void func_2770(var uParam0, var uParam1) // Position - 0x105211 (1069585)
 {
 	BOOL flag;
 	var unk;
-	ePedComponentType type;
-	ePedComponentType i;
 	BOOL flag2;
+	BOOL i;
+	BOOL flag3;
 
 	unk = 5;
 
@@ -205364,14 +205364,14 @@ void func_2770(var uParam0, var uParam1) // Position - 0x105211 (1069585)
 		return;
 	}
 
-	for (i = PV_COMP_HEAD; i < PV_COMP_HAND; i = i + 1)
+	for (i = false; i < 5; i = i + 1)
 	{
 		unk[i] = func_2743(i);
 	
 		if (!flag && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk[i]))
 			flag = true;
 	
-		type = type + 1;
+		flag2 = flag2 + 1;
 	}
 
 	if (uParam0->f_5 || flag)
@@ -205379,7 +205379,7 @@ void func_2770(var uParam0, var uParam1) // Position - 0x105211 (1069585)
 		func_1088(false, true);
 		func_2772();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk[i], 0, true, false, false, false);
 		}
@@ -205388,12 +205388,12 @@ void func_2770(var uParam0, var uParam1) // Position - 0x105211 (1069585)
 	}
 	else
 	{
-		flag2 = uParam0->f_4;
-		func_1020(func_2771(flag2), 0, 0);
+		flag3 = uParam0->f_4;
+		func_1020(func_2771(flag3), 0, 0);
 	
 		if (uParam0->f_2)
 		{
-			func_973(flag2);
+			func_973(flag3);
 			*uParam1 = 1;
 			func_1091(1);
 		}
@@ -230823,14 +230823,14 @@ void func_3472(var uParam0) // Position - 0x12D5A4 (1234340)
 {
 	int currentLanguage;
 	BOOL flag;
-	ePedComponentType i;
+	BOOL i;
 	const char* playerName;
 
 	currentLanguage = LOCALIZATION::GET_CURRENT_LANGUAGE();
 	flag = currentLanguage != 12 && currentLanguage != 9 && currentLanguage != 8 && currentLanguage != 10;
-	i = PV_COMP_HEAD;
+	i = false;
 
-	for (i = PV_COMP_HEAD; i < *uParam0; i = i + 1)
+	for (i = false; i < *uParam0; i = i + 1)
 	{
 		if (uParam0->[i] != _INVALID_PLAYER_INDEX())
 		{
@@ -231012,15 +231012,15 @@ void func_3483(var uParam0, var uParam1) // Position - 0x12D8A3 (1235107)
 	var unk5;
 	var unk9;
 	char* str;
-	ePedComponentType type;
-	ePedComponentType i;
+	BOOL flag2;
+	BOOL i;
 	int num;
 
 	unk = 3;
 	unk5 = 3;
 	unk9 = 3;
 	str = func_3426();
-	flag = func_3486(&unk, &unk5, &unk9, &type);
+	flag = func_3486(&unk, &unk5, &unk9, &flag2);
 
 	if (uParam0->f_5 || flag)
 	{
@@ -231029,7 +231029,7 @@ void func_3483(var uParam0, var uParam1) // Position - 0x12D8A3 (1235107)
 		func_1924(true, str, str);
 		func_3473();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk9[i], 0, unk5[i], false, false, false);
 		}
@@ -231240,8 +231240,8 @@ void func_3490(var uParam0, var uParam1) // Position - 0x12DCE0 (1236192)
 	var unk;
 	var unk5;
 	char* str;
-	ePedComponentType type;
-	ePedComponentType i;
+	BOOL flag5;
+	BOOL i;
 
 	HUD::HIDE_HELP_TEXT_THIS_FRAME();
 	uParam1->f_2 = 0;
@@ -231278,20 +231278,20 @@ void func_3490(var uParam0, var uParam1) // Position - 0x12DCE0 (1236192)
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		unk5[type] = func_3492(i);
+		unk5[flag5] = func_3492(i);
 	
 		if (func_1057(i, flag, flag2))
 		{
-			unk[type] = i;
+			unk[flag5] = i;
 		
-			if (!flag4 && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[type /*6*/], unk5[type]))
+			if (!flag4 && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[flag5 /*6*/], unk5[flag5]))
 				flag4 = true;
 		
-			type = type + 1;
+			flag5 = flag5 + 1;
 		}
 		else if (!flag4)
 		{
-			if (MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[type /*6*/], unk5[type]))
+			if (MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[flag5 /*6*/], unk5[flag5]))
 				flag4 = true;
 		}
 	}
@@ -231303,7 +231303,7 @@ void func_3490(var uParam0, var uParam1) // Position - 0x12DCE0 (1236192)
 		func_1924(true, str, str);
 		func_3473();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag5; i = i + 1)
 		{
 			func_1064(i, unk5[i], 0, true, false, false, false);
 		}
@@ -231395,15 +231395,15 @@ void func_3493(var uParam0, var uParam1) // Position - 0x12DFE4 (1236964)
 	var unk5;
 	var unk9;
 	char* str;
-	ePedComponentType type;
-	ePedComponentType i;
+	BOOL flag2;
+	BOOL i;
 	int num;
 
 	unk = 3;
 	unk5 = 3;
 	unk9 = 3;
 	str = func_3426();
-	flag = func_3486(&unk, &unk5, &unk9, &type);
+	flag = func_3486(&unk, &unk5, &unk9, &flag2);
 
 	if (uParam0->f_5 || flag)
 	{
@@ -231412,7 +231412,7 @@ void func_3493(var uParam0, var uParam1) // Position - 0x12DFE4 (1236964)
 		func_1924(true, str, str);
 		func_3473();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk9[i], 0, unk5[i], false, false, false);
 		}
@@ -236848,10 +236848,10 @@ void func_3645(var uParam0, var uParam1) // Position - 0x136A85 (1272453)
 	char* str;
 	int currentLanguage;
 	BOOL flag2;
-	ePedComponentType type;
+	BOOL flag3;
 	Player player3;
 	var unk34;
-	ePedComponentType type2;
+	ePedComponentType type;
 	Player player4;
 
 	unk = 32;
@@ -236924,7 +236924,7 @@ void func_3645(var uParam0, var uParam1) // Position - 0x136A85 (1272453)
 			}
 			else
 			{
-				func_1064(type, "AUTOS_OWNER_X" /*~a~'s Auto Shop*/, 1, unk[i], false, false, false);
+				func_1064(flag3, "AUTOS_OWNER_X" /*~a~'s Auto Shop*/, 1, unk[i], false, false, false);
 				TEXT_LABEL_ASSIGN_STRING(&unk34, PLAYER::GET_PLAYER_NAME(player3), 64);
 			
 				if (flag2)
@@ -236932,12 +236932,12 @@ void func_3645(var uParam0, var uParam1) // Position - 0x136A85 (1272453)
 				else
 					func_1936(&unk34, false, false, false);
 			
-				type = type + 1;
+				flag3 = flag3 + 1;
 			}
 		}
 	
-		type2 = uParam0->f_5 ? PV_COMP_HEAD : uParam0->f_4;
-		func_1062(type2, true, 1);
+		type = uParam0->f_5 ? PV_COMP_HEAD : uParam0->f_4;
+		func_1062(type, true, 1);
 	}
 	else
 	{
@@ -237185,10 +237185,10 @@ void func_3654(var uParam0, var uParam1) // Position - 0x137042 (1273922)
 		func_3647();
 		str = func_3605();
 		func_1924(true, str, str);
-		func_1064(PV_COMP_HEAD, "AUTOS_ENT_OWNED" /*Enter your Auto Shop*/, 0, true, false, false, false);
+		func_1064(false, "AUTOS_ENT_OWNED" /*Enter your Auto Shop*/, 0, true, false, false, false);
 	
 		if (flag)
-			func_1064(PV_COMP_BERD, "AUTOS_ENT_RIVAL" /*Enter another Auto Shop*/, 0, true, false, false, false);
+			func_1064(true, "AUTOS_ENT_RIVAL" /*Enter another Auto Shop*/, 0, true, false, false, false);
 	
 		func_1062(PV_COMP_HEAD, true, 1);
 	}
@@ -266643,10 +266643,10 @@ void func_4503(var uParam0, var uParam1) // Position - 0x1615B6 (1447350)
 	Player player2;
 	int currentLanguage;
 	BOOL flag2;
-	ePedComponentType type2;
+	BOOL flag3;
 	Player player3;
 	var unk34;
-	ePedComponentType type3;
+	ePedComponentType type2;
 	Player player4;
 
 	unk = 32;
@@ -266717,7 +266717,7 @@ void func_4503(var uParam0, var uParam1) // Position - 0x1615B6 (1447350)
 			}
 			else
 			{
-				func_1064(type2, "ARC_OWNER_X" /*~a~'s Arcade*/, 1, unk[i], false, false, false);
+				func_1064(flag3, "ARC_OWNER_X" /*~a~'s Arcade*/, 1, unk[i], false, false, false);
 				TEXT_LABEL_ASSIGN_STRING(&unk34, PLAYER::GET_PLAYER_NAME(player3), 64);
 			
 				if (flag2)
@@ -266725,12 +266725,12 @@ void func_4503(var uParam0, var uParam1) // Position - 0x1615B6 (1447350)
 				else
 					func_1936(&unk34, false, false, false);
 			
-				type2 = type2 + 1;
+				flag3 = flag3 + 1;
 			}
 		}
 	
-		type3 = uParam0->f_5 ? PV_COMP_HEAD : uParam0->f_4;
-		func_1062(type3, true, 1);
+		type2 = uParam0->f_5 ? PV_COMP_HEAD : uParam0->f_4;
+		func_1062(type2, true, 1);
 	}
 	else
 	{
@@ -266923,10 +266923,10 @@ void func_4509(var uParam0, var uParam1) // Position - 0x161A67 (1448551)
 	{
 		func_1088(false, false);
 		func_4505();
-		func_1064(PV_COMP_HEAD, "ARC_ENT_OWNED" /*Enter your Arcade*/, 0, true, false, false, false);
+		func_1064(false, "ARC_ENT_OWNED" /*Enter your Arcade*/, 0, true, false, false, false);
 	
 		if (flag)
-			func_1064(PV_COMP_BERD, "ARC_ENT_RIVAL" /*Enter another Arcade*/, 0, true, false, false, false);
+			func_1064(true, "ARC_ENT_RIVAL" /*Enter another Arcade*/, 0, true, false, false, false);
 	
 		func_1062(PV_COMP_HEAD, true, 1);
 	}
@@ -272283,7 +272283,7 @@ void func_4674(var uParam0) // Position - 0x16A20B (1483275)
 {
 	if (Global_1950707 == 31)
 	{
-		Global_1972789 = true;
+		Global_1972789 = 1;
 		Global_1972791 = 1;
 	}
 
@@ -275911,34 +275911,34 @@ void func_4776(var uParam0, var uParam1) // Position - 0x16FAF3 (1506035)
 	var unk;
 	var unk5;
 	char* str;
-	ePedComponentType type;
-	ePedComponentType i;
 	BOOL flag2;
+	BOOL i;
 	BOOL flag3;
+	BOOL flag4;
 
 	HUD::HIDE_HELP_TEXT_THIS_FRAME();
 	uParam1->f_2 = 0;
 	unk = 3;
 	unk5 = 3;
 	str = func_4779();
-	func_1036(*uParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), &flag2, &flag3, true, false, false);
+	func_1036(*uParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), &flag3, &flag4, true, false, false);
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		unk5[type] = func_3492(i);
+		unk5[flag2] = func_3492(i);
 	
-		if (func_1057(i, flag2, flag3))
+		if (func_1057(i, flag3, flag4))
 		{
-			unk[type] = i;
+			unk[flag2] = i;
 		
-			if (!flag && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[type /*6*/], unk5[type]))
+			if (!flag && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[flag2 /*6*/], unk5[flag2]))
 				flag = true;
 		
-			type = type + 1;
+			flag2 = flag2 + 1;
 		}
 		else if (!flag)
 		{
-			if (MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[type /*6*/], unk5[type]))
+			if (MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[flag2 /*6*/], unk5[flag2]))
 				flag = true;
 		}
 	}
@@ -275950,7 +275950,7 @@ void func_4776(var uParam0, var uParam1) // Position - 0x16FAF3 (1506035)
 		func_1924(true, str, str);
 		func_4778();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk5[i], 0, true, false, false, false);
 		}
@@ -276016,8 +276016,8 @@ void func_4780(var uParam0, var uParam1) // Position - 0x16FCF7 (1506551)
 	var unk4;
 	var unk7;
 	char* str;
-	ePedComponentType type;
-	ePedComponentType i;
+	BOOL flag2;
+	BOOL i;
 	int num;
 
 	unk = 2;
@@ -276025,7 +276025,7 @@ void func_4780(var uParam0, var uParam1) // Position - 0x16FCF7 (1506551)
 	unk7 = 2;
 	str = func_4779();
 
-	for (i = PV_COMP_HEAD; i < PV_COMP_HAIR; i = i + 1)
+	for (i = false; i < 2; i = i + 1)
 	{
 		unk7[i] = func_4783(i);
 		unk[i] = func_4782(i);
@@ -276034,7 +276034,7 @@ void func_4780(var uParam0, var uParam1) // Position - 0x16FCF7 (1506551)
 		if (!flag && Global_24546.f_1616[i] != unk4[i] || !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk7[i]))
 			flag = true;
 	
-		type = type + 1;
+		flag2 = flag2 + 1;
 	}
 
 	if (!func_9485(PLAYER::PLAYER_ID()) && func_4767(PLAYER::PLAYER_ID()))
@@ -276048,7 +276048,7 @@ void func_4780(var uParam0, var uParam1) // Position - 0x16FCF7 (1506551)
 		func_1924(true, str, str);
 		func_4778();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk7[i], 0, unk4[i], false, false, false);
 		}
@@ -278081,7 +278081,7 @@ void func_4846(var uParam0) // Position - 0x172AB4 (1518260)
 {
 	if (Global_1950707 == 8 || Global_1950707 == 31)
 	{
-		Global_1972789 = true;
+		Global_1972789 = 1;
 		Global_1972791 = 1;
 		Global_1972792 = 1;
 		Global_1972790 = 1;
@@ -278505,7 +278505,7 @@ void func_4859(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) 
 			iParam0 = 23;
 
 	if (iParam0 != 18 && iParam0 != 17)
-		Global_2643846 = PV_COMP_HEAD;
+		Global_2643846 = false;
 
 	Global_2635562.f_491 = iParam0;
 	Global_2635562.f_491.f_1 = SCRIPT::GET_ID_OF_THIS_THREAD();
@@ -281799,8 +281799,8 @@ void func_4977(var uParam0, var uParam1) // Position - 0x1786A8 (1541800)
 	var unk;
 	var unk5;
 	char* str;
-	ePedComponentType type;
-	ePedComponentType i;
+	BOOL flag5;
+	BOOL i;
 
 	HUD::HIDE_HELP_TEXT_THIS_FRAME();
 	uParam1->f_2 = 0;
@@ -281814,20 +281814,20 @@ void func_4977(var uParam0, var uParam1) // Position - 0x1786A8 (1541800)
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		unk5[type] = func_3492(i);
+		unk5[flag5] = func_3492(i);
 	
 		if (func_1057(i, flag2, flag3))
 		{
-			unk[type] = i;
+			unk[flag5] = i;
 		
-			if (!flag4 && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[type /*6*/], unk5[type]))
+			if (!flag4 && !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[flag5 /*6*/], unk5[flag5]))
 				flag4 = true;
 		
-			type = type + 1;
+			flag5 = flag5 + 1;
 		}
 		else if (!flag4)
 		{
-			if (MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[type /*6*/], unk5[type]))
+			if (MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[flag5 /*6*/], unk5[flag5]))
 				flag4 = true;
 		}
 	}
@@ -281839,7 +281839,7 @@ void func_4977(var uParam0, var uParam1) // Position - 0x1786A8 (1541800)
 		func_1924(true, str, str);
 		func_4978();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag5; i = i + 1)
 		{
 			func_1064(i, unk5[i], 0, true, false, false, false);
 		}
@@ -281927,8 +281927,8 @@ void func_4980(var uParam0, var uParam1) // Position - 0x178935 (1542453)
 	var unk7;
 	var unk13;
 	char* str;
-	ePedComponentType type;
-	ePedComponentType i;
+	BOOL flag2;
+	BOOL i;
 	int num;
 
 	unk = 5;
@@ -281937,9 +281937,9 @@ void func_4980(var uParam0, var uParam1) // Position - 0x178935 (1542453)
 	str = func_4779();
 
 	if (func_480() == 0)
-		flag = func_4989(&unk, &unk7, &unk13, &type);
+		flag = func_4989(&unk, &unk7, &unk13, &flag2);
 	else
-		flag = func_4985(&unk, &unk7, &unk13, &type);
+		flag = func_4985(&unk, &unk7, &unk13, &flag2);
 
 	if (uParam0->f_5 || flag)
 	{
@@ -281948,7 +281948,7 @@ void func_4980(var uParam0, var uParam1) // Position - 0x178935 (1542453)
 		func_1924(true, str, str);
 		func_4978();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk13[i], 0, unk7[i], false, false, false);
 		}
@@ -284797,9 +284797,9 @@ char* func_5088(BOOL bParam0, BOOL bParam1) // Position - 0x17C26F (1557103)
 	return "ARENA_BUY_FLOOR" /*Go to www.arenawar.tv to purchase this garage level.*/;
 }
 
-BOOL func_5089(ePedComponentType epctParam0) // Position - 0x17C2B2 (1557170)
+BOOL func_5089(BOOL bParam0) // Position - 0x17C2B2 (1557170)
 {
-	return Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_383.f_1 >= epctParam0;
+	return Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_383.f_1 >= bParam0;
 }
 
 BOOL func_5090(int iParam0) // Position - 0x17C2D0 (1557200)
@@ -287373,10 +287373,10 @@ void func_5128(var uParam0, var uParam1) // Position - 0x1802F5 (1573621)
 	var unk;
 	var unk5;
 	var unk9;
-	ePedComponentType type;
-	ePedComponentType i;
-	int num;
 	BOOL flag2;
+	BOOL i;
+	int num;
+	BOOL flag3;
 
 	player = PLAYER::PLAYER_ID();
 	unk = 3;
@@ -287390,7 +287390,7 @@ void func_5128(var uParam0, var uParam1) // Position - 0x1802F5 (1573621)
 		return;
 	}
 
-	for (i = PV_COMP_HEAD; i < PV_COMP_UPPR; i = i + 1)
+	for (i = false; i < 3; i = i + 1)
 	{
 		unk9[i] = func_5131(i);
 		unk[i] = func_5089(i);
@@ -287399,7 +287399,7 @@ void func_5128(var uParam0, var uParam1) // Position - 0x1802F5 (1573621)
 		if (!flag && Global_24546.f_1616[i] != unk5[i] || !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk9[i]))
 			flag = true;
 	
-		type = type + 1;
+		flag2 = flag2 + 1;
 	}
 
 	if (!func_5121())
@@ -287415,7 +287415,7 @@ void func_5128(var uParam0, var uParam1) // Position - 0x1802F5 (1573621)
 		func_1054("ARENA_ENT_T" /*ARENA WORKSHOP*/);
 		func_5130();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag2; i = i + 1)
 		{
 			func_1064(i, unk9[i], 0, unk5[i], false, false, false);
 		}
@@ -287424,12 +287424,12 @@ void func_5128(var uParam0, var uParam1) // Position - 0x1802F5 (1573621)
 	}
 	else
 	{
-		flag2 = uParam0->f_4;
-		func_1020(func_5129(unk[flag2], flag2), 0, 0);
+		flag3 = uParam0->f_4;
+		func_1020(func_5129(unk[flag3], flag3), 0, 0);
 	
-		if (uParam0->f_2 && unk5[flag2])
+		if (uParam0->f_2 && unk5[flag3])
 		{
-			func_973(flag2);
+			func_973(flag3);
 			*uParam1 = 1;
 			func_1091(1);
 		}
@@ -308136,29 +308136,29 @@ void func_5457(var uParam0, var uParam1) // Position - 0x1A1319 (1708825)
 	var unk;
 	var unk8;
 	var unk15;
-	ePedComponentType type;
-	ePedComponentType i;
-	ePedComponentType type2;
 	BOOL flag3;
+	BOOL i;
+	ePedComponentType type;
+	BOOL flag4;
 
 	flag2 = func_5401();
 	unk = 6;
 	unk8 = 6;
 	unk15 = 6;
-	type2 = func_5385(*uParam0);
+	type = func_5385(*uParam0);
 
-	if (!func_845(PLAYER::PLAYER_ID(), true) && !func_5384(PLAYER::PLAYER_ID(), type2))
+	if (!func_845(PLAYER::PLAYER_ID(), true) && !func_5384(PLAYER::PLAYER_ID(), type))
 	{
 		uParam1->f_4 = 1;
 		return;
 	}
 
-	for (i = PV_COMP_HEAD; i < PV_COMP_FEET; i = i + 1)
+	for (i = false; i < 6; i = i + 1)
 	{
 		unk15[i] = func_5465(i);
 		unk8[i] = func_5459(i);
 	
-		if (i == PV_COMP_HAND)
+		if (i == 5)
 		{
 			unk[i] = unk8[i];
 		
@@ -308167,7 +308167,7 @@ void func_5457(var uParam0, var uParam1) // Position - 0x1A1319 (1708825)
 				if (!Global_24546.f_1616[i] || !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk15[i]))
 					flag = true;
 			
-				type = type + 1;
+				flag3 = flag3 + 1;
 			}
 			else if (Global_24546.f_1616[i] || MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk15[i]))
 			{
@@ -308176,12 +308176,12 @@ void func_5457(var uParam0, var uParam1) // Position - 0x1A1319 (1708825)
 		}
 		else
 		{
-			unk[i] = unk8[i] && !(i == PV_COMP_HEAD && flag2);
+			unk[i] = unk8[i] && !(i == false && flag2);
 		
 			if (!flag && Global_24546.f_1616[i] != unk[i] || !MISC::ARE_STRINGS_EQUAL(&Global_24546.f_79[i /*6*/], unk15[i]))
 				flag = true;
 		
-			type = type + 1;
+			flag3 = flag3 + 1;
 		}
 	}
 
@@ -308198,7 +308198,7 @@ void func_5457(var uParam0, var uParam1) // Position - 0x1A1319 (1708825)
 		func_1054("HUB_TITLE_2" /*NIGHTCLUB GARAGE*/);
 		func_5458();
 	
-		for (i = PV_COMP_HEAD; i < type; i = i + 1)
+		for (i = false; i < flag3; i = i + 1)
 		{
 			func_1064(i, unk15[i], 0, unk[i], false, false, false);
 		}
@@ -308207,12 +308207,12 @@ void func_5457(var uParam0, var uParam1) // Position - 0x1A1319 (1708825)
 	}
 	else
 	{
-		flag3 = uParam0->f_4;
-		func_1020(func_5398(true, unk8[flag3], flag3, false), 0, 0);
+		flag4 = uParam0->f_4;
+		func_1020(func_5398(true, unk8[flag4], flag4, false), 0, 0);
 	
-		if (uParam0->f_2 && unk[flag3])
+		if (uParam0->f_2 && unk[flag4])
 		{
-			func_973(flag3);
+			func_973(flag4);
 			*uParam1 = 1;
 			func_1091(1);
 		}
@@ -308401,10 +308401,10 @@ void func_5468(var uParam0, var uParam1) // Position - 0x1A17A8 (1709992)
 	Player player2;
 	int currentLanguage;
 	BOOL flag2;
-	ePedComponentType type2;
+	BOOL flag3;
 	Player player3;
 	var unk34;
-	ePedComponentType type3;
+	ePedComponentType type2;
 	Player player4;
 
 	unk = 32;
@@ -308478,7 +308478,7 @@ void func_5468(var uParam0, var uParam1) // Position - 0x1A17A8 (1709992)
 			}
 			else
 			{
-				func_1064(type2, "CLUB_OWNER_X" /*~a~'s Nightclub*/, 1, unk[i], false, false, false);
+				func_1064(flag3, "CLUB_OWNER_X" /*~a~'s Nightclub*/, 1, unk[i], false, false, false);
 				TEXT_LABEL_ASSIGN_STRING(&unk34, PLAYER::GET_PLAYER_NAME(player3), 64);
 			
 				if (flag2)
@@ -308486,12 +308486,12 @@ void func_5468(var uParam0, var uParam1) // Position - 0x1A17A8 (1709992)
 				else
 					func_1936(&unk34, false, false, false);
 			
-				type2 = type2 + 1;
+				flag3 = flag3 + 1;
 			}
 		}
 	
-		type3 = uParam0->f_5 ? PV_COMP_HEAD : uParam0->f_4;
-		func_1062(type3, true, 1);
+		type2 = uParam0->f_5 ? PV_COMP_HEAD : uParam0->f_4;
+		func_1062(type2, true, 1);
 	}
 	else
 	{
@@ -308720,10 +308720,10 @@ void func_5479(var uParam0, var uParam1) // Position - 0x1A1D47 (1711431)
 	{
 		func_1088(false, false);
 		func_5472();
-		func_1064(PV_COMP_HEAD, "CLUB_ENT_OWNED" /*Enter your Nightclub*/, 0, true, false, false, false);
+		func_1064(false, "CLUB_ENT_OWNED" /*Enter your Nightclub*/, 0, true, false, false, false);
 	
 		if (flag)
-			func_1064(PV_COMP_BERD, "CLUB_ENT_RIVAL" /*Enter another Nightclub*/, 0, true, false, false, false);
+			func_1064(true, "CLUB_ENT_RIVAL" /*Enter another Nightclub*/, 0, true, false, false, false);
 	
 		func_1062(PV_COMP_HEAD, true, 1);
 	}
@@ -412141,10 +412141,10 @@ int func_7540(ePedComponentType epctParam0) // Position - 0x23F94B (2357579)
 
 void func_7541(var uParam0, int iParam1) // Position - 0x23FC50 (2358352)
 {
-	ePedComponentType type;
+	BOOL flag;
 	var unk;
 	int i;
-	ePedComponentType type2;
+	ePedComponentType type;
 
 	func_1088(false, false);
 
@@ -412169,38 +412169,38 @@ void func_7541(var uParam0, int iParam1) // Position - 0x23FC50 (2358352)
 			}
 			else
 			{
-				type2 = func_382(i, -1);
+				type = func_382(i, -1);
 			
-				if (type2 == 129)
+				if (type == 129)
 				{
 				}
 				else if (!func_7548(i) && iParam1 == -1 || func_7548(i) && iParam1 == i)
 				{
-					if (type2 > PV_COMP_HEAD && type2 <= 131)
+					if (type > PV_COMP_HEAD && type <= 131)
 					{
 						if (!func_7547())
 						{
-							if (!func_7546() && !func_7545(type2))
+							if (!func_7546() && !func_7545(type))
 							{
-								func_1064(type, &(Global_1312440[type2 /*1951*/].f_16), 0, true, false, false, false);
+								func_1064(flag, &(Global_1312440[type /*1951*/].f_16), 0, true, false, false, false);
 							}
 							else
 							{
-								unk = { Global_1312440[type2 /*1951*/].f_16 };
+								unk = { Global_1312440[type /*1951*/].f_16 };
 								TEXT_LABEL_APPEND_STRING(&unk, "S", 16);
-								func_1064(type, &unk, 0, true, false, false, false);
+								func_1064(flag, &unk, 0, true, false, false, false);
 							}
 						}
 						else
 						{
-							func_1064(type, "PIM_DNAME" /*~a~*/, 1, true, false, false, false);
-							func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&(Global_1312440[type2 /*1951*/].f_16)), false, true, true);
+							func_1064(flag, "PIM_DNAME" /*~a~*/, 1, true, false, false, false);
+							func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&(Global_1312440[type /*1951*/].f_16)), false, true, true);
 						}
 					
-						func_1064(type, "CUST_GAR_COST" /*$~1~*/, 1, true, false, false, false);
+						func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, true, false, false, false);
 						func_7544(func_7456(i), false);
-						uParam0->[type] = i;
-						type = type + 1;
+						uParam0->[flag] = i;
+						flag = flag + 1;
 					}
 					else if (i > 0)
 					{
@@ -412208,54 +412208,54 @@ void func_7541(var uParam0, int iParam1) // Position - 0x23FC50 (2358352)
 						{
 							if (func_382(i - 1, -1) > PV_COMP_HEAD && !func_7548(i - 1) || func_7548(i) && iParam1 == i)
 							{
-								func_1064(type, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
-								uParam0->[type] = i;
-								type = type + 1;
+								func_1064(flag, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
+								uParam0->[flag] = i;
+								flag = flag + 1;
 							}
 						}
 						else if (i == 7)
 						{
 							if (func_382(4, -1) > PV_COMP_HEAD)
 							{
-								func_1064(type, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
-								uParam0->[type] = i;
-								type = type + 1;
+								func_1064(flag, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
+								uParam0->[flag] = i;
+								flag = flag + 1;
 							}
 						}
 						else if (i == 23)
 						{
 							if (func_382(7, -1) > PV_COMP_HEAD)
 							{
-								func_1064(type, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
-								uParam0->[type] = i;
-								type = type + 1;
+								func_1064(flag, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
+								uParam0->[flag] = i;
+								flag = flag + 1;
 							}
 						}
 						else if (i == 24)
 						{
 							if (func_382(23, -1) > PV_COMP_HEAD)
 							{
-								func_1064(type, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
-								uParam0->[type] = i;
-								type = type + 1;
+								func_1064(flag, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
+								uParam0->[flag] = i;
+								flag = flag + 1;
 							}
 						}
 						else if (i == 27)
 						{
 							if (func_382(24, -1) > PV_COMP_HEAD)
 							{
-								func_1064(type, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
-								uParam0->[type] = i;
-								type = type + 1;
+								func_1064(flag, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
+								uParam0->[flag] = i;
+								flag = flag + 1;
 							}
 						}
 						else if (i == 28)
 						{
 							if (func_382(27, -1) > PV_COMP_HEAD)
 							{
-								func_1064(type, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
-								uParam0->[type] = i;
-								type = type + 1;
+								func_1064(flag, "MP_REP_PROP_1" /*Empty*/, 0, true, false, false, false);
+								uParam0->[flag] = i;
+								flag = flag + 1;
 							}
 						}
 					}
@@ -412265,7 +412265,7 @@ void func_7541(var uParam0, int iParam1) // Position - 0x23FC50 (2358352)
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
 		MISC::CLEAR_BIT(&(uParam0->f_51), 5);
-		uParam0->f_48 = type;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 		func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
@@ -412619,10 +412619,10 @@ void func_7555(BOOL bParam0) // Position - 0x240548 (2360648)
 void func_7556(var uParam0, ePedComponentType epctParam1) // Position - 0x2405CB (2360779)
 {
 	ePedComponentType type;
-	ePedComponentType type2;
-	int num;
-	ePedComponentType type3;
 	BOOL flag;
+	int num;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -412635,36 +412635,36 @@ void func_7556(var uParam0, ePedComponentType epctParam1) // Position - 0x2405CB
 		func_1087(1, 2, 1, 1, 1);
 		func_7549(false, false, false, false, false);
 		func_1054("REP_BOF_0" /*BAIL OFFICE PURCHASE*/);
-		type3 = func_2093(PLAYER::PLAYER_ID());
-		flag = false;
+		type2 = func_2093(PLAYER::PLAYER_ID());
+		flag2 = false;
 	
-		if (type3 > PV_COMP_HEAD)
+		if (type2 > PV_COMP_HEAD)
 		{
-			flag = func_7558(type3, type);
+			flag2 = func_7558(type2, type);
 		
-			if (!flag)
+			if (!flag2)
 				MISC::SET_BIT(&(uParam0->f_51), 8);
 		
-			func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-			labelName = func_7475(type3);
+			func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+			labelName = func_7475(type2);
 		
 			if (func_7557())
 				func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 			else
 				func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 		
-			func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-			func_7544(func_7473(type3), false);
-			uParam0->[num] = type3;
-			type2 = type2 + 1;
+			func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+			func_7544(func_7473(type2), false);
+			uParam0->[num] = type2;
+			flag = flag + 1;
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 	
-		if (flag)
+		if (flag2)
 			func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
 	
 		func_7542(INPUT_CELLPHONE_CANCEL, "BB_BACK" /*Back*/, -1);
@@ -412815,10 +412815,10 @@ void func_7561(BOOL bParam0) // Position - 0x2408BF (2361535)
 void func_7562(var uParam0, ePedComponentType epctParam1) // Position - 0x240942 (2361666)
 {
 	ePedComponentType type;
-	ePedComponentType type2;
-	int num;
-	ePedComponentType type3;
 	BOOL flag;
+	int num;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -412831,36 +412831,36 @@ void func_7562(var uParam0, ePedComponentType epctParam1) // Position - 0x240942
 		func_1087(1, 2, 1, 1, 1);
 		func_7549(false, false, false, false, false);
 		func_1054("REP_SVG_0" /*SALVAGE YARD PURCHASE*/);
-		type3 = func_2434(PLAYER::PLAYER_ID());
-		flag = false;
+		type2 = func_2434(PLAYER::PLAYER_ID());
+		flag2 = false;
 	
-		if (type3 > PV_COMP_HEAD)
+		if (type2 > PV_COMP_HEAD)
 		{
-			flag = func_7563(type3, type);
+			flag2 = func_7563(type2, type);
 		
-			if (!flag)
+			if (!flag2)
 				MISC::SET_BIT(&(uParam0->f_51), 8);
 		
-			func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-			labelName = func_7478(type3);
+			func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+			labelName = func_7478(type2);
 		
 			if (func_7557())
 				func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 			else
 				func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 		
-			func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-			func_7544(func_7476(type3), false);
-			uParam0->[num] = type3;
-			type2 = type2 + 1;
+			func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+			func_7544(func_7476(type2), false);
+			uParam0->[num] = type2;
+			flag = flag + 1;
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 	
-		if (flag)
+		if (flag2)
 			func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
 	
 		func_7542(INPUT_CELLPHONE_CANCEL, "BB_BACK" /*Back*/, -1);
@@ -412963,10 +412963,10 @@ void func_7565(BOOL bParam0) // Position - 0x240B74 (2362228)
 void func_7566(var uParam0, ePedComponentType epctParam1) // Position - 0x240BF7 (2362359)
 {
 	ePedComponentType type;
-	ePedComponentType type2;
-	int num;
-	ePedComponentType type3;
 	BOOL flag;
+	int num;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -412978,27 +412978,27 @@ void func_7566(var uParam0, ePedComponentType epctParam1) // Position - 0x240BF7
 		func_1087(1, 2, 1, 1, 1);
 		func_7549(false, false, false, false, false);
 		func_1054("REP_FIX_0" /*AGENCY PURCHASE*/);
-		type3 = func_3158(PLAYER::PLAYER_ID());
+		type2 = func_3158(PLAYER::PLAYER_ID());
 	
-		if (type3 > PV_COMP_HEAD)
+		if (type2 > PV_COMP_HEAD)
 		{
-			flag = func_7567(type3, type);
-			func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-			labelName = func_7483(type3);
+			flag2 = func_7567(type2, type);
+			func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+			labelName = func_7483(type2);
 		
 			if (func_7557())
 				func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 			else
 				func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 		
-			func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-			func_7544(func_7479(type3), false);
-			uParam0->[num] = type3;
-			type2 = type2 + 1;
+			func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+			func_7544(func_7479(type2), false);
+			uParam0->[num] = type2;
+			flag = flag + 1;
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 		func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
@@ -413077,10 +413077,10 @@ void func_7569(BOOL bParam0) // Position - 0x240D64 (2362724)
 void func_7570(var uParam0, ePedComponentType epctParam1) // Position - 0x240DE7 (2362855)
 {
 	ePedComponentType type;
-	ePedComponentType type2;
-	int num;
-	ePedComponentType type3;
 	BOOL flag;
+	int num;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -413092,27 +413092,27 @@ void func_7570(var uParam0, ePedComponentType epctParam1) // Position - 0x240DE7
 		func_1087(1, 2, 1, 1, 1);
 		func_7549(false, false, false, false, false);
 		func_1054("REP_AUT_0" /*AUTO SHOP PURCHASE*/);
-		type3 = func_3622(PLAYER::PLAYER_ID());
+		type2 = func_3622(PLAYER::PLAYER_ID());
 	
-		if (type3 > PV_COMP_HEAD)
+		if (type2 > PV_COMP_HEAD)
 		{
-			flag = func_7571(type3, type);
-			func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-			labelName = func_7487(type3);
+			flag2 = func_7571(type2, type);
+			func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+			labelName = func_7487(type2);
 		
 			if (func_7557())
 				func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 			else
 				func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 		
-			func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-			func_7544(func_7485(type3), false);
-			uParam0->[num] = type3;
-			type2 = type2 + 1;
+			func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+			func_7544(func_7485(type2), false);
+			uParam0->[num] = type2;
+			flag = flag + 1;
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 		func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
@@ -413193,10 +413193,10 @@ void func_7573(BOOL bParam0) // Position - 0x240F6C (2363244)
 void func_7574(var uParam0, ePedComponentType epctParam1) // Position - 0x240FEF (2363375)
 {
 	ePedComponentType type;
-	ePedComponentType type2;
-	int num;
-	ePedComponentType type3;
 	BOOL flag;
+	int num;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -413208,28 +413208,28 @@ void func_7574(var uParam0, ePedComponentType epctParam1) // Position - 0x240FEF
 		func_1087(1, 2, 1, 1, 1);
 		func_7549(false, false, false, false, false);
 		func_1054("REP_ARC_0" /*ARCADE PURCHASE*/);
-		type3 = func_4330(PLAYER::PLAYER_ID());
+		type2 = func_4330(PLAYER::PLAYER_ID());
 	
-		if (type3 > PV_COMP_HEAD)
+		if (type2 > PV_COMP_HEAD)
 		{
-			flag = func_7575(type3, type);
-			func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-			labelName = func_7492(type3);
+			flag2 = func_7575(type2, type);
+			func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+			labelName = func_7492(type2);
 		
 			if (func_7557())
 				func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 			else
 				func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 		
-			func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-			func_7544(func_7489(type3), false);
-			uParam0->[num] = type3;
-			type2 = type2 + 1;
+			func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+			func_7544(func_7489(type2), false);
+			uParam0->[num] = type2;
+			flag = flag + 1;
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
 		MISC::CLEAR_BIT(&(uParam0->f_51), 5);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 		func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
@@ -413310,10 +413310,10 @@ void func_7577(BOOL bParam0) // Position - 0x24117D (2363773)
 void func_7578(var uParam0, ePedComponentType epctParam1) // Position - 0x241200 (2363904)
 {
 	ePedComponentType type;
-	ePedComponentType type2;
-	int num;
-	ePedComponentType type3;
 	BOOL flag;
+	int num;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -413325,28 +413325,28 @@ void func_7578(var uParam0, ePedComponentType epctParam1) // Position - 0x241200
 		func_1087(1, 2, 1, 1, 1);
 		func_7549(false, false, false, false, false);
 		func_1054("REP_NCLUB_0" /*NIGHTCLUB PURCHASE*/);
-		type3 = func_5471(PLAYER::PLAYER_ID());
+		type2 = func_5471(PLAYER::PLAYER_ID());
 	
-		if (type3 > PV_COMP_HEAD)
+		if (type2 > PV_COMP_HEAD)
 		{
-			flag = func_7579(type3, type);
-			func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-			labelName = func_7499(type3);
+			flag2 = func_7579(type2, type);
+			func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+			labelName = func_7499(type2);
 		
 			if (func_7557())
 				func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 			else
 				func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 		
-			func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-			func_7544(func_7497(type3), false);
-			uParam0->[num] = type3;
-			type2 = type2 + 1;
+			func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+			func_7544(func_7497(type2), false);
+			uParam0->[num] = type2;
+			flag = flag + 1;
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
 		MISC::CLEAR_BIT(&(uParam0->f_51), 5);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 		func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
@@ -413427,10 +413427,10 @@ void func_7581(BOOL bParam0) // Position - 0x24138E (2364302)
 void func_7582(var uParam0, ePedComponentType epctParam1) // Position - 0x241411 (2364433)
 {
 	ePedComponentType type;
-	ePedComponentType type2;
-	int num;
-	ePedComponentType type3;
 	BOOL flag;
+	int num;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -413442,28 +413442,28 @@ void func_7582(var uParam0, ePedComponentType epctParam1) // Position - 0x241411
 		func_1087(1, 2, 1, 1, 1);
 		func_7549(false, false, false, false, false);
 		func_1054("REP_DBASE_0" /*FACILITY PURCHASE*/);
-		type3 = func_5840(PLAYER::PLAYER_ID());
+		type2 = func_5840(PLAYER::PLAYER_ID());
 	
-		if (type3 > PV_COMP_HEAD)
+		if (type2 > PV_COMP_HEAD)
 		{
-			flag = func_7583(type3, type);
-			func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-			labelName = func_7508(type3);
+			flag2 = func_7583(type2, type);
+			func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+			labelName = func_7508(type2);
 		
 			if (func_7557())
 				func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 			else
 				func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 		
-			func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-			func_7544(func_7502(type3), false);
-			uParam0->[num] = type3;
-			type2 = type2 + 1;
+			func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+			func_7544(func_7502(type2), false);
+			uParam0->[num] = type2;
+			flag = flag + 1;
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
 		MISC::CLEAR_BIT(&(uParam0->f_51), 5);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 		func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
@@ -413544,10 +413544,10 @@ void func_7585(BOOL bParam0) // Position - 0x24159F (2364831)
 void func_7586(var uParam0, ePedComponentType epctParam1) // Position - 0x241622 (2364962)
 {
 	ePedComponentType type;
-	ePedComponentType type2;
-	int num;
-	ePedComponentType type3;
 	BOOL flag;
+	int num;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -413559,28 +413559,28 @@ void func_7586(var uParam0, ePedComponentType epctParam1) // Position - 0x241622
 		func_1087(1, 2, 1, 1, 1);
 		func_7549(false, false, false, false, false);
 		func_1054("REP_HANGAR_0" /*HANGAR PURCHASE*/);
-		type3 = func_6185(PLAYER::PLAYER_ID());
+		type2 = func_6185(PLAYER::PLAYER_ID());
 	
-		if (type3 > PV_COMP_HEAD)
+		if (type2 > PV_COMP_HEAD)
 		{
-			flag = func_7587(type3, type);
-			func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-			labelName = func_7515(type3);
+			flag2 = func_7587(type2, type);
+			func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+			labelName = func_7515(type2);
 		
 			if (func_7557())
 				func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 			else
 				func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 		
-			func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-			func_7544(func_7511(type3), false);
-			uParam0->[num] = type3;
-			type2 = type2 + 1;
+			func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+			func_7544(func_7511(type2), false);
+			uParam0->[num] = type2;
+			flag = flag + 1;
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
 		MISC::CLEAR_BIT(&(uParam0->f_51), 5);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 		func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
@@ -413715,7 +413715,7 @@ void func_7588(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 
 	if (bParam3)
 	{
-		if (Global_24546.f_5821 <= PV_COMP_BERD)
+		if (Global_24546.f_5821 <= true)
 		{
 			func_1064(Global_24546.f_5821 + 1, "DFLT_MNU_OPT" /*Exit*/, 0, true, false, false, false);
 			Global_24546.f_6617 = 1;
@@ -415749,10 +415749,10 @@ void func_7609(var uParam0, ePedComponentType epctParam1) // Position - 0x24546D
 {
 	ePedComponentType type;
 	int num;
-	ePedComponentType type2;
-	int i;
-	ePedComponentType type3;
 	BOOL flag;
+	int i;
+	ePedComponentType type2;
+	BOOL flag2;
 	char* labelName;
 
 	type = epctParam1;
@@ -415768,32 +415768,32 @@ void func_7609(var uParam0, ePedComponentType epctParam1) // Position - 0x24546D
 	
 		for (i = 0; i < 7; i = i + 1)
 		{
-			type3 = func_7611(PLAYER::PLAYER_ID(), i);
+			type2 = func_7611(PLAYER::PLAYER_ID(), i);
 		
-			if (type3 > PV_COMP_HEAD)
+			if (type2 > PV_COMP_HEAD)
 			{
-				if (func_6780(type3) == num)
+				if (func_6780(type2) == num)
 				{
-					flag = func_7610(type3, type);
-					func_1064(type2, "PIM_DNAME" /*~a~*/, 1, flag, false, false, false);
-					labelName = func_7533(type3);
+					flag2 = func_7610(type2, type);
+					func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag2, false, false, false);
+					labelName = func_7533(type2);
 				
 					if (func_7557())
 						func_1936(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, false, false);
 					else
 						func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(labelName), false, true, true);
 				
-					func_1064(type2, "CUST_GAR_COST" /*$~1~*/, 1, flag, false, false, false);
-					func_7544(func_7518(type3), false);
-					uParam0->[i] = type3;
-					type2 = type2 + 1;
+					func_1064(flag, "CUST_GAR_COST" /*$~1~*/, 1, flag2, false, false, false);
+					func_7544(func_7518(type2), false);
+					uParam0->[i] = type2;
+					flag = flag + 1;
 				}
 			}
 		}
 	
 		MISC::CLEAR_BIT(&(uParam0->f_51), 2);
 		MISC::CLEAR_BIT(&(uParam0->f_51), 5);
-		uParam0->f_48 = type2;
+		uParam0->f_48 = flag;
 		func_1063(uParam0->f_45, true, 1);
 		func_7543(-1);
 		func_7542(INPUT_CELLPHONE_SELECT, "BB_SELECT" /*Select*/, -1);
@@ -466695,18 +466695,18 @@ void func_8638(const char* sParam0) // Position - 0x286803 (2648067)
 
 void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Position - 0x286864 (2648164)
 {
-	ePedComponentType type;
-	int i;
 	BOOL flag;
-	ePedComponentType type2;
+	int i;
+	BOOL flag2;
+	ePedComponentType type;
 	int num;
-	ePedComponentType type3;
+	ePedComponentType type2;
 	int j;
 	int num2;
-	ePedComponentType type4;
+	ePedComponentType type3;
 	var unk;
-	BOOL flag2;
-	ePedComponentType type5;
+	BOOL flag3;
+	ePedComponentType type4;
 	int num3;
 	int num4;
 	int num5;
@@ -466714,14 +466714,14 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 	var unk11;
 	var unk27;
 	int num6;
-	BOOL flag3;
-	int num7;
 	BOOL flag4;
+	int num7;
+	BOOL flag5;
 	var labelName;
 	var labelName2;
-	BOOL flag5;
+	BOOL flag6;
 
-	type = PV_COMP_HEAD;
+	flag = false;
 	func_1088(false, false);
 
 	if (bParam2)
@@ -466730,14 +466730,14 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 	func_1086(1, 1, 0, 0, 0);
 	func_1087(1, 2, 1, 1, 1);
 	func_7549(0, 0, 0, 0, 0);
-	flag = false;
+	flag2 = false;
 	j = 0;
 	num2 = 1;
-	flag2 = func_333(epctParam1);
+	flag3 = func_333(epctParam1);
 	num5 = 1;
 	unk27 = 4;
 	num6 = -1;
-	flag3 = true;
+	flag4 = true;
 	num7 = -1;
 
 	switch (uParam0->f_44)
@@ -466749,9 +466749,9 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 		
 			for (i = 0; i < 36; i = i + 1)
 			{
-				type2 = func_382(i, -1);
+				type = func_382(i, -1);
 			
-				if (type2 > PV_COMP_HEAD && func_330(type2) && func_8662(i))
+				if (type > PV_COMP_HEAD && func_330(type) && func_8662(i))
 				{
 					if (!func_1104(epctParam1, i) && !func_8660(epctParam1, i))
 					{
@@ -466759,11 +466759,11 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 					else
 					{
 						num6 = -1;
-						flag3 = true;
 						flag4 = true;
+						flag5 = true;
 					
-						if (type2 == 131 && !func_334())
-							flag4 = false;
+						if (type == 131 && !func_334())
+							flag5 = false;
 					
 						if (func_8659(i))
 						{
@@ -466771,44 +466771,44 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 						
 							if (unk27[num6 - 6000])
 							{
-								flag3 = false;
+								flag4 = false;
 							}
 							else
 							{
 								TEXT_LABEL_ASSIGN_STRING(&labelName, func_8658(num6), 16);
-								func_1064(type, &labelName, 0, flag4, 0, false, 0);
-								uParam0->[type] = num6;
-								type = type + 1;
+								func_1064(flag, &labelName, 0, flag5, 0, false, 0);
+								uParam0->[flag] = num6;
+								flag = flag + 1;
 								unk27[num6 - 6000] = 1;
-								flag3 = false;
+								flag4 = false;
 							}
 						}
 					
-						if (flag3)
+						if (flag4)
 						{
-							func_8657(&labelName, type2);
+							func_8657(&labelName, type);
 						
 							if (!func_7547())
 							{
-								if (!func_7546() && !func_7545(type2))
+								if (!func_7546() && !func_7545(type))
 								{
-									func_1064(type, &labelName, 0, flag4, false, false, false);
+									func_1064(flag, &labelName, 0, flag5, false, false, false);
 								}
 								else
 								{
 									unk = { labelName };
 									TEXT_LABEL_APPEND_STRING(&unk, "S", 16);
-									func_1064(type, &unk, 0, flag4, false, false, false);
+									func_1064(flag, &unk, 0, flag5, false, false, false);
 								}
 							}
 							else
 							{
-								func_1064(type, "PIM_DNAME" /*~a~*/, 1, flag4, false, false, false);
+								func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag5, false, false, false);
 								func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&labelName), false, true, true);
 							}
 						
-							uParam0->[type] = i;
-							type = type + 1;
+							uParam0->[flag] = i;
+							flag = flag + 1;
 						}
 					}
 				}
@@ -466816,26 +466816,26 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 		
 			if (func_77(5396, -1) != PV_COMP_HEAD && _STAT_GET_PACKED_INT(15270, -1) == 7 && !Global_262145.f_20909 && func_348(epctParam1, 156) && !VEHICLE::IS_THIS_MODEL_A_HELI(epctParam1) && !VEHICLE::IS_THIS_MODEL_A_PLANE(epctParam1))
 			{
-				func_1064(type, func_8656(0), 0, true, false, false, false);
-				uParam0->[type] = func_8655(0);
-				type = type + 1;
+				func_1064(flag, func_8656(0), 0, true, false, false, false);
+				uParam0->[flag] = func_8655(0);
+				flag = flag + 1;
 			}
 		
 			if (func_346(-1) && func_348(epctParam1, 223))
 			{
-				func_1064(type, func_8656(2), 0, true, false, false, false);
-				uParam0->[type] = func_8655(2);
-				type = type + 1;
+				func_1064(flag, func_8656(2), 0, true, false, false, false);
+				uParam0->[flag] = func_8655(2);
+				flag = flag + 1;
 			}
 		
 			if (func_345(-1) && func_348(epctParam1, 278))
 			{
-				func_1064(type, func_8656(3), 0, true, false, false, false);
-				uParam0->[type] = func_8655(3);
-				type = type + 1;
+				func_1064(flag, func_8656(3), 0, true, false, false, false);
+				uParam0->[flag] = func_8655(3);
+				flag = flag + 1;
 			}
 		
-			uParam0->f_48 = type;
+			uParam0->f_48 = flag;
 			func_1063(uParam0->f_45, true, 1);
 			break;
 	
@@ -466847,51 +466847,51 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 			else
 				func_1054("DEL_VEH_SEL0a" /*SELECT FLOOR*/);
 		
-			type = PV_COMP_HEAD;
+			flag = false;
 		
 			for (i = 0; i < 36; i = i + 1)
 			{
 				num6 = uParam0->f_56;
-				type2 = func_382(i, -1);
-				flag5 = true;
+				type = func_382(i, -1);
+				flag6 = true;
 			
 				if (func_8637(num6))
-					if (type2 <= PV_COMP_HEAD)
-						flag5 = false;
+					if (type <= PV_COMP_HEAD)
+						flag6 = false;
 			
-				if (func_8659(i) && func_8631(i) == num6 && flag5)
+				if (func_8659(i) && func_8631(i) == num6 && flag6)
 				{
-					flag4 = false;
+					flag5 = false;
 				
-					if (type2 > PV_COMP_HEAD && func_330(type2) && func_8662(i))
-						flag4 = true;
+					if (type > PV_COMP_HEAD && func_330(type) && func_8662(i))
+						flag5 = true;
 				
 					func_8652(&labelName2, i, true);
 				
 					if (!func_7547())
 					{
-						if (!func_7546() && !func_7545(type2))
+						if (!func_7546() && !func_7545(type))
 						{
-							func_1064(type, &labelName2, 0, flag4, false, false, false);
+							func_1064(flag, &labelName2, 0, flag5, false, false, false);
 						}
 						else
 						{
 							TEXT_LABEL_COPY(&unk, { labelName2 }, 4);
 							TEXT_LABEL_APPEND_STRING(&unk, "S", 16);
-							func_1064(type, &unk, 0, flag4, false, false, false);
+							func_1064(flag, &unk, 0, flag5, false, false, false);
 						}
 					}
 					else
 					{
-						func_1064(type, "PIM_DNAME" /*~a~*/, 1, flag4, false, false, false);
+						func_1064(flag, "PIM_DNAME" /*~a~*/, 1, flag5, false, false, false);
 						func_1939(HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&labelName2), false, true, true);
 					}
 				
-					uParam0->[type] = i;
-					type = type + 1;
+					uParam0->[flag] = i;
+					flag = flag + 1;
 				}
 			
-				uParam0->f_49 = type;
+				uParam0->f_49 = flag;
 				func_1063(uParam0->f_46, true, 1);
 			}
 			break;
@@ -466899,16 +466899,16 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 		case 1:
 			uParam0->f_57 = -1;
 			func_1054("DEL_VEH_SEL0a" /*SELECT FLOOR*/);
-			type = PV_COMP_HEAD;
+			flag = false;
 		
 			for (i = 0; i < func_8651(uParam0->f_56); i = i + 1)
 			{
 				TEXT_LABEL_ASSIGN_STRING(&unk, func_8650(uParam0->f_56, i), 16);
-				func_1064(type, &unk, 0, true, false, false, false);
-				type = type + 1;
+				func_1064(flag, &unk, 0, true, false, false, false);
+				flag = flag + 1;
 			}
 		
-			uParam0->f_49 = type;
+			uParam0->f_49 = flag;
 			func_1063(uParam0->f_46, true, 1);
 			break;
 	
@@ -466939,8 +466939,8 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 				}
 				else
 				{
-					type3 = func_331(num7, j);
-					type4 = 10 + func_331(num7, j);
+					type2 = func_331(num7, j);
+					type3 = 10 + func_331(num7, j);
 				
 					if (num7 >= 36 && !func_8626(num7))
 					{
@@ -466948,20 +466948,20 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 					
 						for (i = 0; i < func_8648(num4); i = i + 1)
 						{
-							type5 = i + type3;
+							type4 = i + type2;
+						
+							if (!flag3)
+								if (func_355(type4))
+									flag2 = true;
+							else if (!func_355(type4))
+								flag2 = true;
+						
+							if (!func_348(epctParam1, type4))
+								flag2 = true;
 						
 							if (!flag2)
-								if (func_355(type5))
-									flag = true;
-							else if (!func_355(type5))
-								flag = true;
-						
-							if (!func_348(epctParam1, type5))
-								flag = true;
-						
-							if (!flag)
 							{
-								func_361(type5, &num3, true);
+								func_361(type4, &num3, true);
 							
 								if (num3 >= 0 && Global_1583772[num3 /*143*/].f_66 != PV_COMP_HEAD && STREAMING::IS_MODEL_IN_CDIMAGE(Global_1583772[num3 /*143*/].f_66))
 								{
@@ -466974,15 +466974,15 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 									if (func_8646(Global_1583772[num3 /*143*/].f_66, Global_1583772[num3 /*143*/].f_77, Global_1583772[num3 /*143*/].f_9[10]) && func_8645(Global_1583772[num3 /*143*/].f_66))
 										num5 = num5 + 1;
 								
-									unk11 = { func_8643(-1, type5, true) };
+									unk11 = { func_8643(-1, type4, true) };
 								
 									if (IS_BIT_SET(Global_1583772[num3 /*143*/].f_104, 1))
 									{
-										if (IS_BIT_SET(Global_1583772[num3 /*143*/].f_104, 2) && !flag2)
+										if (IS_BIT_SET(Global_1583772[num3 /*143*/].f_104, 2) && !flag3)
 										{
 											TEXT_LABEL_ASSIGN_STRING(&unk5, "MP_MAN_VEH_S0", 24);
 											TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-											func_1064(type, &unk5, num5, true, false, false, false);
+											func_1064(flag, &unk5, num5, true, false, false, false);
 										
 											if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 												func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -466995,18 +466995,18 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 											if (func_8646(Global_1583772[num3 /*143*/].f_66, Global_1583772[num3 /*143*/].f_77, Global_1583772[num3 /*143*/].f_9[10]) && func_8645(Global_1583772[num3 /*143*/].f_66))
 												func_8642("VEH_TOPL" /*Topless*/, false);
 										
-											uParam0->[type] = type5;
-											type = type + 1;
+											uParam0->[flag] = type4;
+											flag = flag + 1;
 										}
 										else
 										{
-											func_1064(type, "MP_MAN_VEH_S" /*Empty*/, 0, true, false, false, false);
-											uParam0->[type] = type5;
-											func_8641(&(uParam0->f_41), type);
-											type = type + 1;
+											func_1064(flag, "MP_MAN_VEH_S" /*Empty*/, 0, true, false, false, false);
+											uParam0->[flag] = type4;
+											func_8641(&(uParam0->f_41), flag);
+											flag = flag + 1;
 										}
 									}
-									else if (flag2)
+									else if (flag3)
 									{
 										if (func_333(Global_1583772[num3 /*143*/].f_66))
 										{
@@ -467014,7 +467014,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 											{
 												TEXT_LABEL_ASSIGN_STRING(&unk5, "MP_MAN_VEH_S1", 24);
 												TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-												func_1064(type, &unk5, num5, true, false, false, false);
+												func_1064(flag, &unk5, num5, true, false, false, false);
 											
 												if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 													func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467031,7 +467031,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 											{
 												TEXT_LABEL_ASSIGN_STRING(&unk5, "PIL_MP_VEH_0", 24);
 												TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-												func_1064(type, &unk5, num5, true, false, false, false);
+												func_1064(flag, &unk5, num5, true, false, false, false);
 											
 												if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 													func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467045,8 +467045,8 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 													func_8642("VEH_TOPL" /*Topless*/, false);
 											}
 										
-											uParam0->[type] = type5;
-											type = type + 1;
+											uParam0->[flag] = type4;
+											flag = flag + 1;
 										}
 									}
 									else if (!func_333(Global_1583772[num3 /*143*/].f_66))
@@ -467055,7 +467055,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 										{
 											TEXT_LABEL_ASSIGN_STRING(&unk5, "MP_MAN_VEH_S1", 24);
 											TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-											func_1064(type, &unk5, num5, true, false, false, false);
+											func_1064(flag, &unk5, num5, true, false, false, false);
 										
 											if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 												func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467072,7 +467072,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 										{
 											TEXT_LABEL_ASSIGN_STRING(&unk5, "PIL_MP_VEH_0", 24);
 											TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-											func_1064(type, &unk5, num5, true, false, false, false);
+											func_1064(flag, &unk5, num5, true, false, false, false);
 										
 											if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 												func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467086,30 +467086,30 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 												func_8642("VEH_TOPL" /*Topless*/, false);
 										}
 									
-										uParam0->[type] = type5;
-										type = type + 1;
+										uParam0->[flag] = type4;
+										flag = flag + 1;
 									}
 								}
 								else
 								{
-									func_1064(type, "MP_MAN_VEH_S" /*Empty*/, 0, true, false, false, false);
-									uParam0->[type] = type5;
-									func_8641(&(uParam0->f_41), type);
-									type = type + 1;
+									func_1064(flag, "MP_MAN_VEH_S" /*Empty*/, 0, true, false, false, false);
+									uParam0->[flag] = type4;
+									func_8641(&(uParam0->f_41), flag);
+									flag = flag + 1;
 								}
 							}
 						}
 					}
 					else
 					{
-						type2 = func_382(num7, -1);
+						type = func_382(num7, -1);
 					
 						if (func_8625(num7))
 						{
 							num = func_8640(num7);
-							type3 = type3 + (uParam0->f_57 * num);
+							type2 = type2 + (uParam0->f_57 * num);
 						
-							if (flag2)
+							if (flag3)
 								num = 0;
 						}
 						else if (func_8649(num7))
@@ -467118,39 +467118,39 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 						}
 						else
 						{
-							num = func_323(num7, PV_COMP_INVALID, true);
+							num = func_323(num7, -1, true);
 						}
 					
 						for (i = 0; i < num; i = i + 1)
 						{
-							type5 = type3 + i;
-							flag = false;
+							type4 = type2 + i;
+							flag2 = false;
 						
-							if (type2 <= PV_COMP_HEAD)
-								flag = true;
-							else if (type2 >= PV_COMP_HEAD && type2 <= 131)
-								if (Global_1312440[type2 /*1951*/].f_33 == 2)
-									if (type5 >= type3 + 2 && type5 != type4)
-										flag = true;
-								else if (Global_1312440[type2 /*1951*/].f_33 == 6)
-									if (type5 >= type3 + 6 && type5 != type4 && type5 != type4 + 1)
-										flag = true;
+							if (type <= PV_COMP_HEAD)
+								flag2 = true;
+							else if (type >= PV_COMP_HEAD && type <= 131)
+								if (Global_1312440[type /*1951*/].f_33 == 2)
+									if (type4 >= type2 + 2 && type4 != type3)
+										flag2 = true;
+								else if (Global_1312440[type /*1951*/].f_33 == 6)
+									if (type4 >= type2 + 6 && type4 != type3 && type4 != type3 + 1)
+										flag2 = true;
+						
+							if (!flag3)
+								if (type4 >= type3 && func_355(type4))
+									flag2 = true;
+							else if (type4 < type3)
+								flag2 = true;
+						
+							if (!func_321(type4, type, num7, uParam0->f_57))
+								flag2 = true;
+						
+							if (!func_348(epctParam1, type4))
+								flag2 = true;
 						
 							if (!flag2)
-								if (type5 >= type4 && func_355(type5))
-									flag = true;
-							else if (type5 < type4)
-								flag = true;
-						
-							if (!func_321(type5, type2, num7, uParam0->f_57))
-								flag = true;
-						
-							if (!func_348(epctParam1, type5))
-								flag = true;
-						
-							if (!flag)
 							{
-								func_361(type5, &num3, true);
+								func_361(type4, &num3, true);
 							
 								if (num3 >= 0 && Global_1583772[num3 /*143*/].f_66 != PV_COMP_HEAD && STREAMING::IS_MODEL_IN_CDIMAGE(Global_1583772[num3 /*143*/].f_66))
 								{
@@ -467163,15 +467163,15 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 									if (func_8646(Global_1583772[num3 /*143*/].f_66, Global_1583772[num3 /*143*/].f_77, Global_1583772[num3 /*143*/].f_9[10]) && func_8645(Global_1583772[num3 /*143*/].f_66))
 										num5 = num5 + 1;
 								
-									unk11 = { func_8643(-1, type5, true) };
+									unk11 = { func_8643(-1, type4, true) };
 								
 									if (IS_BIT_SET(Global_1583772[num3 /*143*/].f_104, 1))
 									{
-										if (IS_BIT_SET(Global_1583772[num3 /*143*/].f_104, 2) && !flag2)
+										if (IS_BIT_SET(Global_1583772[num3 /*143*/].f_104, 2) && !flag3)
 										{
 											TEXT_LABEL_ASSIGN_STRING(&unk5, "MP_MAN_VEH_S0", 24);
 											TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-											func_1064(type, &unk5, num5, true, false, false, false);
+											func_1064(flag, &unk5, num5, true, false, false, false);
 										
 											if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 												func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467184,18 +467184,18 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 											if (func_8646(Global_1583772[num3 /*143*/].f_66, Global_1583772[num3 /*143*/].f_77, Global_1583772[num3 /*143*/].f_9[10]) && func_8645(Global_1583772[num3 /*143*/].f_66))
 												func_8642("VEH_TOPL" /*Topless*/, false);
 										
-											uParam0->[type] = type5;
-											type = type + 1;
+											uParam0->[flag] = type4;
+											flag = flag + 1;
 										}
 										else
 										{
-											func_1064(type, "MP_MAN_VEH_S" /*Empty*/, 0, true, false, false, false);
-											uParam0->[type] = type5;
-											func_8641(&(uParam0->f_41), type);
-											type = type + 1;
+											func_1064(flag, "MP_MAN_VEH_S" /*Empty*/, 0, true, false, false, false);
+											uParam0->[flag] = type4;
+											func_8641(&(uParam0->f_41), flag);
+											flag = flag + 1;
 										}
 									}
-									else if (flag2)
+									else if (flag3)
 									{
 										if (func_333(Global_1583772[num3 /*143*/].f_66))
 										{
@@ -467203,7 +467203,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 											{
 												TEXT_LABEL_ASSIGN_STRING(&unk5, "MP_MAN_VEH_S1", 24);
 												TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-												func_1064(type, &unk5, num5, true, false, false, false);
+												func_1064(flag, &unk5, num5, true, false, false, false);
 											
 												if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 													func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467220,7 +467220,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 											{
 												TEXT_LABEL_ASSIGN_STRING(&unk5, "PIL_MP_VEH_0", 24);
 												TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-												func_1064(type, &unk5, num5, true, false, false, false);
+												func_1064(flag, &unk5, num5, true, false, false, false);
 											
 												if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 													func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467234,8 +467234,8 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 													func_8642("VEH_TOPL" /*Topless*/, false);
 											}
 										
-											uParam0->[type] = type5;
-											type = type + 1;
+											uParam0->[flag] = type4;
+											flag = flag + 1;
 										}
 									}
 									else if (!func_333(Global_1583772[num3 /*143*/].f_66))
@@ -467244,7 +467244,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 										{
 											TEXT_LABEL_ASSIGN_STRING(&unk5, "MP_MAN_VEH_S1", 24);
 											TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-											func_1064(type, &unk5, num5, true, false, false, false);
+											func_1064(flag, &unk5, num5, true, false, false, false);
 										
 											if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 												func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467261,7 +467261,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 										{
 											TEXT_LABEL_ASSIGN_STRING(&unk5, "PIL_MP_VEH_0", 24);
 											TEXT_LABEL_APPEND_INT(&unk5, num5, 24);
-											func_1064(type, &unk5, num5, true, false, false, false);
+											func_1064(flag, &unk5, num5, true, false, false, false);
 										
 											if (MISC::IS_STRING_NULL_OR_EMPTY(&unk11))
 												func_8642(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(Global_1583772[num3 /*143*/].f_66), false);
@@ -467275,16 +467275,16 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 												func_8642("VEH_TOPL" /*Topless*/, false);
 										}
 									
-										uParam0->[type] = type5;
-										type = type + 1;
+										uParam0->[flag] = type4;
+										flag = flag + 1;
 									}
 								}
 								else
 								{
-									func_1064(type, "MP_MAN_VEH_S" /*Empty*/, 0, true, false, false, false);
-									uParam0->[type] = type5;
-									func_8641(&(uParam0->f_41), type);
-									type = type + 1;
+									func_1064(flag, "MP_MAN_VEH_S" /*Empty*/, 0, true, false, false, false);
+									uParam0->[flag] = type4;
+									func_8641(&(uParam0->f_41), flag);
+									flag = flag + 1;
 								}
 							}
 						}
@@ -467292,7 +467292,7 @@ void func_8639(var uParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 				}
 			}
 		
-			uParam0->f_50 = type;
+			uParam0->f_50 = flag;
 		
 			if (uParam0->f_47 >= uParam0->f_50)
 				uParam0->f_47 = 0;
@@ -467338,9 +467338,9 @@ int func_8640(int iParam0) // Position - 0x287942 (2652482)
 	return 0;
 }
 
-void func_8641(var uParam0, ePedComponentType epctParam1) // Position - 0x28796C (2652524)
+void func_8641(var uParam0, BOOL bParam1) // Position - 0x28796C (2652524)
 {
-	MISC::SET_BIT(&uParam0->[BUILTIN::FLOOR(BUILTIN::TO_FLOAT(epctParam1 / 32))], epctParam1 % 32);
+	MISC::SET_BIT(&uParam0->[BUILTIN::FLOOR(BUILTIN::TO_FLOAT(bParam1 / 32))], bParam1 % 32);
 	return;
 }
 

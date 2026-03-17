@@ -294,7 +294,7 @@ void main() // Position - 0x0 (0)
 	Global_105311 = -99;
 	Global_105393 = -1;
 	Global_105474 = -1;
-	Global_111630 = true;
+	Global_111630 = 1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_113571, "", 16);
 	Global_113575 = -1;
 	Global_113883 = -1;

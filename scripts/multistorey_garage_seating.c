@@ -118656,16 +118656,16 @@ BOOL func_1047() // Position - 0x93B38 (604984)
 	return func_1048(*Global_4718592.f_139000);
 }
 
-BOOL func_1048(Hash hParam0) // Position - 0x93B5C (605020)
+BOOL func_1048(ePedComponentType epctParam0) // Position - 0x93B5C (605020)
 {
 	int i;
 
-	if (hParam0 == 0)
+	if (epctParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_4690[i] == hParam0)
+		if (Global_262145.f_4690[i] == epctParam0)
 			return 1;
 	}
 
@@ -135672,16 +135672,16 @@ BOOL func_1375() // Position - 0xA868D (689805)
 	return func_1376(*Global_4718592.f_139000);
 }
 
-BOOL func_1376(Hash hParam0) // Position - 0xA86B1 (689841)
+BOOL func_1376(ePedComponentType epctParam0) // Position - 0xA86B1 (689841)
 {
 	int i;
 
-	if (hParam0 == 0)
+	if (epctParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_4699[i] == hParam0)
+		if (Global_262145.f_4699[i] == epctParam0)
 			return 1;
 	}
 

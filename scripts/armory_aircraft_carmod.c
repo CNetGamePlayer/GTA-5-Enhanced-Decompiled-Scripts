@@ -128400,7 +128400,7 @@ BOOL func_1114(var uParam0, int iParam1, BOOL bParam2, int iParam3, int iParam4,
 				break;
 		
 			case 17:
-				if (Global_2643846 > PV_COMP_HEAD)
+				if (Global_2643846 > false)
 					type3 = Global_2643846;
 				else
 					type3 = func_1306();
@@ -128666,7 +128666,7 @@ BOOL func_1114(var uParam0, int iParam1, BOOL bParam2, int iParam3, int iParam4,
 				else
 					func_1286(type3);
 			
-				if (Global_2635562.f_2986 > PV_COMP_INVALID)
+				if (Global_2635562.f_2986 > -1)
 				{
 					type3 = Global_2635562.f_2986;
 					Global_2635562.f_2986 = -1;
@@ -137765,7 +137765,7 @@ int func_1305() // Position - 0xBA38A (762762)
 
 ePedComponentType func_1306() // Position - 0xBA396 (762774)
 {
-	if (Global_2359296[func_150() /*5574*/].f_681.f_1303 > PV_COMP_HEAD && func_1307(Global_2359296[func_150() /*5574*/].f_681.f_1303))
+	if (Global_2359296[func_150() /*5574*/].f_681.f_1303 > false && func_1307(Global_2359296[func_150() /*5574*/].f_681.f_1303))
 		return Global_2359296[func_150() /*5574*/].f_681.f_1303;
 	else
 		return func_1364(0, -1);
@@ -137777,7 +137777,7 @@ BOOL func_1307(ePedComponentType epctParam0) // Position - 0xBA3EF (762863)
 {
 	int i;
 
-	if (epctParam0 > PV_COMP_HEAD)
+	if (epctParam0 > false)
 	{
 		for (i = 0; i < 36; i = i + 1)
 		{
@@ -137792,9 +137792,9 @@ BOOL func_1307(ePedComponentType epctParam0) // Position - 0xBA3EF (762863)
 	return false;
 }
 
-BOOL func_1308(ePedComponentType epctParam0, int iParam1) // Position - 0xBA43F (762943)
+BOOL func_1308(BOOL bParam0, int iParam1) // Position - 0xBA43F (762943)
 {
-	return func_1310(epctParam0) == func_1309(iParam1);
+	return func_1310(bParam0) == func_1309(iParam1);
 }
 
 int func_1309(int iParam0) // Position - 0xBA454 (762964)
@@ -137854,22 +137854,22 @@ int func_1309(int iParam0) // Position - 0xBA454 (762964)
 	return -1;
 }
 
-int func_1310(ePedComponentType epctParam0) // Position - 0xBA56C (763244)
+int func_1310(BOOL bParam0) // Position - 0xBA56C (763244)
 {
-	switch (epctParam0)
+	switch (bParam0)
 	{
-		case PV_COMP_BERD:
-		case PV_COMP_HAIR:
-		case PV_COMP_UPPR:
-		case PV_COMP_LOWR:
-		case PV_COMP_HAND:
-		case PV_COMP_FEET:
-		case PV_COMP_TEEF:
-		case PV_COMP_ACCS:
-		case PV_COMP_TASK:
-		case PV_COMP_DECL:
-		case PV_COMP_JBIB:
-		case PV_COMP_MAX:
+		case true:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
 		case 13:
 		case 14:
 		case 15:
@@ -181432,11 +181432,11 @@ BOOL func_1803() // Position - 0xF23D0 (992208)
 	return false;
 }
 
-int func_1804(int iParam0, int iParam1, int iParam2) // Position - 0xF2530 (992560)
+int func_1804(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xF2530 (992560)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -181615,7 +181615,7 @@ int func_1804(int iParam0, int iParam1, int iParam2) // Position - 0xF2530 (9925
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -181747,7 +181747,7 @@ int func_1804(int iParam0, int iParam1, int iParam2) // Position - 0xF2530 (9925
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -184225,7 +184225,7 @@ void func_1836(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) 
 			iParam0 = 23;
 
 	if (iParam0 != 18 && iParam0 != 17)
-		Global_2643846 = PV_COMP_HEAD;
+		Global_2643846 = false;
 
 	Global_2635562.f_491 = iParam0;
 	Global_2635562.f_491.f_1 = SCRIPT::GET_ID_OF_THIS_THREAD();

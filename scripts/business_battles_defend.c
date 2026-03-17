@@ -4713,7 +4713,7 @@ void func_84() // Position - 0x2E8E (11918)
 	return;
 }
 
-BOOL func_85(int iParam0, int iParam1) // Position - 0x2F86 (12166)
+int func_85(int iParam0, int iParam1) // Position - 0x2F86 (12166)
 {
 	if (iParam0 > iParam1)
 		return iParam0;
@@ -152504,11 +152504,11 @@ void func_1697(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1698(int iParam0, int iParam1, int iParam2) // Position - 0xC6430 (812080)
+int func_1698(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xC6430 (812080)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -152687,7 +152687,7 @@ int func_1698(int iParam0, int iParam1, int iParam2) // Position - 0xC6430 (8120
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -152819,7 +152819,7 @@ int func_1698(int iParam0, int iParam1, int iParam2) // Position - 0xC6430 (8120
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -271810,7 +271810,7 @@ void func_5159(var uParam0) // Position - 0x178802 (1542146)
 		Global_1972789 = true;
 		Global_1972791 = 1;
 		Global_1972792 = true;
-		Global_1972790 = 1;
+		Global_1972790 = true;
 		Global_1972793 = true;
 	}
 
@@ -396710,13 +396710,13 @@ void func_7593(int iParam0, int iParam1, int iParam2) // Position - 0x23B0BB (23
 	return;
 }
 
-int func_7594(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4) // Position - 0x23B0D6 (2339030)
+int func_7594(int iParam0, ePedComponentType epctParam1, int iParam2, int iParam3, var uParam4) // Position - 0x23B0D6 (2339030)
 {
 	int value;
 	float num;
 	float num2;
 
-	if (iParam2 == iParam1)
+	if (iParam2 == epctParam1)
 		return iParam3;
 
 	value = iParam3;
@@ -396724,7 +396724,7 @@ int func_7594(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4) /
 	if (iParam0 == 1 || iParam0 == 2 || iParam0 == 3)
 		value = value - uParam4;
 
-	num = BUILTIN::TO_FLOAT(iParam2) / BUILTIN::TO_FLOAT(iParam1);
+	num = BUILTIN::TO_FLOAT(iParam2) / BUILTIN::TO_FLOAT(epctParam1);
 	num2 = BUILTIN::TO_FLOAT(value);
 	return BUILTIN::FLOOR(num2 * num);
 }
@@ -415937,7 +415937,7 @@ int func_8074(eCharacter echParam0, const char* sParam1, int iParam2, int iParam
 			if (PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()))
 				return 0;
 	
-		if (Global_114931.f_14058[Global_21627 /*20*/].f_17 == 1)
+		if (Global_114931.f_14058[Global_21627 /*20*/].f_17 == true)
 			return 0;
 	
 		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("apptextmessage")) > 0)
@@ -442309,7 +442309,7 @@ void func_8725(BOOL bParam0, int iParam1) // Position - 0x274EF6 (2576118)
 		if (Global_2673274.f_1023.f_5 != -1)
 			Global_2673274.f_1023.f_17 = 1;
 	
-		Global_45859 = 1;
+		Global_45859 = true;
 	}
 	else
 	{
@@ -442437,7 +442437,7 @@ void func_8731(BOOL bParam0) // Position - 0x2751D0 (2576848)
 		if (!Global_2673274.f_1023.f_10)
 			Global_2673274.f_1023.f_10 = 1;
 	
-		Global_45859 = 1;
+		Global_45859 = true;
 	}
 	else if (Global_2673274.f_1023.f_10)
 	{
@@ -442462,7 +442462,7 @@ void func_8732(BOOL bParam0) // Position - 0x27529B (2577051)
 		if (!Global_2673274.f_1023.f_11)
 			Global_2673274.f_1023.f_11 = 1;
 	
-		Global_45859 = 1;
+		Global_45859 = true;
 	}
 	else if (Global_2673274.f_1023.f_11)
 	{

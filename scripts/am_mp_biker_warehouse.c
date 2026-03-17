@@ -170059,11 +170059,11 @@ void func_2064(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_2065(int iParam0, int iParam1, int iParam2) // Position - 0xE01CD (917965)
+int func_2065(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xE01CD (917965)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -170242,7 +170242,7 @@ int func_2065(int iParam0, int iParam1, int iParam2) // Position - 0xE01CD (9179
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -170374,7 +170374,7 @@ int func_2065(int iParam0, int iParam1, int iParam2) // Position - 0xE01CD (9179
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -364220,12 +364220,12 @@ int func_7014(var uParam0, var uParam1) // Position - 0x20CBA0 (2149280)
 	return 1;
 }
 
-void func_7015(Vehicle veParam0, var uParam1, var uParam2, var uParam3) // Position - 0x20CE31 (2149937)
+void func_7015(Vehicle veParam0, Vehicle veParam1, var uParam2, var uParam3) // Position - 0x20CE31 (2149937)
 {
 	if (!ENTITY::DOES_ENTITY_EXIST(*veParam0))
 		return;
 
-	if (!ENTITY::DOES_ENTITY_EXIST(*uParam1))
+	if (!ENTITY::DOES_ENTITY_EXIST(*veParam1))
 		return;
 
 	if (!ENTITY::DOES_ENTITY_EXIST(*uParam2))
@@ -364235,8 +364235,8 @@ void func_7015(Vehicle veParam0, var uParam1, var uParam2, var uParam3) // Posit
 		return;
 
 	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*veParam0, *uParam2, false);
-	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam2, *uParam1, false);
-	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam1, *uParam3, false);
+	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam2, *veParam1, false);
+	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*veParam1, *uParam3, false);
 	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam3, *veParam0, false);
 	return;
 }
@@ -401630,7 +401630,7 @@ void func_7784() // Position - 0x2478FD (2390269)
 	return;
 }
 
-void func_7785(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, char* sParam6, int iParam7, float fParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24, int iParam25, int iParam26) // Position - 0x247A96 (2390678)
+void func_7785(BOOL bParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, char* sParam6, int iParam7, float fParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24, int iParam25, int iParam26) // Position - 0x247A96 (2390678)
 {
 	int num;
 	int i;
@@ -401651,7 +401651,7 @@ void func_7785(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4
 	{
 		Global_1679155.f_1 = 1;
 		func_1923(6, num);
-		Global_1679155.f_4085[num] = iParam0;
+		Global_1679155.f_4085[num] = bParam0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1679155.f_4085.f_11[num /*16*/], sParam1, 64);
 		Global_1679155.f_4085.f_183[num] = iParam3;
 		Global_1679155.f_4085.f_172[num] = iParam2;
@@ -401690,11 +401690,11 @@ void func_7785(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4
 			if (x == 1280 && y >= 960)
 				flag = true;
 		
-			if (iParam0 > 99999999)
+			if (bParam0 > 99999999)
 				Global_1679155.f_1176 = 1;
-			else if (iParam0 > 9999999 || flag)
+			else if (bParam0 > 9999999 || flag)
 				Global_1679155.f_1175 = 1;
-			else if (iParam0 > 999)
+			else if (bParam0 > 999)
 				Global_1679155.f_1172 = 1;
 		
 			if (func_7786())

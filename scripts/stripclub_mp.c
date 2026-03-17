@@ -101337,7 +101337,7 @@ int func_666(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	{
 		if (!NETSHOPPING::NET_GAMESERVER_IS_SESSION_VALID(func_154()) || NETSHOPPING::NET_GAMESERVER_IS_SESSION_REFRESH_PENDING())
 		{
-			Global_4516903 = true;
+			Global_4516903 = 1;
 			return 0;
 		}
 	
@@ -101345,7 +101345,7 @@ int func_666(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 		{
 			if (hParam3 == joaat("CATEGORY_WEAPON_AMMO") || hParam3 == joaat("CATEGORY_MART"))
 			{
-				Global_4516904 = true;
+				Global_4516904 = 1;
 				return 0;
 			}
 		}
@@ -101392,7 +101392,7 @@ int func_666(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	{
 		if (iParam7 & 2 != 0)
 		{
-			Global_4516902 = true;
+			Global_4516902 = 1;
 			Global_4516905 = hParam4;
 			Global_4516907 = hParam3;
 			Global_4516908 = 1;
@@ -101412,7 +101412,7 @@ int func_666(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 		if (flag4)
 		{
 			func_672(1, hParam4);
-			Global_4516902 = false;
+			Global_4516902 = 0;
 		}
 	
 		if (iParam7 & 4 != 0)

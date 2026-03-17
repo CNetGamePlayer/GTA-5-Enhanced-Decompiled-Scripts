@@ -20571,11 +20571,11 @@ int func_416(int iParam0) // Position - 0x178CC (96460)
 	return -1;
 }
 
-int func_417(int iParam0, int iParam1, int iParam2) // Position - 0x178F3 (96499)
+int func_417(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x178F3 (96499)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -20754,7 +20754,7 @@ int func_417(int iParam0, int iParam1, int iParam2) // Position - 0x178F3 (96499
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -20886,7 +20886,7 @@ int func_417(int iParam0, int iParam1, int iParam2) // Position - 0x178F3 (96499
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -119462,10 +119462,10 @@ int func_1366(int iParam0, int iParam1) // Position - 0x99DCE (630222)
 {
 	Vehicle vehiclePedIsIn;
 	BOOL flag;
-	int num;
 	BOOL flag2;
-	int num2;
-	int num3;
+	BOOL flag3;
+	BOOL flag4;
+	int num;
 
 	if (iParam1 == 11)
 	{
@@ -119482,29 +119482,29 @@ int func_1366(int iParam0, int iParam1) // Position - 0x99DCE (630222)
 			
 				if (func_1456(vehiclePedIsIn, true) || Global_1950683 != -1)
 				{
-					num = -1;
 					flag2 = -1;
+					flag3 = -1;
 				
 					if (Global_1950683 != -1)
-						flag2 = Global_1950683;
+						flag3 = Global_1950683;
 					else
-						flag2 = _GET_ACTIVE_PV_SLOT();
+						flag3 = _GET_ACTIVE_PV_SLOT();
 				
-					func_1455(flag2, &num);
+					func_1455(flag3, &flag2);
 				
-					if (func_1454(num, PLAYER::PLAYER_ID(), iParam0, -1))
+					if (func_1454(flag2, PLAYER::PLAYER_ID(), iParam0, -1))
 					{
 						return 0;
 					}
-					else if (!func_862() && func_1453(iParam0, flag2))
+					else if (!func_862() && func_1453(iParam0, flag3))
 					{
 						flag = true;
 					}
 					else
 					{
-						num2 = func_1450(func_1452(iParam0), -1);
+						flag4 = func_1450(func_1452(iParam0), -1);
 					
-						if (num >= num2 && num < num + 20)
+						if (flag2 >= flag4 && flag2 < flag2 + 20)
 							return 1;
 					}
 				}
@@ -119512,9 +119512,9 @@ int func_1366(int iParam0, int iParam1) // Position - 0x99DCE (630222)
 				if (!flag && func_1368(iParam0, vehiclePedIsIn))
 					return 1;
 			
-				num3 = func_1367(iParam0);
+				num = func_1367(iParam0);
 			
-				if (num3 == 0 || num3 == 1)
+				if (num == 0 || num == 1)
 					return 0;
 				else
 					return 1;
@@ -135325,14 +135325,14 @@ int func_1438(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4,
 	return -1;
 }
 
-void func_1439(int iParam0, var uParam1, BOOL bParam2) // Position - 0xAA162 (696674)
+void func_1439(BOOL bParam0, var uParam1, BOOL bParam2) // Position - 0xAA162 (696674)
 {
 	if (Global_262145.f_10745)
-		*uParam1 = iParam0;
+		*uParam1 = bParam0;
 
-	if (iParam0 >= 0)
+	if (bParam0 >= 0)
 	{
-		*uParam1 = Global_1944744[iParam0] - 1;
+		*uParam1 = Global_1944744[bParam0] - 1;
 	
 		if (bParam2)
 			MISC::GET_FRAME_COUNT() % 5 == 0;
@@ -135903,7 +135903,7 @@ BOOL func_1453(int iParam0, BOOL bParam1) // Position - 0xAACD0 (699600)
 	return false;
 }
 
-BOOL func_1454(int iParam0, Player plParam1, int iParam2, int iParam3) // Position - 0xAAD4E (699726)
+BOOL func_1454(BOOL bParam0, Player plParam1, int iParam2, int iParam3) // Position - 0xAAD4E (699726)
 {
 	Player player;
 	int num;
@@ -135917,24 +135917,24 @@ BOOL func_1454(int iParam0, Player plParam1, int iParam2, int iParam3) // Positi
 	if (num < 0)
 		return false;
 
-	if (iParam0 >= 0 && iParam0 < 607)
+	if (bParam0 >= false && bParam0 < 607)
 	{
 		if (iParam3 == -1)
 		{
-			return iParam0 == Global_1882717[player /*315*/].f_158.f_43.f_7[num] || iParam0 == Global_1882717[player /*315*/].f_158.f_43.f_11[num] || iParam0 == Global_1882717[player /*315*/].f_158.f_43.f_15[num];
+			return bParam0 == Global_1882717[player /*315*/].f_158.f_43.f_7[num] || bParam0 == Global_1882717[player /*315*/].f_158.f_43.f_11[num] || bParam0 == Global_1882717[player /*315*/].f_158.f_43.f_15[num];
 		}
 		else
 		{
 			switch (iParam3)
 			{
 				case 0:
-					return iParam0 == Global_1882717[player /*315*/].f_158.f_43.f_7[num];
+					return bParam0 == Global_1882717[player /*315*/].f_158.f_43.f_7[num];
 			
 				case 1:
-					return iParam0 == Global_1882717[player /*315*/].f_158.f_43.f_11[num];
+					return bParam0 == Global_1882717[player /*315*/].f_158.f_43.f_11[num];
 			
 				case 2:
-					return iParam0 == Global_1882717[player /*315*/].f_158.f_43.f_15[num];
+					return bParam0 == Global_1882717[player /*315*/].f_158.f_43.f_15[num];
 			
 				default:
 				
@@ -173224,20 +173224,20 @@ BOOL func_2540() // Position - 0xDFBBD (916413)
 
 BOOL func_2541() // Position - 0xDFBF7 (916471)
 {
-	BOOL num;
-	int num2;
+	BOOL flag;
+	int num;
 	int i;
 	Hash model;
 	Hash model2;
 
+	flag = -1;
 	num = -1;
-	num2 = -1;
 
 	if (Global_1950382 >= false)
 	{
-		func_1439(Global_1950382, &num2, false);
+		func_1439(Global_1950382, &num, false);
 	
-		if (num2 < 0 || num2 >= 607)
+		if (num < 0 || num >= 607)
 		{
 			func_2543(13);
 			func_2543(14);
@@ -173259,16 +173259,16 @@ BOOL func_2541() // Position - 0xDFBF7 (916471)
 	
 		for (i = 0; i < 100; i = i + 1)
 		{
-			num = 415 + i;
-			func_1439(num, &num2, true);
+			flag = 415 + i;
+			func_1439(flag, &num, true);
 		
-			if (num2 >= 0 && num2 < 607)
+			if (num >= 0 && num < 607)
 			{
-				model = Global_1583772[num2 /*143*/].f_66;
+				model = Global_1583772[num /*143*/].f_66;
 			
 				if (model != 0 && STREAMING::IS_MODEL_A_VEHICLE(model))
 				{
-					Global_1950382 = num;
+					Global_1950382 = flag;
 					func_2542(13);
 					return true;
 				}
@@ -173289,16 +173289,16 @@ BOOL func_2541() // Position - 0xDFBF7 (916471)
 	{
 		if (Global_1950382 < false)
 		{
-			num = 415 + Global_1950383;
-			func_1439(num, &num2, false);
+			flag = 415 + Global_1950383;
+			func_1439(flag, &num, false);
 		
-			if (num2 >= 0 && num2 < 607)
+			if (num >= 0 && num < 607)
 			{
-				model2 = Global_1583772[num2 /*143*/].f_66;
+				model2 = Global_1583772[num /*143*/].f_66;
 			
 				if (model2 != 0 && STREAMING::IS_MODEL_A_VEHICLE(model2))
 				{
-					Global_1950382 = num;
+					Global_1950382 = flag;
 					return true;
 				}
 			}
@@ -246823,15 +246823,15 @@ BOOL func_4749() // Position - 0x14CF89 (1363849)
 	return false;
 }
 
-BOOL func_4750(int iParam0) // Position - 0x14CFF4 (1363956)
+BOOL func_4750(Hash hParam0) // Position - 0x14CFF4 (1363956)
 {
 	int i;
 
-	if (iParam0 != 0)
+	if (hParam0 != 0)
 	{
 		for (i = 0; i < Global_262145.f_6183[19]; i = i + 1)
 		{
-			if (iParam0 == Global_262145.f_4732[19 /*51*/][i])
+			if (hParam0 == Global_262145.f_4732[19 /*51*/][i])
 				return true;
 		}
 	}
@@ -360862,15 +360862,15 @@ void func_7165(var uParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x204C
 void func_7166(Vehicle veParam0) // Position - 0x204C92 (2116754)
 {
 	BOOL flag;
+	BOOL flag2;
 	int num;
-	int num2;
 
 	if (Global_4282955 == -1)
 		Global_4282955 = _GET_ACTIVE_PV_SLOT();
 
-	num2 = func_1386(ENTITY::GET_ENTITY_MODEL(veParam0));
-	num = num2 + 148;
-	func_1439(num, &flag, false);
+	num = func_1386(ENTITY::GET_ENTITY_MODEL(veParam0));
+	flag2 = num + 148;
+	func_1439(flag2, &flag, false);
 	func_837(flag);
 	MISC::SET_BIT(&(Global_1583772[flag /*143*/].f_104), 23);
 	return;
@@ -365775,13 +365775,13 @@ char* func_7255(int iParam0, var uParam1, var uParam2) // Position - 0x20B8CB (2
 BOOL func_7256() // Position - 0x20BA94 (2144916)
 {
 	int num;
-	int num2;
+	BOOL flag;
 	int i;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		num2 = i + func_1450(11, -1);
-		func_1439(num2, &num, false);
+		flag = i + func_1450(11, -1);
+		func_1439(flag, &num, false);
 	
 		if (num >= 0)
 			if (func_1557(Global_1583772[num /*143*/].f_66, true, -1))

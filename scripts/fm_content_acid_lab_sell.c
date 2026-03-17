@@ -156319,11 +156319,11 @@ void func_1717(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1718(int iParam0, int iParam1, int iParam2) // Position - 0xC0A63 (789091)
+int func_1718(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xC0A63 (789091)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -156502,7 +156502,7 @@ int func_1718(int iParam0, int iParam1, int iParam2) // Position - 0xC0A63 (7890
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -156634,7 +156634,7 @@ int func_1718(int iParam0, int iParam1, int iParam2) // Position - 0xC0A63 (7890
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -156888,42 +156888,42 @@ void func_1726(int iParam0) // Position - 0xC15E6 (792038)
 	return;
 }
 
-void func_1727(Hash hParam0) // Position - 0xC163A (792122)
+void func_1727(ePedComponentType epctParam0) // Position - 0xC163A (792122)
 {
-	hParam0->f_65 = 0;
-	hParam0->f_65 = 2147483647;
-	hParam0->f_65.f_1 = 0;
-	hParam0->f_65.f_2 = 0;
-	hParam0->f_65.f_3 = joaat("NET_SHOP_TTYPE_INVALID");
-	hParam0->f_65.f_4 = joaat("SERVICE_INVALID");
-	hParam0->f_65.f_5 = 0;
-	hParam0->f_65.f_6 = joaat("CATEGORY_CLOTH");
-	hParam0->f_65.f_7 = joaat("NET_SHOP_ACTION_INVALID");
-	*hParam0 = 0;
-	hParam0->f_1 = 0;
-	hParam0->f_12 = 0;
-	hParam0->f_2 = 0;
-	func_1728(&(hParam0->f_13));
-	func_1728(&(hParam0->f_13.f_13));
-	TEXT_LABEL_ASSIGN_STRING(&(hParam0->f_13.f_26), "", 32);
-	TEXT_LABEL_ASSIGN_STRING(&(hParam0->f_13.f_34), "", 24);
-	TEXT_LABEL_ASSIGN_STRING(&(hParam0->f_13.f_40), "", 16);
-	TEXT_LABEL_ASSIGN_STRING(&(hParam0->f_13.f_44), "", 32);
-	hParam0->f_3 = 0;
-	hParam0->f_4 = 0;
-	hParam0->f_5 = 0;
-	hParam0->f_6 = 0;
-	hParam0->f_7 = 0;
-	hParam0->f_65.f_8 = 0;
-	hParam0->f_65.f_9 = 0;
-	hParam0->f_65.f_10 = 0;
-	hParam0->f_65.f_11 = 0;
-	hParam0->f_65.f_13 = 0;
-	hParam0->f_65.f_12 = 0;
-	hParam0->f_65.f_14 = 0;
-	hParam0->f_65.f_15 = 0;
-	hParam0->f_65.f_16 = 0;
-	hParam0->f_65.f_18 = 0;
+	epctParam0->f_65 = 0;
+	epctParam0->f_65 = 2147483647;
+	epctParam0->f_65.f_1 = 0;
+	epctParam0->f_65.f_2 = 0;
+	epctParam0->f_65.f_3 = joaat("NET_SHOP_TTYPE_INVALID");
+	epctParam0->f_65.f_4 = joaat("SERVICE_INVALID");
+	epctParam0->f_65.f_5 = 0;
+	epctParam0->f_65.f_6 = joaat("CATEGORY_CLOTH");
+	epctParam0->f_65.f_7 = joaat("NET_SHOP_ACTION_INVALID");
+	*epctParam0 = 0;
+	epctParam0->f_1 = 0;
+	epctParam0->f_12 = 0;
+	epctParam0->f_2 = 0;
+	func_1728(&(epctParam0->f_13));
+	func_1728(&(epctParam0->f_13.f_13));
+	TEXT_LABEL_ASSIGN_STRING(&(epctParam0->f_13.f_26), "", 32);
+	TEXT_LABEL_ASSIGN_STRING(&(epctParam0->f_13.f_34), "", 24);
+	TEXT_LABEL_ASSIGN_STRING(&(epctParam0->f_13.f_40), "", 16);
+	TEXT_LABEL_ASSIGN_STRING(&(epctParam0->f_13.f_44), "", 32);
+	epctParam0->f_3 = 0;
+	epctParam0->f_4 = 0;
+	epctParam0->f_5 = 0;
+	epctParam0->f_6 = 0;
+	epctParam0->f_7 = 0;
+	epctParam0->f_65.f_8 = 0;
+	epctParam0->f_65.f_9 = 0;
+	epctParam0->f_65.f_10 = 0;
+	epctParam0->f_65.f_11 = 0;
+	epctParam0->f_65.f_13 = 0;
+	epctParam0->f_65.f_12 = 0;
+	epctParam0->f_65.f_14 = 0;
+	epctParam0->f_65.f_15 = 0;
+	epctParam0->f_65.f_16 = 0;
+	epctParam0->f_65.f_18 = 0;
 	return;
 }
 
@@ -256525,7 +256525,7 @@ int func_4679(Cam caParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		
 			if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() == false || bParam2 && STREAMING::GET_PLAYER_SWITCH_STATE() > 8)
 			{
-				if (!(Global_2635562.f_2989 == -1) && !Global_1836749 && !(Global_2635562.f_2989 >= 254) && !func_4683() && !IS_BIT_SET(*Global_4718592.f_199313, 0) && !(AUDIO::AUDIO_IS_SCRIPTED_MUSIC_PLAYING() && Global_2635562.f_2990 == 0))
+				if (!(Global_2635562.f_2989 == PV_COMP_INVALID) && !Global_1836749 && !(Global_2635562.f_2989 >= 254) && !func_4683() && !IS_BIT_SET(*Global_4718592.f_199313, 0) && !(AUDIO::AUDIO_IS_SCRIPTED_MUSIC_PLAYING() && Global_2635562.f_2990 == 0))
 					if (!func_4682(&Global_2696949))
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -343168,16 +343168,16 @@ BOOL func_6677(int iParam0, Vector3 vParam1, var uParam2, var uParam3, float fPa
 
 void func_6678(int iParam0) // Position - 0x1DFA21 (1964577)
 {
-	int num;
+	ePedComponentType type;
 
-	num = Global_2635562.f_2992;
+	type = Global_2635562.f_2992;
 
 	if (AUDIO::AUDIO_IS_SCRIPTED_MUSIC_PLAYING() && Global_2635562.f_2990 == 0 && iParam0 == 0)
-		num = 255;
+		type = 255;
 
-	if (!(num == Global_2635562.f_2989))
+	if (!(type == Global_2635562.f_2989))
 		if (!AUDIO::IS_RADIO_RETUNING())
-			Global_2635562.f_2989 = num;
+			Global_2635562.f_2989 = type;
 
 	return;
 }
@@ -385901,7 +385901,7 @@ int func_7525() // Position - 0x223EF6 (2244342)
 	return uLocal_5725.f_1404.f_1;
 }
 
-Hash func_7526() // Position - 0x223F06 (2244358)
+ePedComponentType func_7526() // Position - 0x223F06 (2244358)
 {
 	return uLocal_5725.f_1404;
 }
@@ -395821,7 +395821,7 @@ BOOL func_8064(int iParam0) // Position - 0x22F7EB (2291691)
 	return false;
 }
 
-int func_8065(Hash hParam0, int iParam1, Player plParam2, Player plParam3) // Position - 0x22F83C (2291772)
+int func_8065(ePedComponentType epctParam0, int iParam1, Player plParam2, Player plParam3) // Position - 0x22F83C (2291772)
 {
 	switch (iParam1)
 	{
@@ -395929,9 +395929,9 @@ int func_8065(Hash hParam0, int iParam1, Player plParam2, Player plParam3) // Po
 	return 0;
 }
 
-int func_8066(Hash hParam0, int iParam1) // Position - 0x22F98C (2292108)
+int func_8066(ePedComponentType epctParam0, int iParam1) // Position - 0x22F98C (2292108)
 {
-	switch (hParam0)
+	switch (epctParam0)
 	{
 		case 1:
 			return 4;
@@ -404079,7 +404079,7 @@ eBlipSprite func_8413(int iParam0) // Position - 0x23A688 (2336392)
 	return func_8414();
 }
 
-int func_8414() // Position - 0x23A6C1 (2336449)
+eBlipSprite func_8414() // Position - 0x23A6C1 (2336449)
 {
 	return 478;
 }
@@ -404175,14 +404175,14 @@ void func_8420() // Position - 0x23A8D4 (2336980)
 	return;
 }
 
-void func_8421(int iParam0) // Position - 0x23A8F4 (2337012)
+void func_8421(eBlipSprite ebsParam0) // Position - 0x23A8F4 (2337012)
 {
 	Player player;
 
 	player = PLAYER::PLAYER_ID();
 
-	if (Global_1912540[player /*319*/].f_286 != iParam0)
-		Global_1912540[player /*319*/].f_286 = iParam0;
+	if (Global_1912540[player /*319*/].f_286 != ebsParam0)
+		Global_1912540[player /*319*/].f_286 = ebsParam0;
 
 	return;
 }
@@ -423489,9 +423489,9 @@ void func_8878(var uParam0, Player plParam1) // Position - 0x259DEF (2465263)
 	return;
 }
 
-void func_8879(var uParam0, int iParam1) // Position - 0x259E46 (2465350)
+void func_8879(int iParam0, int iParam1) // Position - 0x259E46 (2465350)
 {
-	func_8880(uParam0, iParam1);
+	func_8880(iParam0, iParam1);
 	return;
 }
 
@@ -425111,7 +425111,7 @@ void func_8971() // Position - 0x25BA22 (2472482)
 	return;
 }
 
-Hash func_8972() // Position - 0x25BAF4 (2472692)
+ePedComponentType func_8972() // Position - 0x25BAF4 (2472692)
 {
 	return Global_1574580;
 }
@@ -427214,7 +427214,7 @@ void func_9076(int iParam0) // Position - 0x25DEFB (2481915)
 				if (WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), func_8972()) == 0 && func_8972() != joaat("WEAPON_STONE_HATCHET"))
 					func_9079(func_8972());
 			
-				if (Global_1574580 == 0 || func_8972() == 0)
+				if (Global_1574580 == PV_COMP_HEAD || func_8972() == PV_COMP_HEAD)
 				{
 					if (func_8972() == joaat("WEAPON_STONE_HATCHET"))
 					{
@@ -427228,7 +427228,7 @@ void func_9076(int iParam0) // Position - 0x25DEFB (2481915)
 					}
 				}
 			
-				if (!func_9078(func_8972()) && !func_9077(func_8972(), false) && func_8972() != 0)
+				if (!func_9078(func_8972()) && !func_9077(func_8972(), false) && func_8972() != PV_COMP_HEAD)
 					WEAPON::REFILL_AMMO_INSTANTLY(PLAYER::PLAYER_PED_ID());
 			}
 			else
@@ -427273,9 +427273,9 @@ void func_9076(int iParam0) // Position - 0x25DEFB (2481915)
 	return;
 }
 
-BOOL func_9077(Hash hParam0, BOOL bParam1) // Position - 0x25E0FA (2482426)
+BOOL func_9077(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x25E0FA (2482426)
 {
-	switch (hParam0)
+	switch (epctParam0)
 	{
 		case joaat("WEAPON_MOLOTOV"):
 		case joaat("WEAPON_SMOKEGRENADE"):
@@ -427288,15 +427288,15 @@ BOOL func_9077(Hash hParam0, BOOL bParam1) // Position - 0x25E0FA (2482426)
 			return true;
 	}
 
-	if (bParam1 && hParam0 == joaat("WEAPON_SNOWBALL"))
+	if (bParam1 && epctParam0 == joaat("WEAPON_SNOWBALL"))
 		return true;
 
 	return false;
 }
 
-BOOL func_9078(Hash hParam0) // Position - 0x25E152 (2482514)
+BOOL func_9078(ePedComponentType epctParam0) // Position - 0x25E152 (2482514)
 {
-	switch (hParam0)
+	switch (epctParam0)
 	{
 		case joaat("WEAPON_KNIFE"):
 		case joaat("WEAPON_BAT"):
@@ -427326,7 +427326,7 @@ BOOL func_9078(Hash hParam0) // Position - 0x25E152 (2482514)
 	return false;
 }
 
-void func_9079(Hash hParam0) // Position - 0x25E1D8 (2482648)
+void func_9079(ePedComponentType epctParam0) // Position - 0x25E1D8 (2482648)
 {
 	int num;
 	int i;
@@ -427334,10 +427334,10 @@ void func_9079(Hash hParam0) // Position - 0x25E1D8 (2482648)
 	Hash weaponHash2;
 
 	if (func_9088(*Global_4718592.f_199277))
-		if (func_9078(hParam0))
+		if (func_9078(epctParam0))
 			return;
 
-	num = func_9087(hParam0);
+	num = func_9087(epctParam0);
 
 	if (num == 0 || num == 29 || num == 33 || num == 31)
 		return;
@@ -428120,9 +428120,9 @@ Hash func_9086(int iParam0, BOOL bParam1) // Position - 0x25EA1B (2484763)
 	return joaat("WEAPON_UNARMED");
 }
 
-int func_9087(Hash hParam0) // Position - 0x25F128 (2486568)
+int func_9087(ePedComponentType epctParam0) // Position - 0x25F128 (2486568)
 {
-	switch (hParam0)
+	switch (epctParam0)
 	{
 		case joaat("WEAPON_UNARMED"):
 			return 0;
@@ -433055,7 +433055,7 @@ BOOL func_9256(Player plParam0) // Position - 0x264C3F (2509887)
 	return func_9254(&Global_2647285.f_756[plParam0]);
 }
 
-void func_9257(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position - 0x264C56 (2509910)
+void func_9257(Player plParam0, eBlipSprite ebsParam1, BOOL bParam2, BOOL bParam3) // Position - 0x264C56 (2509910)
 {
 	BOOL flag;
 
@@ -433065,7 +433065,7 @@ void func_9257(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Posi
 	if (func_9251(&Global_2647285.f_591[plParam0], &Global_2647285.f_954[plParam0], &(Global_2647285.f_388), bParam2, plParam0, bParam3, &flag))
 	{
 		if (bParam2)
-			Global_2647285.f_426[plParam0] = iParam1;
+			Global_2647285.f_426[plParam0] = ebsParam1;
 	
 		if (flag)
 			func_9258();
@@ -448246,7 +448246,7 @@ void func_9962(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x277C
 	return;
 }
 
-int func_9963(Player plParam0) // Position - 0x277D9E (2588062)
+eBlipSprite func_9963(Player plParam0) // Position - 0x277D9E (2588062)
 {
 	return Global_2647285.f_426[plParam0];
 }
@@ -449501,7 +449501,7 @@ void func_10017() // Position - 0x279449 (2593865)
 
 	player = PLAYER::PLAYER_ID();
 
-	if (Global_1912540[player /*319*/].f_286 != -1)
+	if (Global_1912540[player /*319*/].f_286 != INVALID)
 		Global_1912540[player /*319*/].f_286 = -1;
 
 	return;

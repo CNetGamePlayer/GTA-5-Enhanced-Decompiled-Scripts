@@ -174437,11 +174437,11 @@ void func_1840(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1841(int iParam0, int iParam1, int iParam2) // Position - 0xD7D5B (884059)
+int func_1841(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xD7D5B (884059)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -174620,7 +174620,7 @@ int func_1841(int iParam0, int iParam1, int iParam2) // Position - 0xD7D5B (8840
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -174752,7 +174752,7 @@ int func_1841(int iParam0, int iParam1, int iParam2) // Position - 0xD7D5B (8840
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -368666,34 +368666,34 @@ float func_6847(Vehicle veParam0) // Position - 0x204742 (2115394)
 	return num5;
 }
 
-void func_6848(Vehicle veParam0, var uParam1, BOOL bParam2) // Position - 0x2047F2 (2115570)
+void func_6848(Vehicle veParam0, int iParam1, BOOL bParam2) // Position - 0x2047F2 (2115570)
 {
 	int _int;
 
-	func_1203(uParam1);
+	func_1203(iParam1);
 
 	if (bParam2)
 	{
-		uParam1->f_104 = 0;
-		uParam1->f_106 = 0;
-		TEXT_LABEL_ASSIGN_STRING(&(uParam1->f_107), "", 64);
-		TEXT_LABEL_ASSIGN_STRING(&(uParam1->f_123), "", 64);
-		uParam1->f_141 = 0;
-		uParam1->f_139 = -1;
-		uParam1->f_140 = -1;
-		uParam1->f_142 = NETWORK::GET_CLOUD_TIME_AS_INT();
+		iParam1->f_104 = 0;
+		iParam1->f_106 = 0;
+		TEXT_LABEL_ASSIGN_STRING(&(iParam1->f_107), "", 64);
+		TEXT_LABEL_ASSIGN_STRING(&(iParam1->f_123), "", 64);
+		iParam1->f_141 = 0;
+		iParam1->f_139 = -1;
+		iParam1->f_140 = -1;
+		iParam1->f_142 = NETWORK::GET_CLOUD_TIME_AS_INT();
 	
 		if (Global_262145.f_11211)
-			MISC::SET_BIT(&(uParam1->f_104), 22);
+			MISC::SET_BIT(&(iParam1->f_104), 22);
 	}
 
 	if (func_4109(veParam0, 0))
 	{
 		func_6849();
-		MISC::SET_BIT(&(uParam1->f_104), 3);
+		MISC::SET_BIT(&(iParam1->f_104), 3);
 	}
 
-	func_1183(veParam0, uParam1);
+	func_1183(veParam0, iParam1);
 
 	if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("MPBitset", INT))
 	{
@@ -368702,18 +368702,18 @@ void func_6848(Vehicle veParam0, var uParam1, BOOL bParam2) // Position - 0x2047
 			_int = DECORATOR::DECOR_GET_INT(veParam0, "MPBitset");
 		
 			if (IS_BIT_SET(_int, 3))
-				MISC::SET_BIT(&(uParam1->f_104), 2);
+				MISC::SET_BIT(&(iParam1->f_104), 2);
 		}
 	}
 
-	if (IS_BIT_SET(uParam1->f_104, 8))
+	if (IS_BIT_SET(iParam1->f_104, 8))
 	{
 		!func_1132(veParam0);
 	}
 	else if (func_1132(veParam0))
 	{
-		MISC::SET_BIT(&(uParam1->f_104), 8);
-		MISC::SET_BIT(&(uParam1->f_104), 9);
+		MISC::SET_BIT(&(iParam1->f_104), 8);
+		MISC::SET_BIT(&(iParam1->f_104), 9);
 	}
 
 	return;

@@ -3079,7 +3079,7 @@ struct<4> _GET_CHARACTER_NAME(eCharacter character) // Position - 0x1262 (4706)
 	return Global_2339[character /*29*/].f_3;
 }
 
-int func_37(int iParam0, char* sParam1, int iParam2, int iParam3, char* sParam4, char* sParam5, int iParam6, int iParam7, int iParam8, int iParam9, BOOL bParam10, int iParam11, int iParam12, int iParam13, char* sParam14, char* sParam15, int iParam16) // Position - 0x1275 (4725)
+int func_37(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char* sParam4, char* sParam5, int iParam6, int iParam7, int iParam8, int iParam9, BOOL bParam10, int iParam11, int iParam12, int iParam13, char* sParam14, char* sParam15, int iParam16) // Position - 0x1275 (4725)
 {
 	int num;
 	int num2;
@@ -3141,7 +3141,7 @@ int func_37(int iParam0, char* sParam1, int iParam2, int iParam3, char* sParam4,
 
 	func_47(Global_24068);
 	TEXT_LABEL_ASSIGN_STRING(&Global_114931.f_14148[Global_24068 /*104*/], sParam1, 64);
-	Global_114931.f_14148[Global_24068 /*104*/].f_17 = iParam0;
+	Global_114931.f_14148[Global_24068 /*104*/].f_17 = echParam0;
 
 	if (iParam2 == 0)
 	{
@@ -3307,35 +3307,35 @@ int func_37(int iParam0, char* sParam1, int iParam2, int iParam3, char* sParam4,
 		}
 	}
 
-	if (Global_1979864 != -1 && iParam0 == Global_1979864)
+	if (Global_1979864 != -1 && echParam0 == Global_1979864)
 		num2 = 1;
 
-	func_38(iParam0, sParam1, num2, func_39(PLAYER::PLAYER_ID()));
+	func_38(echParam0, sParam1, num2, func_39(PLAYER::PLAYER_ID()));
 	return 1;
 }
 
-void func_38(int iParam0, char* sParam1, BOOL bParam2, int iParam3) // Position - 0x175C (5980)
+void func_38(eCharacter echParam0, char* sParam1, BOOL bParam2, int iParam3) // Position - 0x175C (5980)
 {
-	int num;
+	eCharacter character;
 
 	if (!func_5())
 		return;
 
-	num = iParam0;
-	num.f_1 = 1654525105;
-	num.f_2 = MISC::GET_HASH_KEY(sParam1);
-	num.f_3 = 0;
-	num.f_4 = bParam2;
-	num.f_5 = iParam3;
-	num.f_6 = Global_1979847.f_7;
-	num.f_7 = Global_1979847.f_8;
-	num.f_8 = Global_1979847.f_9;
-	num.f_9 = Global_1979847.f_10;
-	num.f_10 = Global_1979847.f_11;
-	num.f_11 = Global_1979847.f_12;
-	num.f_12 = Global_1979847.f_13;
-	num.f_13 = Global_1979847.f_14;
-	STATS::PLAYSTATS_NPC_PHONE(&num);
+	character = echParam0;
+	character.f_1 = 1654525105;
+	character.f_2 = MISC::GET_HASH_KEY(sParam1);
+	character.f_3 = 0;
+	character.f_4 = bParam2;
+	character.f_5 = iParam3;
+	character.f_6 = Global_1979847.f_7;
+	character.f_7 = Global_1979847.f_8;
+	character.f_8 = Global_1979847.f_9;
+	character.f_9 = Global_1979847.f_10;
+	character.f_10 = Global_1979847.f_11;
+	character.f_11 = Global_1979847.f_12;
+	character.f_12 = Global_1979847.f_13;
+	character.f_13 = Global_1979847.f_14;
+	STATS::PLAYSTATS_NPC_PHONE(&character);
 
 	if (bParam2)
 		Global_1979864 = -1;

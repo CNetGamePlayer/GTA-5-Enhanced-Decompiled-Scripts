@@ -43630,7 +43630,7 @@ BOOL func_369(int iParam0) // Position - 0x31071 (200817)
 	return true;
 }
 
-void func_370(var uParam0, eCharacter echParam1) // Position - 0x31181 (201089)
+void func_370(Any* panParam0, eCharacter echParam1) // Position - 0x31181 (201089)
 {
 	int i;
 	eCharacter character;
@@ -43655,12 +43655,12 @@ void func_370(var uParam0, eCharacter echParam1) // Position - 0x31181 (201089)
 			if (!func_372(Global_114931.f_18540[i], &unk, &num))
 			{
 				Global_114931.f_18540[i] = 318;
-				func_371(&uParam0->f_2296[i]);
-				uParam0->f_2300[i /*3*/] = { 0f, 0f, 0f };
-				uParam0->f_2310[i] = 0f;
-				uParam0->f_2314[i] = 0;
-				uParam0->f_2318[i /*3*/] = { 0f, 0f, 0f };
-				uParam0->f_2328[i] = 0;
+				func_371(&panParam0->f_2296[i]);
+				panParam0->f_2300[i /*3*/] = { 0f, 0f, 0f };
+				panParam0->f_2310[i] = 0f;
+				panParam0->f_2314[i] = 0;
+				panParam0->f_2318[i /*3*/] = { 0f, 0f, 0f };
+				panParam0->f_2328[i] = 0;
 				Global_99819[i /*29*/] = { 0f, 0f, 0f };
 				Global_99819[i /*29*/].f_9 = 0f;
 				Global_99819[i /*29*/].f_12 = 0f;
@@ -110338,12 +110338,12 @@ void func_774(BOOL bParam0) // Position - 0x8C74B (575307)
 	if (bParam0)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&Global_113987, SCRIPT::GET_THIS_SCRIPT_NAME(), 24);
-		Global_113981 = 1;
+		Global_113981 = true;
 	}
 	else
 	{
 		TEXT_LABEL_ASSIGN_STRING(&Global_113987, "NULL", 24);
-		Global_113981 = 0;
+		Global_113981 = false;
 	}
 
 	return;

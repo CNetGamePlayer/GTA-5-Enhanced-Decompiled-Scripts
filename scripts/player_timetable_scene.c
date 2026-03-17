@@ -116478,7 +116478,7 @@ void func_696() // Position - 0x98C71 (625777)
 	int num22;
 	int num23;
 	int num24;
-	int num25;
+	eCharacter character;
 
 	HUD::THEFEED_FLUSH_QUEUE();
 
@@ -117502,8 +117502,8 @@ void func_696() // Position - 0x98C71 (625777)
 	
 		if (uLocal_70.f_2 == 5 || uLocal_70.f_2 == 6 || uLocal_70.f_2 == 7)
 		{
-			num25 = func_701();
-			num25 != -1;
+			character = func_701();
+			character != -1;
 		}
 	
 		if (!flag)
@@ -117707,7 +117707,7 @@ void func_700(int iParam0, int iParam1, BOOL bParam2) // Position - 0x9A912 (633
 	return;
 }
 
-int func_701() // Position - 0x9A994 (633236)
+eCharacter func_701() // Position - 0x9A994 (633236)
 {
 	return Global_99350;
 }

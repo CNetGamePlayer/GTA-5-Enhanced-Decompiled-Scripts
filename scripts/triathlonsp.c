@@ -92709,21 +92709,21 @@ void func_441(Vehicle veParam0, float fParam1, float fParam2, float fParam3, flo
 	return;
 }
 
-void func_442(int iParam0, Vehicle veParam1, int iParam2) // Position - 0x679DB (424411)
+void func_442(eCharacter echParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x679DB (424411)
 {
 	Vehicle vehicle;
 
-	if (iParam0 == -1)
+	if (echParam0 == -1)
 		return;
 
-	if (!func_472(&Global_79095.f_555[0 /*21*/], iParam0))
+	if (!func_472(&Global_79095.f_555[0 /*21*/], echParam0))
 		return;
 
 	if (!IS_BIT_SET(Global_79095.f_555[0 /*21*/].f_9, 12) && !IS_BIT_SET(Global_79095.f_555[0 /*21*/].f_9, 10))
 		if (Global_79095.f_555[0 /*21*/].f_4 != ENTITY::GET_ENTITY_MODEL(veParam1))
 			return;
 
-	if (Global_80002 != -1 && Global_80002 != iParam0)
+	if (Global_80002 != -1 && Global_80002 != echParam0)
 		return;
 
 	if (ENTITY::DOES_ENTITY_EXIST(veParam1))
@@ -92733,22 +92733,22 @@ void func_442(int iParam0, Vehicle veParam1, int iParam2) // Position - 0x679DB 
 			if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(veParam1))
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(veParam1, true, true);
 		
-			if (iParam0 == 24)
+			if (echParam0 == CHAR_WADE)
 				Global_114931.f_32757.f_4801 = func_461();
 		
-			if (veParam1 != Global_79095.f_139[iParam0])
+			if (veParam1 != Global_79095.f_139[echParam0])
 			{
-				if (iParam0 == 24)
+				if (echParam0 == CHAR_WADE)
 				{
-					vehicle = func_460(iParam0);
+					vehicle = func_460(echParam0);
 				
 					if (ENTITY::DOES_ENTITY_EXIST(vehicle) && VEHICLE::IS_VEHICLE_DRIVEABLE(vehicle, false) && veParam1 != vehicle)
 						func_443(vehicle, _CHAR_NULL);
 				}
 			
 				Global_80001 = veParam1;
-				Global_80002 = iParam0;
-				Global_80003 = iParam2;
+				Global_80002 = echParam0;
+				Global_80003 = bParam2;
 			}
 		}
 	}
@@ -93295,12 +93295,12 @@ BOOL func_459(int iParam0, int iParam1, char* sParam2, var uParam3) // Position 
 	return false;
 }
 
-Vehicle func_460(int iParam0) // Position - 0x6876C (427884)
+Vehicle func_460(eCharacter echParam0) // Position - 0x6876C (427884)
 {
-	if (iParam0 == -1)
+	if (echParam0 == -1)
 		return 0;
 
-	return Global_79095.f_139[iParam0];
+	return Global_79095.f_139[echParam0];
 }
 
 var func_461() // Position - 0x68788 (427912)
@@ -94391,7 +94391,7 @@ void func_476(int iParam0, BOOL bParam1) // Position - 0x6A4FC (435452)
 			func_477(iParam0, 3, false);
 			func_477(iParam0, 4, false);
 			func_477(iParam0, 0, true);
-			Global_79095[iParam0] = 1;
+			Global_79095[iParam0] = true;
 		}
 	}
 	else

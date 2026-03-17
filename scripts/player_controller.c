@@ -45698,8 +45698,8 @@ BOOL func_414(Entity eParam0, eCharacter echParam1, int iParam2, var uParam3) //
 	Vector3 entityCoords;
 	Vector3 entityCoords2;
 	float num;
+	eCharacter character;
 	int num2;
-	int num3;
 
 	if (!PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 	{
@@ -45759,31 +45759,31 @@ BOOL func_414(Entity eParam0, eCharacter echParam1, int iParam2, var uParam3) //
 		}
 	}
 
-	num2 = Global_99350;
+	character = Global_99350;
 
-	if (num2 != -1)
+	if (character != -1)
 	{
-		num3 = 4;
+		num2 = 4;
 	
 		if (echParam1 == CHAR_MICHAEL)
 		{
-			num3 = 0;
+			num2 = 0;
 		}
 		else if (echParam1 == CHAR_TREVOR)
 		{
-			num3 = 2;
+			num2 = 2;
 		}
 		else if (echParam1 == CHAR_FRANKLIN)
 		{
-			num3 = 1;
+			num2 = 1;
 		}
 		else if (echParam1 == _CHAR_NULL)
 		{
-			num3 = 3;
+			num2 = 3;
 			return false;
 		}
 	
-		if (IS_BIT_SET(Global_99907.f_47, num3))
+		if (IS_BIT_SET(Global_99907.f_47, num2))
 		{
 			*uParam3 = 24;
 			return false;

@@ -86322,7 +86322,7 @@ BOOL func_537(Any* panParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Positi
 		{
 			if (i != 1 || bParam2)
 			{
-				if (Global_2359296[num /*5574*/].f_681.f_1342[iParam1 /*13*/][i] != PV_COMP_INVALID)
+				if (Global_2359296[num /*5574*/].f_681.f_1342[iParam1 /*13*/][i] != -1)
 				{
 					panParam0->[i] = Global_2359296[num /*5574*/].f_681.f_1342[iParam1 /*13*/][i];
 					panParam0->f_13[i] = Global_2359296[num /*5574*/].f_681.f_1616[iParam1 /*13*/][i];
@@ -86332,7 +86332,7 @@ BOOL func_537(Any* panParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Positi
 	
 		for (j = 0; j < 9; j = j + 1)
 		{
-			if (Global_2359296[num /*5574*/].f_681.f_1890[iParam1 /*10*/][j] != PV_COMP_INVALID)
+			if (Global_2359296[num /*5574*/].f_681.f_1890[iParam1 /*10*/][j] != -1)
 			{
 				panParam0->f_26[j] = Global_2359296[num /*5574*/].f_681.f_1890[iParam1 /*10*/][j];
 				panParam0->f_36[j] = Global_2359296[num /*5574*/].f_681.f_2101[iParam1 /*10*/][j];
@@ -132972,16 +132972,16 @@ BOOL func_1294() // Position - 0xA7257 (684631)
 	return func_1295(*Global_4718592.f_139000);
 }
 
-BOOL func_1295(ePedComponentType epctParam0) // Position - 0xA726D (684653)
+BOOL func_1295(Hash hParam0) // Position - 0xA726D (684653)
 {
 	int i;
 
-	if (epctParam0 == 0)
+	if (hParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 6; i = i + 1)
 	{
-		if (Global_262145.f_31306[i] == epctParam0)
+		if (Global_262145.f_31306[i] == hParam0)
 			return 1;
 	}
 

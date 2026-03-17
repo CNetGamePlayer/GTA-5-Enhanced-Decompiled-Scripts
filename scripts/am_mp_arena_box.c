@@ -130812,11 +130812,11 @@ void func_1280(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1281(int iParam0, int iParam1, int iParam2) // Position - 0xA35B5 (669109)
+int func_1281(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xA35B5 (669109)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -130995,7 +130995,7 @@ int func_1281(int iParam0, int iParam1, int iParam2) // Position - 0xA35B5 (6691
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -131127,7 +131127,7 @@ int func_1281(int iParam0, int iParam1, int iParam2) // Position - 0xA35B5 (6691
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -157411,7 +157411,7 @@ BOOL func_2034() // Position - 0xCAE6C (831084)
 
 BOOL func_2035() // Position - 0xCAEA6 (831142)
 {
-	int num;
+	BOOL num;
 	int num2;
 	int i;
 	Hash model;
@@ -157420,7 +157420,7 @@ BOOL func_2035() // Position - 0xCAEA6 (831142)
 	num = -1;
 	num2 = -1;
 
-	if (Global_1950382 >= 0)
+	if (Global_1950382 >= false)
 	{
 		func_769(Global_1950382, &num2, false);
 	
@@ -157464,7 +157464,7 @@ BOOL func_2035() // Position - 0xCAEA6 (831142)
 	
 		func_2036(13);
 	
-		if (Global_1950382 < 0)
+		if (Global_1950382 < false)
 		{
 			func_2037(14);
 			func_2036(14);
@@ -157474,7 +157474,7 @@ BOOL func_2035() // Position - 0xCAEA6 (831142)
 
 	if (func_721(13) && func_721(14))
 	{
-		if (Global_1950382 < 0)
+		if (Global_1950382 < false)
 		{
 			num = 415 + Global_1950383;
 			func_769(num, &num2, false);
@@ -328052,9 +328052,9 @@ int func_6399(var uParam0, var uParam1) // Position - 0x1D40F8 (1917176)
 	return 1;
 }
 
-void func_6400(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0x1D4389 (1917833)
+void func_6400(Entity eParam0, var uParam1, var uParam2, var uParam3) // Position - 0x1D4389 (1917833)
 {
-	if (!ENTITY::DOES_ENTITY_EXIST(*uParam0))
+	if (!ENTITY::DOES_ENTITY_EXIST(*eParam0))
 		return;
 
 	if (!ENTITY::DOES_ENTITY_EXIST(*uParam1))
@@ -328066,10 +328066,10 @@ void func_6400(var uParam0, var uParam1, var uParam2, var uParam3) // Position -
 	if (!ENTITY::DOES_ENTITY_EXIST(*uParam3))
 		return;
 
-	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam0, *uParam2, false);
+	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*eParam0, *uParam2, false);
 	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam2, *uParam1, false);
 	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam1, *uParam3, false);
-	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam3, *uParam0, false);
+	ENTITY::SET_ENTITY_NO_COLLISION_ENTITY(*uParam3, *eParam0, false);
 	return;
 }
 

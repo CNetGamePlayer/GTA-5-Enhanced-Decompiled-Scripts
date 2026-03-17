@@ -11340,7 +11340,7 @@ void func_15() // Position - 0x28B7 (10423)
 	return;
 }
 
-void func_16(int iParam0, BOOL bParam1) // Position - 0x28C3 (10435)
+void func_16(BOOL bParam0, BOOL bParam1) // Position - 0x28C3 (10435)
 {
 	Global_80574 = bParam1;
 
@@ -11359,7 +11359,7 @@ void func_16(int iParam0, BOOL bParam1) // Position - 0x28C3 (10435)
 		{
 		}
 	
-		Global_65047 = iParam0;
+		Global_65047 = bParam0;
 		Global_65021 = true;
 		Global_65032 = true;
 	}

@@ -45461,7 +45461,7 @@ int func_663(int iParam0, BOOL bParam1) // Position - 0x2EB82 (191362)
 	return num;
 }
 
-BOOL func_664() // Position - 0x2ED47 (191815)
+int func_664() // Position - 0x2ED47 (191815)
 {
 	return Global_262145.f_9212;
 }

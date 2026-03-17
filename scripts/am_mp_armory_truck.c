@@ -128658,19 +128658,19 @@ void func_1375(int iParam0, BOOL bParam1, var uParam2, var uParam3, var uParam4,
 	return;
 }
 
-BOOL func_1376(int iParam0) // Position - 0xB2E99 (732825)
+BOOL func_1376(Hash hParam0) // Position - 0xB2E99 (732825)
 {
 	int i;
 
 	if (*Global_4718592.f_199277 == 29)
 		return true;
 
-	if (iParam0 == 0)
+	if (hParam0 == 0)
 		return false;
 
 	for (i = 0; i <= 11; i = i + 1)
 	{
-		if (iParam0 == Global_262145.f_9804[i])
+		if (hParam0 == Global_262145.f_9804[i])
 			return true;
 	}
 
@@ -163640,11 +163640,11 @@ void func_1972(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1973(int iParam0, int iParam1, int iParam2) // Position - 0xDCB01 (903937)
+int func_1973(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xDCB01 (903937)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -163823,7 +163823,7 @@ int func_1973(int iParam0, int iParam1, int iParam2) // Position - 0xDCB01 (9039
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -163955,7 +163955,7 @@ int func_1973(int iParam0, int iParam1, int iParam2) // Position - 0xDCB01 (9039
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -263553,15 +263553,15 @@ BOOL func_4939(Hash hParam0) // Position - 0x1719D9 (1513945)
 	return false;
 }
 
-BOOL func_4940(int iParam0) // Position - 0x171A1C (1514012)
+BOOL func_4940(Hash hParam0) // Position - 0x171A1C (1514012)
 {
 	int i;
 
-	if (iParam0 != 0)
+	if (hParam0 != 0)
 	{
 		for (i = 0; i < Global_262145.f_6183[18]; i = i + 1)
 		{
-			if (iParam0 == Global_262145.f_4732[18 /*51*/][i])
+			if (hParam0 == Global_262145.f_4732[18 /*51*/][i])
 				return true;
 		}
 	}

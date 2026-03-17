@@ -144094,7 +144094,7 @@ int func_1551() // Position - 0xB4E06 (740870)
 			if (func_198(PLAYER::PLAYER_ID()) != -1 || func_1591())
 				return 5;
 	
-		if (Global_1989840.f_11 > false && !MONEY::NETWORK_CAN_SPEND_MONEY(Global_1989840.f_11, false, true, false, -1, 0))
+		if (Global_1989840.f_11 > 0 && !MONEY::NETWORK_CAN_SPEND_MONEY(Global_1989840.f_11, false, true, false, -1, 0))
 			return 6;
 	}
 
@@ -146213,11 +146213,11 @@ BOOL func_1582() // Position - 0xB6FBB (749499)
 	return false;
 }
 
-int func_1583(int iParam0, int iParam1, int iParam2) // Position - 0xB711B (749851)
+int func_1583(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xB711B (749851)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -146396,7 +146396,7 @@ int func_1583(int iParam0, int iParam1, int iParam2) // Position - 0xB711B (7498
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -146528,7 +146528,7 @@ int func_1583(int iParam0, int iParam1, int iParam2) // Position - 0xB711B (7498
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -146558,7 +146558,7 @@ BOOL func_1585(Hash hParam0) // Position - 0xB786A (751722)
 	return false;
 }
 
-BOOL func_1586(int iParam0, Hash hParam1, Hash hParam2, Hash hParam3, int iParam4, BOOL bParam5, int iParam6, int iParam7, Hash hParam8, int iParam9) // Position - 0xB78A6 (751782)
+BOOL func_1586(int iParam0, Hash hParam1, Hash hParam2, Hash hParam3, int iParam4, int iParam5, int iParam6, int iParam7, Hash hParam8, int iParam9) // Position - 0xB78A6 (751782)
 {
 	BOOL flag;
 	int num;
@@ -146602,14 +146602,14 @@ BOOL func_1586(int iParam0, Hash hParam1, Hash hParam2, Hash hParam3, int iParam
 		{
 			itemData = hParam8;
 			itemData.f_1 = hParam2;
-			itemData.f_2 = bParam5;
+			itemData.f_2 = iParam5;
 			itemData.f_3 = iParam6;
 		}
 		else
 		{
 			itemData = hParam2;
 			itemData.f_1 = hParam8;
-			itemData.f_2 = bParam5;
+			itemData.f_2 = iParam5;
 			itemData.f_3 = iParam6;
 		}
 	
@@ -151943,7 +151943,7 @@ int func_1767() // Position - 0xBEAC3 (780995)
 			if (func_198(PLAYER::PLAYER_ID()) != -1 || func_1591())
 				return 5;
 	
-		if (Global_1989840.f_11 > false && !MONEY::NETWORK_CAN_SPEND_MONEY(Global_1989840.f_11, false, true, false, -1, 0))
+		if (Global_1989840.f_11 > 0 && !MONEY::NETWORK_CAN_SPEND_MONEY(Global_1989840.f_11, false, true, false, -1, 0))
 			return 6;
 	}
 
@@ -155025,7 +155025,7 @@ int func_1912() // Position - 0xC2B0F (797455)
 			if (func_198(PLAYER::PLAYER_ID()) != -1 || func_1591())
 				return 5;
 	
-		if (Global_1989840.f_11 > false && !MONEY::NETWORK_CAN_SPEND_MONEY(Global_1989840.f_11, false, true, false, -1, 0))
+		if (Global_1989840.f_11 > 0 && !MONEY::NETWORK_CAN_SPEND_MONEY(Global_1989840.f_11, false, true, false, -1, 0))
 			return 6;
 	}
 
@@ -188755,7 +188755,7 @@ int func_2813(function funcParam0, function funcParam1) // Position - 0xF6327 (1
 			if (func_198(PLAYER::PLAYER_ID()) != -1 || func_1591())
 				return 5;
 	
-		if (Global_1989840.f_11 > false && !MONEY::NETWORK_CAN_SPEND_MONEY(Global_1989840.f_11, false, true, false, -1, 0))
+		if (Global_1989840.f_11 > 0 && !MONEY::NETWORK_CAN_SPEND_MONEY(Global_1989840.f_11, false, true, false, -1, 0))
 			return 6;
 	}
 
@@ -189492,7 +189492,7 @@ void func_2845(int iParam0, BOOL bParam1, BOOL bParam2, Hash hParam3, BOOL bPara
 	
 		if (NETSHOPPING::NET_GAMESERVER_CATALOG_ITEM_KEY_IS_VALID(MISC::GET_HASH_KEY(sParam5)) && NETSHOPPING::NET_GAMESERVER_CATALOG_ITEM_KEY_IS_VALID(MISC::GET_HASH_KEY(sParam6)))
 		{
-			if (func_1586(78225582, hParam3, MISC::GET_HASH_KEY(sParam5), 235173372, 1, false, 1, 4, MISC::GET_HASH_KEY(sParam6), 3))
+			if (func_1586(78225582, hParam3, MISC::GET_HASH_KEY(sParam5), 235173372, 1, 0, 1, 4, MISC::GET_HASH_KEY(sParam6), 3))
 			{
 			}
 			else

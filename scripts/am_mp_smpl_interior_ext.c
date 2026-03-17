@@ -112308,16 +112308,16 @@ BOOL func_942() // Position - 0x8DB92 (580498)
 	return func_943(*Global_4718592.f_139000);
 }
 
-BOOL func_943(int iParam0) // Position - 0x8DBB6 (580534)
+BOOL func_943(Hash hParam0) // Position - 0x8DBB6 (580534)
 {
 	int i;
 
-	if (iParam0 == 0)
+	if (hParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_4690[i] == iParam0)
+		if (Global_262145.f_4690[i] == hParam0)
 			return 1;
 	}
 
@@ -128561,11 +128561,11 @@ void func_1248(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1249(int iParam0, int iParam1, int iParam2) // Position - 0xA1862 (661602)
+int func_1249(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xA1862 (661602)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -128744,7 +128744,7 @@ int func_1249(int iParam0, int iParam1, int iParam2) // Position - 0xA1862 (6616
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -128876,7 +128876,7 @@ int func_1249(int iParam0, int iParam1, int iParam2) // Position - 0xA1862 (6616
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -305901,12 +305901,12 @@ BOOL func_5911() // Position - 0x1B1E56 (1777238)
 	return Global_1574944[0] != 0 || Global_1574944[1] != 0;
 }
 
-var func_5912() // Position - 0x1B1E76 (1777270)
+BOOL func_5912() // Position - 0x1B1E76 (1777270)
 {
 	return Global_1574930;
 }
 
-var func_5913() // Position - 0x1B1E82 (1777282)
+BOOL func_5913() // Position - 0x1B1E82 (1777282)
 {
 	return Global_2697000;
 }
@@ -379723,18 +379723,18 @@ void func_7445(BOOL bParam0, BOOL bParam1) // Position - 0x223D48 (2243912)
 	return;
 }
 
-void func_7446(var uParam0, int iParam1) // Position - 0x223DA8 (2244008)
+void func_7446(int iParam0, int iParam1) // Position - 0x223DA8 (2244008)
 {
-	func_7447(*uParam0, iParam1);
-	iParam1->f_104 = uParam0->f_104;
-	iParam1->f_105 = uParam0->f_105;
-	iParam1->f_106 = uParam0->f_106;
-	iParam1->f_107 = { uParam0->f_107 };
-	iParam1->f_123 = { uParam0->f_123 };
-	iParam1->f_139 = uParam0->f_139;
-	iParam1->f_140 = uParam0->f_140;
-	iParam1->f_141 = uParam0->f_141;
-	iParam1->f_142 = uParam0->f_142;
+	func_7447(*iParam0, iParam1);
+	iParam1->f_104 = iParam0->f_104;
+	iParam1->f_105 = iParam0->f_105;
+	iParam1->f_106 = iParam0->f_106;
+	iParam1->f_107 = { iParam0->f_107 };
+	iParam1->f_123 = { iParam0->f_123 };
+	iParam1->f_139 = iParam0->f_139;
+	iParam1->f_140 = iParam0->f_140;
+	iParam1->f_141 = iParam0->f_141;
+	iParam1->f_142 = iParam0->f_142;
 	return;
 }
 

@@ -66538,7 +66538,7 @@ ePedComponentType _GET_ACTIVE_PV_SLOT() // Position - 0x80ECA (528074)
 	if (Global_2359296[func_1059() /*5574*/].f_681.f_2 >= 607)
 	{
 		Global_2359296[func_1059() /*5574*/].f_681.f_2 = -1;
-		return PV_COMP_INVALID;
+		return -1;
 	}
 
 	return Global_2359296[func_1059() /*5574*/].f_681.f_2;
@@ -171007,7 +171007,7 @@ void func_1790(BOOL bParam0, BOOL bParam1, int iParam2) // Position - 0x1068E9 (
 
 void func_1791(BOOL bParam0, BOOL bParam1, int iParam2) // Position - 0x10691A (1075482)
 {
-	ePedComponentType i;
+	BOOL i;
 	int num;
 
 	Global_24546.f_6342 = bParam0;
@@ -171021,7 +171021,7 @@ void func_1791(BOOL bParam0, BOOL bParam1, int iParam2) // Position - 0x10691A (
 	{
 		for (i = Global_24546.f_6341; i <= Global_24546.f_6342; i = i + 1)
 		{
-			if (i >= PV_COMP_HEAD && i < 127)
+			if (i >= false && i < 127)
 				if (Global_24546.f_5692[i] != 0)
 					num = num + 1;
 		}
@@ -171033,7 +171033,7 @@ void func_1791(BOOL bParam0, BOOL bParam1, int iParam2) // Position - 0x10691A (
 		
 			for (i = Global_24546.f_6341; i <= Global_24546.f_6342; i = i + 1)
 			{
-				if (i >= PV_COMP_HEAD && i < 127)
+				if (i >= false && i < 127)
 					if (Global_24546.f_5692[i] != 0)
 						num = num + 1;
 			}
@@ -177415,7 +177415,7 @@ BOOL func_1969(Vehicle veParam0) // Position - 0x10EFF5 (1110005)
 		if (func_1973() || func_1770(PLAYER::PLAYER_ID()))
 			return false;
 	
-		if (func_1972(PLAYER::PLAYER_ID(), true, false) && Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_39 > PV_COMP_HEAD || IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_37, 14) || IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_37, 11))
+		if (func_1972(PLAYER::PLAYER_ID(), true, false) && Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_39 > false || IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_37, 14) || IS_BIT_SET(Global_1845299[PLAYER::PLAYER_ID() /*883*/].f_260.f_37, 11))
 			return false;
 	
 		if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Player_Vehicle", INT))
@@ -183868,11 +183868,11 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 2:
 				case 3:
 				case 7:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 4:
 				case 6:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 5:
 					return 5000000;
@@ -183888,13 +183888,13 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 83:
 				case 86:
 				case 88:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 90:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 84:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 85:
 					return 100000;
@@ -183920,24 +183920,24 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 94:
 				case 95:
 				case 101:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 96:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 97:
 				case 100:
-					return PV_COMP_HAIR;
+					return 2;
 			
 				case 98:
 					return 25000;
 			
 				case 99:
 				case 104:
-					return PV_COMP_LOWR;
+					return 4;
 			
 				case 102:
-					return PV_COMP_TASK;
+					return 9;
 			
 				case 103:
 					return 25;
@@ -183955,11 +183955,11 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 10:
 				case 11:
 				case 15:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 12:
 				case 14:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 13:
 					return 5000000;
@@ -183972,23 +183972,23 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 106:
 				case 107:
 				case 108:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 109:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 110:
-					return PV_COMP_HAIR;
+					return 2;
 			
 				case 111:
 					return 250000;
 			
 				case 112:
 				case 115:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 113:
-					return PV_COMP_UPPR;
+					return 3;
 			
 				case 114:
 					return 25;
@@ -184012,16 +184012,16 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 18:
 				case 19:
 				case 22:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 20:
-					return PV_COMP_HAIR;
+					return 2;
 			
 				case 21:
 					return 5000000;
 			
 				case 23:
-					return PV_COMP_TASK;
+					return 9;
 			}
 			break;
 	
@@ -184034,7 +184034,7 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 122:
 				case 123:
 				case 127:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 124:
 					return 250000;
@@ -184042,10 +184042,10 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 125:
 				case 126:
 				case 130:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 128:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 129:
 					return 2500000;
@@ -184066,10 +184066,10 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 306:
 				case 307:
 				case 308:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 309:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 310:
 					return 15;
@@ -184078,10 +184078,10 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 					return 50000000;
 			
 				case 312:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 313:
-					return PV_COMP_BERD;
+					return true;
 			}
 			break;
 	
@@ -184091,14 +184091,14 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 24:
 				case 25:
 				case 27:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 26:
 				case 28:
 				case 29:
 				case 30:
 				case 31:
-					return PV_COMP_FEET;
+					return 6;
 			}
 			break;
 	
@@ -184112,16 +184112,16 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 188:
 				case 189:
 				case 190:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 191:
 					return 25;
 			
 				case 192:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 193:
-					return PV_COMP_ACCS;
+					return 8;
 			
 				case 194:
 					return 18;
@@ -184142,7 +184142,7 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 335:
 				case 336:
 				case 331:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 332:
 					return 50;
@@ -184161,13 +184161,13 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 346:
 				case 347:
 				case 353:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 348:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 349:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 350:
 					return 20;
@@ -184184,23 +184184,23 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 			switch (iParam1)
 			{
 				case 132:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 133:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 134:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 135:
 				case 136:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 137:
 					return 1000000;
 			
 				case 138:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 139:
 					return 25;
@@ -184215,7 +184215,7 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 					return 100;
 			
 				case 143:
-					return PV_COMP_JBIB;
+					return 11;
 			
 				case 144:
 					return 10000000;
@@ -184228,14 +184228,14 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 32:
 				case 33:
 				case 35:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 34:
 				case 36:
 				case 37:
 				case 38:
 				case 39:
-					return PV_COMP_FEET;
+					return 6;
 			}
 			break;
 	
@@ -184245,14 +184245,14 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 40:
 				case 41:
 				case 43:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 42:
 				case 44:
 				case 45:
 				case 46:
 				case 47:
-					return PV_COMP_FEET;
+					return 6;
 			}
 			break;
 	
@@ -184262,14 +184262,14 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 48:
 				case 49:
 				case 51:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 50:
 				case 52:
 				case 53:
 				case 54:
 				case 55:
-					return PV_COMP_FEET;
+					return 6;
 			}
 			break;
 	
@@ -184279,14 +184279,14 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 56:
 				case 57:
 				case 59:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 58:
 				case 60:
 				case 61:
 				case 62:
 				case 63:
-					return PV_COMP_ACCS;
+					return 8;
 			}
 			break;
 	
@@ -184296,14 +184296,14 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 64:
 				case 65:
 				case 67:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 66:
 				case 68:
 				case 69:
 				case 70:
 				case 71:
-					return PV_COMP_FEET;
+					return 6;
 			}
 			break;
 	
@@ -184313,14 +184313,14 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 72:
 				case 73:
 				case 75:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 74:
 				case 76:
 				case 77:
 				case 78:
 				case 79:
-					return PV_COMP_ACCS;
+					return 8;
 			}
 			break;
 	
@@ -184328,35 +184328,35 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 			switch (iParam1)
 			{
 				case 367:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 368:
 				case 369:
 				case 370:
 				case 371:
 				case 372:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 373:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 374:
-					return PV_COMP_ACCS;
+					return 8;
 			
 				case 375:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 376:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 377:
-					return PV_COMP_MAX;
+					return 12;
 			
 				case 378:
 					return 50;
 			
 				case 379:
-					return PV_COMP_HAND;
+					return 5;
 			}
 			break;
 	
@@ -184368,18 +184368,18 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 147:
 				case 148:
 				case 151:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 149:
 				case 150:
 				case 154:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 152:
 					return 25;
 			
 				case 153:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 155:
 				case 156:
@@ -184399,15 +184399,15 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 239:
 				case 243:
 				case 244:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 240:
 				case 241:
 				case 245:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 242:
-					return PV_COMP_ACCS;
+					return 8;
 			
 				case 246:
 					return 25;
@@ -184429,25 +184429,25 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 265:
 				case 266:
 				case 268:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 267:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 269:
 					return 25;
 			
 				case 270:
-					return PV_COMP_TEEF;
+					return 7;
 			
 				case 271:
 					return 15;
 			
 				case 272:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 273:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 274:
 					return 50000000;
@@ -184463,22 +184463,22 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 278:
 				case 280:
 				case 283:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 279:
 					return 25;
 			
 				case 281:
-					return PV_COMP_UPPR;
+					return 3;
 			
 				case 282:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 284:
 					return 15;
 			
 				case 285:
-					return PV_COMP_LOWR;
+					return 4;
 			
 				case 286:
 					return 50000000;
@@ -184498,7 +184498,7 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 253:
 				case 254:
 				case 257:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 255:
 					return 13;
@@ -184506,10 +184506,10 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 256:
 				case 259:
 				case 260:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 258:
-					return PV_COMP_JBIB;
+					return 11;
 			
 				case 261:
 					return 100;
@@ -184527,17 +184527,17 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 293:
 				case 294:
 				case 295:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 296:
 					return 14;
 			
 				case 297:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 298:
 				case 299:
-					return PV_COMP_UPPR;
+					return 3;
 			
 				case 300:
 					return 15;
@@ -184549,16 +184549,16 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 			{
 				case 314:
 				case 315:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 316:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 317:
 					return 25;
 			
 				case 318:
-					return PV_COMP_TASK;
+					return 9;
 			
 				case 319:
 					return 15;
@@ -184579,13 +184579,13 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 161:
 				case 162:
 				case 163:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 160:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 164:
-					return PV_COMP_LOWR;
+					return 4;
 			
 				case 165:
 					return Global_262145.f_23773;
@@ -184595,10 +184595,10 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 					return 25;
 			
 				case 167:
-					return PV_COMP_ACCS;
+					return 8;
 			
 				case 169:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 170:
 					return 50000000;
@@ -184614,10 +184614,10 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 174:
 				case 176:
 				case 179:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 175:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 177:
 					return 25;
@@ -184632,7 +184632,7 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 					return 1000;
 			
 				case 182:
-					return PV_COMP_ACCS;
+					return 8;
 			
 				case 183:
 					return 50000000;
@@ -184647,17 +184647,17 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 199:
 				case 200:
 				case 201:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 202:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 205:
 				case 207:
-					return PV_COMP_ACCS;
+					return 8;
 			
 				case 206:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 203:
 					return 25;
@@ -184682,16 +184682,16 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 213:
 				case 214:
 				case 215:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 216:
 					return 13;
 			
 				case 217:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 218:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 219:
 					return 25000000;
@@ -184717,19 +184717,19 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 227:
 				case 228:
 				case 230:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 229:
-					return PV_COMP_JBIB;
+					return 11;
 			
 				case 231:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 232:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 233:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 234:
 					return 250;
@@ -184743,11 +184743,11 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 			switch (iParam1)
 			{
 				case 338:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 339:
 				case 340:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 341:
 				case 342:
@@ -184768,13 +184768,13 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 322:
 				case 323:
 				case 329:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 324:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 325:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 326:
 					return 20;
@@ -184798,13 +184798,13 @@ ePedComponentType func_2182(int iParam0, int iParam1) // Position - 0x116E79 (11
 				case 359:
 				case 360:
 				case 361:
-					return PV_COMP_BERD;
+					return true;
 			
 				case 362:
-					return PV_COMP_HAND;
+					return 5;
 			
 				case 363:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 364:
 					return 100;
@@ -187092,7 +187092,7 @@ ePedComponentType func_2199(int iParam0, int iParam1) // Position - 0x11A3B3 (11
 
 	for (i = 0; i < Global_1989528; i = i + 1)
 	{
-		if (Global_1989528.f_1[i /*14*/] == iParam1 && Global_1989528.f_1[i /*14*/].f_1 > PV_COMP_HEAD)
+		if (Global_1989528.f_1[i /*14*/] == iParam1 && Global_1989528.f_1[i /*14*/].f_1 > false)
 			return Global_1989528.f_1[i /*14*/].f_1;
 	}
 
@@ -193003,11 +193003,11 @@ BOOL func_2222() // Position - 0x1220AB (1188011)
 	return false;
 }
 
-int func_2223(int iParam0, int iParam1, int iParam2) // Position - 0x12220B (1188363)
+int func_2223(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x12220B (1188363)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -193186,7 +193186,7 @@ int func_2223(int iParam0, int iParam1, int iParam2) // Position - 0x12220B (118
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -193318,7 +193318,7 @@ int func_2223(int iParam0, int iParam1, int iParam2) // Position - 0x12220B (118
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -305490,7 +305490,7 @@ void func_5491(var uParam0) // Position - 0x1CAF0A (1879818)
 {
 	if (Global_1950707 == 31)
 	{
-		Global_1972789 = true;
+		Global_1972789 = 1;
 		Global_1972791 = 1;
 	}
 
@@ -311307,7 +311307,7 @@ void func_5665(var uParam0) // Position - 0x1D3849 (1914953)
 {
 	if (Global_1950707 == 8 || Global_1950707 == 31)
 	{
-		Global_1972789 = true;
+		Global_1972789 = 1;
 		Global_1972791 = 1;
 		Global_1972792 = 1;
 		Global_1972790 = 1;
@@ -311731,7 +311731,7 @@ void func_5678(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) 
 			iParam0 = 23;
 
 	if (iParam0 != 18 && iParam0 != 17)
-		Global_2643846 = PV_COMP_HEAD;
+		Global_2643846 = false;
 
 	Global_2635562.f_491 = iParam0;
 	Global_2635562.f_491.f_1 = SCRIPT::GET_ID_OF_THIS_THREAD();
@@ -372411,8 +372411,8 @@ int func_6967(var uParam0, Player plParam1, BOOL bParam2) // Position - 0x23669A
 
 void func_6968(Vehicle veParam0) // Position - 0x236839 (2320441)
 {
-	ePedComponentType counterMeasureCount;
-	ePedComponentType counterMeasureCount2;
+	int counterMeasureCount;
+	int counterMeasureCount2;
 
 	if (func_6969(veParam0))
 	{

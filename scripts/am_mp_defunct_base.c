@@ -143544,11 +143544,11 @@ void func_1424(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1425(int iParam0, int iParam1, int iParam2) // Position - 0xAA503 (697603)
+int func_1425(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xAA503 (697603)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -143727,7 +143727,7 @@ int func_1425(int iParam0, int iParam1, int iParam2) // Position - 0xAA503 (6976
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -143859,7 +143859,7 @@ int func_1425(int iParam0, int iParam1, int iParam2) // Position - 0xAA503 (6976
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -524721,7 +524721,7 @@ void func_9800() // Position - 0x2EF348 (3076936)
 	return;
 }
 
-int func_9801(var uParam0, int* piParam1, var uParam2, BOOL bParam3, int iParam4, Player plParam5, var uParam6, int iParam7) // Position - 0x2EF5E4 (3077604)
+int func_9801(var uParam0, int* piParam1, var uParam2, BOOL bParam3, int iParam4, int iParam5, var uParam6, int iParam7) // Position - 0x2EF5E4 (3077604)
 {
 	int num;
 	int i;
@@ -524745,7 +524745,7 @@ int func_9801(var uParam0, int* piParam1, var uParam2, BOOL bParam3, int iParam4
 	}
 	else if (*bParam3 != func_6(uParam0, 0) && MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(*uParam6, NETWORK::GET_NETWORK_TIME())) >= 250)
 	{
-		func_9802(*bParam3, iParam4, plParam5);
+		func_9802(*bParam3, iParam4, iParam5);
 		*uParam6 = NETWORK::GET_NETWORK_TIME();
 	}
 
@@ -524774,7 +524774,7 @@ int func_9801(var uParam0, int* piParam1, var uParam2, BOOL bParam3, int iParam4
 	return num;
 }
 
-void func_9802(var uParam0, int iParam1, Player plParam2) // Position - 0x2EF72C (3077932)
+void func_9802(var uParam0, int iParam1, int iParam2) // Position - 0x2EF72C (3077932)
 {
 	Hash eventData;
 	int address;
@@ -524786,8 +524786,8 @@ void func_9802(var uParam0, int iParam1, Player plParam2) // Position - 0x2EF72C
 	eventData.f_5 = MISC::GET_FRAME_COUNT();
 	address = 0;
 
-	if (plParam2 != -1)
-		MISC::SET_BIT(&address, plParam2);
+	if (iParam2 != -1)
+		MISC::SET_BIT(&address, iParam2);
 
 	if (!(address == 0))
 		SCRIPT::_SEND_TU_SCRIPT_EVENT_NEW(1, &eventData, 6, address, eventData);

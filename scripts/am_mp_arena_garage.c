@@ -120882,7 +120882,7 @@ void func_813(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 	
 		func_815(true, bParam3, bParam2, false);
 		Global_65033 = 1;
-		Global_77362 = true;
+		Global_77362 = 1;
 		Global_80303 = 1;
 	}
 	else
@@ -145786,11 +145786,11 @@ void func_1555(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	return;
 }
 
-int func_1556(int iParam0, int iParam1, int iParam2) // Position - 0xB2D0C (732428)
+int func_1556(Hash hParam0, Hash hParam1, int iParam2) // Position - 0xB2D0C (732428)
 {
-	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -145969,7 +145969,7 @@ int func_1556(int iParam0, int iParam1, int iParam2) // Position - 0xB2D0C (7324
 				return 2;
 		}
 	
-		switch (iParam1)
+		switch (hParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -146101,7 +146101,7 @@ int func_1556(int iParam0, int iParam1, int iParam2) // Position - 0xB2D0C (7324
 	
 		return 0;
 	}
-	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -381734,7 +381734,7 @@ BOOL func_7387() // Position - 0x21F42B (2225195)
 	return IS_BIT_SET(Global_2685153.f_3, 4);
 }
 
-Ped func_7388() // Position - 0x21F43B (2225211)
+Entity func_7388() // Position - 0x21F43B (2225211)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(func_7390()))
 		return func_7390();
@@ -381742,12 +381742,12 @@ Ped func_7388() // Position - 0x21F43B (2225211)
 	return func_7389();
 }
 
-Ped func_7389() // Position - 0x21F459 (2225241)
+Entity func_7389() // Position - 0x21F459 (2225241)
 {
 	return Global_2621446.f_2;
 }
 
-Ped func_7390() // Position - 0x21F467 (2225255)
+Entity func_7390() // Position - 0x21F467 (2225255)
 {
 	return Global_2621446.f_3;
 }
@@ -469933,7 +469933,7 @@ BOOL func_9012(Player plParam0) // Position - 0x2B3100 (2830592)
 
 void func_9013() // Position - 0x2B3115 (2830613)
 {
-	Global_77362 = true;
+	Global_77362 = 1;
 	return;
 }
 
